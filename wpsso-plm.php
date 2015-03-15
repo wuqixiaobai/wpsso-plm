@@ -21,11 +21,19 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 	class WpssoPlm {
 
+		public $p;				// class object variables
+
+		protected static $instance = null;
+
 		private $opt_version = 'plm2';
 		private $min_version = '2.8.1';
 		private $has_min_ver = true;
 
-		public $p;				// class object variables
+		public static function &get_instance() {
+			if ( self::$instance === null )
+				self::$instance = new self;
+			return self::$instance;
+		}
 
 		public function __construct() {
 			require_once ( dirname( __FILE__ ).'/lib/config.php' );
@@ -64,8 +72,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		// this action is executed when WpssoOptions::__construct() is executed (class object is created)
 		public function init_options() {
-			global $wpsso;
-			$this->p =& $wpsso;
+			$this->p =& Wpsso::get_instance();
 			if ( $this->has_min_ver === false )
 				return;
 			$this->p->is_avail['plm'] = true;
@@ -110,7 +117,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 	}
 
         global $wpssoplm;
-	$wpssoplm = new WpssoPlm();
+	$wpssoplm = WpssoPlm::get_instance();
 }
 
 ?>
