@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					),
 					'lib' => array(
 						'submenu' => array (
-							'wpssoplm-separator-0' => '',
+							'wpssoplm-separator-0' => 'PLM',
 							'place' => 'Place and Location Meta',
 							'corp-contact' => 'Corporate Contacts',
 						),
