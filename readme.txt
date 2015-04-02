@@ -34,18 +34,29 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 
 = App Meta Tags =
 
-* **Facebook / Open Graph *Location* Meta Tags** (Free version)
-	* place:location:latitude
-	* place:location:longitude
-	* place:location:altitude
-* **Pinterest *Place* Rich Pin Meta Tags** (Pro version)
-	* place:street_address
-	* place:locality
-	* place:region
-	* place:postal_code
-	* place:country_name
-* **Schema Meta Tags** (Pro version)
-        * address
+<ul>
+<li><strong>Facebook / Open Graph <em>Location</em> Meta Tags</strong> (Free version)
+	<ul>
+	<li>place:location:latitude</li>
+	<li>place:location:longitude</li>
+	<li>place:location:altitude</li>
+	</ul>
+</li>
+<li><strong>Pinterest <em>Place</em> Rich Pin Meta Tags</strong> (Pro version)
+	<ul>
+	<li>place:street_address</li>
+	<li>place:locality</li>
+	<li>place:region</li>
+	<li>place:postal_code</li>
+	<li>place:country_name</li>
+	</ul>
+</li>
+<li><strong>Schema Meta Tags</strong> (Pro version)
+	<ul>
+        <li>address</li>
+	</ul>
+</li>
+</ul>
 
 <blockquote>
 <p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> plugin is required to use the WPSSO PLM extension. You can use the <em>Free version</em> of WPSSO PLM with either WPSSO Free or Pro, but the <a href="http://surniaulula.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a></strong> as well.</p>
