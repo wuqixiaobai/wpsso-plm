@@ -9,7 +9,7 @@
  * Description: WPSSO extension to provide Open Graph / Facebook Location and Pinterest Place Rich Pin meta tags.
  * Requires At Least: 3.0
  * Tested Up To: 4.1
- * Version: 2.0dev1
+ * Version: 1.2
  * 
  * Copyright 2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 */
@@ -26,7 +26,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		protected static $instance = null;
 
 		private $opt_version = 'plm2';
-		private $min_version = '2.8.1';
+		private $min_version = '2.9';
 		private $has_min_ver = true;
 
 		public static function &get_instance() {
