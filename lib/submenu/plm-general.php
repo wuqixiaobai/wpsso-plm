@@ -8,9 +8,9 @@ Copyright 2012-2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 if ( ! defined( 'ABSPATH' ) ) 
 	die( 'These aren\'t the droids you\'re looking for...' );
 
-if ( ! class_exists( 'WpssoPlmSubmenuPlace' ) && class_exists( 'WpssoAdmin' ) ) {
+if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin' ) ) {
 
-	class WpssoPlmSubmenuPlace extends WpssoAdmin {
+	class WpssoPlmSubmenuPlmgeneral extends WpssoAdmin {
 
 		public function __construct( &$plugin, $id, $name ) {
 			$this->p =& $plugin;
@@ -20,12 +20,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlace' ) && class_exists( 'WpssoAdmin' ) ) 
 
 		protected function add_meta_boxes() {
 			// add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
-			add_meta_box( $this->pagehook.'_place', 'Place and Location', 
-				array( &$this, 'show_metabox_place' ), $this->pagehook, 'normal' );
+			add_meta_box( $this->pagehook.'_plm_general', 'Place / Location', 
+				array( &$this, 'show_metabox_plm_general' ), $this->pagehook, 'normal' );
 		}
 
-		public function show_metabox_place() {
-			$metabox = 'place';
+		public function show_metabox_plm_general() {
+			$metabox = 'plm';
 			echo '<table class="sucom-setting">';
 			foreach ( apply_filters( $this->p->cf['lca'].'_'.$metabox.'_general_rows', 
 				$this->get_rows( $metabox, 'general' ), $this->form ) as $row )
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlace' ) && class_exists( 'WpssoAdmin' ) ) 
 		protected function get_rows( $metabox, $key ) {
 			$rows = array();
 			switch ( $metabox.'-'.$key ) {
-				case 'place-general':
+				case 'plm-general':
 
 					$rows[] = '<td colspan="2" style="padding-bottom:10px;">'.
 						$this->p->msgs->get( 'info-place-general' ).'</td>';

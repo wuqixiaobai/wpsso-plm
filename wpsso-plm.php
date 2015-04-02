@@ -76,13 +76,13 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			if ( $this->has_min_ver === false )
 				return;
 			$this->p->is_avail['plm'] = true;
-			$this->p->is_avail['admin']['place'] = true;
-			$this->p->is_avail['head']['place'] = true;
+			$this->p->is_avail['admin']['plm-general'] = true;
+			$this->p->is_avail['head']['place-meta'] = true;
 		}
 
 		public function init_objects() {
-			WpssoPlmConfig::load_lib( false, 'place' );
-			$this->p->place = new WpssoPlmPlace( $this->p, __FILE__ );
+			WpssoPlmConfig::load_lib( false, 'filters' );
+			$this->p->plm = new WpssoPlmFilters( $this->p, __FILE__ );
 		}
 
 		// this action is executed once all class objects have been defined and modules have been loaded
@@ -90,23 +90,19 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			$shortname = WpssoPlmConfig::$cf['plugin']['wpssoplm']['short'];
 			if ( $this->has_min_ver === false ) {
 				$wpsso_version = $this->p->cf['plugin']['wpsso']['version'];
-				$this->p->debug->log( $shortname.' requires WPSSO version '.
-					$this->min_version.' or newer ('.$wpsso_version.' installed)' );
+				if ( $this->p->debug_enabled )
+					$this->p->debug->log( $shortname.' requires WPSSO version '.
+						$this->min_version.' or newer ('.$wpsso_version.' installed)' );
 				if ( is_admin() )
 					$this->p->notice->err( $shortname.' v'.WpssoPlmConfig::$cf['plugin']['wpssoplm']['version'].
-						' requires WPSSO v'.$this->min_version.
-						' or newer ('.$wpsso_version.' is currently installed).', true );
+						' requires WPSSO v'.$this->min_version.' or newer ('.$wpsso_version.' is currently installed).', true );
 				return;
 			}
 
-			if ( is_admin() && 
-				! empty( $this->p->options['plugin_wpssoplm_tid'] ) && 
-				! $this->p->check->aop( 'wpssoplm', false ) ) {
+			if ( is_admin() && ! empty( $this->p->options['plugin_wpssoplm_tid'] ) && ! $this->p->check->aop( 'wpssoplm', false ) )
 				$this->p->notice->inf( 'An Authentication ID was entered for '.
 					$shortname.', but the Pro version is not installed yet &ndash; don\'t forget to update the '.
 					$shortname.' plugin to install the Pro version.', true );
-			}
-
 		}
 
 		public function filter_installed_version( $version ) {

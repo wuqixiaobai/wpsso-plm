@@ -8,15 +8,15 @@ Copyright 2012-2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 if ( ! defined( 'ABSPATH' ) ) 
 	die( 'These aren\'t the droids you\'re looking for...' );
 
-if ( ! class_exists( 'WpssoPlmGplAdminPlace' ) ) {
+if ( ! class_exists( 'WpssoPlmGplAdminPlmgeneral' ) ) {
 
-	class WpssoPlmGplAdminPlace {
+	class WpssoPlmGplAdminPlmgeneral {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
 			$this->p->util->add_plugin_filters( $this, array( 
-				'meta_tabs' => 1,		// add the Place and Location tab
-				'meta_place_rows' => 3,		// content for the Place and Location tab
+				'meta_tabs' => 1,		// add the Place / Location tab
+				'meta_plm_rows' => 3,		// content for the Place / Location tab
 			), 200 );
 		}
 
@@ -30,15 +30,14 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlace' ) ) {
 			foreach ( $tabs as $key => $val ) {
 				$new_tabs[$key] = $val;
 				if ( $key === 'media' )
-					$new_tabs['place'] = 'Place and Location';
+					$new_tabs['plm'] = 'Place / Location';
 			}
 			return $new_tabs;
 		}
 
-		public function filter_meta_place_rows( $rows, $form, $post_info ) {
+		public function filter_meta_plm_rows( $rows, $form, $post_info ) {
 
-			$rows[] = '<td colspan="2" class="subsection"
-				style="margin-top:0;"><h4>Pinterest Place Rich Pin</h4></td>';
+			$rows[] = '<td colspan="2" class="subsection" style="margin-top:0;"><h4>Pinterest Place Rich Pin</h4></td>';
 
 			$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', 
 				array( 'lca' => 'wpssoplm' ) ).'</td>';

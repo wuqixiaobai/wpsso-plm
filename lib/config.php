@@ -42,21 +42,21 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					),
 					'lib' => array(
 						'submenu' => array (
-							'wpssoplm-separator-0' => 'PLM',
-							'place' => 'Place and Location Meta',
+							'wpssoplm-separator-0' => 'PLM Extension',
+							'plm-general' => 'Place and Location Meta',
 							'corp-contact' => 'Corporate Contacts',
 						),
 						'gpl' => array(
 							'admin' => array(
-								'place' => 'Place and Location Meta',
+								'plm-general' => 'Place and Location Meta',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
-								'place' => 'Place and Location Meta',
+								'plm-general' => 'Place and Location Meta',
 							),
 							'head' => array(
-								'place' => 'Place Meta Tags',
+								'place-meta' => 'Place Meta Tags',
 							),
 						),
 					),

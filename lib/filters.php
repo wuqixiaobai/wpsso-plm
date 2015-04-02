@@ -8,9 +8,9 @@ Copyright 2012-2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 if ( ! defined( 'ABSPATH' ) ) 
 	die( 'These aren\'t the droids you\'re looking for...' );
 
-if ( ! class_exists( 'WpssoPlmPlace' ) ) {
+if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
-	class WpssoPlmPlace {
+	class WpssoPlmFilters {
 
 		protected $p;
 		protected $plugin_filepath;
@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			),
 		);
 
-		public function __construct( &$plugin, $plugin_filepath = WPSSOSP_FILEPATH ) {
+		public function __construct( &$plugin, $plugin_filepath = WPSSOPLM_FILEPATH ) {
 			$this->p =& $plugin;
 			$this->plugin_filepath = $plugin_filepath;
 			$this->p->util->add_plugin_filters( $this, array( 
@@ -146,10 +146,10 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-location-meta-tags':
-					$text = 'If location information is entered under the <em>Place and Location</em> tab (in the Social Settings metabox), '.$short.' will include additional meta tags for Facebook.';
+					$text = 'If location information is entered under the <em>Place / Location</em> tab (in the Social Settings metabox), '.$short.' will include additional meta tags for Facebook.';
 					break;
 				case 'tooltip-side-place-meta-tags':
-					$text = 'If location information is entered under the <em>Place and Location</em> tab (in the Social Settings metabox), '.$short_pro.' will include additional meta tags for Pinterest\'s <em>Place</em> Rich Pin.';
+					$text = 'If location information is entered under the <em>Place / Location</em> tab (in the Social Settings metabox), '.$short_pro.' will include additional meta tags for Pinterest\'s <em>Place</em> Rich Pin.';
 					break;
 			}
 			return $text;
@@ -198,7 +198,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			switch ( $idx ) {
 				case 'info-place-general':
 					$text = '<blockquote style="margin-top:0;margin-bottom:10px;">
-					<p>A <em>Place and Location</em> tab can be added to the Social Settings metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).</p>
+					<p>A <em>Place / Location</em> tab can be added to the Social Settings metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).</p>
 					</blockquote>';
 					break;
 			}
@@ -211,7 +211,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				case ( strpos( $idx, 'tooltip-plm_' ) !== false ? true : false ):
 					switch ( $idx ) {
 						case 'tooltip-plm_add_to':
-							$text = 'Include the <em>Place and Location</em> tab in the Social Settings metabox on Posts, Pages, etc.';
+							$text = 'Include the <em>Place / Location</em> tab in the Social Settings metabox on Posts, Pages, etc.';
 							break;
 					}
 					break;
