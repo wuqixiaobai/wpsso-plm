@@ -7,7 +7,7 @@
 <strong>License URI</strong>: http://www.gnu.org/licenses/gpl.txt<br/>
 <strong>Requires At Least</strong>: 3.0<br/>
 <strong>Tested Up To</strong>: 4.1.1<br/>
-<strong>Stable Tag</strong>: 1.1.4<br/>
+<strong>Stable Tag</strong>: 1.2<br/>
 </blockquote>
 
 WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.
