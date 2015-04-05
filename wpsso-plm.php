@@ -85,17 +85,9 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		// this action is executed once all class objects have been defined and modules have been loaded
 		public function init_plugin() {
-			$shortname = WpssoPlmConfig::$cf['plugin']['wpssoplm']['short'];
-			if ( $this->wpsso_has_min_ver === false ) {
-				$wpsso_version = $this->p->cf['plugin']['wpsso']['version'];
-				if ( $this->p->debug_enabled )
-					$this->p->debug->log( $shortname.' requires WPSSO version '.
-						$this->wpsso_min_version.' or newer ('.$wpsso_version.' installed)' );
-				if ( is_admin() )
-					$this->p->notice->err( $shortname.' v'.WpssoPlmConfig::$cf['plugin']['wpssoplm']['version'].
-						' requires WPSSO v'.$this->wpsso_min_version.' or newer ('.$wpsso_version.' is currently installed).', true );
-				return;
-			}
+			if ( $this->wpsso_has_min_ver === false )
+				return $this->min_version_warning( WpssoPlmConfig::$cf['plugin']['wpssoplm'] );
+
 			if ( ! empty( $this->p->options['plugin_wpssoplm_tid'] ) )
 				add_filter( 'wpssoplm_installed_version', array( &$this, 'filter_installed_version' ), 10, 1 );
 		}
@@ -104,6 +96,16 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			if ( ! $this->p->check->aop( 'wpssoplm', false ) )
 				$version = '0.'.$version;
 			return $version;
+		}
+
+		private function min_version_warning( $info ) {
+			$wpsso_version = $this->p->cf['plugin']['wpsso']['version'];
+			if ( $this->p->debug->enabled )
+				$this->p->debug->log( $info['name'].' requires WPSSO version '.$this->wpsso_min_version.
+					' or newer ('.$wpsso_version.' installed)' );
+			if ( is_admin() )
+				$this->p->notice->err( $info['name'].' v'.$info['version'].' requires WPSSO v'.$this->wpsso_min_version.
+					' or newer ('.$wpsso_version.' is currently installed).', true );
 		}
 	}
 
