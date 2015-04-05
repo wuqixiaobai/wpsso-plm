@@ -1,4 +1,4 @@
-<h1>WPSSO Place and Location Meta</h1><h3>for Facebook "Location" and Pinterest "Place"</h3>
+=== WPSSO Place and Location Meta - for Facebook "Location" and Pinterest "Place" ===
 <blockquote>
 <strong>Contributors</strong>: jsmoriss<br/>
 <strong>Donate Link</strong>: https://surniaulula.com/extend/plugins/wpsso-plm/<br/>
@@ -10,7 +10,11 @@
 <strong>Stable Tag</strong>: 1.2<br/>
 </blockquote>
 
+<p>
+
 WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.
+
+</p>
 
 <h3>Description</h3>
 
