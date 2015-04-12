@@ -105,7 +105,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 	* *None*
 * **Improvements**
 	* Moved the minimum version checks to a new `WpssoAm::min_version_warning()` method.
-	* Refactored code for the new "WPSSO Pro Update Manager (WPSSO UM)" extension plugin.
+	* Refactored code for the new "WPSSO Pro Update Manager (WPSSO UM)" *Free* extension plugin.
 * **Bugfixes**
 	* *None*
 
@@ -119,22 +119,13 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **New Features**
 	* *None*
 
-<h4>Version 1.1.4</h4>
-
-* **Bugfixes**
-	* Fixed validation of network-activated plugin dependencies by checking for the Wpsso class only.
-* **Improvements**
-	* *None*
-* **New Features**
-	* *None*
-
 <h3>Upgrade Notice</h3>
+
+<h4>1.3</h4>
+
+Refactored code for the new "WPSSO Pro Update Manager (WPSSO UM)" Free extension plugin.
 
 <h4>1.2</h4>
 
 Renamed the settings and main library files.
-
-<h4>1.1.4</h4>
-
-Fixed validation of network-activated plugin dependencies by checking for the Wpsso class only.
 
