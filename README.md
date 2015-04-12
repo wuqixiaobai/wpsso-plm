@@ -1,4 +1,5 @@
-=== WPSSO Place and Location Meta - for Facebook "Location" and Pinterest "Place" ===
+<h1>WPSSO Place and Location Meta</h1><h3>for Facebook "Location" and Pinterest "Place"</h3>
+
 <blockquote>
 <strong>Contributors</strong>: jsmoriss<br/>
 <strong>Donate Link</strong>: https://surniaulula.com/extend/plugins/wpsso-plm/<br/>
