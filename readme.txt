@@ -88,8 +88,8 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 
 = Free / Basic Version Repository =
 
-* GitHub: https://github.com/SurniaUlula/wpsso-plm
-* WordPress.org: https://wordpress.org/plugins/wpsso-plm/developers/
+* [GitHub](https://github.com/SurniaUlula/wpsso-plm)
+* [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
 = Version 1.3 (2015/04/12) =
 
