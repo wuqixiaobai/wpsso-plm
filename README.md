@@ -99,7 +99,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * [GitHub](https://github.com/SurniaUlula/wpsso-plm)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
-<h4>Version 1.3.1</h4>
+<h4>Version 1.3.1 (2015/04/21)</h4>
 
 * **New Features**
 	* *None*
