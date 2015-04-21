@@ -88,6 +88,8 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		}
 
 		public function wpsso_init_objects() {
+			if ( $this->wpsso_has_min_ver === false )
+				return;		// stop here
 			WpssoPlmConfig::load_lib( false, 'filters' );
 			$this->p->plm = new WpssoPlmFilters( $this->p, __FILE__ );
 		}
