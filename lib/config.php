@@ -47,7 +47,6 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						'submenu' => array (
 							'wpssoplm-separator-0' => 'PLM Extension',
 							'plm-general' => 'Place and Location Meta',
-							'corp-contact' => 'Corporate Contacts',
 						),
 						'gpl' => array(
 							'admin' => array(
