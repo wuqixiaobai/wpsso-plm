@@ -104,7 +104,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **New Features**
 	* *None*
 * **Improvements**
-	* Replaced self-deactivation when WPSSO is not found by a warning notice instead.
+	* Replaced self-deactivation by a warning notice if the WPSSO plugin is not found.
 * **Bugfixes**
 	* *None*
 
@@ -129,6 +129,10 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 	* *None*
 
 <h3>Upgrade Notice</h3>
+
+<h4>1.3.1</h4>
+
+Replaced self-deactivation by a warning notice if the WPSSO plugin is not found.
 
 <h4>1.3</h4>
 
