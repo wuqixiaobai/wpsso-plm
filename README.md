@@ -13,7 +13,7 @@
 
 <p>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot; and Pinterest &quot;Place&quot; Rich Pin meta tags.</p>
 
-<h3>Description</p>
+<h3>Description</h3>
 
 <p align="center"><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" /></p><p><strong>Do you have <em>location specific</em> webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
 
