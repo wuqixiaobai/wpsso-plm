@@ -2,18 +2,17 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place and Location Meta (WPSSO PLM)</td></tr>
+<tr><th align="right" valign="top" nowrap>Description Summary</th><td>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot; and Pinterest &quot;Place&quot; Rich Pin meta tags.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.3.1</td></tr>
-<tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
-<tr><th align="right" valign="top" nowrap>Donate / Purchase</th><td><a href="https://surniaulula.com/extend/plugins/wpsso-plm/">https://surniaulula.com/extend/plugins/wpsso-plm/</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>wpsso, place, location, venue, longitude, latitude, address, local</td></tr>
-<tr><th align="right" valign="top" nowrap>License</th><td><a href="http://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.2</td></tr>
+<tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
+<tr><th align="right" valign="top" nowrap>Website URL</th><td><a href="https://surniaulula.com/extend/plugins/wpsso-plm/">https://surniaulula.com/extend/plugins/wpsso-plm/</a></td></tr>
+<tr><th align="right" valign="top" nowrap>License</th><td><a href="http://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>wpsso, place, location, venue, longitude, latitude, address, local</td></tr>
 </table>
 
-<p>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot; and Pinterest &quot;Place&quot; Rich Pin meta tags.</p>
-
-<h3>Description</h3>
+<h2>Description</h2>
 
 <p align="center"><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" /></p><p><strong>Do you have <em>location specific</em> webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
 
@@ -70,7 +69,7 @@
 </blockquote>
 
 
-<h3>Installation</p>
+<h2>Installation</h2>
 
 <h4>Install and Uninstall</h4>
 
@@ -80,12 +79,12 @@
 </ul>
 
 
-<h3>Frequently Asked Questions</h3>
+<h2>Frequently Asked Questions</h2>
 
 <h4>Frequently Asked Questions</h4>
 
 
-<h3>Other Notes</h3>
+<h2>Other Notes</h2>
 
 <h3>Other Notes</h3>
 <h4>Additional Documentation</h4>
