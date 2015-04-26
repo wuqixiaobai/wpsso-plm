@@ -1,4 +1,5 @@
 === WPSSO Place and Location Meta - for Facebook "Location" and Pinterest "Place" ===
+Plugin Name: WPSSO Place and Location Meta (WPSSO PLM)
 Plugin Slug: wpsso-plm
 Contributors: jsmoriss
 Donate Link: https://surniaulula.com/extend/plugins/wpsso-plm/
