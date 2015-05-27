@@ -2,7 +2,7 @@
 Plugin Name: WPSSO Place and Location Meta (WPSSO PLM)
 Plugin Slug: wpsso-plm
 Contributors: jsmoriss
-Donate Link: https://wpsso.com/extend/plugins/wpsso-plm/
+Donate Link: https://wpsso.com/
 Tags: wpsso, place, location, venue, longitude, latitude, address, local
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
