@@ -98,7 +98,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **New Features**
 	* *None*
 * **Improvements**
-	* Code compatibility with WPSSO v3.3.
+	* Renamed the 'postmeta' filter hooks to 'post' for compatibility with WPSSO v3.3.
 * **Bugfixes**
 	* *None*
 * **Developer Notes**
@@ -134,6 +134,10 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.3.2 =
+
+Renamed the 'postmeta' filter hooks to 'post' for compatibility with WPSSO v3.3.
 
 = 1.3.1 =
 
