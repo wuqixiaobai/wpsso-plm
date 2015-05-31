@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->plugin_filepath = $plugin_filepath;
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,		// option defaults
-				'get_meta_defaults' => 1,	// post meta option defaults
+				'get_post_defaults' => 1,	// post option defaults
 				'doctype_prefix_ns' => 1,	// open graph namespace
 				'og_seed' => 3,			// open graph meta tags
 			) );
@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'option_type' => 2,
 					'tooltip_side' => 2,		// tooltip messages for side boxes
-					'tooltip_postmeta' => 3,	// tooltip messages for post social settings
+					'tooltip_post' => 3,	// tooltip messages for post social settings
 					'messages_info' => 2,		// info messages filter
 					'messages' => 2,		// messages filter
 				) );
@@ -77,7 +77,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			if ( empty( $this->p->options[ 'plm_add_to_'.$post_type->name ] ) )
 				return $og;
 
-			$opts = $this->p->mods['util']['postmeta']->get_options( $obj->ID );
+			$opts = $this->p->mods['util']['post']->get_options( $obj->ID );
 
 			// the latitude and longitude values are required for the place meta tags
 			if ( ! empty( $opts['plm_latitude'] ) && ! empty( $opts['plm_longitude'] ) ) {
@@ -100,7 +100,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $opts_def;
 		}
 
-		public function filter_get_meta_defaults( $opts_def ) {
+		public function filter_get_post_defaults( $opts_def ) {
 			$opts_def = array_merge( $opts_def, array(
 				'plm_latitude' => '',
 				'plm_longitude' => '',
@@ -155,37 +155,37 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $text;
 		}
 
-		public function filter_tooltip_postmeta( $text, $idx, $atts ) {
+		public function filter_tooltip_post( $text, $idx, $atts ) {
 			$ptn = empty( $atts['ptn'] ) ? 'Post' : $atts['ptn'];
 			switch ( $idx ) {
 				// post metabox settings tab
-				case ( strpos( $idx, 'tooltip-postmeta-plm_' ) !== false ? true : false ):
+				case ( strpos( $idx, 'tooltip-post-plm_' ) !== false ? true : false ):
 					switch ( $idx ) {
-						case 'tooltip-postmeta-plm_latitude':
+						case 'tooltip-post-plm_latitude':
 							$text = 'The numeric <em>decimal degrees</em> latitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
 							break;
-						case 'tooltip-postmeta-plm_longitude':
+						case 'tooltip-post-plm_longitude':
 							$text = 'The numeric <em>decimal degrees</em> longitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
 							break;
-						case 'tooltip-postmeta-plm_place':
+						case 'tooltip-post-plm_place':
 							$text = 'Share this '.$ptn.' as an Open Graph <em>Place</em> Rich Pin.';
 							break;
-						case 'tooltip-postmeta-plm_altitude':
+						case 'tooltip-post-plm_altitude':
 							$text = 'An optional numeric altitude (in feet) for the content of this '.$ptn.'.';
 							break;
-						case 'tooltip-postmeta-plm_streetaddr':
+						case 'tooltip-post-plm_streetaddr':
 							$text = 'An optional Street Address for the <em>Place</em> meta tags.';
 							break;
-						case 'tooltip-postmeta-plm_city':
+						case 'tooltip-post-plm_city':
 							$text = 'An optional City name for the <em>Place</em> meta tags.';
 							break;
-						case 'tooltip-postmeta-plm_state':
+						case 'tooltip-post-plm_state':
 							$text = 'An optional State or Province name for the <em>Place</em> meta tags.';
 							break;
-						case 'tooltip-postmeta-plm_zipcode':
+						case 'tooltip-post-plm_zipcode':
 							$text = 'An optional Zip or Postal Code for the <em>Place</em> meta tags.';
 							break;
-						case 'tooltip-postmeta-plm_country':
+						case 'tooltip-post-plm_country':
 							$text = 'An optional Country name for the <em>Place</em> meta tags.';
 							break;
 					}

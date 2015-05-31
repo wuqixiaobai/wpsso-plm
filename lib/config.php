@@ -2,7 +2,7 @@
 /*
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Copyright 2014-2015 - Jean-Sebastien Morisset - http://surniaulula.com/
+ * Copyright 2014-2015 - Jean-Sebastien Morisset - http://wpsso.com/
  */
 
 if ( ! defined( 'ABSPATH' ) ) 
@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '1.3.1',	// plugin version
+					'version' => '1.3.2',	// plugin version
 					'short' => 'WPSSO PLM',
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.',
@@ -33,15 +33,14 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						'readme' => 'https://plugins.svn.wordpress.org/wpsso-plm/trunk/readme.txt',
 						'wp_support' => 'https://wordpress.org/support/plugin/wpsso-plm',
 						// surniaulula
-						'update' => 'http://surniaulula.com/extend/plugins/wpsso-plm/update/',
-						'purchase' => 'http://surniaulula.com/extend/plugins/wpsso-plm/',
-						'changelog' => 'http://surniaulula.com/extend/plugins/wpsso-plm/changelog/',
-						'codex' => 'http://surniaulula.com/codex/plugins/wpsso-plm/',
-						'faq' => 'http://surniaulula.com/codex/plugins/wpsso-plm/faq/',
+						'update' => 'http://wpsso.com/extend/plugins/wpsso-plm/update/',
+						'purchase' => 'http://wpsso.com/extend/plugins/wpsso-plm/',
+						'changelog' => 'http://wpsso.com/extend/plugins/wpsso-plm/changelog/',
+						'codex' => 'http://wpsso.com/codex/plugins/wpsso-plm/',
+						'faq' => 'http://wpsso.com/codex/plugins/wpsso-plm/faq/',
 						'notes' => '',
-						'feed' => 'http://surniaulula.com/category/application/wordpress/wp-plugins/wpsso-plm/feed/',
-						'pro_support' => 'http://support.wpsso-plm.surniaulula.com/',
-						'pro_ticket' => 'http://ticket.wpsso-plm.surniaulula.com/',
+						'feed' => 'http://wpsso.com/category/application/wordpress/wp-plugins/wpsso-plm/feed/',
+						'pro_support' => 'http://wpsso-plm.support.wpsso.com/',
 					),
 					'lib' => array(
 						'submenu' => array (
