@@ -141,7 +141,3 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 
 Renamed the 'postmeta' filter hooks to 'post' for compatibility with WPSSO v3.3.
 
-= 1.3.1 =
-
-Replaced self-deactivation by a warning notice if the WPSSO plugin is not found.
-
