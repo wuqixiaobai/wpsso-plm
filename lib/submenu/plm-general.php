@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 							$post_type->label.' '.( empty( $post_type->description ) ? 
 								'' : '('.$post_type->description.')' ).'</p>';
 
-					$rows[] = $this->p->util->th( 'Show Tab on Post Types', null, 'plm_add_to' ).'<td>'.$checkboxes.'</td>';
+					$rows[] = $this->p->util->get_th( 'Show Tab on Post Types', null, 'plm_add_to' ).'<td>'.$checkboxes.'</td>';
 
 					break;
 

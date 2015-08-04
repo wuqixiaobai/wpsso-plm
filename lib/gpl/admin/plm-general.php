@@ -42,33 +42,33 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmgeneral' ) ) {
 			$rows[] = '<td colspan="2" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssoplm' ) ).'</td>';
 
-			$rows[] = $this->p->util->th( 'Share as a <em>Place</em>', 'medium', 'post-plm_place' ). 
+			$rows[] = $this->p->util->get_th( 'Share as a <em>Place</em>', 'medium', 'post-plm_place' ). 
 			'<td class="blank">'.$form->get_no_checkbox( 'plm_place' ).'</td>';
 
-			$rows[] = $this->p->util->th( 'Street Address', 'medium', 'post-plm_streetaddr' ). 
+			$rows[] = $this->p->util->get_th( 'Street Address', 'medium', 'post-plm_streetaddr' ). 
 			'<td class="blank">'.$form->get_options( 'plm_streetaddr' ).'</td>';
 
-			$rows[] = $this->p->util->th( 'City', 'medium', 'post-plm_city' ). 
+			$rows[] = $this->p->util->get_th( 'City', 'medium', 'post-plm_city' ). 
 			'<td class="blank">'.$form->get_options( 'plm_city' ).'</td>';
 
-			$rows[] = $this->p->util->th( 'State / Province', 'medium', 'post-plm_state' ). 
+			$rows[] = $this->p->util->get_th( 'State / Province', 'medium', 'post-plm_state' ). 
 			'<td class="blank">'.$form->get_options( 'plm_state' ).'</td>';
 
-			$rows[] = $this->p->util->th( 'Zip / Postal Code', 'medium', 'post-plm_zipcode' ). 
+			$rows[] = $this->p->util->get_th( 'Zip / Postal Code', 'medium', 'post-plm_zipcode' ). 
 			'<td class="blank">'.$form->get_options( 'plm_zipcode' ).'</td>';
 
-			$rows[] = $this->p->util->th( 'Country', 'medium', 'post-plm_country' ). 
+			$rows[] = $this->p->util->get_th( 'Country', 'medium', 'post-plm_country' ). 
 			'<td class="blank">'.$form->get_options( 'plm_country' ).'</td>';
 
 			$rows[] = '<td colspan="2" class="subsection"><h4>Facebook / Open Graph Location</h4></td>';
 
-			$rows[] = $this->p->util->th( 'Latitude', 'medium', 'post-plm_latitude' ). 
+			$rows[] = $this->p->util->get_th( 'Latitude', 'medium', 'post-plm_latitude' ). 
 			'<td>'.$form->get_input( 'plm_latitude', 'required' ).'</td>';
 
-			$rows[] = $this->p->util->th( 'Longitude', 'medium', 'post-plm_longitude' ). 
+			$rows[] = $this->p->util->get_th( 'Longitude', 'medium', 'post-plm_longitude' ). 
 			'<td>'.$form->get_input( 'plm_longitude', 'required' ).'</td>';
 
-			$rows[] = $this->p->util->th( 'Altitude in Feet', 'medium', 'post-plm_altitude' ). 
+			$rows[] = $this->p->util->get_th( 'Altitude in Feet', 'medium', 'post-plm_altitude' ). 
 			'<td>'.$form->get_input( 'plm_altitude' ).'</td>';
 
 			return $rows;

@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '1.3.2',	// plugin version
+					'version' => '1.3.3',	// plugin version
 					'short' => 'WPSSO PLM',
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.',
@@ -72,7 +72,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			$slug = self::$cf['plugin'][$lca]['slug'];
 
 			define( 'WPSSOPLM_FILEPATH', $plugin_filepath );						
-			define( 'WPSSOPLM_PLUGINDIR', trailingslashit( plugin_dir_path( $plugin_filepath ) ) );
+			define( 'WPSSOPLM_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
 			define( 'WPSSOPLM_PLUGINBASE', plugin_basename( $plugin_filepath ) );
 			define( 'WPSSOPLM_TEXTDOM', $slug );
 			define( 'WPSSOPLM_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );

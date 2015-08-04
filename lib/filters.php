@@ -46,14 +46,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'option_type' => 2,
-					'tooltip_side' => 2,		// tooltip messages for side boxes
+					'tooltip_side' => 2,	// tooltip messages for side boxes
 					'tooltip_post' => 3,	// tooltip messages for post social settings
-					'messages_info' => 2,		// info messages filter
-					'messages' => 2,		// messages filter
+					'messages_info' => 2,	// info messages filter
+					'messages' => 2,	// messages filter
 				) );
 				$this->p->util->add_plugin_filters( $this, array( 
 					'status_gpl_features' => 3,
-				), 10, 'wpssoplm' );			// hook into our own filters
+				), 10, 'wpssoplm' );		// hook into our own filters
 			}
 		}
 
