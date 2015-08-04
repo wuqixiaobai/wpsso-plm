@@ -95,6 +95,18 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * [GitHub](https://github.com/SurniaUlula/wpsso-plm)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
+= Version 1.3.3 (2015/08/04) =
+
+* **New Features**
+	* *None*
+* **Improvements**
+	* Confirmed WordPress v4.2.4 compatibility.
+	* Renamed the deprecated SucomUtil `th()` method to `get_th()`.
+* **Bugfixes**
+	* *None*
+* **Developer Notes**
+	* *None*
+
 = Version 1.3.2 =
 
 * **New Features**
@@ -136,6 +148,10 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.3.3 =
+
+Confirmed WordPress v4.2.4 compatibility. Renamed the deprecated SucomUtil `th()` method to `get_th()`.
 
 = 1.3.2 =
 
