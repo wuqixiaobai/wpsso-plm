@@ -46,10 +46,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'option_type' => 2,
-					'tooltip_side' => 2,	// tooltip messages for side boxes
-					'tooltip_post' => 3,	// tooltip messages for post social settings
-					'messages_info' => 2,	// info messages filter
-					'messages' => 2,	// messages filter
+					'messages_tooltip_side' => 2,	// tooltip messages for side boxes
+					'messages_tooltip_post' => 3,	// tooltip messages for post social settings
+					'messages_tooltip' => 2,	// tooltip messages filter
+					'messages_info' => 2,		// info messages filter
 				) );
 				$this->p->util->add_plugin_filters( $this, array( 
 					'status_gpl_features' => 3,
@@ -140,7 +140,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $type;
 		}
 
-		public function filter_tooltip_side( $text, $idx ) {
+		public function filter_messages_tooltip_side( $text, $idx ) {
 			$lca =  $this->p->cf['lca'];
 			$short = $this->p->cf['plugin'][$lca]['short'];
 			$short_pro = $short.' Pro';
@@ -155,40 +155,52 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $text;
 		}
 
-		public function filter_tooltip_post( $text, $idx, $atts ) {
-			$ptn = empty( $atts['ptn'] ) ? 'Post' : $atts['ptn'];
+		public function filter_messages_tooltip_post( $text, $idx, $atts ) {
+			if ( strpos( $idx, 'tooltip-post-plm_' ) !== 0 )
+				return $text;
+
+			$ptn = empty( $atts['ptn'] ) ? 
+				'Post' : $atts['ptn'];
+
 			switch ( $idx ) {
-				// post metabox settings tab
-				case ( strpos( $idx, 'tooltip-post-plm_' ) !== false ? true : false ):
-					switch ( $idx ) {
-						case 'tooltip-post-plm_latitude':
-							$text = 'The numeric <em>decimal degrees</em> latitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
-							break;
-						case 'tooltip-post-plm_longitude':
-							$text = 'The numeric <em>decimal degrees</em> longitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
-							break;
-						case 'tooltip-post-plm_place':
-							$text = 'Share this '.$ptn.' as an Open Graph <em>Place</em> Rich Pin.';
-							break;
-						case 'tooltip-post-plm_altitude':
-							$text = 'An optional numeric altitude (in feet) for the content of this '.$ptn.'.';
-							break;
-						case 'tooltip-post-plm_streetaddr':
-							$text = 'An optional Street Address for the <em>Place</em> meta tags.';
-							break;
-						case 'tooltip-post-plm_city':
-							$text = 'An optional City name for the <em>Place</em> meta tags.';
-							break;
-						case 'tooltip-post-plm_state':
-							$text = 'An optional State or Province name for the <em>Place</em> meta tags.';
-							break;
-						case 'tooltip-post-plm_zipcode':
-							$text = 'An optional Zip or Postal Code for the <em>Place</em> meta tags.';
-							break;
-						case 'tooltip-post-plm_country':
-							$text = 'An optional Country name for the <em>Place</em> meta tags.';
-							break;
-					}
+				case 'tooltip-post-plm_latitude':
+					$text = 'The numeric <em>decimal degrees</em> latitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
+					break;
+				case 'tooltip-post-plm_longitude':
+					$text = 'The numeric <em>decimal degrees</em> longitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
+					break;
+				case 'tooltip-post-plm_place':
+					$text = 'Share this '.$ptn.' as an Open Graph <em>Place</em> Rich Pin.';
+					break;
+				case 'tooltip-post-plm_altitude':
+					$text = 'An optional numeric altitude (in feet) for the content of this '.$ptn.'.';
+					break;
+				case 'tooltip-post-plm_streetaddr':
+					$text = 'An optional Street Address for the <em>Place</em> meta tags.';
+					break;
+				case 'tooltip-post-plm_city':
+					$text = 'An optional City name for the <em>Place</em> meta tags.';
+					break;
+				case 'tooltip-post-plm_state':
+					$text = 'An optional State or Province name for the <em>Place</em> meta tags.';
+					break;
+				case 'tooltip-post-plm_zipcode':
+					$text = 'An optional Zip or Postal Code for the <em>Place</em> meta tags.';
+					break;
+				case 'tooltip-post-plm_country':
+					$text = 'An optional Country name for the <em>Place</em> meta tags.';
+					break;
+			}
+			return $text;
+		}
+
+		public function filter_messages_tooltip( $text, $idx ) {
+			if ( strpos( $idx, 'tooltip-plm_' ) !== 0 )
+				return $text;
+
+			switch ( $idx ) {
+				case 'tooltip-plm_add_to':
+					$text = 'Include the <em>Place / Location</em> tab in the Social Settings metabox on Posts, Pages, etc.';
 					break;
 			}
 			return $text;
@@ -200,20 +212,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = '<blockquote style="margin-top:0;margin-bottom:10px;">
 					<p>A <em>Place / Location</em> tab can be added to the Social Settings metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).</p>
 					</blockquote>';
-					break;
-			}
-			return $text;
-		}
-
-		public function filter_messages( $text, $idx ) {
-			switch ( $idx ) {
-				// app meta plugin settings page
-				case ( strpos( $idx, 'tooltip-plm_' ) !== false ? true : false ):
-					switch ( $idx ) {
-						case 'tooltip-plm_add_to':
-							$text = 'Include the <em>Place / Location</em> tab in the Social Settings metabox on Posts, Pages, etc.';
-							break;
-					}
 					break;
 			}
 			return $text;

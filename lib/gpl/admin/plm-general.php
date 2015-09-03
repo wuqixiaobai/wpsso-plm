@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmgeneral' ) ) {
 			return $new_tabs;
 		}
 
-		public function filter_post_plm_rows( $rows, $form, $post_info ) {
+		public function filter_post_plm_rows( $rows, $form, $head_info ) {
 
 			$rows[] = '<td colspan="2" class="subsection" style="margin-top:0;"><h4>Pinterest Place Rich Pin</h4></td>';
 
