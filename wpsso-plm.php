@@ -9,7 +9,7 @@
  * Description: WPSSO extension to provide Open Graph / Facebook Location and Pinterest Place Rich Pin meta tags.
  * Requires At Least: 3.0
  * Tested Up To: 4.3
- * Version: 1.3.4
+ * Version: 1.3.5
  * 
  * Copyright 2014-2015 - Jean-Sebastien Morisset - http://surniaulula.com/
  */
@@ -21,12 +21,13 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 	class WpssoPlm {
 
-		public $p;				// class object variables
+		public $p;			// Wpsso
+		public $reg;			// WpssoPlmRegister
 
 		protected static $instance = null;
 
 		private $opt_version_suffix = 'plm2';
-		private $wpsso_min_version = '3.8';
+		private $wpsso_min_version = '3.9';
 		private $wpsso_has_min_ver = true;
 
 		public static function &get_instance() {
@@ -36,30 +37,19 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		}
 
 		public function __construct() {
+
 			require_once ( dirname( __FILE__ ).'/lib/config.php' );
 			WpssoPlmConfig::set_constants( __FILE__ );
 			WpssoPlmConfig::require_libs( __FILE__ );
-
-			add_filter( 'wpsso_get_config', array( &$this, 'wpsso_get_config' ), 20, 1 );
+			$this->reg = new WpssoPlmRegister();		// activate, deactivate, uninstall hooks
 
 			if ( is_admin() )
 				add_action( 'admin_init', array( &$this, 'wp_check_for_wpsso' ) );
 
+			add_filter( 'wpsso_get_config', array( &$this, 'wpsso_get_config' ), 20, 1 );
 			add_action( 'wpsso_init_options', array( &$this, 'wpsso_init_options' ), 20 );
 			add_action( 'wpsso_init_objects', array( &$this, 'wpsso_init_objects' ), 10 );
 			add_action( 'wpsso_init_plugin', array( &$this, 'wpsso_init_plugin' ), 20 );
-		}
-
-		// this filter is executed at init priority -1
-		public function wpsso_get_config( $cf ) {
-			if ( version_compare( $cf['plugin']['wpsso']['version'], $this->wpsso_min_version, '<' ) ) {
-				$this->wpsso_has_min_ver = false;
-				return $cf;
-			}
-			$cf['opt']['version'] .= '-'.$this->opt_version_suffix.
-				( is_dir( trailingslashit( dirname( __FILE__ ) ).'lib/pro/' ) ? 'pro' : 'gpl' );
-			$cf = SucomUtil::array_merge_recursive_distinct( $cf, WpssoPlmConfig::$cf );
-			return $cf;
 		}
 
 		public function wp_check_for_wpsso() {
@@ -78,7 +68,17 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			echo '</p></div>';
 		}
 
-		// this action is executed when WpssoOptions::__construct() is executed (class object is created)
+		public function wpsso_get_config( $cf ) {
+			if ( version_compare( $cf['plugin']['wpsso']['version'], $this->wpsso_min_version, '<' ) ) {
+				$this->wpsso_has_min_ver = false;
+				return $cf;
+			}
+			$cf['opt']['version'] .= '-'.$this->opt_version_suffix.
+				( is_dir( trailingslashit( dirname( __FILE__ ) ).'lib/pro/' ) ? 'pro' : 'gpl' );
+			$cf = SucomUtil::array_merge_recursive_distinct( $cf, WpssoPlmConfig::$cf );
+			return $cf;
+		}
+
 		public function wpsso_init_options() {
 			$this->p =& Wpsso::get_instance();
 			if ( $this->wpsso_has_min_ver === false )
@@ -95,7 +95,6 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			$this->p->plm = new WpssoPlmFilters( $this->p, __FILE__ );
 		}
 
-		// this action is executed once all class objects have been defined and modules have been loaded
 		public function wpsso_init_plugin() {
 			if ( $this->wpsso_has_min_ver === false )
 				return $this->warning_wpsso_version( WpssoPlmConfig::$cf['plugin']['wpssoplm'] );
