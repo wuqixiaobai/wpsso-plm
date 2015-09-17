@@ -22,24 +22,23 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 <p>You can download the <a href="https://wordpress.org/plugins/wpsso-plm/">Free version of WPSSO PLM on WordPress.org</a> and <a href="(http://wpsso.com/extend/plugins/wpsso-plm/">purchase the Pro version on WPSSO.com</a> (includes a No Risk 30 Day Refund Policy). The Facebook / Open Graph <em>Location</em> meta tags are available in the Free version, and the Pinterest <em>Place</em> Rich Pin meta tags are provided with the Pro version.</p>
 </blockquote>
 
-= Quick List of Features =
+<h4>Quick List of Features</h4>
 
-**Free / Basic Version**
+<strong>Free / Basic Features</strong>
 
 * Show the *Place and Location* tab on Posts, Pages, and custom post types.
 * Enter the latitude, longitude, and altitude of a location.
 * Provides location meta tags for Facebook and other social websites.
 
-**Pro / Power-User Version**
+<strong>Pro / Power-User Features</strong>
 
-* **No Risk 30 Day Refund Policy**
 * Enter the street address, city, state / province, zip / postal code, and country of a place / location.
 * Optionally share a webpage as a Pinterest *Place* Rich Pin (instead of an *Article*, *Product*, etc.).
 
 = App Meta Tags =
 
 <ul>
-<li><strong>Facebook / Open Graph <em>Location</em> Meta Tags</strong> (Free version)
+<li><strong>Facebook / Open Graph <em>Location</em> Meta Tags</strong>
 	<ul>
 	<li>place:location:latitude</li>
 	<li>place:location:longitude</li>
@@ -63,7 +62,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 </ul>
 
 <blockquote>
-<p>The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension. You can use the Free version of WPSSO PLM with both the Free and Pro versions of WPSSO, but <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro</a> requires the use of <a href="http://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> as well.</p>
+<p>The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension. You can use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO, but <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro</a> requires the use of <a href="http://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> as well. <a href="http://wpsso.com/extend/plugins/wpsso-am/">Purchase the WPSSO AM Pro extension</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 </blockquote>
 
 == Installation ==
