@@ -9,7 +9,7 @@
  * Description: WPSSO extension to provide Open Graph / Facebook Location and Pinterest Place Rich Pin meta tags.
  * Requires At Least: 3.1
  * Tested Up To: 4.3.1
- * Version: 1.3.5
+ * Version: 1.3.6
  * 
  * Copyright 2014-2015 - Jean-Sebastien Morisset - http://surniaulula.com/
  */
@@ -26,9 +26,11 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		protected static $instance = null;
 
-		private $opt_version_suffix = 'plm2';
-		private $wpsso_min_version = '3.9';
-		private $wpsso_has_min_ver = true;
+		private static $wpsso_short = 'WPSSO';
+		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
+		private static $wpsso_min_version = '3.9';
+		private static $wpsso_has_min_ver = true;
+		private static $opt_version_suffix = 'plm2';
 
 		public static function &get_instance() {
 			if ( self::$instance === null )
@@ -44,7 +46,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			$this->reg = new WpssoPlmRegister();		// activate, deactivate, uninstall hooks
 
 			if ( is_admin() )
-				add_action( 'admin_init', array( &$this, 'wp_check_for_wpsso' ) );
+				add_action( 'admin_init', array( &$this, 'check_for_wpsso' ) );
 
 			add_filter( 'wpsso_get_config', array( &$this, 'wpsso_get_config' ), 20, 1 );
 			add_action( 'wpsso_init_options', array( &$this, 'wpsso_init_options' ), 20 );
@@ -52,28 +54,32 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			add_action( 'wpsso_init_plugin', array( &$this, 'wpsso_init_plugin' ), 20 );
 		}
 
-		public function wp_check_for_wpsso() {
+		public function check_for_wpsso() {
 			if ( ! class_exists( 'Wpsso' ) )
-				add_action( 'all_admin_notices', array( &$this, 'wp_notice_missing_wpsso' ) );
+				add_action( 'all_admin_notices', array( __CLASS__, 'wpsso_missing_notice' ) );
 		}
 
-		public function wp_notice_missing_wpsso() {
-			$ext_name = WpssoPlmConfig::$cf['plugin']['wpssoplm']['name'];
-			$req_name = 'WordPress Social Sharing Optimization (WPSSO)';
-			$req_uca = 'WPSSO';
-			echo '<div class="error"><p>';
-			echo sprintf( __( 'The %s extension requires the %s plugin &mdash; '.
-				'Please install and activate the %s plugin.', WPSSOPLM_TEXTDOM ),
-					$ext_name, $req_name, $req_uca );
-			echo '</p></div>';
+		public static function wpsso_missing_notice( $deactivate = false ) {
+			$lca = 'wpssoplm';
+			$name = WpssoPlmConfig::$cf['plugin'][$lca]['name'];
+			$short = WpssoPlmConfig::$cf['plugin'][$lca]['short'];
+			if ( $deactivate === true ) {
+				require_once( ABSPATH.'wp-admin/includes/plugin.php' );
+				deactivate_plugins( WPSSOPLM_PLUGINBASE );
+				wp_die( '<p>'.sprintf( __( 'The %s extension requires the %s plugin &mdash; please install and '.
+					'activate the %s plugin before trying to re-activate the %s extension.', WPSSOPLM_TEXTDOM ), 
+						$name, self::$wpsso_name, self::$wpsso_short, $short ).'</p>' );
+			} else echo '<div class="error"><p>'.sprintf( __( 'The %s extension requires the %s plugin &mdash; '.
+					'please install and activate the %s plugin.', WPSSOPLM_TEXTDOM ), 
+						$name, self::$wpsso_name, self::$wpsso_short ).'</p></div>';
 		}
 
 		public function wpsso_get_config( $cf ) {
-			if ( version_compare( $cf['plugin']['wpsso']['version'], $this->wpsso_min_version, '<' ) ) {
-				$this->wpsso_has_min_ver = false;
+			if ( version_compare( $cf['plugin']['wpsso']['version'], self::$wpsso_min_version, '<' ) ) {
+				self::$wpsso_has_min_ver = false;
 				return $cf;
 			}
-			$cf['opt']['version'] .= '-'.$this->opt_version_suffix.
+			$cf['opt']['version'] .= '-'.self::$opt_version_suffix.
 				( is_dir( trailingslashit( dirname( __FILE__ ) ).'lib/pro/' ) ? 'pro' : 'gpl' );
 			$cf = SucomUtil::array_merge_recursive_distinct( $cf, WpssoPlmConfig::$cf );
 			return $cf;
@@ -81,7 +87,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		public function wpsso_init_options() {
 			$this->p =& Wpsso::get_instance();
-			if ( $this->wpsso_has_min_ver === false )
+			if ( self::$wpsso_has_min_ver === false )
 				return;
 			$this->p->is_avail['plm'] = true;
 			$this->p->is_avail['admin']['plm-general'] = true;
@@ -89,25 +95,25 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		}
 
 		public function wpsso_init_objects() {
-			if ( $this->wpsso_has_min_ver === false )
+			if ( self::$wpsso_has_min_ver === false )
 				return;		// stop here
 			WpssoPlmConfig::load_lib( false, 'filters' );
 			$this->p->plm = new WpssoPlmFilters( $this->p, __FILE__ );
 		}
 
 		public function wpsso_init_plugin() {
-			if ( $this->wpsso_has_min_ver === false )
+			if ( self::$wpsso_has_min_ver === false )
 				return $this->warning_wpsso_version( WpssoPlmConfig::$cf['plugin']['wpssoplm'] );
 		}
 
 		private function warning_wpsso_version( $info ) {
 			$wpsso_version = $this->p->cf['plugin']['wpsso']['version'];
 			if ( $this->p->debug->enabled )
-				$this->p->debug->log( $info['name'].' requires WPSSO version '.$this->wpsso_min_version.
+				$this->p->debug->log( $info['name'].' requires WPSSO version '.self::$wpsso_min_version.
 					' or newer ('.$wpsso_version.' installed)' );
 			if ( is_admin() )
 				$this->p->notice->err( 'The '.$info['name'].' version '.$info['version'].
-					' extension requires WPSSO version '.$this->wpsso_min_version.
+					' extension requires WPSSO version '.self::$wpsso_min_version.
 					' or newer (version '.$wpsso_version.' is currently installed).', true );
 		}
 	}
