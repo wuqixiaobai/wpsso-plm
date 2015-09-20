@@ -68,12 +68,10 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		);
 
 		public static function set_constants( $plugin_filepath ) { 
-			$slug = self::$cf['plugin']['wpssoplm']['slug'];
-
 			define( 'WPSSOPLM_FILEPATH', $plugin_filepath );						
 			define( 'WPSSOPLM_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
-			define( 'WPSSOPLM_PLUGINBASE', plugin_basename( $plugin_filepath ) );
-			define( 'WPSSOPLM_TEXTDOM', $slug );
+			define( 'WPSSOPLM_PLUGINBASE', self::$cf['plugin']['wpssoplm']['base'] );	// wpsso-plm/wpsso-plm.php
+			define( 'WPSSOPLM_TEXTDOM', self::$cf['plugin']['wpssoplm']['slug'] );		// wpsso-plm
 			define( 'WPSSOPLM_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
 		}
 
