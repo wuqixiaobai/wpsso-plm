@@ -1,6 +1,8 @@
 === WPSSO Place and Location Meta - for Facebook "Location" and Pinterest "Place" ===
 Plugin Name: WPSSO Place and Location Meta (WPSSO PLM)
 Plugin Slug: wpsso-plm
+Text Domain: wpsso-plm
+Domain Path: /languages
 Contributors: jsmoriss
 Donate Link: https://wpsso.com/
 Tags: wpsso, place, location, venue, longitude, latitude, address, local
