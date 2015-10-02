@@ -108,7 +108,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **Developer Notes**
 	* Added a POT (Portable Object Template) file with translation strings in wpsso-plm/languages/wpsso-plm.pot.
 
-= Version 1.3.6 (2015/09/19) =
+= Version 1.3.6 2015/09/19 =
 
 * **New Features**
 	* *None*
@@ -119,7 +119,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **Developer Notes**
 	* Added a self-deactivation feature when WPSSO PLM is activated and WPSSO is missing. 
 
-= Version 1.3.5 (2015/09/09) =
+= Version 1.3.5 2015/09/09 =
 
 * **New Features**
 	* *None*
@@ -130,7 +130,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **Developer Notes**
 	* Added a WpssoPlmRegister class with `WpssoUtil::save_time()` calls during activation to save install / activation / update timestamps.
 
-= Version 1.3.4 (2015/09/03) =
+= Version 1.3.4 2015/09/03 =
 
 * **New Features**
 	* *None*
@@ -142,7 +142,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 	* Updated the tooltip message filter names for WPSSO v3.8.
 	* Removed the WPSSO PLM specific 'installed_version' filter.
 
-= Version 1.3.3 (2015/08/04) =
+= Version 1.3.3 2015/08/04 =
 
 * **New Features**
 	* *None*
@@ -165,7 +165,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **Developer Notes**
 	* *None*
 
-= Version 1.3.1 (2015/04/21) =
+= Version 1.3.1 2015/04/21 =
 
 * **New Features**
 	* *None*
@@ -174,7 +174,7 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 * **Bugfixes**
 	* *None*
 
-= Version 1.3 (2015/04/12) =
+= Version 1.3 2015/04/12 =
 
 * **New Features**
 	* *None*
@@ -188,5 +188,5 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 
 = 1.3.6 =
 
-Added a self-deactivation feature when WPSSO PLM is activated and WPSSO is missing. 
+2015/09/19 Added a self-deactivation feature when WPSSO PLM is activated and WPSSO is missing. 
 
