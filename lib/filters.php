@@ -146,10 +146,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-location-meta-tags':
-					$text = 'If location information is entered under the <em>Place / Location</em> tab (in the Social Settings metabox), '.$short.' will include additional meta tags for Facebook.';
+					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the Social Settings metabox), %2$s will include additional meta tags for %3$s.', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ), $short, 'Facebook' );
 					break;
 				case 'tooltip-side-place-meta-tags':
-					$text = 'If location information is entered under the <em>Place / Location</em> tab (in the Social Settings metabox), '.$short_pro.' will include additional meta tags for Pinterest\'s <em>Place</em> Rich Pin.';
+					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the Social Settings metabox), %2$s will include additional meta tags for %3$s.', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ), $short_pro, 'Pinterest\'s <em>Place</em> Rich Pin' );
 					break;
 			}
 			return $text;
@@ -164,31 +164,31 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			switch ( $idx ) {
 				case 'tooltip-post-plm_latitude':
-					$text = 'The numeric <em>decimal degrees</em> latitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
+					$text = sprintf( __( 'The numeric <em>decimal degrees</em> latitude for the content of this %s.', 'wpsso-plm' ), $ptn ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
 					break;
 				case 'tooltip-post-plm_longitude':
-					$text = 'The numeric <em>decimal degrees</em> longitude for the content of this '.$ptn.'. You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address. <strong>This field is required to include the Place and Location meta tags.</strong>';
+					$text = sprintf( __( 'The numeric <em>decimal degrees</em> longitude for the content of this %s.', 'wpsso-plm' ), $ptn ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
 					break;
 				case 'tooltip-post-plm_place':
-					$text = 'Share this '.$ptn.' as an Open Graph <em>Place</em> Rich Pin.';
+					$text = sprintf( __( 'Share this %s as an Open Graph <em>Place</em> Rich Pin.', 'wpsso-plm' ), $ptn );
 					break;
 				case 'tooltip-post-plm_altitude':
-					$text = 'An optional numeric altitude (in feet) for the content of this '.$ptn.'.';
+					$text = sprintf( __( 'An optional numeric altitude (in feet) for the content of this %s.', 'wpsso-plm' ), $ptn );
 					break;
 				case 'tooltip-post-plm_streetaddr':
-					$text = 'An optional Street Address for the <em>Place</em> meta tags.';
+					$text = __( 'An optional Street Address for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_city':
-					$text = 'An optional City name for the <em>Place</em> meta tags.';
+					$text = __( 'An optional City name for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_state':
-					$text = 'An optional State or Province name for the <em>Place</em> meta tags.';
+					$text = __( 'An optional State or Province name for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_zipcode':
-					$text = 'An optional Zip or Postal Code for the <em>Place</em> meta tags.';
+					$text = __( 'An optional Zip or Postal Code for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_country':
-					$text = 'An optional Country name for the <em>Place</em> meta tags.';
+					$text = __( 'An optional Country name for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
 			}
 			return $text;
@@ -200,7 +200,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			switch ( $idx ) {
 				case 'tooltip-plm_add_to':
-					$text = 'Include the <em>Place / Location</em> tab in the Social Settings metabox on Posts, Pages, etc.';
+					$text = sprintf( __( 'Add a <em>%s</em> tab to the Social Settings metabox on Posts, Pages, etc.', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ) );
 					break;
 			}
 			return $text;
@@ -209,9 +209,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_messages_info( $text, $idx ) {
 			switch ( $idx ) {
 				case 'info-place-general':
-					$text = '<blockquote style="margin-top:0;margin-bottom:10px;">
-					<p>A <em>Place / Location</em> tab can be added to the Social Settings metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).</p>
-					</blockquote>';
+					$text = '<blockquote class="top-info"><p>'.sprintf( __( 'A <em>%s</em> tab can be added to the Social Settings metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ) ).'</p></blockquote>';
 					break;
 			}
 			return $text;
