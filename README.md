@@ -55,7 +55,10 @@
 <li>place:country_name</li>
 </ul></li>
 <li><strong>Schema Meta Tags</strong> (Pro version)
-    * address</li>
+
+<ul>
+<li>address</li>
+</ul></li>
 </ul>
 
 <h4>WPSSO Plugin Required</h4>

@@ -46,7 +46,7 @@ WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPre
 	* place:postal_code
 	* place:country_name
 * **Schema Meta Tags** (Pro version)
-        * address
+	* address
 
 = WPSSO Plugin Required =
 
