@@ -19,6 +19,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			'opt' => array(				// options
 				'defaults' => array(
 					'add_meta_itemprop_address' => 1,
+					'add_meta_property_og:latitude' => 1,
+					'add_meta_property_og:longitude' => 1,
+					'add_meta_property_og:altitude' => 1,
 					'add_meta_property_place:location:latitude' => 1,
 					'add_meta_property_place:location:longitude' => 1,
 					'add_meta_property_place:location:altitude' => 1,
@@ -40,7 +43,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,		// option defaults
 				'get_post_defaults' => 1,	// post option defaults
-				'doctype_prefix_ns' => 1,	// open graph namespace
+				'og_prefix_ns' => 1,	// open graph namespace
 				'og_seed' => 3,			// open graph meta tags
 			) );
 			if ( is_admin() ) {
@@ -57,7 +60,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 		}
 
-		public function filter_doctype_prefix_ns( $ns ) {
+		public function filter_og_prefix_ns( $ns ) {
 			$ns['place'] = 'http://ogp.me/ns/place#';
 			return $ns;
 		}
@@ -79,18 +82,28 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			$opts = $this->p->mods['util']['post']->get_options( $obj->ID );
 
-			// the latitude and longitude values are required for the place meta tags
-			if ( ! empty( $opts['plm_latitude'] ) && ! empty( $opts['plm_longitude'] ) ) {
+			// the latitude and longitude values are both required for the place meta tags
+			if ( ! empty( $opts['plm_latitude'] ) && 
+				! empty( $opts['plm_longitude'] ) ) {
 
-				$og_place = array();
-				$og_place['place:location:latitude'] = $opts['plm_latitude'];
-				$og_place['place:location:longitude'] = $opts['plm_longitude'];
-				if ( ! empty( $opts['plm_altitude'] ) )
+				$og_place = array(
+					'og:latitude' => $opts['plm_latitude'],
+					'og:longitude' => $opts['plm_longitude'],
+					'place:location:latitude' => $opts['plm_latitude'],
+					'place:location:longitude' => $opts['plm_longitude'],
+				);
+
+				if ( ! empty( $opts['plm_altitude'] ) ) {
+					$og_place['og:altitude'] = $opts['plm_altitude'];
 					$og_place['place:location:altitude'] = $opts['plm_altitude'];
+				}
+
+				ksort( $og_place );
 
 				return array_merge( $og, apply_filters( $this->p->cf['lca'].'_og_place', 
 					$og_place, $use_post, $obj ) );
 			}
+
 			return $og;
 		}
 
@@ -127,7 +140,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'plm_latitude':
 				case 'plm_longitude':
 				case 'plm_altitude':
-					return 'numeric';	// must be numeric (blank or zero is ok)
+					return 'blank_num';	// must be numeric (blank or zero is ok)
 					break;
 				case 'plm_streetaddr':
 				case 'plm_city':
@@ -146,10 +159,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-location-meta-tags':
-					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the Social Settings metabox), %2$s will include additional meta tags for %3$s.', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ), $short, 'Facebook' );
+					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Facebook' );
 					break;
 				case 'tooltip-side-place-meta-tags':
-					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the Social Settings metabox), %2$s will include additional meta tags for %3$s.', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ), $short_pro, 'Pinterest\'s <em>Place</em> Rich Pin' );
+					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Pinterest <em>Place</em> Rich Pin' );
 					break;
 			}
 			return $text;
@@ -159,21 +172,18 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			if ( strpos( $idx, 'tooltip-post-plm_' ) !== 0 )
 				return $text;
 
-			$ptn = empty( $atts['ptn'] ) ? 
-				'Post' : $atts['ptn'];
-
 			switch ( $idx ) {
 				case 'tooltip-post-plm_latitude':
-					$text = sprintf( __( 'The numeric <em>decimal degrees</em> latitude for the content of this %s.', 'wpsso-plm' ), $ptn ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
+					$text = __( 'The numeric <em>decimal degrees</em> latitude for the content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
 					break;
 				case 'tooltip-post-plm_longitude':
-					$text = sprintf( __( 'The numeric <em>decimal degrees</em> longitude for the content of this %s.', 'wpsso-plm' ), $ptn ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
+					$text = __( 'The numeric <em>decimal degrees</em> longitude for the content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
 					break;
 				case 'tooltip-post-plm_place':
-					$text = sprintf( __( 'Share this %s as an Open Graph <em>Place</em> Rich Pin.', 'wpsso-plm' ), $ptn );
+					$text = __( 'Share this webpage as an Open Graph and Pinterest <em>Place</em> Rich Pin.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_altitude':
-					$text = sprintf( __( 'An optional numeric altitude (in feet) for the content of this %s.', 'wpsso-plm' ), $ptn );
+					$text = __( 'An optional numeric altitude (in meters above sea level) for the content of this webpage.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_streetaddr':
 					$text = __( 'An optional Street Address for the <em>Place</em> meta tags.', 'wpsso-plm' );
@@ -200,7 +210,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			switch ( $idx ) {
 				case 'tooltip-plm_add_to':
-					$text = sprintf( __( 'Add a <em>%s</em> tab to the Social Settings metabox on Posts, Pages, etc.', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ) );
+					$text = sprintf( __( 'Add a <em>%1$s</em> tab to the %2$s metabox on Posts, Pages, etc.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) );
 					break;
 			}
 			return $text;
@@ -209,7 +219,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_messages_info( $text, $idx ) {
 			switch ( $idx ) {
 				case 'info-place-general':
-					$text = '<blockquote class="top-info"><p>'.sprintf( __( 'A <em>%s</em> tab can be added to the Social Settings metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'normal metabox tab', 'wpsso-plm' ) ).'</p></blockquote>';
+					$text = '<blockquote class="top-info"><p>'.sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) ).'</p></blockquote>';
 					break;
 			}
 			return $text;

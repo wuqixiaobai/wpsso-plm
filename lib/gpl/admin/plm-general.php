@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmgeneral' ) ) {
 				$new_tabs[$key] = $val;
 				if ( $key === 'media' )
 					$new_tabs['plm'] = _x( 'Place / Location',
-						'normal metabox tab', 'wpsso-plm' );
+						'metabox tab', 'wpsso-plm' );
 			}
 			return $new_tabs;
 		}
@@ -39,49 +39,48 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmgeneral' ) ) {
 		public function filter_post_plm_rows( $rows, $form, $head_info ) {
 
 			$rows[] = '<td colspan="2" class="subsection" style="margin-top:0;"><h4>'.
-				__( 'Pinterest Place Rich Pin', 'wpsso-plm' ).'</h4></td>';
+				__( 'Pinterest Place Rich Pin', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 
 			$rows[] = '<td colspan="2" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssoplm' ) ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'Share as a <em>Place</em>',
-				'wpsso-plm' ), 'medium', 'post-plm_place' ). 
+			$rows[] = $this->p->util->get_th( _x( 'Share as a <em>Place</em>',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_place' ). 
 			'<td class="blank">'.$form->get_no_checkbox( 'plm_place' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'Street Address',
-				'wpsso-plm' ), 'medium', 'post-plm_streetaddr' ). 
+			$rows[] = $this->p->util->get_th( _x( 'Street Address',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_streetaddr' ). 
 			'<td class="blank">'.$form->get_options( 'plm_streetaddr' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'City',
-				'wpsso-plm' ), 'medium', 'post-plm_city' ). 
+			$rows[] = $this->p->util->get_th( _x( 'City',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_city' ). 
 			'<td class="blank">'.$form->get_options( 'plm_city' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'State / Province',
-				'wpsso-plm' ), 'medium', 'post-plm_state' ). 
+			$rows[] = $this->p->util->get_th( _x( 'State / Province',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_state' ). 
 			'<td class="blank">'.$form->get_options( 'plm_state' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'Zip / Postal Code',
-				'wpsso-plm' ), 'medium', 'post-plm_zipcode' ). 
+			$rows[] = $this->p->util->get_th( _x( 'Zip / Postal Code',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_zipcode' ). 
 			'<td class="blank">'.$form->get_options( 'plm_zipcode' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'Country',
-				'wpsso-plm' ), 'medium', 'post-plm_country' ). 
+			$rows[] = $this->p->util->get_th( _x( 'Country',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_country' ). 
 			'<td class="blank">'.$form->get_options( 'plm_country' ).'</td>';
 
 			$rows[] = '<td colspan="2" class="subsection"><h4>'.
-				__( 'Facebook / Open Graph Location',
-					'wpsso-plm' ).'</h4></td>';
+				__( 'Facebook / Open Graph Location', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 
-			$rows[] = $this->p->util->get_th( __( 'Latitude',
-				'wpsso-plm' ), 'medium', 'post-plm_latitude' ). 
+			$rows[] = $this->p->util->get_th( _x( 'Latitude',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_latitude' ). 
 			'<td>'.$form->get_input( 'plm_latitude', 'required' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'Longitude',
-				'wpsso-plm' ), 'medium', 'post-plm_longitude' ). 
+			$rows[] = $this->p->util->get_th( _x( 'Longitude',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_longitude' ). 
 			'<td>'.$form->get_input( 'plm_longitude', 'required' ).'</td>';
 
-			$rows[] = $this->p->util->get_th( __( 'Altitude in Feet',
-				'wpsso-plm' ), 'medium', 'post-plm_altitude' ). 
+			$rows[] = $this->p->util->get_th( _x( 'Altitude in Meters',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_altitude' ). 
 			'<td>'.$form->get_input( 'plm_altitude' ).'</td>';
 
 			return $rows;

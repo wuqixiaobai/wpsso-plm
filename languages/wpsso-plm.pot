@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.3.7\n"
+"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.3.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2015-10-06 12:26:35+00:00\n"
+"POT-Creation-Date: 2015-10-11 23:00:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,83 +12,100 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/config-lib-extract.php:3
+#: lib/config-gettext-extract.php:3
 msgctxt "lib file description"
-msgid "Place and Location Meta"
+msgid "Place / Location Meta"
 msgstr ""
 
-#: lib/filters.php:149 lib/filters.php:152
+#: lib/config-gettext-extract.php:4
+msgctxt "plugin description"
 msgid ""
-"If location information is entered under the <em>%1$s</em> tab (in the "
-"Social Settings metabox), %2$s will include additional meta tags for %3$s."
+"WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
+"\"Place\" Rich Pin meta tags."
 msgstr ""
 
-#: lib/filters.php:149 lib/filters.php:152 lib/filters.php:203
-#: lib/filters.php:212 lib/gpl/admin/plm-general.php:33
+#: lib/filters.php:162 lib/filters.php:165
+msgid ""
+"If location information is entered under the <em>%1$s</em> tab (in the %2$s "
+"metabox), %3$s will include additional meta tags for %4$s."
+msgstr ""
+
+#: lib/filters.php:162 lib/filters.php:165 lib/filters.php:213
+#: lib/filters.php:222 lib/gpl/admin/plm-general.php:33
 #: lib/pro/admin/plm-general.php:40
-msgctxt "normal metabox tab"
+msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:167
-msgid ""
-"The numeric <em>decimal degrees</em> latitude for the content of this %s."
+#: lib/filters.php:162 lib/filters.php:165 lib/filters.php:213
+#: lib/filters.php:222
+msgctxt "metabox title"
+msgid "Social Settings"
 msgstr ""
 
-#: lib/filters.php:167 lib/filters.php:170
+#: lib/filters.php:177
+msgid ""
+"The numeric <em>decimal degrees</em> latitude for the content of this "
+"webpage."
+msgstr ""
+
+#: lib/filters.php:177 lib/filters.php:180
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:167 lib/filters.php:170
+#: lib/filters.php:177 lib/filters.php:180
 msgid "This field is required to include the Place and Location meta tags."
 msgstr ""
 
-#: lib/filters.php:170
+#: lib/filters.php:180
 msgid ""
-"The numeric <em>decimal degrees</em> longitude for the content of this %s."
+"The numeric <em>decimal degrees</em> longitude for the content of this "
+"webpage."
 msgstr ""
 
-#: lib/filters.php:173
-msgid "Share this %s as an Open Graph <em>Place</em> Rich Pin."
+#: lib/filters.php:183
+msgid ""
+"Share this webpage as an Open Graph and Pinterest <em>Place</em> Rich Pin."
 msgstr ""
 
-#: lib/filters.php:176
-msgid "An optional numeric altitude (in feet) for the content of this %s."
+#: lib/filters.php:186
+msgid ""
+"An optional numeric altitude (in meters above sea level) for the content of "
+"this webpage."
 msgstr ""
 
-#: lib/filters.php:179
+#: lib/filters.php:189
 msgid "An optional Street Address for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:182
+#: lib/filters.php:192
 msgid "An optional City name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:185
+#: lib/filters.php:195
 msgid "An optional State or Province name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:188
+#: lib/filters.php:198
 msgid "An optional Zip or Postal Code for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:191
+#: lib/filters.php:201
 msgid "An optional Country name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:203
-msgid ""
-"Add a <em>%s</em> tab to the Social Settings metabox on Posts, Pages, etc."
+#: lib/filters.php:213
+msgid "Add a <em>%1$s</em> tab to the %2$s metabox on Posts, Pages, etc."
 msgstr ""
 
-#: lib/filters.php:212
+#: lib/filters.php:222
 msgid ""
-"A <em>%s</em> tab can be added to the Social Settings metabox on Posts, "
-"Pages, and custom post types, allowing you to enter specific location "
-"information for that webpage (ie. GPS coordinates and/or street address)."
+"A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
+"custom post types, allowing you to enter specific location information for "
+"that webpage (ie. GPS coordinates and/or street address)."
 msgstr ""
 
 #: lib/gpl/admin/plm-general.php:42 lib/pro/admin/plm-general.php:49
@@ -96,26 +113,32 @@ msgid "Pinterest Place Rich Pin"
 msgstr ""
 
 #: lib/gpl/admin/plm-general.php:47 lib/pro/admin/plm-general.php:51
+msgctxt "option label"
 msgid "Share as a <em>Place</em>"
 msgstr ""
 
 #: lib/gpl/admin/plm-general.php:51 lib/pro/admin/plm-general.php:55
+msgctxt "option label"
 msgid "Street Address"
 msgstr ""
 
 #: lib/gpl/admin/plm-general.php:55 lib/pro/admin/plm-general.php:59
+msgctxt "option label"
 msgid "City"
 msgstr ""
 
 #: lib/gpl/admin/plm-general.php:59 lib/pro/admin/plm-general.php:63
+msgctxt "option label"
 msgid "State / Province"
 msgstr ""
 
 #: lib/gpl/admin/plm-general.php:63 lib/pro/admin/plm-general.php:67
+msgctxt "option label"
 msgid "Zip / Postal Code"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:67 lib/pro/admin/plm-general.php:71
+#: lib/gpl/admin/plm-general.php:67
+msgctxt "option label"
 msgid "Country"
 msgstr ""
 
@@ -123,25 +146,52 @@ msgstr ""
 msgid "Facebook / Open Graph Location"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:75 lib/pro/admin/plm-general.php:79
+#: lib/gpl/admin/plm-general.php:74 lib/pro/admin/plm-general.php:78
+msgctxt "option label"
 msgid "Latitude"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:79 lib/pro/admin/plm-general.php:83
+#: lib/gpl/admin/plm-general.php:78 lib/pro/admin/plm-general.php:82
+msgctxt "option label"
 msgid "Longitude"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:83 lib/pro/admin/plm-general.php:87
-msgid "Altitude in Feet"
+#: lib/gpl/admin/plm-general.php:82 lib/pro/admin/plm-general.php:86
+msgctxt "option label"
+msgid "Altitude in Meters"
+msgstr ""
+
+#: lib/pro/admin/plm-general.php:71
+msgctxt "medium"
+msgid "Country"
 msgstr ""
 
 #: lib/submenu/plm-general.php:24
-msgctxt "normal metabox title"
-msgid "Place / Location"
+msgctxt "metabox title"
+msgid "Place and Location Meta"
 msgstr ""
 
 #: lib/submenu/plm-general.php:50
+msgctxt "option label"
 msgid "Show Tab on Post Types"
+msgstr ""
+
+#: wpsso-plm.php:73
+msgid ""
+"The %1$s extension requires the %2$s plugin &mdash; please install and "
+"activate the %3$s plugin before trying to re-activate the %4$s extension."
+msgstr ""
+
+#: wpsso-plm.php:75
+msgid ""
+"The %1$s extension requires the %2$s plugin &mdash; please install and "
+"activate the %3$s plugin."
+msgstr ""
+
+#: wpsso-plm.php:125
+msgid ""
+"The %1$s extension version %2$s requires the use of %3$s version %4$s or "
+"newer (version %5$s is currently installed)."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
