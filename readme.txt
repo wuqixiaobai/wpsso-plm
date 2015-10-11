@@ -79,6 +79,18 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * [GitHub](https://github.com/SurniaUlula/wpsso-plm)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
+= Version 1.3.8 2015/10/12 =
+
+* **New Features**
+	* Added a French language (fr_FR) translation.
+* **Improvements**
+	* Minor improvements to title / option text strings and contextual help messages.
+	* Added the og:latitude, og:longitude, and og:altitude meta tags (same as the corresponding place:location meta tags).
+* **Bugfixes**
+	* *None*
+* **Developer Notes**
+	* *None*
+
 = Version 1.3.7 2015/10/06 =
 
 * **New Features**
@@ -169,11 +181,11 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 == Upgrade Notice ==
 
+= 1.3.8 =
+
+2015/10/12 Added a French language (fr_FR) translation. Minor improvements to title / option text strings and contextual help messages.
+
 = 1.3.7 =
 
 2015/10/06 Added translation function calls to all option labels and popup help messages. Added POT (Portable Object Template) file with translation strings in languages/wpsso-plm.pot.
-
-= 1.3.6 =
-
-2015/09/19 Added a self-deactivation feature when WPSSO PLM is activated and WPSSO is missing. 
 
