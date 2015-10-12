@@ -18,7 +18,7 @@
 
 <p>WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph <em>Location</em> and Pinterest <em>Place</em> Rich Pin meta tags in your webpages.</p>
 
-<p><strong>Available in multiple languages:</strong></p>
+<h4>Available in Multiple Languages</h4>
 
 <ul>
 <li>English (US)</li>
