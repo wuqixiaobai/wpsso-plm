@@ -20,7 +20,7 @@
 
 <h4>Quick List of Features</h4>
 
-<p><strong>Free / Basic Features</strong></p>
+<p><strong>WPSSO PLM Free / Basic Features</strong></p>
 
 <ul>
 <li>Show the <em>Place / Location</em> tab on Posts, Pages, and custom post types (e-commerce Product pages, for example).</li>
@@ -28,7 +28,7 @@
 <li>Provides location meta tags for Facebook and other social websites.</li>
 </ul>
 
-<p><strong>Pro / Power-User Features</strong></p>
+<p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
 
 <ul>
 <li>Enter the street address, city, state / province, zip / postal code, and country of a Place / Location.</li>

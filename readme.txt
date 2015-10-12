@@ -22,13 +22,13 @@ WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPre
 
 = Quick List of Features =
 
-**Free / Basic Features**
+**WPSSO PLM Free / Basic Features**
 
 * Show the *Place / Location* tab on Posts, Pages, and custom post types (e-commerce Product pages, for example).
 * Enter the latitude, longitude, and altitude of a location.
 * Provides location meta tags for Facebook and other social websites.
 
-**Pro / Power-User Features**
+**WPSSO PLM Pro / Power-User Features**
 
 * Enter the street address, city, state / province, zip / postal code, and country of a Place / Location.
 * Optionally share the webpage as a Pinterest *Place* Rich Pin (instead of an *Article*, *Product*, etc.).
