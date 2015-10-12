@@ -20,6 +20,12 @@ WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place
 
 WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](https://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph *Location* and Pinterest *Place* Rich Pin meta tags in your webpages.
 
+**Available in multiple languages:**
+
+* English (US)
+* French (France)
+* More to come...
+
 = Quick List of Features =
 
 **WPSSO PLM Free / Basic Features**
@@ -48,7 +54,7 @@ WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPre
 * **Schema Meta Tags** (Pro version)
 	* address
 
-= WPSSO Plugin Required =
+= WPSSO Framework Required =
 
 The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension. You can use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO, but [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) requires the use of the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) plugin as well. [Purchase the WPSSO PLM Pro extension](http://wpsso.com/extend/plugins/wpsso-plm/) (includes a *No Risk 30 Day Refund Policy*).
 
