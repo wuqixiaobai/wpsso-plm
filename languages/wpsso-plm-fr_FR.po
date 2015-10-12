@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.3.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2015-10-11 18:52-0400\n"
-"PO-Revision-Date: 2015-10-11 18:55-0400\n"
+"PO-Revision-Date: 2015-10-11 20:55-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -33,6 +33,8 @@ msgid ""
 "If location information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include "
 "additional meta tags for %4$s."
 msgstr ""
+"Si des informations de position sont entrées sous l'onglet <em>%1$s</em> (dans le %2$s metabox), %3$s "
+"ajoutera des balises méta supplémentaires pour %4$s."
 
 #: lib/filters.php:162 lib/filters.php:165 lib/filters.php:213 lib/filters.php:222
 #: lib/gpl/admin/plm-general.php:33 lib/pro/admin/plm-general.php:40
@@ -68,11 +70,13 @@ msgstr "Les <em>degrés décimaux</em> numérique de longitude pour le contenu d
 
 #: lib/filters.php:183
 msgid "Share this webpage as an Open Graph and Pinterest <em>Place</em> Rich Pin."
-msgstr ""
+msgstr "Partager cette page Web en tant que <em>Place</em> Open Graph et Pinterest Rich Pin."
 
 #: lib/filters.php:186
 msgid "An optional numeric altitude (in meters above sea level) for the content of this webpage."
 msgstr ""
+"Une altitude numérique optionnel (en mètres au-dessus du niveau de mer) pour le contenu de cette page "
+"Web."
 
 #: lib/filters.php:189
 msgid "An optional Street Address for the <em>Place</em> meta tags."
@@ -96,13 +100,16 @@ msgstr "Un nom de pays optionnel pour les balises méta de <em>Place</em>."
 
 #: lib/filters.php:213
 msgid "Add a <em>%1$s</em> tab to the %2$s metabox on Posts, Pages, etc."
-msgstr ""
+msgstr "Ajouter l'onglet <em>%1$s</em> dans la metabox %2$s, sur les Articles, Pages, etc.."
 
 #: lib/filters.php:222
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing "
 "you to enter specific location information for that webpage (ie. GPS coordinates and/or street address)."
 msgstr ""
+"Un onglet <em>%1$s</em> peut être ajouté à la metabox %2$s sur les Articles, Pages et les articles de "
+"type personnalisé, vous permettant d'entrer des informations sur un endroit spécifique (c'est à dire, "
+"des coordonnées GPS et/ou adresse postale)."
 
 #: lib/gpl/admin/plm-general.php:42 lib/pro/admin/plm-general.php:49
 msgid "Pinterest Place Rich Pin"
