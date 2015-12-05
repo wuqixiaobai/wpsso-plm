@@ -85,7 +85,22 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * [GitHub](https://github.com/SurniaUlula/wpsso-plm)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
-= Version 1.3.8 2015/10/12 =
+= Version 1.3.9 (TBD) =
+
+Official announcement: N/A
+
+* **New Features**
+	* *None*
+* **Improvements**
+	* *None*
+* **Bugfixes**
+	* *None*
+* **Developer Notes**
+	* Moved the enable/disable meta tag setting option keys into the main WPSSO config.
+
+= Version 1.3.8 (2015/10/12) =
+
+Official announcement: N/A
 
 * **New Features**
 	* Added a French language (fr_FR) translation.
@@ -98,7 +113,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * **Developer Notes**
 	* *None*
 
-= Version 1.3.7 2015/10/06 =
+= Version 1.3.7 (2015/10/06) =
+
+Official announcement: N/A
 
 * **New Features**
 	* *None*
@@ -110,7 +127,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * **Developer Notes**
 	* Added a POT (Portable Object Template) file with translation strings in languages/wpsso-plm.pot.
 
-= Version 1.3.6 2015/09/19 =
+= Version 1.3.6 (2015/09/19) =
+
+Official announcement: N/A
 
 * **New Features**
 	* *None*
@@ -121,7 +140,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * **Developer Notes**
 	* Added a self-deactivation feature when WPSSO PLM is activated and WPSSO is missing. 
 
-= Version 1.3.5 2015/09/09 =
+= Version 1.3.5 (2015/09/09) =
+
+Official announcement: N/A
 
 * **New Features**
 	* *None*
@@ -132,7 +153,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * **Developer Notes**
 	* Added a WpssoPlmRegister class with `WpssoUtil::save_time()` calls during activation to save install / activation / update timestamps.
 
-= Version 1.3.4 2015/09/03 =
+= Version 1.3.4 (2015/09/03) =
+
+Official announcement: N/A
 
 * **New Features**
 	* *None*
@@ -144,7 +167,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 	* Updated the tooltip message filter names for WPSSO v3.8.
 	* Removed the WPSSO PLM specific 'installed_version' filter.
 
-= Version 1.3.3 2015/08/04 =
+= Version 1.3.3 (2015/08/04) =
+
+Official announcement: N/A
 
 * **New Features**
 	* *None*
@@ -158,6 +183,8 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 = Version 1.3.2 =
 
+Official announcement: N/A
+
 * **New Features**
 	* *None*
 * **Improvements**
@@ -167,7 +194,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * **Developer Notes**
 	* *None*
 
-= Version 1.3.1 2015/04/21 =
+= Version 1.3.1 (2015/04/21) =
+
+Official announcement: N/A
 
 * **New Features**
 	* *None*
@@ -176,7 +205,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * **Bugfixes**
 	* *None*
 
-= Version 1.3 2015/04/12 =
+= Version 1.3 (2015/04/12) =
+
+Official announcement: N/A
 
 * **New Features**
 	* *None*
@@ -191,8 +222,4 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 = 1.3.8 =
 
 2015/10/12 Added a French language (fr_FR) translation. Minor improvements to title / option text strings and contextual help messages.
-
-= 1.3.7 =
-
-2015/10/06 Added translation function calls to all option labels and popup help messages. Added POT (Portable Object Template) file with translation strings in languages/wpsso-plm.pot.
 
