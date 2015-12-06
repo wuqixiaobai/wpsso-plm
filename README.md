@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place and Location Meta (WPSSO PLM)</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot; and Pinterest &quot;Place&quot; Rich Pin meta tags.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.3.8</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.3.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>

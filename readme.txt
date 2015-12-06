@@ -10,7 +10,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.1
 Tested Up To: 4.3.1
-Stable Tag: 1.3.8
+Stable Tag: 1.3.9
 
 WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.
 
@@ -85,7 +85,7 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * [GitHub](https://github.com/SurniaUlula/wpsso-plm)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
-= Version 1.3.9 (TBD) =
+= Version 1.3.9 (2015/12/06) =
 
 Official announcement: N/A
 
@@ -96,7 +96,7 @@ Official announcement: N/A
 * **Bugfixes**
 	* *None*
 * **Developer Notes**
-	* Moved the enable/disable meta tag setting option keys into the main WPSSO config.
+	* Moved the default enable/disable meta tag option keys into the main WPSSO config.
 
 = Version 1.3.8 (2015/10/12) =
 
@@ -218,6 +218,10 @@ Official announcement: N/A
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.3.9 =
+
+2015/12/06 Moved the default enable/disable meta tag option keys into the main WPSSO config.
 
 = 1.3.8 =
 
