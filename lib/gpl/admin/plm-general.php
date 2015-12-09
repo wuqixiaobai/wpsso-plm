@@ -15,15 +15,12 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmgeneral' ) ) {
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
 			$this->p->util->add_plugin_filters( $this, array( 
-				'post_tabs' => 1,		// add the Place / Location tab
+				'post_tabs' => 3,		// add the Place / Location tab
 				'post_plm_rows' => 3,		// content for the Place / Location tab
 			), 200 );
 		}
 
-		public function filter_post_tabs( $tabs ) {
-			if ( ( $obj = $this->p->util->get_post_object() ) === false ) 
-				return $tabs;
-			$post_type = get_post_type_object( $obj->post_type );
+		public function filter_post_tabs( $tabs, $post, $post_type ) {
 			if ( empty( $this->p->options[ 'plm_add_to_'.$post_type->name ] ) )
 				return $tabs;
 			$new_tabs = array();	// new array to insert plm after media tab

@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 					$rows[] = '<td colspan="2">'.$this->p->msgs->get( 'info-place-general' ).'</td>';
 
 					$checkboxes = '';
-					foreach ( $this->p->util->get_post_types( 'frontend' ) as $post_type )
+					foreach ( $this->p->util->get_post_types() as $post_type )
 						$checkboxes .= '<p>'.$this->form->get_checkbox( 'plm_add_to_'.$post_type->name ).' '.
 							$post_type->label.' '.( empty( $post_type->description ) ? 
 								'' : '('.$post_type->description.')' ).'</p>';

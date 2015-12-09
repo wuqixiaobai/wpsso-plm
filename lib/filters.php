@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_get_defaults( $opts_def ) {
 			$opts_def = array_merge( $opts_def, self::$cf['opt']['defaults'] );
-			$opts_def = $this->p->util->push_add_to_options( $opts_def, array( 'pm' => 'frontend' ) );
+			$opts_def = $this->p->util->add_ptns_to_opts( $opts_def, 'pm_add_to' );
 			return $opts_def;
 		}
 

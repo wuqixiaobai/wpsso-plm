@@ -11,8 +11,8 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: WPSSO extension to provide Open Graph / Facebook Location and Pinterest Place Rich Pin meta tags.
  * Requires At Least: 3.1
- * Tested Up To: 4.3.1
- * Version: 1.3.9
+ * Tested Up To: 4.4
+ * Version: 1.3.10
  * 
  * Copyright 2014-2015 - Jean-Sebastien Morisset - http://surniaulula.com/
  */
@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		private static $wpsso_short = 'WPSSO';
 		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
-		private static $wpsso_min_version = '3.17.0';
+		private static $wpsso_min_version = '3.18.0';
 		private static $wpsso_has_min_ver = true;
 		private static $opt_version_suffix = 'plm3';
 
