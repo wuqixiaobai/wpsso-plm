@@ -130,9 +130,9 @@ Official announcement: N/A
 
 = 1.3.10 =
 
-2015/12/09 Updated the required and tested version strings. Updated method names and arguments for WPSSO v3.18.0. 
+2015/12/09 - Updated the required and tested version strings. Updated method names and arguments for WPSSO v3.18.0. 
 
 = 1.3.9 =
 
-2015/12/06 Moved the default enable/disable meta tag option keys into the main WPSSO config.
+2015/12/06 - Moved the default enable/disable meta tag option keys into the main WPSSO config.
 
