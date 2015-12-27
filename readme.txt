@@ -85,6 +85,18 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * [GitHub](https://github.com/SurniaUlula/wpsso-plm)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
+= Version 1.3.11 (2015/12/27) =
+
+* **New Features**
+	* *None*
+* **Improvements**
+	* *None*
+* **Bugfixes**
+	* *None*
+* **Developer Notes**
+	* Updated minimum required version to WPSSO v3.20.0.
+	* Updated the settings page construct to include the library name argument.
+
 = Version 1.3.10 (2015/12/09) =
 
 * **New Features**
@@ -128,11 +140,11 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
+= 1.3.11 =
+
+2015/12/27 - Updated minimum required version to WPSSO v3.20.0. Updated the settings page construct to include the library name argument.
+
 = 1.3.10 =
 
 2015/12/09 - Updated the required and tested version strings. Updated method names and arguments for WPSSO v3.18.0. 
-
-= 1.3.9 =
-
-2015/12/06 - Moved the default enable/disable meta tag option keys into the main WPSSO config.
 
