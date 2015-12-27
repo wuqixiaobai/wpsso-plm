@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.3.10\n"
+"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.3.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2015-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -161,12 +161,12 @@ msgctxt "option label"
 msgid "Altitude in Meters"
 msgstr ""
 
-#: lib/submenu/plm-general.php:24
+#: lib/submenu/plm-general.php:25
 msgctxt "metabox title"
 msgid "Place and Location Meta"
 msgstr ""
 
-#: lib/submenu/plm-general.php:50
+#: lib/submenu/plm-general.php:51
 msgctxt "option label"
 msgid "Show Tab on Post Types"
 msgstr ""
