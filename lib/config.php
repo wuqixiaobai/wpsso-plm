@@ -2,7 +2,7 @@
 /*
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Copyright 2014-2015 - Jean-Sebastien Morisset - http://wpsso.com/
+ * Copyright 2014-2016 Jean-Sebastien Morisset (http://surniaulula.com/)
  */
 
 if ( ! defined( 'ABSPATH' ) ) 
@@ -72,6 +72,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static function set_constants( $plugin_filepath ) { 
 			define( 'WPSSOPLM_FILEPATH', $plugin_filepath );						
 			define( 'WPSSOPLM_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
+			define( 'WPSSOPLM_PLUGINSLUG', self::$cf['plugin']['wpssoplm']['slug'] );	// wpsso-plm
 			define( 'WPSSOPLM_PLUGINBASE', self::$cf['plugin']['wpssoplm']['base'] );	// wpsso-plm/wpsso-plm.php
 			define( 'WPSSOPLM_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
 		}
