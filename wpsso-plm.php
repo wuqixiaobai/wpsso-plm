@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: WPSSO extension to provide Open Graph / Facebook Location and Pinterest Place Rich Pin meta tags.
  * Requires At Least: 3.1
- * Tested Up To: 4.4
+ * Tested Up To: 4.4.2
  * Version: 1.3.11
  * 
  * Copyright 2014-2016 Jean-Sebastien Morisset (http://surniaulula.com/)
