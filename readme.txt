@@ -9,7 +9,7 @@ Tags: wpsso, place, location, venue, longitude, latitude, address, local
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.1
-Tested Up To: 4.4
+Tested Up To: 4.4.2
 Stable Tag: 1.3.11
 
 WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.
