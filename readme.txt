@@ -85,7 +85,7 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * [GitHub](https://github.com/SurniaUlula/wpsso-plm)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
-= Version 1.4.0 (TBD) =
+= Version 1.4.0 (2016/02/13) =
 
 Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 
