@@ -87,7 +87,7 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 = Changelog / Release Notes =
 
-** Version 1.4.0 (2016/02/13) **
+**Version 1.4.0 (2016/02/13)**
 
 Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 
@@ -100,7 +100,7 @@ Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 * **Developer Notes**
 	* Renamed all core 'wpsso_*_tabs' filters for WPSSO v3.24.0.
 
-** Version 1.3.11 (2015/12/27) **
+**Version 1.3.11 (2015/12/27)**
 
 * **New Features**
 	* *None*
@@ -112,7 +112,7 @@ Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 	* Updated minimum required version to WPSSO v3.20.0.
 	* Updated the settings page construct to include the library name argument.
 
-** Version 1.3.10 (2015/12/09) **
+**Version 1.3.10 (2015/12/09)**
 
 * **New Features**
 	* *None*
@@ -125,7 +125,7 @@ Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 	* Updated minimum required version to WPSSO v3.18.0.
 	* Updated method names and arguments for WPSSO v3.18.0. 
 
-** Version 1.3.9 (2015/12/06) **
+**Version 1.3.9 (2015/12/06)**
 
 Official announcement: N/A
 
@@ -138,7 +138,7 @@ Official announcement: N/A
 * **Developer Notes**
 	* Moved the default enable/disable meta tag option keys into the main WPSSO config.
 
-** Version 1.3.8 (2015/10/12) **
+**Version 1.3.8 (2015/10/12)**
 
 Official announcement: N/A
 
