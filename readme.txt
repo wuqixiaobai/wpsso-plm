@@ -91,36 +91,36 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 
-* **New Features**
-	* *None*
-* **Improvements**
-	* *None*
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
 	* Renamed all core 'wpsso_*_tabs' filters for WPSSO v3.24.0.
 
 **Version 1.3.11 (2015/12/27)**
 
-* **New Features**
-	* *None*
-* **Improvements**
-	* *None*
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
 	* Updated minimum required version to WPSSO v3.20.0.
 	* Updated the settings page construct to include the library name argument.
 
 **Version 1.3.10 (2015/12/09)**
 
-* **New Features**
-	* *None*
-* **Improvements**
-	* *None*
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
 	* Updated tested up to WP v4.4.
 	* Updated minimum required version to WPSSO v3.18.0.
 	* Updated method names and arguments for WPSSO v3.18.0. 
@@ -129,29 +129,29 @@ Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 
 Official announcement: N/A
 
-* **New Features**
-	* *None*
-* **Improvements**
-	* *None*
-* **Bugfixes**
-	* *None*
-* **Developer Notes**
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
 	* Moved the default enable/disable meta tag option keys into the main WPSSO config.
 
 **Version 1.3.8 (2015/10/12)**
 
 Official announcement: N/A
 
-* **New Features**
+* *New Features*
 	* Added a French language (fr_FR) translation.
-* **Improvements**
+* *Improvements*
 	* Minor improvements to title / option text strings and contextual help messages.
 	* Added the og:latitude, og:longitude, and og:altitude meta tags (same as the corresponding place:location meta tags).
-* **Bugfixes**
+* *Bugfixes*
 	* Renamed the 'doctype_prefix_ns' filter hook to 'og_prefix_ns'.
 	* Renamed the 'doctype_schema_type' filter hook to 'schema_item_type'.
-* **Developer Notes**
-	* *None*
+* *Developer Notes*
+	* None
 
 == Upgrade Notice ==
 
