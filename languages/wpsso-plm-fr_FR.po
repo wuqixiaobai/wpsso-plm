@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2015-12-08 11:50-0700\n"
-"PO-Revision-Date: 2015-12-08 11:50-0700\n"
+"POT-Creation-Date: 2016-02-12 08:05-0400\n"
+"PO-Revision-Date: 2016-02-12 08:05-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -191,12 +191,12 @@ msgctxt "option label"
 msgid "Altitude in Meters"
 msgstr "Altitude en mètres"
 
-#: lib/submenu/plm-general.php:24
+#: lib/submenu/plm-general.php:25
 msgctxt "metabox title"
 msgid "Place and Location Meta"
 msgstr "Méta de Place et Position"
 
-#: lib/submenu/plm-general.php:50
+#: lib/submenu/plm-general.php:51
 msgctxt "option label"
 msgid "Show Tab on Post Types"
 msgstr "Afficher l'onglet sur articles de type"
@@ -242,8 +242,8 @@ msgstr ""
 "\"Position\" et Pinterest Rich Pin de \"Place\"."
 
 #. Author of the plugin/theme
-msgid "Jean-Sebastien Morisset"
-msgstr "Jean-Sebastien Morisset"
+msgid "JS Morisset"
+msgstr "JS Morisset"
 
 #. Author URI of the plugin/theme
 msgid "http://surniaulula.com/"
