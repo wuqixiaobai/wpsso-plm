@@ -78,7 +78,10 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		}
 
 		public static function require_libs( $plugin_filepath ) {
+
 			require_once( WPSSOPLM_PLUGINDIR.'lib/register.php' );
+			require_once( WPSSOPLM_PLUGINDIR.'lib/filters.php' );
+
 			add_filter( 'wpssoplm_load_lib', array( 'WpssoPlmConfig', 'load_lib' ), 10, 3 );
 		}
 

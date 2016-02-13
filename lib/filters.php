@@ -29,10 +29,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p =& $plugin;
 			$this->plugin_filepath = $plugin_filepath;
 			$this->p->util->add_plugin_filters( $this, array( 
-				'get_defaults' => 1,		// option defaults
-				'get_post_defaults' => 1,	// post option defaults
-				'og_prefix_ns' => 1,	// open graph namespace
-				'og_seed' => 3,			// open graph meta tags
+				'get_defaults' => 1,			// option defaults
+				'get_post_defaults' => 1,		// post option defaults
+				'og_prefix_ns' => 1,			// open graph namespace
+				'og_seed' => 3,				// open graph meta tags
 			) );
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
@@ -44,7 +44,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				) );
 				$this->p->util->add_plugin_filters( $this, array( 
 					'status_gpl_features' => 3,
-				), 10, 'wpssoplm' );		// hook into our own filters
+				), 10, 'wpssoplm' );			// hook into our own filters
 			}
 		}
 

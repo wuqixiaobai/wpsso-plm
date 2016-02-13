@@ -26,6 +26,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		public $p;			// Wpsso
 		public $reg;			// WpssoPlmRegister
+		public $filters;		// WpssoPlmFilters
 
 		protected static $instance = null;
 
@@ -104,8 +105,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			if ( self::$wpsso_has_min_ver === false )
 				return;		// stop here
 
-			WpssoPlmConfig::load_lib( false, 'filters' );
-			$this->p->plm = new WpssoPlmFilters( $this->p, __FILE__ );
+			$this->filters = new WpssoPlmFilters( $this->p, __FILE__ );
 		}
 
 		public function wpsso_init_plugin() {
