@@ -24,84 +24,96 @@ msgid ""
 "\"Place\" Rich Pin meta tags."
 msgstr ""
 
-#: lib/filters.php:150 lib/filters.php:153
+#: lib/filters.php:159 lib/filters.php:162
 msgid ""
 "If location information is entered under the <em>%1$s</em> tab (in the %2$s "
 "metabox), %3$s will include additional meta tags for %4$s."
 msgstr ""
 
-#: lib/filters.php:150 lib/filters.php:153 lib/filters.php:201
-#: lib/filters.php:210 lib/gpl/admin/plm-general.php:30
+#: lib/filters.php:159 lib/filters.php:162 lib/filters.php:216
+#: lib/filters.php:225 lib/gpl/admin/plm-general.php:30
 #: lib/pro/admin/plm-general.php:37
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:150 lib/filters.php:153 lib/filters.php:201
-#: lib/filters.php:210
+#: lib/filters.php:159 lib/filters.php:162 lib/filters.php:216
+#: lib/filters.php:225
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr ""
 
-#: lib/filters.php:165
+#: lib/filters.php:174
 msgid ""
 "The numeric <em>decimal degrees</em> latitude for the content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:165 lib/filters.php:168
+#: lib/filters.php:174 lib/filters.php:177
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:165 lib/filters.php:168
+#: lib/filters.php:174 lib/filters.php:177
 msgid "This field is required to include the Place and Location meta tags."
 msgstr ""
 
-#: lib/filters.php:168
+#: lib/filters.php:177
 msgid ""
 "The numeric <em>decimal degrees</em> longitude for the content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:171
+#: lib/filters.php:180
 msgid ""
 "Share this webpage as an Open Graph and Pinterest <em>Place</em> Rich Pin."
 msgstr ""
 
-#: lib/filters.php:174
+#: lib/filters.php:183
+msgid ""
+"Select the type of address entered &mdash; either a Geographic <em>Place</"
+"em> or a Postal Address."
+msgstr ""
+
+#: lib/filters.php:186
 msgid ""
 "An optional numeric altitude (in meters above sea level) for the content of "
 "this webpage."
 msgstr ""
 
-#: lib/filters.php:177
+#: lib/filters.php:189
 msgid "An optional Street Address for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:180
+#: lib/filters.php:192
+msgid ""
+"An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD "
+"markup."
+msgstr ""
+
+#: lib/filters.php:195
 msgid "An optional City name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:183
+#: lib/filters.php:198
 msgid "An optional State or Province name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:186
+#: lib/filters.php:201
 msgid "An optional Zip or Postal Code for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:189
+#: lib/filters.php:204
 msgid "An optional Country name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:201
+#: lib/filters.php:216
 msgid "Add a <em>%1$s</em> tab to the %2$s metabox on Posts, Pages, etc."
 msgstr ""
 
-#: lib/filters.php:210
+#: lib/filters.php:225
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
 "custom post types, allowing you to enter specific location information for "
@@ -119,44 +131,54 @@ msgstr ""
 
 #: lib/gpl/admin/plm-general.php:48 lib/pro/admin/plm-general.php:52
 msgctxt "option label"
+msgid "Place Type"
+msgstr ""
+
+#: lib/gpl/admin/plm-general.php:52 lib/pro/admin/plm-general.php:59
+msgctxt "option label"
 msgid "Street Address"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:52 lib/pro/admin/plm-general.php:56
+#: lib/gpl/admin/plm-general.php:56 lib/pro/admin/plm-general.php:63
+msgctxt "option label"
+msgid "P.O. Box Number"
+msgstr ""
+
+#: lib/gpl/admin/plm-general.php:60 lib/pro/admin/plm-general.php:67
 msgctxt "option label"
 msgid "City"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:56 lib/pro/admin/plm-general.php:60
+#: lib/gpl/admin/plm-general.php:64 lib/pro/admin/plm-general.php:71
 msgctxt "option label"
 msgid "State / Province"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:60 lib/pro/admin/plm-general.php:64
+#: lib/gpl/admin/plm-general.php:68 lib/pro/admin/plm-general.php:75
 msgctxt "option label"
 msgid "Zip / Postal Code"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:64 lib/pro/admin/plm-general.php:68
+#: lib/gpl/admin/plm-general.php:72 lib/pro/admin/plm-general.php:79
 msgctxt "option label"
 msgid "Country"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:69 lib/pro/admin/plm-general.php:73
+#: lib/gpl/admin/plm-general.php:77 lib/pro/admin/plm-general.php:84
 msgid "Facebook / Open Graph Location"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:71 lib/pro/admin/plm-general.php:75
+#: lib/gpl/admin/plm-general.php:79 lib/pro/admin/plm-general.php:86
 msgctxt "option label"
 msgid "Latitude"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:75 lib/pro/admin/plm-general.php:79
+#: lib/gpl/admin/plm-general.php:83 lib/pro/admin/plm-general.php:90
 msgctxt "option label"
 msgid "Longitude"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:79 lib/pro/admin/plm-general.php:83
+#: lib/gpl/admin/plm-general.php:87 lib/pro/admin/plm-general.php:94
 msgctxt "option label"
 msgid "Altitude in Meters"
 msgstr ""

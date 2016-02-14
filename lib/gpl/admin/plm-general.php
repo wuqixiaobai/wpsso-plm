@@ -45,9 +45,17 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmgeneral' ) ) {
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_place' ). 
 			'<td class="blank">'.$form->get_no_checkbox( 'plm_place' ).'</td>';
 
+			$rows[] = $this->p->util->get_th( _x( 'Place Type',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_type' ). 
+			'<td class="blank">'.$form->get_options( 'plm_type' ).'</td>';
+
 			$rows[] = $this->p->util->get_th( _x( 'Street Address',
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_streetaddr' ). 
 			'<td class="blank">'.$form->get_options( 'plm_streetaddr' ).'</td>';
+
+			$rows[] = $this->p->util->get_th( _x( 'P.O. Box Number',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_box_number' ). 
+			'<td class="blank">'.$form->get_options( 'plm_box_number' ).'</td>';
 
 			$rows[] = $this->p->util->get_th( _x( 'City',
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_city' ). 

@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
 		private static $wpsso_min_version = '3.24.0';
 		private static $wpsso_has_min_ver = true;
-		private static $opt_version_suffix = 'plm3';
+		private static $opt_version_suffix = 'plm4';
 
 		public static function &get_instance() {
 			if ( self::$instance === null )
@@ -56,7 +56,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 			add_filter( 'wpsso_get_config', array( &$this, 'wpsso_get_config' ), 20, 1 );
 			add_action( 'wpsso_init_options', array( &$this, 'wpsso_init_options' ), 20 );
-			add_action( 'wpsso_init_objects', array( &$this, 'wpsso_init_objects' ), 10 );
+			add_action( 'wpsso_init_objects', array( &$this, 'wpsso_init_objects' ), 20 );
 			add_action( 'wpsso_init_plugin', array( &$this, 'wpsso_init_plugin' ), 20 );
 		}
 
@@ -98,7 +98,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 			$this->p->is_avail['plm'] = true;
 			$this->p->is_avail['admin']['plm-general'] = true;
-			$this->p->is_avail['head']['place-meta'] = true;
+			$this->p->is_avail['head']['place'] = true;
 		}
 
 		public function wpsso_init_objects() {

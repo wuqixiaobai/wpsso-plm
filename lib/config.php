@@ -59,7 +59,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 								'plm-general' => 'Place / Location Meta',
 							),
 							'head' => array(
-								'place-meta' => 'Place Meta Tags',
+								'place' => 'Place Meta Tags',
 							),
 						),
 					),

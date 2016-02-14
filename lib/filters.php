@@ -56,19 +56,22 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_og_seed( $og = array(), $use_post = false, $obj = false ) {
 			if ( ! is_object( $obj ) && 
 				( $obj = $this->p->util->get_post_object( $use_post ) ) === false ) {
-				$this->p->debug->log( 'exiting early: invalid post object' );
+				if ( $this->p->debug->enabled )
+					$this->p->debug->log( 'exiting early: invalid post object' );
 				return $og;
 			}
 			if ( ! isset( $obj->post_type ) ) {
-				$this->p->debug->log( 'exiting early: object post_type is empty' );
+				if ( $this->p->debug->enabled )
+					$this->p->debug->log( 'exiting early: object post_type is empty' );
 				return $og;
 			}
-			$this->p->debug->mark();
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
 			$post_type = get_post_type_object( $obj->post_type );
 			if ( empty( $this->p->options[ 'plm_add_to_'.$post_type->name ] ) )
 				return $og;
 
-			$opts = $this->p->mods['util']['post']->get_options( $obj->ID );
+			$opts = $this->p->m['util']['post']->get_options( $obj->ID );
 
 			// the latitude and longitude values are both required for the place meta tags
 			if ( ! empty( $opts['plm_latitude'] ) && 
@@ -106,8 +109,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_latitude' => '',
 				'plm_longitude' => '',
 				'plm_altitude' => '',
+				'plm_type' => 'geo',
 				'plm_place' => 0,
 				'plm_streetaddr' => '',
+				'plm_box_number' => '',
 				'plm_city' => '',
 				'plm_state' => '',
 				'plm_zipcode' => '',
@@ -125,9 +130,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$key = preg_replace( '/#.*$/', '', $key );
 
 			switch ( $key ) {
+				case 'plm_type':
+					return 'not_blank';
+					break;
 				case 'plm_latitude':
 				case 'plm_longitude':
 				case 'plm_altitude':
+				case 'plm_box_number':
 					return 'blank_num';	// must be numeric (blank or zero is ok)
 					break;
 				case 'plm_streetaddr':
@@ -170,11 +179,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-post-plm_place':
 					$text = __( 'Share this webpage as an Open Graph and Pinterest <em>Place</em> Rich Pin.', 'wpsso-plm' );
 					break;
+				case 'tooltip-post-plm_type':
+					$text = __( 'Select the type of address entered &mdash; either a Geographic <em>Place</em> or a Postal Address.', 'wpsso-plm' );
+					break;
 				case 'tooltip-post-plm_altitude':
 					$text = __( 'An optional numeric altitude (in meters above sea level) for the content of this webpage.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_streetaddr':
 					$text = __( 'An optional Street Address for the <em>Place</em> meta tags.', 'wpsso-plm' );
+					break;
+				case 'tooltip-post-plm_box_number':
+					$text = __( 'An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_city':
 					$text = __( 'An optional City name for the <em>Place</em> meta tags.', 'wpsso-plm' );
