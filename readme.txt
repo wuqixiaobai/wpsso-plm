@@ -92,7 +92,7 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 
 * *New Features*
-	* None
+	* Added new "Place Type" and "P.O. Box Number" options in the Social Settings metabox.
 * *Improvements*
 	* None
 * *Bugfixes*
