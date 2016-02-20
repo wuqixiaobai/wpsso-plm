@@ -87,6 +87,19 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 = Changelog / Release Notes =
 
+**Version 1.4.1 (2016/02/20) **
+
+Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.25.0.
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Renamed the 'wpssoschema_item_type' filter hook to 'wpsso_schema_head_type_key'.
+
 **Version 1.4.0 (2016/02/14)**
 
 Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
@@ -155,7 +168,7 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 1.4.0 =
+= 1.4.1 =
 
-2016/02/14 - Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
+2016/02/20 - Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.25.0.
 
