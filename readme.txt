@@ -98,7 +98,7 @@ Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.25.0.
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed the 'wpssoschema_item_type' filter hook to 'wpsso_schema_head_type_key'.
+	* Renamed the 'wpssoschema_item_type' filter hook to 'wpsso_schema_head_type'.
 
 **Version 1.4.0 (2016/02/14)**
 
