@@ -75,7 +75,7 @@
 
 <p>You can use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO, but the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro</a> version requires the use of the <a href="http://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> version as well.</p>
 
-<p><a href="http://wpsso.com/extend/plugins/wpsso-plm/">Purchase the WPSSO PLM Pro extension</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
+<p>Purchase the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO Place and Location Meta (WPSSO PLM) Pro</a> extension (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 
 <h2>Installation</h2>
