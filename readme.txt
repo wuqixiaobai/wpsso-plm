@@ -91,7 +91,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 1.4.2 (2016/02/23) **
+**Version 1.4.2 (2016/02/23)**
 
 Official announcement: N/A
 
@@ -104,7 +104,7 @@ Official announcement: N/A
 * *Developer Notes*
 	* None
 
-**Version 1.4.1 (2016/02/21) **
+**Version 1.4.1 (2016/02/21)**
 
 Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.25.0.
 
