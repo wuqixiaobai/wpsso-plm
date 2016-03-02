@@ -183,12 +183,12 @@ msgctxt "option label"
 msgid "Altitude in Meters"
 msgstr ""
 
-#: lib/submenu/plm-general.php:25
+#: lib/submenu/plm-general.php:26
 msgctxt "metabox title"
 msgid "Place and Location Meta"
 msgstr ""
 
-#: lib/submenu/plm-general.php:51
+#: lib/submenu/plm-general.php:52
 msgctxt "option label"
 msgid "Show Tab on Post Types"
 msgstr ""
