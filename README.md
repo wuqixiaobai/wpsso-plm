@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place and Location Meta (WPSSO PLM)</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot; and Pinterest &quot;Place&quot; Rich Pin meta tags.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot; and Pinterest Rich Pin / Schema &quot;Place&quot; meta tags.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.4.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.4.2</td></tr>
@@ -16,7 +16,7 @@
 
 <p align="center"><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" /></p><p><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
 
-<p>WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph <em>Location</em> and Pinterest <em>Place</em> Rich Pin meta tags in your webpages.</p>
+<p>WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph <em>Location</em> and Pinterest Rich Pin / Schema <em>Place</em> meta tags in your webpages.</p>
 
 <h4>Available in Multiple Languages</h4>
 
@@ -40,7 +40,7 @@
 
 <ul>
 <li>Enter the street address, city, state / province, zip / postal code, and country of a Place / Location.</li>
-<li>Optionally share the webpage as a Pinterest <em>Place</em> Rich Pin (instead of an <em>Article</em>, <em>Product</em>, etc.).</li>
+<li>Optionally share the webpage as a Pinterest Rich Pin / Schema <em>Place</em> (instead of an <em>Article</em>, <em>Product</em>, etc.).</li>
 </ul>
 
 <h4>Place and Location Meta Tags</h4>

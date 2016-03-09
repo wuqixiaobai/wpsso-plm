@@ -12,13 +12,13 @@ Requires At Least: 3.1
 Tested Up To: 4.4.2
 Stable Tag: 1.4.2
 
-WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.
+WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.
 
 == Description ==
 
 <p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" style="width:33%;min-width:128px;max-width:256px;float:left;margin:0 40px 20px 0;" /><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
 
-WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](https://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph *Location* and Pinterest *Place* Rich Pin meta tags in your webpages.
+WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](https://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph *Location* and Pinterest Rich Pin / Schema *Place* meta tags in your webpages.
 
 = Available in Multiple Languages =
 
@@ -37,7 +37,7 @@ WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPre
 **WPSSO PLM Pro / Power-User Features**
 
 * Enter the street address, city, state / province, zip / postal code, and country of a Place / Location.
-* Optionally share the webpage as a Pinterest *Place* Rich Pin (instead of an *Article*, *Product*, etc.).
+* Optionally share the webpage as a Pinterest Rich Pin / Schema *Place* (instead of an *Article*, *Product*, etc.).
 
 = Place and Location Meta Tags =
 
