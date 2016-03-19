@@ -107,7 +107,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 				return;		// stop here
 
 			$this->filters = new WpssoPlmFilters( $this->p );
-			$this->place = new WpssoPlmPlace( $this->p );
+			$this->location = new WpssoPlmLocation( $this->p );
 		}
 
 		public function wpsso_init_plugin() {

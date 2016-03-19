@@ -8,9 +8,9 @@
 if ( ! defined( 'ABSPATH' ) ) 
 	die( 'These aren\'t the droids you\'re looking for...' );
 
-if ( ! class_exists( 'WpssoPlmPlace' ) ) {
+if ( ! class_exists( 'WpssoPlmLocation' ) ) {
 
-	class WpssoPlmPlace {
+	class WpssoPlmLocation {
 
 		protected $p;
 
@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 				$this->p->debug->mark();
 		}
 
-		public static function get_md_location( &$mod ) {
+		public static function get_md_options( &$mod ) {
 			$wpsso =& Wpsso::get_instance();
 
 			if ( $wpsso->debug->enabled )
@@ -47,9 +47,8 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			return SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );
 		}
 
-		// options may be provided when saving
-		// do not pass the $opts variable by reference
-		public static function get_location_ids( $opts = array() ) {
+		// options may be provided when saving post meta data
+		public static function get_ids( $opts = array() ) {
 			$wpsso =& Wpsso::get_instance();
 
 			if ( $wpsso->debug->enabled )
@@ -65,13 +64,13 @@ if ( ! class_exists( 'WpssoPlmPlace' ) ) {
 			return $location_ids;
 		}
 
-		public static function get_location_ids_first_next() {
+		public static function get_ids_first_next() {
 			$wpsso =& Wpsso::get_instance();
 
 			if ( $wpsso->debug->enabled )
 				$wpsso->debug->mark();
 
-			$location_ids = self::get_location_ids();
+			$location_ids = self::get_ids();
 
 			ksort( $location_ids );		// sort keys to find highest / lowest key integer
 

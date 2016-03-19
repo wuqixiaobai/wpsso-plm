@@ -74,23 +74,23 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				return $og;	// abort
 			}
 
-			$location = WpssoPlmPlace::get_md_location( $mod );
+			$opts = WpssoPlmLocation::get_md_options( $mod );
 
 			// the latitude and longitude values are both required for the place meta tags
-			if ( ! empty( $location['plm_latitude'] ) && 
-				! empty( $location['plm_longitude'] ) ) {
+			if ( ! empty( $opts['plm_latitude'] ) && 
+				! empty( $opts['plm_longitude'] ) ) {
 
 				$og_place = array(
-					'og:latitude' => $location['plm_latitude'],
-					'og:longitude' => $location['plm_longitude'],
-					'place:location:latitude' => $location['plm_latitude'],
-					'place:location:longitude' => $location['plm_longitude'],
+					'og:latitude' => $opts['plm_latitude'],
+					'og:longitude' => $opts['plm_longitude'],
+					'place:location:latitude' => $opts['plm_latitude'],
+					'place:location:longitude' => $opts['plm_longitude'],
 				);
 
 				// optional altitude
-				if ( ! empty( $location['plm_altitude'] ) ) {
-					$og_place['og:altitude'] = $location['plm_altitude'];
-					$og_place['place:location:altitude'] = $location['plm_altitude'];
+				if ( ! empty( $opts['plm_altitude'] ) ) {
+					$og_place['og:altitude'] = $opts['plm_altitude'];
+					$og_place['place:location:altitude'] = $opts['plm_altitude'];
 				}
 
 				ksort( $og_place );
@@ -119,7 +119,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
-			$location_ids = WpssoPlmPlace::get_location_ids( $opts );
+
+			$location_ids = WpssoPlmLocation::get_ids( $opts );
 
 			// remove all locations with an empty name value
 			foreach ( $location_ids as $id => $name )
