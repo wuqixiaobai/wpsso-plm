@@ -12,7 +12,7 @@
  * Description: WPSSO extension to provide Open Graph / Facebook Location and Pinterest Place Rich Pin meta tags.
  * Requires At Least: 3.1
  * Tested Up To: 4.4.2
- * Version: 1.4.2
+ * Version: 1.5.0
  * 
  * Copyright 2014-2016 Jean-Sebastien Morisset (http://surniaulula.com/)
  */
@@ -32,9 +32,9 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		private static $wpsso_short = 'WPSSO';
 		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
-		private static $wpsso_min_version = '3.26.1';
+		private static $wpsso_min_version = '3.28.1';
 		private static $wpsso_has_min_ver = true;
-		private static $opt_version_suffix = 'plm4';
+		private static $opt_version_suffix = 'plm8';
 
 		public static function &get_instance() {
 			if ( self::$instance === null )
@@ -97,7 +97,8 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 				return;
 
 			$this->p->is_avail['plm'] = true;
-			$this->p->is_avail['admin']['plm-general'] = true;
+			$this->p->is_avail['admin']['plm-post'] = true;
+			$this->p->is_avail['admin']['plm-contact'] = true;
 			$this->p->is_avail['head']['place'] = true;
 		}
 
@@ -105,7 +106,8 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			if ( self::$wpsso_has_min_ver === false )
 				return;		// stop here
 
-			$this->filters = new WpssoPlmFilters( $this->p, __FILE__ );
+			$this->filters = new WpssoPlmFilters( $this->p );
+			$this->place = new WpssoPlmPlace( $this->p );
 		}
 
 		public function wpsso_init_plugin() {

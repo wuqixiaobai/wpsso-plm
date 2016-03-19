@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.4.2\n"
+"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2016-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -12,183 +12,262 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/config-gettext-extract.php:3
+#: lib/config-gettext-extract.php:4
+msgctxt "lib file description"
+msgid "Corporate Contacts"
+msgstr ""
+
+#: lib/config-gettext-extract.php:5
+msgctxt "option value"
+msgid "Geographic"
+msgstr ""
+
+#: lib/config-gettext-extract.php:6
 msgctxt "lib file description"
 msgid "Place / Location Meta"
 msgstr ""
 
-#: lib/config-gettext-extract.php:4
+#: lib/config-gettext-extract.php:7
+msgctxt "option value"
+msgid "Postal Address"
+msgstr ""
+
+#: lib/config-gettext-extract.php:8
 msgctxt "plugin description"
 msgid ""
 "WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
 "\"Place\" Rich Pin meta tags."
 msgstr ""
 
-#: lib/filters.php:159 lib/filters.php:162
+#: lib/config-gettext-extract.php:9
+msgctxt "option value"
+msgid "[Custom Location]"
+msgstr ""
+
+#: lib/config-gettext-extract.php:10
+msgctxt "option value"
+msgid "[New Location]"
+msgstr ""
+
+#: lib/config-gettext-extract.php:11
+msgctxt "option value"
+msgid "[None]"
+msgstr ""
+
+#: lib/filters.php:168 lib/filters.php:171 lib/filters.php:174
 msgid ""
 "If location information is entered under the <em>%1$s</em> tab (in the %2$s "
 "metabox), %3$s will include additional meta tags for %4$s."
 msgstr ""
 
-#: lib/filters.php:159 lib/filters.php:162 lib/filters.php:216
-#: lib/filters.php:225 lib/gpl/admin/plm-general.php:30
-#: lib/pro/admin/plm-general.php:37
+#: lib/filters.php:168 lib/filters.php:171 lib/filters.php:174
+#: lib/filters.php:228 lib/gpl/admin/plm-post.php:30
+#: lib/pro/admin/plm-post.php:41
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:159 lib/filters.php:162 lib/filters.php:216
-#: lib/filters.php:225
+#: lib/filters.php:168 lib/filters.php:171 lib/filters.php:174
+#: lib/filters.php:228
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr ""
 
-#: lib/filters.php:174
+#: lib/filters.php:186
+msgid ""
+"Share this webpage as an Open Graph and Pinterest Rich Pin / Schema "
+"<em>Place</em>. If the WPSSO JSON Pro extension is active, the webpage will "
+"also include Schema JSON-LD markup for the Schema type <a href=\"%1$s\">"
+"%1$s</a>."
+msgstr ""
+
+#: lib/filters.php:189
+msgid ""
+"Select the type of address entered &mdash; either a Geographic <em>Place</"
+"em> or a Postal Address."
+msgstr ""
+
+#: lib/filters.php:192
+msgid ""
+"Select a corporate contact location, or enter customized location "
+"information bellow."
+msgstr ""
+
+#: lib/filters.php:195
+msgid "An optional Street Address for the <em>Place</em> meta tags."
+msgstr ""
+
+#: lib/filters.php:198
+msgid ""
+"An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD "
+"markup."
+msgstr ""
+
+#: lib/filters.php:201
+msgid "An optional City name for the <em>Place</em> meta tags."
+msgstr ""
+
+#: lib/filters.php:204
+msgid "An optional State or Province name for the <em>Place</em> meta tags."
+msgstr ""
+
+#: lib/filters.php:207
+msgid "An optional Zip or Postal Code for the <em>Place</em> meta tags."
+msgstr ""
+
+#: lib/filters.php:210
+msgid "An optional Country for the <em>Place</em> meta tags."
+msgstr ""
+
+#: lib/filters.php:213
 msgid ""
 "The numeric <em>decimal degrees</em> latitude for the content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:174 lib/filters.php:177
+#: lib/filters.php:213 lib/filters.php:216
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:174 lib/filters.php:177
+#: lib/filters.php:213 lib/filters.php:216
 msgid "This field is required to include the Place and Location meta tags."
 msgstr ""
 
-#: lib/filters.php:177
+#: lib/filters.php:216
 msgid ""
 "The numeric <em>decimal degrees</em> longitude for the content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:180
-msgid ""
-"Share this webpage as an Open Graph and Pinterest <em>Place</em> Rich Pin."
-msgstr ""
-
-#: lib/filters.php:183
-msgid ""
-"Select the type of address entered &mdash; either a Geographic <em>Place</"
-"em> or a Postal Address."
-msgstr ""
-
-#: lib/filters.php:186
+#: lib/filters.php:219
 msgid ""
 "An optional numeric altitude (in meters above sea level) for the content of "
 "this webpage."
 msgstr ""
 
-#: lib/filters.php:189
-msgid "An optional Street Address for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:192
-msgid ""
-"An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD "
-"markup."
-msgstr ""
-
-#: lib/filters.php:195
-msgid "An optional City name for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:198
-msgid "An optional State or Province name for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:201
-msgid "An optional Zip or Postal Code for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:204
-msgid "An optional Country name for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:216
-msgid "Add a <em>%1$s</em> tab to the %2$s metabox on Posts, Pages, etc."
-msgstr ""
-
-#: lib/filters.php:225
+#: lib/filters.php:228
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
 "custom post types, allowing you to enter specific location information for "
 "that webpage (ie. GPS coordinates and/or street address)."
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:39 lib/pro/admin/plm-general.php:46
-msgid "Pinterest Place Rich Pin"
-msgstr ""
-
-#: lib/gpl/admin/plm-general.php:44 lib/pro/admin/plm-general.php:48
+#: lib/gpl/admin/plm-contact.php:30
 msgctxt "option label"
-msgid "Share as a <em>Place</em>"
+msgid "Edit Location"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:48 lib/pro/admin/plm-general.php:52
+#: lib/gpl/admin/plm-contact.php:37
 msgctxt "option label"
-msgid "Place Type"
+msgid "Location Name"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:52 lib/pro/admin/plm-general.php:59
+#: lib/gpl/admin/plm-contact.php:41 lib/gpl/admin/plm-post.php:66
+#: lib/pro/admin/plm-post.php:79 lib/pro/admin/plm-post.php:105
 msgctxt "option label"
 msgid "Street Address"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:56 lib/pro/admin/plm-general.php:63
+#: lib/gpl/admin/plm-contact.php:45 lib/gpl/admin/plm-post.php:71
+#: lib/pro/admin/plm-post.php:83 lib/pro/admin/plm-post.php:109
 msgctxt "option label"
 msgid "P.O. Box Number"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:60 lib/pro/admin/plm-general.php:67
+#: lib/gpl/admin/plm-contact.php:49 lib/gpl/admin/plm-post.php:76
+#: lib/pro/admin/plm-post.php:87 lib/pro/admin/plm-post.php:113
 msgctxt "option label"
 msgid "City"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:64 lib/pro/admin/plm-general.php:71
+#: lib/gpl/admin/plm-contact.php:53 lib/gpl/admin/plm-post.php:81
+#: lib/pro/admin/plm-post.php:91 lib/pro/admin/plm-post.php:117
 msgctxt "option label"
 msgid "State / Province"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:68 lib/pro/admin/plm-general.php:75
+#: lib/gpl/admin/plm-contact.php:57 lib/gpl/admin/plm-post.php:86
+#: lib/pro/admin/plm-post.php:95 lib/pro/admin/plm-post.php:121
 msgctxt "option label"
 msgid "Zip / Postal Code"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:72 lib/pro/admin/plm-general.php:79
+#: lib/gpl/admin/plm-contact.php:63 lib/gpl/admin/plm-post.php:91
+#: lib/pro/admin/plm-post.php:99 lib/pro/admin/plm-post.php:128
 msgctxt "option label"
 msgid "Country"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:77 lib/pro/admin/plm-general.php:84
-msgid "Facebook / Open Graph Location"
-msgstr ""
-
-#: lib/gpl/admin/plm-general.php:79 lib/pro/admin/plm-general.php:86
+#: lib/gpl/admin/plm-contact.php:68 lib/gpl/admin/plm-post.php:101
+#: lib/pro/admin/plm-post.php:147 lib/pro/admin/plm-post.php:161
 msgctxt "option label"
 msgid "Latitude"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:83 lib/pro/admin/plm-general.php:90
+#: lib/gpl/admin/plm-contact.php:72 lib/gpl/admin/plm-post.php:106
+#: lib/pro/admin/plm-post.php:151 lib/pro/admin/plm-post.php:165
 msgctxt "option label"
 msgid "Longitude"
 msgstr ""
 
-#: lib/gpl/admin/plm-general.php:87 lib/pro/admin/plm-general.php:94
+#: lib/gpl/admin/plm-contact.php:76 lib/gpl/admin/plm-post.php:111
+#: lib/pro/admin/plm-post.php:155 lib/pro/admin/plm-post.php:169
 msgctxt "option label"
 msgid "Altitude in Meters"
 msgstr ""
 
-#: lib/submenu/plm-general.php:26
+#: lib/gpl/admin/plm-post.php:48
+msgctxt "metabox title"
+msgid "Pinterest Rich Pin / Schema Place"
+msgstr ""
+
+#: lib/gpl/admin/plm-post.php:51 lib/pro/admin/plm-post.php:56
+msgctxt "option label"
+msgid "Content is a <em>Place</em>"
+msgstr ""
+
+#: lib/gpl/admin/plm-post.php:56 lib/pro/admin/plm-post.php:60
+msgctxt "option label"
+msgid "Place Type"
+msgstr ""
+
+#: lib/gpl/admin/plm-post.php:61 lib/pro/admin/plm-post.php:65
+msgctxt "option label"
+msgid "Select Location"
+msgstr ""
+
+#: lib/gpl/admin/plm-post.php:98
+msgctxt "metabox title"
+msgid "Facebook / Open Graph Location"
+msgstr ""
+
+#: lib/pro/admin/plm-contact.php:51
+msgctxt "option comment"
+msgid "leave blank to delete contact"
+msgstr ""
+
+#: lib/pro/admin/plm-post.php:54
+msgid "Pinterest Rich Pin / Schema Place"
+msgstr ""
+
+#: lib/pro/admin/plm-post.php:136
+msgid "Facebook / Open Graph Location"
+msgstr ""
+
+#: lib/submenu/plm-contact.php:29
+msgctxt "metabox title"
+msgid "Corporate Contacts"
+msgstr ""
+
+#: lib/submenu/plm-general.php:29
 msgctxt "metabox title"
 msgid "Place and Location Meta"
 msgstr ""
 
-#: lib/submenu/plm-general.php:52
+#: lib/submenu/plm-general.php:55
 msgctxt "option label"
 msgid "Show Tab on Post Types"
 msgstr ""
@@ -205,7 +284,7 @@ msgid ""
 "activate the %3$s plugin."
 msgstr ""
 
-#: wpsso-plm.php:125
+#: wpsso-plm.php:127
 msgid ""
 "The %1$s extension version %2$s requires the use of %3$s version %4$s or "
 "newer (version %5$s is currently installed)."

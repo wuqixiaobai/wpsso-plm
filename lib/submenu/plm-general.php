@@ -18,6 +18,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 			$this->menu_name = $name;
 			$this->menu_lib = $lib;
 			$this->menu_ext = $ext;
+
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
 		}
 
 		protected function add_meta_boxes() {
@@ -31,17 +34,17 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 			$metabox = 'plm';
 			echo '<table class="sucom-setting">';
 			foreach ( apply_filters( $this->p->cf['lca'].'_'.$metabox.'_general_rows', 
-				$this->get_rows( $metabox, 'general' ), $this->form ) as $row )
+				$this->get_table_rows( $metabox, 'general' ), $this->form ) as $row )
 					echo '<tr>'.$row.'</tr>';
 			echo '</table>';
 		}
 
-		protected function get_rows( $metabox, $key ) {
-			$rows = array();
+		protected function get_table_rows( $metabox, $key ) {
+			$table_rows = array();
 			switch ( $metabox.'-'.$key ) {
 				case 'plm-general':
 
-					$rows[] = '<td colspan="2">'.$this->p->msgs->get( 'info-place-general' ).'</td>';
+					$table_rows[] = '<td colspan="2">'.$this->p->msgs->get( 'info-place-general' ).'</td>';
 
 					$checkboxes = '';
 					foreach ( $this->p->util->get_post_types() as $post_type )
@@ -49,13 +52,17 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 							$post_type->label.' '.( empty( $post_type->description ) ? 
 								'' : '('.$post_type->description.')' ).'</p>';
 
-					$rows[] = $this->p->util->get_th( _x( 'Show Tab on Post Types',
+					$table_rows['plm_add_to'] = $this->form->get_th_html( _x( 'Show Tab on Post Types',
 						'option label', 'wpsso-plm' ), null, 'plm_add_to' ).'<td>'.$checkboxes.'</td>';
+
+					$table_rows['plm_def_country'] = $this->form->get_th_html( 'Default Country' ). 
+					'<td>'.$this->form->get_select_country( 'plm_def_country', '', '', false,
+						$this->p->options['plm_def_country'] ).'</td>';
 
 					break;
 
 			}
-			return $rows;
+			return $table_rows;
 		}
 	}
 }

@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '1.4.2',	// plugin version
+					'version' => '1.5.0',	// plugin version
 					'short' => 'WPSSO PLM',
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.',
@@ -48,23 +48,46 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						'submenu' => array (
 							'wpssoplm-separator-0' => 'PLM Extension',
 							'plm-general' => 'Place / Location Meta',
+							'plm-contact' => 'Corporate Contacts',
 						),
 						'gpl' => array(
 							'admin' => array(
-								'plm-general' => 'Place / Location Meta',
+								'plm-contact' => 'Corporate Contacts',
+								'plm-post' => 'Place / Location Tab',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
-								'plm-general' => 'Place / Location Meta',
+								'plm-contact' => 'Corporate Contacts',
+								'plm-post' => 'Place / Location Tab',
 							),
 							'head' => array(
 								'place' => 'Place Meta Tags',
 							),
 						),
 					),
-					'cp' => array(
-					)
+				),
+			),
+			'form' => array(
+				'plm_location' => array(
+					'none' => '[None]',
+					'custom' => '[Custom Location]',
+					'new' => '[New Location]',
+				),
+				'plm_type' => array(
+					'geo' => 'Geographic',
+					'postal' => 'Postal Address',
+				),
+				'plm_md_place' => array(
+					'plm_streetaddr' => '',
+					'plm_po_box_number' => '',
+					'plm_city' => '',
+					'plm_state' => '',
+					'plm_zipcode' => '',
+					'plm_country' => '',
+					'plm_latitude' => '',
+					'plm_longitude' => '',
+					'plm_altitude' => '',
 				),
 			),
 		);
@@ -81,6 +104,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 			require_once( WPSSOPLM_PLUGINDIR.'lib/register.php' );
 			require_once( WPSSOPLM_PLUGINDIR.'lib/filters.php' );
+			require_once( WPSSOPLM_PLUGINDIR.'lib/place.php' );
 
 			add_filter( 'wpssoplm_load_lib', array( 'WpssoPlmConfig', 'load_lib' ), 10, 3 );
 		}
