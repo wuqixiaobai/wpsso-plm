@@ -95,12 +95,14 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 Official announcement: N/A
 
+> Required update for WordPress Social Sharing Optimization (WPSSO) version 3.28.1.
+
 * *New Features*
 	* Added a "Default Country" option to the Place and Location Meta settings page.
 	* Added a new "Corporate Contacts" settings page (Pro version).
 	* Added a new "Select Location" drop-down option in the Social Settings metabox (Pro version).
 * *Improvements*
-	* None
+	* Improved the Social Settings options display (Free version).
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -149,7 +151,7 @@ Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 
 = 1.5.0 =
 
-ETA 2016/03/20 - Added a new "Corporate Contacts" settings page, and "Select Location" drop-down in the Social Settings metabox (Pro version).
+ETA 2016/03/20 - Required update for WPSSO v3.28.1. Added a new "Corporate Contacts" settings page, and "Select Location" drop-down in the Social Settings metabox (Pro version).
 
 = 1.4.2 =
 
