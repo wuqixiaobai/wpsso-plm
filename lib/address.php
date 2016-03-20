@@ -32,16 +32,16 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( ! empty( $md_opts['plm_address'] ) && 
 				$md_opts['plm_address'] !== 'none' ) {
 
-				$cc_opts = SucomUtil::preg_grep_keys( '/^(plm_)cc_(.*)_'.$md_opts['plm_address'].'$/',
+				$addr_opts = SucomUtil::preg_grep_keys( '/^(plm_)addr_(.*)_'.$md_opts['plm_address'].'$/',
 					$wpsso->options, false, '$1$2' );
 
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'using corporate contact ID '.$md_opts['plm_address'] );
-					$wpsso->debug->log( $cc_opts );
+					$wpsso->debug->log( $addr_opts );
 				}
 
 				// reset address / place to defaults, then apply the contact address
-				$md_opts = array_merge( $md_opts, WpssoPlmConfig::$cf['form']['plm_md_place'], $cc_opts );
+				$md_opts = array_merge( $md_opts, WpssoPlmConfig::$cf['form']['plm_md_place'], $addr_opts );
 			}
 
 			return SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );
@@ -57,7 +57,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( empty( $opts ) )
 				$opts = $wpsso->options;
 
-			$address_ids = SucomUtil::preg_grep_keys( '/^plm_cc_name_([0-9]+)$/', $opts, false, '$1' );
+			$address_ids = SucomUtil::preg_grep_keys( '/^plm_addr_name_([0-9]+)$/', $opts, false, '$1' );
 
 			natsort( $address_ids );	// sort values to display in select box
 

@@ -21,7 +21,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_add_to_page' => 1,
 					'plm_add_to_attachment' => 0,
 					'plm_def_country' => 'none',	// alpha2 country code
-					'plm_cc_address' => 'new',	// value is not used
 				),
 			),
 		);
@@ -113,7 +112,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				array(
 					'plm_place' => 0,
 					'plm_type' => 'geo',
-					'plm_address' => 'custom',
+					'plm_addr_id' => 'custom',
 					'plm_country' => $this->p->options['plm_def_country'],	// alpha2 country code
 				) );
 		}
@@ -125,7 +124,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			// remove all addresses with an empty name value
 			foreach ( $address_ids as $id => $name )
 				if ( empty( $name ) )
-					$opts = SucomUtil::preg_grep_keys( '/^plm_cc_.*_'.$id.'$/',
+					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/',
 						$opts, true );	// $invert = true
 
 			return $opts;
@@ -141,19 +140,19 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$key = preg_replace( '/#.*$/', '', $key );
 
 			switch ( $key ) {
-				case 'plm_type':
-				case 'plm_def_country':
-				case 'plm_address':		// 'none', 'custom', or numeric
-				case ( preg_match( '/^plm(_cc)?_(country)(_[0-9]+)?/', $key ) ? true : false ):
-					return 'not_blank';
-					break;
-				case 'plm_cc_address':		// numeric
+				case 'plm_addr_id':		// numeric
 					return 'numeric';
 					break;
-				case ( preg_match( '/^plm(_cc)?_(latitude|longitude|altitude|po_box_number)(_[0-9]+)?/', $key ) ? true : false ):
+				case 'plm_id':			// 'none', 'custom', or numeric
+				case 'plm_type':
+				case 'plm_def_country':
+				case ( preg_match( '/^plm_(addr_)?(country)(_[0-9]+)?/', $key ) ? true : false ):
+					return 'not_blank';
+					break;
+				case ( preg_match( '/^plm_(addr_)?(latitude|longitude|altitude|po_box_number)(_[0-9]+)?/', $key ) ? true : false ):
 					return 'blank_num';	// must be numeric (blank or zero is ok)
 					break;
-				case ( preg_match( '/^plm(_cc)?_(streetaddr|city|state|zipcode)(_[0-9]+)?/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_(addr_)?(streetaddr|city|state|zipcode)(_[0-9]+)?/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
 			}
@@ -189,7 +188,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-post-plm_type':
 					$text = __( 'Select the type of address entered &mdash; either a Geographic <em>Place</em> or a Postal Address.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_address':
+				case 'tooltip-post-plm_addr_id':
 					$text = __( 'Select an address or enter a customized address bellow.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_streetaddr':

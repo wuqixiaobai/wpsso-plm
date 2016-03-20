@@ -54,30 +54,30 @@ msgctxt "option value"
 msgid "[None]"
 msgstr ""
 
-#: lib/filters.php:169
+#: lib/filters.php:168
 msgid ""
 "%s includes an Address and Contacts editor to manage street addresses and "
 "location information."
 msgstr ""
 
-#: lib/filters.php:172 lib/filters.php:175
+#: lib/filters.php:171 lib/filters.php:174
 msgid ""
 "If address information is entered under the <em>%1$s</em> tab (in the %2$s "
 "metabox), %3$s will include additional meta tags for %4$s."
 msgstr ""
 
-#: lib/filters.php:172 lib/filters.php:175 lib/filters.php:229
+#: lib/filters.php:171 lib/filters.php:174 lib/filters.php:228
 #: lib/gpl/admin/plm-post.php:30 lib/pro/admin/plm-post.php:41
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:172 lib/filters.php:175 lib/filters.php:229
+#: lib/filters.php:171 lib/filters.php:174 lib/filters.php:228
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr ""
 
-#: lib/filters.php:187
+#: lib/filters.php:186
 msgid ""
 "Share this webpage as an Open Graph and Pinterest Rich Pin / Schema "
 "<em>Place</em>. If the WPSSO JSON Pro extension is active, the webpage will "
@@ -85,72 +85,72 @@ msgid ""
 "%1$s</a>."
 msgstr ""
 
-#: lib/filters.php:190
+#: lib/filters.php:189
 msgid ""
 "Select the type of address entered &mdash; either a Geographic <em>Place</"
 "em> or a Postal Address."
 msgstr ""
 
-#: lib/filters.php:193
+#: lib/filters.php:192
 msgid "Select an address or enter a customized address bellow."
 msgstr ""
 
-#: lib/filters.php:196
+#: lib/filters.php:195
 msgid "An optional Street Address for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:199
+#: lib/filters.php:198
 msgid ""
 "An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD "
 "markup."
 msgstr ""
 
-#: lib/filters.php:202
+#: lib/filters.php:201
 msgid "An optional City name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:205
+#: lib/filters.php:204
 msgid "An optional State or Province name for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:208
+#: lib/filters.php:207
 msgid "An optional Zip or Postal Code for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:211
+#: lib/filters.php:210
 msgid "An optional Country for the <em>Place</em> meta tags."
 msgstr ""
 
-#: lib/filters.php:214
+#: lib/filters.php:213
 msgid ""
 "The numeric <em>decimal degrees</em> latitude for the content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:214 lib/filters.php:217
+#: lib/filters.php:213 lib/filters.php:216
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:214 lib/filters.php:217
+#: lib/filters.php:213 lib/filters.php:216
 msgid "This field is required to include the Place and Location meta tags."
 msgstr ""
 
-#: lib/filters.php:217
+#: lib/filters.php:216
 msgid ""
 "The numeric <em>decimal degrees</em> longitude for the content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:220
+#: lib/filters.php:219
 msgid ""
 "An optional numeric altitude (in meters above sea level) for the content of "
 "this webpage."
 msgstr ""
 
-#: lib/filters.php:229
+#: lib/filters.php:228
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
 "custom post types, allowing you to enter specific address information for "
@@ -246,7 +246,7 @@ msgctxt "metabox title"
 msgid "Facebook / Open Graph Location"
 msgstr ""
 
-#: lib/pro/admin/plm-contact.php:52
+#: lib/pro/admin/plm-contact.php:54
 msgctxt "option comment"
 msgid "leave blank to delete an address"
 msgstr ""

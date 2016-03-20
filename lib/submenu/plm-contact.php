@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmcontact' ) && class_exists( 'WpssoAdmin'
 		}
 
 		public function show_metabox_plm_contact() {
-			$metabox = 'cc';
+			$metabox = 'contact';
 			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', array( 
 				'address' => 'Addresses',
 			) );
