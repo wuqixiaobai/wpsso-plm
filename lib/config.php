@@ -104,7 +104,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 			require_once( WPSSOPLM_PLUGINDIR.'lib/register.php' );
 			require_once( WPSSOPLM_PLUGINDIR.'lib/filters.php' );
-			require_once( WPSSOPLM_PLUGINDIR.'lib/place.php' );
+			require_once( WPSSOPLM_PLUGINDIR.'lib/location.php' );
 
 			add_filter( 'wpssoplm_load_lib', array( 'WpssoPlmConfig', 'load_lib' ), 10, 3 );
 		}
