@@ -12,44 +12,44 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/config-gettext-extract.php:4
+#: lib/config-gettext-extract.php:3
 msgctxt "lib file description"
 msgid "Corporate Contacts"
 msgstr ""
 
-#: lib/config-gettext-extract.php:5
+#: lib/config-gettext-extract.php:4
 msgctxt "option value"
 msgid "Geographic"
 msgstr ""
 
-#: lib/config-gettext-extract.php:6
+#: lib/config-gettext-extract.php:5
 msgctxt "lib file description"
 msgid "Place / Location Meta"
 msgstr ""
 
-#: lib/config-gettext-extract.php:7
+#: lib/config-gettext-extract.php:6
 msgctxt "option value"
 msgid "Postal Address"
 msgstr ""
 
-#: lib/config-gettext-extract.php:8
+#: lib/config-gettext-extract.php:7
 msgctxt "plugin description"
 msgid ""
 "WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
 "\"Place\" Rich Pin meta tags."
 msgstr ""
 
-#: lib/config-gettext-extract.php:9
+#: lib/config-gettext-extract.php:8
 msgctxt "option value"
 msgid "[Custom Location]"
 msgstr ""
 
-#: lib/config-gettext-extract.php:10
+#: lib/config-gettext-extract.php:9
 msgctxt "option value"
 msgid "[New Location]"
 msgstr ""
 
-#: lib/config-gettext-extract.php:11
+#: lib/config-gettext-extract.php:10
 msgctxt "option value"
 msgid "[None]"
 msgstr ""
@@ -219,7 +219,7 @@ msgctxt "option label"
 msgid "Altitude in Meters"
 msgstr ""
 
-#: lib/gpl/admin/plm-post.php:48
+#: lib/gpl/admin/plm-post.php:48 lib/pro/admin/plm-post.php:54
 msgctxt "metabox title"
 msgid "Pinterest Rich Pin / Schema Place"
 msgstr ""
@@ -239,7 +239,7 @@ msgctxt "option label"
 msgid "Select Location"
 msgstr ""
 
-#: lib/gpl/admin/plm-post.php:98
+#: lib/gpl/admin/plm-post.php:98 lib/pro/admin/plm-post.php:136
 msgctxt "metabox title"
 msgid "Facebook / Open Graph Location"
 msgstr ""
@@ -247,14 +247,6 @@ msgstr ""
 #: lib/pro/admin/plm-contact.php:52
 msgctxt "option comment"
 msgid "leave blank to delete contact"
-msgstr ""
-
-#: lib/pro/admin/plm-post.php:54
-msgid "Pinterest Rich Pin / Schema Place"
-msgstr ""
-
-#: lib/pro/admin/plm-post.php:136
-msgid "Facebook / Open Graph Location"
 msgstr ""
 
 #: lib/submenu/plm-contact.php:29
