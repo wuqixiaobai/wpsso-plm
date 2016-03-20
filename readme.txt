@@ -108,56 +108,9 @@ Official announcement: N/A
 * *Developer Notes*
 	* None
 
-**Version 1.4.2 (2016/02/23)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* Fixed default option values in the Social Settings metabox by renaming the 'wpsso_get_post_defaults' filter hook to 'wpsso_get_meta_defaults'.
-* *Developer Notes*
-	* None
-
-**Version 1.4.1 (2016/02/21)**
-
-Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.25.0.
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Renamed the 'wpssoschema_item_type' filter hook to 'wpsso_schema_head_type'.
-
-**Version 1.4.0 (2016/02/14)**
-
-Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
-
-* *New Features*
-	* Added new "Place Type" and "P.O. Box Number" options in the Social Settings metabox.
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Renamed all core 'wpsso_*_tabs' filters for WPSSO v3.24.0.
-
 == Upgrade Notice ==
 
 = 1.5.0 =
 
 2016/03/20 - Required update for WPSSO v3.28.1. Added a new "Corporate Contacts" settings page, and "Select Location" drop-down in the Social Settings metabox (Pro version).
-
-= 1.4.2 =
-
-2016/02/23 - Fixed default option values in the Social Settings metabox.
-
-= 1.4.1 =
-
-2016/02/21 - Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.25.0.
 
