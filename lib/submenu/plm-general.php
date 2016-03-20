@@ -53,9 +53,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 								'' : '('.$post_type->description.')' ).'</p>';
 
 					$table_rows['plm_add_to'] = $this->form->get_th_html( _x( 'Show Tab on Post Types',
-						'option label', 'wpsso-plm' ), null, 'plm_add_to' ).'<td>'.$checkboxes.'</td>';
+						'option label', 'wpsso-plm' ), '', 'plm_add_to' ).'<td>'.$checkboxes.'</td>';
 
-					$table_rows['plm_def_country'] = $this->form->get_th_html( 'Default Country' ). 
+					$table_rows['plm_def_country'] = $this->form->get_th_html( 'Address Default Country' ). 
 					'<td>'.$this->form->get_select_country( 'plm_def_country', '', '', false,
 						$this->p->options['plm_def_country'] ).'</td>';
 

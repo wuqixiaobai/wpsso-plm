@@ -18,7 +18,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'version' => '1.5.0',	// plugin version
 					'short' => 'WPSSO PLM',
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
-					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest "Place" Rich Pin meta tags.',
+					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.',
 					'slug' => 'wpsso-plm',
 					'base' => 'wpsso-plm/wpsso-plm.php',
 					'update_auth' => 'tid',
@@ -48,17 +48,17 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						'submenu' => array (
 							'wpssoplm-separator-0' => 'PLM Extension',
 							'plm-general' => 'Place / Location Meta',
-							'plm-contact' => 'Corporate Contacts',
+							'plm-contact' => 'Addresses & Contacts',
 						),
 						'gpl' => array(
 							'admin' => array(
-								'plm-contact' => 'Corporate Contacts',
+								'plm-contact' => 'Addresses & Contacts',
 								'plm-post' => 'Place / Location Tab',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
-								'plm-contact' => 'Corporate Contacts',
+								'plm-contact' => 'Addresses & Contacts',
 								'plm-post' => 'Place / Location Tab',
 							),
 							'head' => array(
@@ -69,10 +69,10 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 				),
 			),
 			'form' => array(
-				'plm_location' => array(
+				'plm_address' => array(
 					'none' => '[None]',
-					'custom' => '[Custom Location]',
-					'new' => '[New Location]',
+					'custom' => '[Custom Address]',
+					'new' => '[New Address]',
 				),
 				'plm_type' => array(
 					'geo' => 'Geographic',
@@ -104,7 +104,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 			require_once( WPSSOPLM_PLUGINDIR.'lib/register.php' );
 			require_once( WPSSOPLM_PLUGINDIR.'lib/filters.php' );
-			require_once( WPSSOPLM_PLUGINDIR.'lib/location.php' );
+			require_once( WPSSOPLM_PLUGINDIR.'lib/address.php' );
 
 			add_filter( 'wpssoplm_load_lib', array( 'WpssoPlmConfig', 'load_lib' ), 10, 3 );
 		}

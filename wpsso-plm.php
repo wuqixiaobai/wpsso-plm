@@ -9,7 +9,7 @@
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: WPSSO extension to provide Open Graph / Facebook Location and Pinterest Place Rich Pin meta tags.
+ * Description: WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.',
  * Requires At Least: 3.1
  * Tested Up To: 4.4.2
  * Version: 1.5.0
@@ -107,7 +107,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 				return;		// stop here
 
 			$this->filters = new WpssoPlmFilters( $this->p );
-			$this->location = new WpssoPlmLocation( $this->p );
+			$this->address = new WpssoPlmAddress( $this->p );
 		}
 
 		public function wpsso_init_plugin() {

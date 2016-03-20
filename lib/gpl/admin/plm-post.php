@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmpost' ) ) {
 
 		public function filter_post_plm_rows( $table_rows, $form, $head, $mod ) {
 
-			$location_ids['custom'] = WpssoPlmConfig::$cf['form']['plm_location']['custom'];
+			$address_ids['custom'] = WpssoPlmConfig::$cf['form']['plm_address']['custom'];
 
 			$table_rows[] = '<td colspan="2" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg',
@@ -53,14 +53,14 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmpost' ) ) {
 					'content' => $form->get_no_checkbox( 'plm_place' ),
 				),
 				'plm_type' => array(
-					'label' => _x( 'Place Type', 'option label', 'wpsso-plm' ),
+					'label' => _x( 'Schema Place Type', 'option label', 'wpsso-plm' ),
 					'th_class' => 'medium', 'tooltip' => 'post-plm_type', 'td_class' => 'blank',
 					'content' => $form->get_no_select( 'plm_type', WpssoPlmConfig::$cf['form']['plm_type'] ),
 				),
-				'plm_location' => array(
-					'label' => _x( 'Select Location', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm-location', 'td_class' => 'blank',
-					'content' => $form->get_no_select( 'plm_location', $location_ids, 'full_name', '', true ),
+				'plm_address' => array(
+					'label' => _x( 'Select Address', 'option label', 'wpsso-plm' ),
+					'th_class' => 'medium', 'tooltip' => 'post-plm-address', 'td_class' => 'blank',
+					'content' => $form->get_no_select( 'plm_address', $address_ids, 'full_name', '', true ),
 				),
 				'plm_streetaddr' => array(
 					'label' => _x( 'Street Address', 'option label', 'wpsso-plm' ),

@@ -26,14 +26,14 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmcontact' ) && class_exists( 'WpssoAdmin'
 		protected function add_meta_boxes() {
 			// add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
 			add_meta_box( $this->pagehook.'_plm_contact', 
-				_x( 'Corporate Contacts', 'metabox title', 'wpsso-plm' ), 
+				_x( 'Addresses and Contacts', 'metabox title', 'wpsso-plm' ), 
 					array( &$this, 'show_metabox_plm_contact' ), $this->pagehook, 'normal' );
 		}
 
 		public function show_metabox_plm_contact() {
 			$metabox = 'cc';
 			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', array( 
-				'location' => 'Corporate Locations',
+				'address' => 'Addresses',
 			) );
 			$table_rows = array();
 			foreach ( $tabs as $key => $title )

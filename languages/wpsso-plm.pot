@@ -14,7 +14,7 @@ msgstr ""
 
 #: lib/config-gettext-extract.php:3
 msgctxt "lib file description"
-msgid "Corporate Contacts"
+msgid "Addresses & Contacts"
 msgstr ""
 
 #: lib/config-gettext-extract.php:4
@@ -36,17 +36,17 @@ msgstr ""
 msgctxt "plugin description"
 msgid ""
 "WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
-"\"Place\" Rich Pin meta tags."
+"Rich Pin / Schema \"Place\" meta tags."
 msgstr ""
 
 #: lib/config-gettext-extract.php:8
 msgctxt "option value"
-msgid "[Custom Location]"
+msgid "[Custom Address]"
 msgstr ""
 
 #: lib/config-gettext-extract.php:9
 msgctxt "option value"
-msgid "[New Location]"
+msgid "[New Address]"
 msgstr ""
 
 #: lib/config-gettext-extract.php:10
@@ -54,21 +54,25 @@ msgctxt "option value"
 msgid "[None]"
 msgstr ""
 
-#: lib/filters.php:169 lib/filters.php:172 lib/filters.php:175
+#: lib/filters.php:169
 msgid ""
-"If location information is entered under the <em>%1$s</em> tab (in the %2$s "
+"%s includes an Address and Contacts editor to manage street addresses and "
+"location information."
+msgstr ""
+
+#: lib/filters.php:172 lib/filters.php:175
+msgid ""
+"If address information is entered under the <em>%1$s</em> tab (in the %2$s "
 "metabox), %3$s will include additional meta tags for %4$s."
 msgstr ""
 
-#: lib/filters.php:169 lib/filters.php:172 lib/filters.php:175
-#: lib/filters.php:229 lib/gpl/admin/plm-post.php:30
-#: lib/pro/admin/plm-post.php:41
+#: lib/filters.php:172 lib/filters.php:175 lib/filters.php:229
+#: lib/gpl/admin/plm-post.php:30 lib/pro/admin/plm-post.php:41
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:169 lib/filters.php:172 lib/filters.php:175
-#: lib/filters.php:229
+#: lib/filters.php:172 lib/filters.php:175 lib/filters.php:229
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr ""
@@ -88,9 +92,7 @@ msgid ""
 msgstr ""
 
 #: lib/filters.php:193
-msgid ""
-"Select a corporate contact location, or enter customized location "
-"information bellow."
+msgid "Select an address or enter a customized address bellow."
 msgstr ""
 
 #: lib/filters.php:196
@@ -151,18 +153,18 @@ msgstr ""
 #: lib/filters.php:229
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
-"custom post types, allowing you to enter specific location information for "
+"custom post types, allowing you to enter specific address information for "
 "that webpage (ie. GPS coordinates and/or street address)."
 msgstr ""
 
 #: lib/gpl/admin/plm-contact.php:30
 msgctxt "option label"
-msgid "Edit Location"
+msgid "Edit Address"
 msgstr ""
 
 #: lib/gpl/admin/plm-contact.php:37
 msgctxt "option label"
-msgid "Location Name"
+msgid "Address Name"
 msgstr ""
 
 #: lib/gpl/admin/plm-contact.php:41 lib/gpl/admin/plm-post.php:66
@@ -231,12 +233,12 @@ msgstr ""
 
 #: lib/gpl/admin/plm-post.php:56 lib/pro/admin/plm-post.php:60
 msgctxt "option label"
-msgid "Place Type"
+msgid "Schema Place Type"
 msgstr ""
 
 #: lib/gpl/admin/plm-post.php:61 lib/pro/admin/plm-post.php:65
 msgctxt "option label"
-msgid "Select Location"
+msgid "Select Address"
 msgstr ""
 
 #: lib/gpl/admin/plm-post.php:98 lib/pro/admin/plm-post.php:136
@@ -246,12 +248,12 @@ msgstr ""
 
 #: lib/pro/admin/plm-contact.php:52
 msgctxt "option comment"
-msgid "leave blank to delete contact"
+msgid "leave blank to delete an address"
 msgstr ""
 
 #: lib/submenu/plm-contact.php:29
 msgctxt "metabox title"
-msgid "Corporate Contacts"
+msgid "Addresses and Contacts"
 msgstr ""
 
 #: lib/submenu/plm-general.php:29
@@ -292,8 +294,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WPSSO extension to provide Open Graph / Facebook Location and Pinterest "
-"Place Rich Pin meta tags."
+"WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
+"Rich Pin / Schema \"Place\" meta tags.',"
 msgstr ""
 
 #. Author of the plugin/theme

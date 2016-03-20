@@ -15,26 +15,26 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmcontact' ) ) {
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
 			$this->p->util->add_plugin_filters( $this, array( 
-				'cc_location_rows' => 2,	// $table_rows, $form
+				'cc_address_rows' => 2,	// $table_rows, $form
 			) );
 		}
 
-		public function filter_cc_location_rows( $table_rows, $form ) {
+		public function filter_cc_address_rows( $table_rows, $form ) {
 
-			$location_ids['0'] = WpssoPlmConfig::$cf['form']['plm_location']['new'];
+			$address_ids['0'] = WpssoPlmConfig::$cf['form']['plm_address']['new'];
 
 			$table_rows[] = '<td colspan="2" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg', 
 					array( 'lca' => 'wpssoplm' ) ).'</td>';
 
-			$table_rows['plm_cc_location'] = $form->get_th_html( _x( 'Edit Location',
+			$table_rows['plm_cc_address'] = $form->get_th_html( _x( 'Edit Address',
 				'option label', 'wpsso-plm' ) ).
-			'<td class="blank">'.$form->get_no_select( 'plm_cc_location',
-				$location_ids, 'full_name', '', true, true ).'</td>';
+			'<td class="blank">'.$form->get_no_select( 'plm_cc_address',
+				$address_ids, 'full_name', '', true, true ).'</td>';
 
-			foreach ( $location_ids as $id => $name ) {
+			foreach ( $address_ids as $id => $name ) {
 
-				$table_rows['plm_cc_name_'.$id] = $form->get_th_html( _x( 'Location Name',
+				$table_rows['plm_cc_name_'.$id] = $form->get_th_html( _x( 'Address Name',
 					'option label', 'wpsso-plm' ) ). 
 				'<td class="blank">'.$form->get_no_input_value( '', 'full_name required' ).'</td>';
 	

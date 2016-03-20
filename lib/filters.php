@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_add_to_page' => 1,
 					'plm_add_to_attachment' => 0,
 					'plm_def_country' => 'none',	// alpha2 country code
-					'plm_cc_location' => 'new',	// value is not used
+					'plm_cc_address' => 'new',	// value is not used
 				),
 			),
 		);
@@ -74,7 +74,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				return $og;	// abort
 			}
 
-			$opts = WpssoPlmLocation::get_md_options( $mod );
+			$opts = WpssoPlmAddress::get_md_options( $mod );
 
 			// the latitude and longitude values are both required for the place meta tags
 			if ( ! empty( $opts['plm_latitude'] ) && 
@@ -113,17 +113,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				array(
 					'plm_place' => 0,
 					'plm_type' => 'geo',
-					'plm_location' => 'custom',
+					'plm_address' => 'custom',
 					'plm_country' => $this->p->options['plm_def_country'],	// alpha2 country code
 				) );
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
 
-			$location_ids = WpssoPlmLocation::get_ids( $opts );
+			$address_ids = WpssoPlmAddress::get_ids( $opts );
 
-			// remove all locations with an empty name value
-			foreach ( $location_ids as $id => $name )
+			// remove all addresses with an empty name value
+			foreach ( $address_ids as $id => $name )
 				if ( empty( $name ) )
 					$opts = SucomUtil::preg_grep_keys( '/^plm_cc_.*_'.$id.'$/',
 						$opts, true );	// $invert = true
@@ -143,11 +143,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			switch ( $key ) {
 				case 'plm_type':
 				case 'plm_def_country':
-				case 'plm_location':		// 'none', 'custom', or numeric
+				case 'plm_address':		// 'none', 'custom', or numeric
 				case ( preg_match( '/^plm(_cc)?_(country)(_[0-9]+)?/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case 'plm_cc_location':		// numeric
+				case 'plm_cc_address':		// numeric
 					return 'numeric';
 					break;
 				case ( preg_match( '/^plm(_cc)?_(latitude|longitude|altitude|po_box_number)(_[0-9]+)?/', $key ) ? true : false ):
@@ -165,14 +165,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$short = $this->p->cf['plugin'][$lca]['short'];
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
-				case 'tooltip-side-corp-contacts-editor':
-					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Facebook' );
+				case 'tooltip-side-addr-contact-editor':
+					$text = sprintf( __( '%s includes an Address and Contacts editor to manage street addresses and location information.', 'wpsso-plm' ), $short_pro );
 					break;
 				case 'tooltip-side-location-meta-tags':
-					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Facebook' );
+					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Facebook / Open Graph' );
 					break;
 				case 'tooltip-side-place-meta-tags':
-					$text = sprintf( __( 'If location information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Pinterest <em>Place</em> Rich Pin' );
+					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Pinterest Rich Pin / Schema <em>Place</em>' );
 					break;
 			}
 			return $text;
@@ -189,8 +189,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-post-plm_type':
 					$text = __( 'Select the type of address entered &mdash; either a Geographic <em>Place</em> or a Postal Address.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_location':
-					$text = __( 'Select a corporate contact location, or enter customized location information bellow.', 'wpsso-plm' );
+				case 'tooltip-post-plm_address':
+					$text = __( 'Select an address or enter a customized address bellow.', 'wpsso-plm' );
 					break;
 				case 'tooltip-post-plm_streetaddr':
 					$text = __( 'An optional Street Address for the <em>Place</em> meta tags.', 'wpsso-plm' );
@@ -226,7 +226,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_messages_info( $text, $idx ) {
 			switch ( $idx ) {
 				case 'info-place-general':
-					$text = '<blockquote class="top-info"><p>'.sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific location information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) ).'</p></blockquote>';
+					$text = '<blockquote class="top-info"><p>'.sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) ).'</p></blockquote>';
 					break;
 			}
 			return $text;
@@ -241,7 +241,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_status_pro_features( $features, $lca, $info ) {
 			$aop = $this->p->check->aop( $lca );
-			$features['Corp. Contacts Editor'] = array( 
+			$features['Addr / Contact Editor'] = array( 
 				'status' => $aop ? 'on' : 'off',
 				'td_class' => $aop ? '' : 'blank',
 			);
