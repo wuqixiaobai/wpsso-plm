@@ -8,9 +8,9 @@
 if ( ! defined( 'ABSPATH' ) ) 
 	die( 'These aren\'t the droids you\'re looking for...' );
 
-if ( ! class_exists( 'WpssoPlmLocation' ) ) {
+if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
-	class WpssoPlmLocation {
+	class WpssoPlmAddress {
 
 		protected $p;
 
@@ -29,18 +29,18 @@ if ( ! class_exists( 'WpssoPlmLocation' ) ) {
 
 			$md_opts = $mod['obj']->get_options( $mod['id'] );
 
-			if ( ! empty( $md_opts['plm_location'] ) && 
-				$md_opts['plm_location'] !== 'none' ) {
+			if ( ! empty( $md_opts['plm_address'] ) && 
+				$md_opts['plm_address'] !== 'none' ) {
 
-				$cc_opts = SucomUtil::preg_grep_keys( '/^(plm_)cc_(.*)_'.$md_opts['plm_location'].'$/',
+				$cc_opts = SucomUtil::preg_grep_keys( '/^(plm_)cc_(.*)_'.$md_opts['plm_address'].'$/',
 					$wpsso->options, false, '$1$2' );
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'using corporate contact ID '.$md_opts['plm_location'] );
+					$wpsso->debug->log( 'using corporate contact ID '.$md_opts['plm_address'] );
 					$wpsso->debug->log( $cc_opts );
 				}
 
-				// reset location / place to defaults, then apply the corporate contact location
+				// reset address / place to defaults, then apply the contact address
 				$md_opts = array_merge( $md_opts, WpssoPlmConfig::$cf['form']['plm_md_place'], $cc_opts );
 			}
 
@@ -57,11 +57,11 @@ if ( ! class_exists( 'WpssoPlmLocation' ) ) {
 			if ( empty( $opts ) )
 				$opts = $wpsso->options;
 
-			$location_ids = SucomUtil::preg_grep_keys( '/^plm_cc_name_([0-9]+)$/', $opts, false, '$1' );
+			$address_ids = SucomUtil::preg_grep_keys( '/^plm_cc_name_([0-9]+)$/', $opts, false, '$1' );
 
-			natsort( $location_ids );	// sort values to display in select box
+			natsort( $address_ids );	// sort values to display in select box
 
-			return $location_ids;
+			return $address_ids;
 		}
 
 		public static function get_ids_first_next() {
@@ -70,18 +70,18 @@ if ( ! class_exists( 'WpssoPlmLocation' ) ) {
 			if ( $wpsso->debug->enabled )
 				$wpsso->debug->mark();
 
-			$location_ids = self::get_ids();
+			$address_ids = self::get_ids();
 
-			ksort( $location_ids );		// sort keys to find highest / lowest key integer
+			ksort( $address_ids );		// sort keys to find highest / lowest key integer
 
-			$sorted_keys = array_keys( $location_ids );
+			$sorted_keys = array_keys( $address_ids );
 			$first_id = (int) reset( $sorted_keys );
 			$last_id = (int) end( $sorted_keys );
 			$next_id = $last_id > 0 ? $last_id + 1 : 0;
 
-			natsort( $location_ids );	// sort values to display in select box
+			natsort( $address_ids );	// sort values to display in select box
 
-			return array( $location_ids, $first_id, $next_id );
+			return array( $address_ids, $first_id, $next_id );
 		}
 	}
 }
