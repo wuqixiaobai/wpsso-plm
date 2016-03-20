@@ -10,7 +10,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.1
 Tested Up To: 4.4.2
-Stable Tag: 1.4.2
+Stable Tag: 1.5.0
 
 WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.
 
@@ -91,7 +91,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 1.5.0 (ETA 2016/03/20)**
+**Version 1.5.0 (2016/03/20)**
 
 Official announcement: N/A
 
@@ -151,7 +151,7 @@ Maintenance release for WordPress Social Sharing Optimization (WPSSO) v3.24.0.
 
 = 1.5.0 =
 
-ETA 2016/03/20 - Required update for WPSSO v3.28.1. Added a new "Corporate Contacts" settings page, and "Select Location" drop-down in the Social Settings metabox (Pro version).
+2016/03/20 - Required update for WPSSO v3.28.1. Added a new "Corporate Contacts" settings page, and "Select Location" drop-down in the Social Settings metabox (Pro version).
 
 = 1.4.2 =
 
