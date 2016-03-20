@@ -91,7 +91,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 1.5.0 (2016/03/20)**
+**Version 1.5.1 (2016/03/20)**
 
 Official announcement: N/A
 
@@ -110,7 +110,7 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 1.5.0 =
+= 1.5.1 =
 
 2016/03/20 - Required update for WPSSO v3.28.1. Added a new "Corporate Contacts" settings page, and "Select Location" drop-down in the Social Settings metabox (Pro version).
 
