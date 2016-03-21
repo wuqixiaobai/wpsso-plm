@@ -93,7 +93,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 **Version 1.5.1 (2016/03/20)**
 
-Official announcement: N/A
+Official announcement: [WPSSO Update - AMP Support and Several Core Changes](http://wpsso.com/2016/03/20/wpsso-update-amp-support-and-several-core-changes/)
 
 > Required update for WordPress Social Sharing Optimization (WPSSO) version 3.28.1.
 
