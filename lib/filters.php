@@ -140,12 +140,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$key = preg_replace( '/#.*$/', '', $key );
 
 			switch ( $key ) {
-				case 'plm_addr_id':		// numeric
-					return 'numeric';
-					break;
-				case 'plm_id':			// 'none', 'custom', or numeric
 				case 'plm_type':
 				case 'plm_def_country':
+				case 'plm_addr_id':		// 'none', 'custom', or numeric
 				case ( preg_match( '/^plm_(addr_)?(country)(_[0-9]+)?/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
