@@ -57,10 +57,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmpost' ) ) {
 					'th_class' => 'medium', 'tooltip' => 'post-plm_type', 'td_class' => 'blank',
 					'content' => $form->get_no_select( 'plm_type', WpssoPlmConfig::$cf['form']['plm_type'] ),
 				),
-				'plm_address' => array(
-					'label' => _x( 'Select Address', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm-address', 'td_class' => 'blank',
-					'content' => $form->get_no_select( 'plm_address', $address_ids, 'full_name', '', true ),
+				'plm_addr_id' => array(
+					'label' => _x( 'Select an Address', 'option label', 'wpsso-plm' ),
+					'th_class' => 'medium', 'tooltip' => 'post-plm_addr_id', 'td_class' => 'blank',
+					'content' => $form->get_no_select( 'plm_addr_id', $address_ids, 'full_name', '', true ),
 				),
 				'plm_streetaddr' => array(
 					'label' => _x( 'Street Address', 'option label', 'wpsso-plm' ),

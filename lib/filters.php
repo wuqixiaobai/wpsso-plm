@@ -162,13 +162,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-addr-contact-editor':
-					$text = sprintf( __( '%s includes an Address and Contacts editor to manage street addresses and location information.', 'wpsso-plm' ), $short_pro );
+					$text = sprintf( __( '%s includes an Address and Contacts editor to manage physical locations and contact information.', 'wpsso-plm' ), $short_pro );
 					break;
 				case 'tooltip-side-location-meta-tags':
-					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Facebook / Open Graph' );
+					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional %4$s meta tags.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Facebook / Open Graph' );
 					break;
 				case 'tooltip-side-place-meta-tags':
-					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional meta tags for %4$s.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Pinterest Rich Pin / Schema <em>Place</em>' );
+					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional %4$s meta tags.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Pinterest Rich Pin / Schema <em>Place</em>' );
 					break;
 			}
 			return $text;

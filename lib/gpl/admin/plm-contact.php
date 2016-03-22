@@ -27,7 +27,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPlmcontact' ) ) {
 				$this->p->msgs->get( 'pro-feature-msg', 
 					array( 'lca' => 'wpssoplm' ) ).'</td>';
 
-			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Edit Address',
+			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Edit an Address',
 				'option label', 'wpsso-plm' ) ).
 			'<td class="blank">'.$form->get_no_select( 'plm_addr_id',
 				$address_ids, 'full_name', '', true, true ).'</td>';
