@@ -25,12 +25,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 
 		protected function add_meta_boxes() {
 			// add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
-			add_meta_box( $this->pagehook.'_plm_general',
+			add_meta_box( $this->pagehook.'_general',
 				_x( 'Place and Location Meta', 'metabox title', 'wpsso-plm' ), 
-					array( &$this, 'show_metabox_plm_general' ), $this->pagehook, 'normal' );
+					array( &$this, 'show_metabox_general' ), $this->pagehook, 'normal' );
 		}
 
-		public function show_metabox_plm_general() {
+		public function show_metabox_general() {
 			$metabox = 'plm';
 			echo '<table class="sucom-setting">';
 			foreach ( apply_filters( $this->p->cf['lca'].'_'.$metabox.'_general_rows', 
