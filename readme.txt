@@ -9,7 +9,7 @@ Tags: wpsso, place, location, venue, longitude, latitude, address, local
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.1
-Tested Up To: 4.4.2
+Tested Up To: 4.5
 Stable Tag: 1.5.2
 
 WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.
@@ -91,6 +91,20 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
+**Version 1.5.3 (2016/03/25)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Tested with WordPress v4.5-RC1-37079.
+	* Standardized the general and post library file and class names.
+
 **Version 1.5.2 (2016/03/23)**
 
 Official announcement: N/A
@@ -122,6 +136,10 @@ Official announcement: [WPSSO Update - AMP Support and Several Core Changes](htt
 	* None
 
 == Upgrade Notice ==
+
+= 1.5.3 =
+
+2016/03/23 - Standardized the general and post library file and class names. Tested with WordPress v4.5-RC1-37079.
 
 = 1.5.2 =
 
