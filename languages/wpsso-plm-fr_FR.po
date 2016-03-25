@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.5.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2016-03-23 07:00-0400\n"
-"PO-Revision-Date: 2016-03-23 07:00-0400\n"
+"POT-Creation-Date: 2016-03-25 14:31-0400\n"
+"PO-Revision-Date: 2016-03-25 14:31-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -76,7 +76,7 @@ msgstr ""
 "le %2$s metabox), %3$s ajoutera des balises méta supplémentaires pour %4$s."
 
 #: lib/filters.php:168 lib/filters.php:171 lib/filters.php:225
-#: lib/gpl/admin/plm-post.php:30 lib/pro/admin/plm-post.php:41
+#: lib/gpl/admin/post.php:30 lib/pro/admin/post.php:41
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr "Place / Position"
@@ -193,96 +193,96 @@ msgstr ""
 "d'entrer des informations sur un endroit spécifique (c'est à dire, des "
 "coordonnées GPS et/ou adresse postale)."
 
-#: lib/gpl/admin/plm-contact.php:30
+#: lib/gpl/admin/contact.php:30
 msgctxt "option label"
 msgid "Edit an Address"
 msgstr "Modifier une adresse"
 
-#: lib/gpl/admin/plm-contact.php:37
+#: lib/gpl/admin/contact.php:37
 msgctxt "option label"
 msgid "Address Name"
 msgstr "Nom de l'adresse"
 
-#: lib/gpl/admin/plm-contact.php:41 lib/gpl/admin/plm-post.php:66
-#: lib/pro/admin/plm-post.php:79 lib/pro/admin/plm-post.php:105
+#: lib/gpl/admin/contact.php:41 lib/gpl/admin/post.php:66
+#: lib/pro/admin/post.php:79 lib/pro/admin/post.php:105
 msgctxt "option label"
 msgid "Street Address"
 msgstr "Adresse de rue"
 
-#: lib/gpl/admin/plm-contact.php:45 lib/gpl/admin/plm-post.php:71
-#: lib/pro/admin/plm-post.php:83 lib/pro/admin/plm-post.php:109
+#: lib/gpl/admin/contact.php:45 lib/gpl/admin/post.php:71
+#: lib/pro/admin/post.php:83 lib/pro/admin/post.php:109
 msgctxt "option label"
 msgid "P.O. Box Number"
 msgstr "Num. boîte postale"
 
-#: lib/gpl/admin/plm-contact.php:49 lib/gpl/admin/plm-post.php:76
-#: lib/pro/admin/plm-post.php:87 lib/pro/admin/plm-post.php:113
+#: lib/gpl/admin/contact.php:49 lib/gpl/admin/post.php:76
+#: lib/pro/admin/post.php:87 lib/pro/admin/post.php:113
 msgctxt "option label"
 msgid "City"
 msgstr "Ville"
 
-#: lib/gpl/admin/plm-contact.php:53 lib/gpl/admin/plm-post.php:81
-#: lib/pro/admin/plm-post.php:91 lib/pro/admin/plm-post.php:117
+#: lib/gpl/admin/contact.php:53 lib/gpl/admin/post.php:81
+#: lib/pro/admin/post.php:91 lib/pro/admin/post.php:117
 msgctxt "option label"
 msgid "State / Province"
 msgstr "État / Province"
 
-#: lib/gpl/admin/plm-contact.php:57 lib/gpl/admin/plm-post.php:86
-#: lib/pro/admin/plm-post.php:95 lib/pro/admin/plm-post.php:121
+#: lib/gpl/admin/contact.php:57 lib/gpl/admin/post.php:86
+#: lib/pro/admin/post.php:95 lib/pro/admin/post.php:121
 msgctxt "option label"
 msgid "Zip / Postal Code"
 msgstr "ZIP / Code postal"
 
-#: lib/gpl/admin/plm-contact.php:63 lib/gpl/admin/plm-post.php:91
-#: lib/pro/admin/plm-post.php:99 lib/pro/admin/plm-post.php:128
+#: lib/gpl/admin/contact.php:63 lib/gpl/admin/post.php:91
+#: lib/pro/admin/post.php:99 lib/pro/admin/post.php:128
 msgctxt "option label"
 msgid "Country"
 msgstr "Pays"
 
-#: lib/gpl/admin/plm-contact.php:68 lib/gpl/admin/plm-post.php:101
-#: lib/pro/admin/plm-post.php:147 lib/pro/admin/plm-post.php:161
+#: lib/gpl/admin/contact.php:68 lib/gpl/admin/post.php:101
+#: lib/pro/admin/post.php:147 lib/pro/admin/post.php:161
 msgctxt "option label"
 msgid "Latitude"
 msgstr "Latitude"
 
-#: lib/gpl/admin/plm-contact.php:72 lib/gpl/admin/plm-post.php:106
-#: lib/pro/admin/plm-post.php:151 lib/pro/admin/plm-post.php:165
+#: lib/gpl/admin/contact.php:72 lib/gpl/admin/post.php:106
+#: lib/pro/admin/post.php:151 lib/pro/admin/post.php:165
 msgctxt "option label"
 msgid "Longitude"
 msgstr "Longitude"
 
-#: lib/gpl/admin/plm-contact.php:76 lib/gpl/admin/plm-post.php:111
-#: lib/pro/admin/plm-post.php:155 lib/pro/admin/plm-post.php:169
+#: lib/gpl/admin/contact.php:76 lib/gpl/admin/post.php:111
+#: lib/pro/admin/post.php:155 lib/pro/admin/post.php:169
 msgctxt "option label"
 msgid "Altitude in Meters"
 msgstr "Altitude en mètres"
 
-#: lib/gpl/admin/plm-post.php:48 lib/pro/admin/plm-post.php:54
+#: lib/gpl/admin/post.php:48 lib/pro/admin/post.php:54
 msgctxt "metabox title"
 msgid "Pinterest Rich Pin / Schema Place"
 msgstr "Pinterest Rich Pin / Schéma Place"
 
-#: lib/gpl/admin/plm-post.php:51 lib/pro/admin/plm-post.php:56
+#: lib/gpl/admin/post.php:51 lib/pro/admin/post.php:56
 msgctxt "option label"
 msgid "Content is a <em>Place</em>"
 msgstr "Le contenu est une <em>Place</em>"
 
-#: lib/gpl/admin/plm-post.php:56 lib/pro/admin/plm-post.php:60
+#: lib/gpl/admin/post.php:56 lib/pro/admin/post.php:60
 msgctxt "option label"
 msgid "Schema Place Type"
 msgstr "Type de Schéma Place"
 
-#: lib/gpl/admin/plm-post.php:61 lib/pro/admin/plm-post.php:65
+#: lib/gpl/admin/post.php:61 lib/pro/admin/post.php:65
 msgctxt "option label"
 msgid "Select an Address"
 msgstr "Choisir une adresse"
 
-#: lib/gpl/admin/plm-post.php:98 lib/pro/admin/plm-post.php:136
+#: lib/gpl/admin/post.php:98 lib/pro/admin/post.php:136
 msgctxt "metabox title"
 msgid "Facebook / Open Graph Location"
 msgstr "Position Facebook / Open Graph"
 
-#: lib/pro/admin/plm-contact.php:54
+#: lib/pro/admin/contact.php:54
 msgctxt "option comment"
 msgid "leave blank to delete an address"
 msgstr "laissez vide pour supprimer une adresse"
@@ -318,7 +318,7 @@ msgstr ""
 "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer "
 "l'extension %3$s."
 
-#: wpsso-plm.php:123
+#: wpsso-plm.php:126
 msgid ""
 "The %1$s extension version %2$s requires the use of %3$s version %4$s or "
 "newer (version %5$s is currently installed)."
