@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '1.5.2',		// plugin version
+					'version' => '1.5.3',		// plugin version
 					'opt_version' => '8',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
@@ -46,21 +46,22 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						'pro_support' => 'http://wpsso-plm.support.wpsso.com/',
 					),
 					'lib' => array(
+						// submenu items must have unique keys
 						'submenu' => array (
-							'wpssoplm-separator-0' => 'PLM Extension',
-							'plm-general' => 'Place / Location Meta',
+							//'wpssoplm-separator-0' => 'PLM Extension',
+							'plm-general' => 'Place / Location Meta',	// general settings
 							'plm-contact' => 'Addresses / Contacts',
 						),
 						'gpl' => array(
 							'admin' => array(
-								'plm-contact' => 'Addresses / Contacts',
-								'plm-post' => 'Place / Location Tab',
+								'contact' => 'Contact Settings',
+								'post' => 'Post Settings',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
-								'plm-contact' => 'Addresses / Contacts',
-								'plm-post' => 'Place / Location Tab',
+								'contact' => 'Contact Settings',
+								'post' => 'Post Settings',
 							),
 							'head' => array(
 								'place' => 'Place Meta Tags',
