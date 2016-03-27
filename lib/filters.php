@@ -108,12 +108,25 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_get_md_defaults( $def_opts ) {
 			return array_merge( $def_opts, 
-				WpssoPlmConfig::$cf['form']['plm_md_place'],	// empty array
+				/*
+				 * WpssoPlmConfig::$cf['form']['plm_md_place'] = array(
+				 * 	'plm_streetaddr' => '',		// Street Address
+				 * 	'plm_po_box_number' => '',	// P.O. Box Number
+				 * 	'plm_city' => '',		// City
+				 * 	'plm_state' => '',		// State / Province
+				 * 	'plm_zipcode' => '',		// Zip / Postal Code
+				 * 	'plm_country' => '',		// Country
+				 * 	'plm_latitude' => '',		// Latitude
+				 * 	'plm_longitude' => '',		// Longitude
+				 * 	'plm_altitude' => '',		// Altitude in Meters
+				 * ),
+				 */
+				WpssoPlmConfig::$cf['form']['plm_md_place'],
 				array(
-					'plm_place' => 0,
-					'plm_type' => 'geo',
-					'plm_addr_id' => 'custom',
-					'plm_country' => $this->p->options['plm_def_country'],	// alpha2 country code
+					'plm_place' => 0,					// Content is a Place
+					'plm_type' => 'geo',					// Schema Place Type
+					'plm_addr_id' => 'custom',				// Select an Address
+					'plm_country' => $this->p->options['plm_def_country'],	// Country
 				) );
 		}
 

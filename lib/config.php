@@ -81,15 +81,15 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'postal' => 'Postal Address',
 				),
 				'plm_md_place' => array(
-					'plm_streetaddr' => '',
-					'plm_po_box_number' => '',
-					'plm_city' => '',
-					'plm_state' => '',
-					'plm_zipcode' => '',
-					'plm_country' => '',
-					'plm_latitude' => '',
-					'plm_longitude' => '',
-					'plm_altitude' => '',
+					'plm_streetaddr' => '',		// Street Address
+					'plm_po_box_number' => '',	// P.O. Box Number
+					'plm_city' => '',		// City
+					'plm_state' => '',		// State / Province
+					'plm_zipcode' => '',		// Zip / Postal Code
+					'plm_country' => '',		// Country
+					'plm_latitude' => '',		// Latitude
+					'plm_longitude' => '',		// Longitude
+					'plm_altitude' => '',		// Altitude in Meters
 				),
 			),
 		);
