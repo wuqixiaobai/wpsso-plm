@@ -73,9 +73,13 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Frequently Asked Questions =
 
+* None
+
 == Other Notes ==
 
 = Additional Documentation =
+
+* None
 
 == Screenshots ==
 
