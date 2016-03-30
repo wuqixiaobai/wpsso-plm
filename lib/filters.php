@@ -50,26 +50,64 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 		}
 
+		public function filter_get_defaults( $def_opts ) {
+			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
+
+			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to' );
+
+			return $def_opts;
+		}
+
+		public function filter_get_md_defaults( $def_opts ) {
+			return array_merge( $def_opts, 
+				/*
+				 * WpssoPlmConfig::$cf['form']['plm_md_place'] = array(
+				 * 	'plm_streetaddr' => '',		// Street Address
+				 * 	'plm_po_box_number' => '',	// P.O. Box Number
+				 * 	'plm_city' => '',		// City
+				 * 	'plm_state' => '',		// State / Province
+				 * 	'plm_zipcode' => '',		// Zip / Postal Code
+				 * 	'plm_country' => '',		// Country
+				 * 	'plm_latitude' => '',		// Latitude
+				 * 	'plm_longitude' => '',		// Longitude
+				 * 	'plm_altitude' => '',		// Altitude in Meters
+				 * ),
+				 */
+				WpssoPlmConfig::$cf['form']['plm_md_place'],
+				array(
+					'plm_place' => 0,					// Content is a Place
+					'plm_type' => 'geo',					// Schema Place Type
+					'plm_addr_id' => 'custom',				// Select an Address
+					'plm_country' => $this->p->options['plm_def_country'],	// Country
+				) );
+		}
+
 		public function filter_og_prefix_ns( $ns ) {
 			$ns['place'] = 'http://ogp.me/ns/place#';
 			return $ns;
 		}
 
-		public function filter_og_seed( $og, $use_post, $mod ) {
+		public function filter_og_seed( $og = array(), $use_post = false, $mod = false ) {
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
 
-			// sanity checks
-			if ( $mod['name'] !== 'post' ) {
-				if ( $this->p->debug->enabled )
-					$this->p->debug->log( 'exiting early: module name is not post' );
-				return $og;     // abort
-			}
+			if ( ! is_array( $mod ) )
+				$mod = $this->p->util->get_page_mod( $use_post );	// get post/user/term id, module name, and module object reference
 
-			$post_type = get_post_type( $mod['id'] );
-			if ( empty( $this->p->options['plm_add_to_'.$post_type] ) ) {
+			// sanity checks
+			if ( ! $mod['is_post'] ) {	// aka "not singular"
 				if ( $this->p->debug->enabled )
-					$this->p->debug->log( 'exiting early: plm disabled for post_type \''.$post_type.'\'' );
+					$this->p->debug->log( 'exiting early: index page (not singular)' );
+				return $og;     // abort
+
+			} elseif ( ! $mod['post_type'] ) {
+				if ( $this->p->debug->enabled )
+					$this->p->debug->log( 'exiting early: module post_type is empty' );
+				return $og;
+
+			} elseif ( empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) ) {
+				if ( $this->p->debug->enabled )
+					$this->p->debug->log( 'exiting early: plm_add_to_'.$mod['post_type'].' is empty' );
 				return $og;	// abort
 			}
 
@@ -98,36 +136,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			return $og;
-		}
-
-		public function filter_get_defaults( $def_opts ) {
-			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
-			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to' );
-			return $def_opts;
-		}
-
-		public function filter_get_md_defaults( $def_opts ) {
-			return array_merge( $def_opts, 
-				/*
-				 * WpssoPlmConfig::$cf['form']['plm_md_place'] = array(
-				 * 	'plm_streetaddr' => '',		// Street Address
-				 * 	'plm_po_box_number' => '',	// P.O. Box Number
-				 * 	'plm_city' => '',		// City
-				 * 	'plm_state' => '',		// State / Province
-				 * 	'plm_zipcode' => '',		// Zip / Postal Code
-				 * 	'plm_country' => '',		// Country
-				 * 	'plm_latitude' => '',		// Latitude
-				 * 	'plm_longitude' => '',		// Longitude
-				 * 	'plm_altitude' => '',		// Altitude in Meters
-				 * ),
-				 */
-				WpssoPlmConfig::$cf['form']['plm_md_place'],
-				array(
-					'plm_place' => 0,					// Content is a Place
-					'plm_type' => 'geo',					// Schema Place Type
-					'plm_addr_id' => 'custom',				// Select an Address
-					'plm_country' => $this->p->options['plm_def_country'],	// Country
-				) );
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
