@@ -135,7 +135,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 	}
 
         global $wpssoplm;
-	$wpssoplm = WpssoPlm::get_instance();
+	$wpssoplm =& WpssoPlm::get_instance();
 }
 
 ?>
