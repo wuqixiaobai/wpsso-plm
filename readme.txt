@@ -95,7 +95,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 1.5.3 (2016/03/25)**
+**Version 1.5.4-1 (2016/03/30)**
 
 Official announcement: N/A
 
@@ -106,50 +106,13 @@ Official announcement: N/A
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Tested with WordPress v4.5-RC1-37079.
-	* Standardized the general and post library file and class names.
-
-**Version 1.5.2 (2016/03/23)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Modified the SucomWebpage `get_caption()`, `get_title()`, and `get_description()` method arguments to use the new `$mod` array.
-
-**Version 1.5.1 (2016/03/20)**
-
-Official announcement: [WPSSO Update - AMP Support and Several Core Changes](http://wpsso.com/2016/03/20/wpsso-update-amp-support-and-several-core-changes/)
-
-> Required update for WordPress Social Sharing Optimization (WPSSO) version 3.28.1.
-
-* *New Features*
-	* Added a "Default Country" option to the Place and Location Meta settings page.
-	* Added a new "Corporate Contacts" settings page (Pro version).
-	* Added a new "Select Location" drop-down option in the Social Settings metabox (Pro version).
-* *Improvements*
-	* Improved the Social Settings options display (Free version).
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
+	* Minor code optimization for the 'wpsso_og_seed' filter.
+	* Adopted a standard version numbering system:
+		* `{major}.{minor}.{bugfix}-{stage}{level}`
 
 == Upgrade Notice ==
 
-= 1.5.3 =
+= 1.5.4-1 =
 
-2016/03/23 - Standardized the general and post library file and class names. Tested with WordPress v4.5-RC1-37079.
-
-= 1.5.2 =
-
-2016/03/23 - Modified several SucomWebage method arguments to use the new $mod array.
-
-= 1.5.1 =
-
-2016/03/20 - Required update for WPSSO v3.28.1. Added a new "Corporate Contacts" settings page, and "Select Location" drop-down in the Social Settings metabox (Pro version).
+2016/03/30 - Minor code optimization for the 'wpsso_og_seed' filter. Adopted a standard version numbering system.
 
