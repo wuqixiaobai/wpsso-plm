@@ -95,7 +95,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 1.5.4-1 (2016/03/30)**
+**Version 1.5.4-1 (ETA 2016/03/31)**
 
 Official announcement: N/A
 
@@ -114,5 +114,5 @@ Official announcement: N/A
 
 = 1.5.4-1 =
 
-2016/03/30 - Minor code optimization for the 'wpsso_og_seed' filter. Adopted a standard version numbering system.
+ETA 2016/03/31 - Minor code optimization for the 'wpsso_og_seed' filter. Adopted a standard version numbering system.
 
