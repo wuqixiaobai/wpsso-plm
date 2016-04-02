@@ -19,39 +19,39 @@ msgstr ""
 
 #: lib/config-gettext-extract.php:4
 msgctxt "option value"
-msgid "Geographic"
+msgid "[Custom Address]"
 msgstr ""
 
 #: lib/config-gettext-extract.php:5
-msgctxt "lib file description"
-msgid "Place / Location Meta"
+msgctxt "option value"
+msgid "Geographic"
 msgstr ""
 
 #: lib/config-gettext-extract.php:6
 msgctxt "option value"
-msgid "Postal Address"
+msgid "[New Address]"
 msgstr ""
 
 #: lib/config-gettext-extract.php:7
-msgctxt "plugin description"
-msgid ""
-"WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
-"Rich Pin / Schema \"Place\" meta tags."
+msgctxt "option value"
+msgid "[None]"
 msgstr ""
 
 #: lib/config-gettext-extract.php:8
-msgctxt "option value"
-msgid "[Custom Address]"
+msgctxt "lib file description"
+msgid "Place / Location Meta"
 msgstr ""
 
 #: lib/config-gettext-extract.php:9
 msgctxt "option value"
-msgid "[New Address]"
+msgid "Postal Address"
 msgstr ""
 
 #: lib/config-gettext-extract.php:10
-msgctxt "option value"
-msgid "[None]"
+msgctxt "plugin description"
+msgid ""
+"WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
+"Rich Pin / Schema \"Place\" meta tags."
 msgstr ""
 
 #: lib/filters.php:186
