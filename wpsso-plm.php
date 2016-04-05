@@ -35,8 +35,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		public $reg;			// WpssoPlmRegister
 		public $filters;		// WpssoPlmFilters
 
-		protected static $instance = null;
-
+		private static $instance = null;
 		private static $wpsso_short = 'WPSSO';
 		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
 		private static $wpsso_min_version = '3.28.5-1';
