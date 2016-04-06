@@ -95,6 +95,19 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
+**Version 1.5.5-alpha3 (2016/04/06)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Changed `is_front_page()` to `$mod['is_front']` checks where possible, and `SucomUtil::is_front_page()` elsewhere.
+
 **Version 1.5.4-1 (2016/03/31)**
 
 Official announcement: N/A
@@ -111,6 +124,10 @@ Official announcement: N/A
 		* `{major}.{minor}.{bugfix}-{stage}{level}`
 
 == Upgrade Notice ==
+
+= 1.5.5-alpha3 =
+
+(2016/04/06) Changed is_front_page() calls for WPSSO v3.29.0.
 
 = 1.5.4-1 =
 
