@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.5.4-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2016-03-31 03:32-0400\n"
-"PO-Revision-Date: 2016-03-31 03:32-0400\n"
+"POT-Creation-Date: 2016-04-05 17:04-0400\n"
+"PO-Revision-Date: 2016-04-05 17:04-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -22,20 +22,35 @@ msgstr "Adresses / Contacts"
 
 #: lib/config-gettext-extract.php:4
 msgctxt "option value"
+msgid "[Custom Address]"
+msgstr "[Adresse personnalisée]"
+
+#: lib/config-gettext-extract.php:5
+msgctxt "option value"
 msgid "Geographic"
 msgstr "Géographique"
 
-#: lib/config-gettext-extract.php:5
+#: lib/config-gettext-extract.php:6
+msgctxt "option value"
+msgid "[New Address]"
+msgstr "[Nouvelle adresse]"
+
+#: lib/config-gettext-extract.php:7
+msgctxt "option value"
+msgid "[None]"
+msgstr "[Aucun]"
+
+#: lib/config-gettext-extract.php:8
 msgctxt "lib file description"
 msgid "Place / Location Meta"
 msgstr "Méta Place / Position"
 
-#: lib/config-gettext-extract.php:6
+#: lib/config-gettext-extract.php:9
 msgctxt "option value"
 msgid "Postal Address"
 msgstr "Adresse postale"
 
-#: lib/config-gettext-extract.php:7
+#: lib/config-gettext-extract.php:10
 msgctxt "plugin description"
 msgid ""
 "WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
@@ -43,21 +58,6 @@ msgid ""
 msgstr ""
 "Une extension WPSSO pour fournir les balises méta Facebook / Open Graph de "
 "\"Position\" et Pinterest Rich Pin / Schéma de \"Place\"."
-
-#: lib/config-gettext-extract.php:8
-msgctxt "option value"
-msgid "[Custom Address]"
-msgstr "[Adresse personnalisée]"
-
-#: lib/config-gettext-extract.php:9
-msgctxt "option value"
-msgid "[New Address]"
-msgstr "[Nouvelle adresse]"
-
-#: lib/config-gettext-extract.php:10
-msgctxt "option value"
-msgid "[None]"
-msgstr "[Aucun]"
 
 #: lib/filters.php:186
 msgid ""
@@ -302,7 +302,7 @@ msgctxt "option label"
 msgid "Show Tab on Post Types"
 msgstr "Afficher l'onglet sur articles de type"
 
-#: wpsso-plm.php:81
+#: wpsso-plm.php:80
 msgid ""
 "The %1$s extension requires the %2$s plugin &mdash; please install and "
 "activate the %3$s plugin before trying to re-activate the %4$s extension."
@@ -310,7 +310,7 @@ msgstr ""
 "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer "
 "l'extension %3$s avant d'essayer de re-activer %4$s."
 
-#: wpsso-plm.php:83
+#: wpsso-plm.php:82
 msgid ""
 "The %1$s extension requires the %2$s plugin &mdash; please install and "
 "activate the %3$s plugin."
@@ -318,7 +318,7 @@ msgstr ""
 "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer "
 "l'extension %3$s."
 
-#: wpsso-plm.php:133
+#: wpsso-plm.php:132
 msgid ""
 "The %1$s extension version %2$s requires the use of %3$s version %4$s or "
 "newer (version %5$s is currently installed)."

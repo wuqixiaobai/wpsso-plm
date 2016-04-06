@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '1.5.4-1',		// plugin version
+					'version' => '1.5.5-alpha3',		// plugin version
 					'opt_version' => '8',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
@@ -92,6 +92,10 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 				),
 			),
 		);
+
+		public static function get_version() { 
+			return self::$cf['plugin']['wpssoplm']['version'];
+		}
 
 		public static function set_constants( $plugin_filepath ) { 
 			define( 'WPSSOPLM_FILEPATH', $plugin_filepath );						
