@@ -95,7 +95,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 1.5.5-alpha3 (2016/04/06)**
+**Version 1.5.5-beta1 (2016/04/07)**
 
 Official announcement: N/A
 
@@ -125,9 +125,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 1.5.5-alpha3 =
+= 1.5.5-beta1 =
 
-(2016/04/06) Changed is_front_page() calls for WPSSO v3.29.0.
+(2016/04/07) Changed is_front_page() calls for WPSSO v3.29.0.
 
 = 1.5.4-1 =
 
