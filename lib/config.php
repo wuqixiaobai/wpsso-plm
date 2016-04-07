@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '1.5.5-beta1',		// plugin version
+					'version' => '1.5.5-rc1',		// plugin version
 					'opt_version' => '8',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
