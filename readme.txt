@@ -120,8 +120,7 @@ Official announcement: N/A
 	* None
 * *Developer Notes*
 	* Minor code optimization for the 'wpsso_og_seed' filter.
-	* Adopted a standard version numbering system:
-		* `{major}.{minor}.{bugfix}-{stage}{level}`
+	* Adopted a new version numbering system: `{major}.{minor}.{bugfix}-{stage}{level}`
 
 == Upgrade Notice ==
 
