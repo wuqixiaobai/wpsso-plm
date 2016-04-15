@@ -95,6 +95,19 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
+**Version 1.6.0-dev1 (TBD)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 1.5.5-1 (2016/04/08)**
 
 Official announcement: N/A
