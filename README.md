@@ -1,4 +1,4 @@
-<h1>WPSSO Place and Location Meta Tags</h1><h3>for Facebook &quot;Location&quot; and Pinterest &quot;Place&quot;</h3>
+<h1>WPSSO Place and Location Meta Tags for Facebook, Open Graph, Pinterest, and Schema</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place and Location Meta (WPSSO PLM)</td></tr>

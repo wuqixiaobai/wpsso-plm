@@ -1,4 +1,4 @@
-=== WPSSO Place and Location Meta Tags - for Facebook "Location" and Pinterest "Place" ===
+=== WPSSO Place and Location Meta Tags for Facebook, Open Graph, Pinterest, and Schema ===
 Plugin Name: WPSSO Place and Location Meta (WPSSO PLM)
 Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
