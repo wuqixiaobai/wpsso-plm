@@ -39,7 +39,7 @@
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>Website URL</th><td><a href="https://wpsso.com/">https://wpsso.com/</a></td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="http://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>wpsso, place, location, venue, longitude, latitude, address, local</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>wpsso, place, location, venue, longitude, latitude, address, local, business, hours</td></tr>
 </table>
 
 <h2>Description</h2>
@@ -61,42 +61,31 @@
 <p><strong>WPSSO PLM Free / Basic Features</strong></p>
 
 <ul>
-<li>Show the <em>Place / Location</em> tab on Posts, Pages, and custom post types (e-commerce Product pages, for example).</li>
-<li>Enter the latitude, longitude, and altitude of a location.</li>
-<li>Provides location meta tags for Facebook and other social websites.</li>
-</ul>
-
-<p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
+<li>Adds a <em>Place / Location</em> tab in the Social Settings metabox for Posts, Pages, and custom post types (e-commerce product pages, etc.), where you can enter a custom street address, city, state / province, zip / postal code, country, latitude, longitude, altitude, and business hours.</li>
+<li>Provides Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, location, and address meta tags:
 
 <ul>
-<li>Enter the street address, city, state / province, zip / postal code, and country of a Place / Location.</li>
-<li>Optionally share the webpage as a Pinterest Rich Pin / Schema <em>Place</em> (instead of an <em>Article</em>, <em>Product</em>, etc.).</li>
-</ul>
-
-<h4>Place and Location Meta Tags</h4>
-
-<ul>
-<li><strong>Facebook / Open Graph <em>Location</em> Meta Tags</strong>
-
-<ul>
-<li>place:location:latitude</li>
-<li>place:location:longitude</li>
-<li>place:location:altitude</li>
-</ul></li>
-<li><strong>Pinterest <em>Place</em> Rich Pin Meta Tags</strong> (Pro version)
-
-<ul>
+<li>og:latitude</li>
+<li>og:longitude</li>
+<li>og:altitude</li>
 <li>place:street_address</li>
 <li>place:locality</li>
 <li>place:region</li>
 <li>place:postal_code</li>
 <li>place:country_name</li>
-</ul></li>
-<li><strong>Schema Meta Tags</strong> (Pro version)
-
-<ul>
+<li>place:location:latitude</li>
+<li>place:location:longitude</li>
+<li>place:location:altitude</li>
 <li>address</li>
 </ul></li>
+<li>Defines the Schema Type as a <em>Place</em> or <em>LocalBusiness</em> (complete markup requires the <a href="https://wpsso.com/extends/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension). </li>
+</ul>
+
+<p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
+
+<ul>
+<li>Manage a default set of addresses, including their geo coordinates and business hours.</li>
+<li>Select a default address under the <em>Place / Location</em> tab instead of entering custom values.</li>
 </ul>
 
 <h4>Extends the WPSSO Social Plugin</h4>
