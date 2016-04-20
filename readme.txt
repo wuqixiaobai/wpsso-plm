@@ -5,7 +5,7 @@ Text Domain: wpsso-plm
 Domain Path: /languages
 Contributors: jsmoriss
 Donate Link: https://wpsso.com/
-Tags: wpsso, place, location, venue, longitude, latitude, address, local
+Tags: wpsso, place, location, venue, longitude, latitude, address, local, business, hours
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.1
@@ -30,29 +30,26 @@ WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the [WordPre
 
 **WPSSO PLM Free / Basic Features**
 
-* Show the *Place / Location* tab on Posts, Pages, and custom post types (e-commerce Product pages, for example).
-* Enter the latitude, longitude, and altitude of a location.
-* Provides location meta tags for Facebook and other social websites.
-
-**WPSSO PLM Pro / Power-User Features**
-
-* Enter the street address, city, state / province, zip / postal code, and country of a Place / Location.
-* Optionally share the webpage as a Pinterest Rich Pin / Schema *Place* (instead of an *Article*, *Product*, etc.).
-
-= Place and Location Meta Tags =
-
-* **Facebook / Open Graph *Location* Meta Tags**
-	* place:location:latitude
-	* place:location:longitude
-	* place:location:altitude
-* **Pinterest *Place* Rich Pin Meta Tags** (Pro version)
+* Adds a *Place / Location* tab in the Social Settings metabox for Posts, Pages, and custom post types (e-commerce product pages, etc.), where you can enter a custom street address, city, state / province, zip / postal code, country, latitude, longitude, altitude, and business hours.
+* Provides Facebook / Open Graph and Pinterest Rich Pin / Schema *Place*, location, and address meta tags:
+	* og:latitude
+	* og:longitude
+	* og:altitude
 	* place:street_address
 	* place:locality
 	* place:region
 	* place:postal_code
 	* place:country_name
-* **Schema Meta Tags** (Pro version)
+	* place:location:latitude
+	* place:location:longitude
+	* place:location:altitude
 	* address
+* Defines the Schema Type as a *Place* or *LocalBusiness* (complete markup requires the [WPSSO JSON Pro](https://wpsso.com/extends/plugins/wpsso-schema-json-ld/) extension). 
+
+**WPSSO PLM Pro / Power-User Features**
+
+* Manage a default set of addresses, including their geo coordinates and business hours.
+* Select a default address under the *Place / Location* tab instead of entering custom values.
 
 = Extends the WPSSO Social Plugin =
 
@@ -95,14 +92,16 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 1.6.0-dev1 (TBD)**
+**Version 2.0.0-dev1 (TBD)**
 
 Official announcement: N/A
 
 * *New Features*
-	* None
+	* Added support for business hours.
+	* Added support for the Schema Type *LocalBusiness* (complete markup requires the [WPSSO JSON Pro](https://wpsso.com/extends/plugins/wpsso-schema-json-ld/) extension).
 * *Improvements*
-	* None
+	* Enabled all custom address, location, and business hours fields under the *Place / Location* tab in the Social Settings metabox (Free version).
+	* Added support for all Pinterest Rich Pin *Place* meta tags (Free version).
 * *Bugfixes*
 	* None
 * *Developer Notes*
