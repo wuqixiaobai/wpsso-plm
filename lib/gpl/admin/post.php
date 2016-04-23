@@ -35,86 +35,94 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 		public function filter_post_plm_rows( $table_rows, $form, $head, $mod ) {
 
-			$address_ids['custom'] = WpssoPlmConfig::$cf['form']['plm_address']['custom'];
+			$address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_address']['custom'] );
 
-			$table_rows[] = '<td colspan="2" align="center">'.
-				$this->p->msgs->get( 'pro-feature-msg',
-					array( 'lca' => 'wpssoplm' ) ).'</td>';
+			$table_rows[] = '<td colspan="4" align="center">'.
+				$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssoplm' ) ).'</td>';
 
-			$form_rows = array(
-				'subsection_schema_place' => array(
-					'td_class' => 'subsection top',
-					'header' => 'h4',
-					'label' => _x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' )
-				),
-				'plm_place' => array(
-					'label' => _x( 'Content is a <em>Place</em>', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_place', 'td_class' => 'blank',
-					'content' => $form->get_no_checkbox( 'plm_place' ),
-				),
-				'plm_type' => array(
-					'label' => _x( 'Schema Place Type', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_type', 'td_class' => 'blank',
-					'content' => $form->get_no_select( 'plm_type', WpssoPlmConfig::$cf['form']['plm_type'] ),
-				),
-				'plm_addr_id' => array(
-					'label' => _x( 'Select an Address', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_addr_id', 'td_class' => 'blank',
-					'content' => $form->get_no_select( 'plm_addr_id', $address_ids, 'full_name', '', true ),
-				),
-				'plm_streetaddr' => array(
-					'label' => _x( 'Street Address', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_streetaddr', 'td_class' => 'blank',
-					'content' => $form->get_no_input_value( '', 'wide' ),
-				),
-				'plm_po_box_number' => array(
-					'label' => _x( 'P.O. Box Number', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_po_box_number', 'td_class' => 'blank',
-					'content' => $form->get_no_input_value( '' ),
-				),
-				'plm_city' => array(
-					'label' => _x( 'City', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_city', 'td_class' => 'blank',
-					'content' => $form->get_no_input_value( '' ),
-				),
-				'plm_state' => array(
-					'label' => _x( 'State / Province', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_state', 'td_class' => 'blank',
-					'content' => $form->get_no_input_value( '' ),
-				),
-				'plm_zipcode' => array(
-					'label' => _x( 'Zip / Postal Code', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_zipcode', 'td_class' => 'blank',
-					'content' => $form->get_no_input_value( '' ),
-				),
-				'plm_country' => array(
-					'label' => _x( 'Country', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_country', 'td_class' => 'blank',
-					'content' => $form->get_no_select_country( 'plm_country' ),
-				),
-				'subsection_opengraph' => array(
-					'td_class' => 'subsection',
-					'header' => 'h4',
-					'label' => _x( 'Facebook / Open Graph Location', 'metabox title', 'wpsso-plm' )
-				),
-				'plm_latitude' => array(
-					'label' => _x( 'Latitude', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_latitude',
-					'content' => $form->get_input( 'plm_latitude', 'required' ),
-				),
-				'plm_longitude' => array(
-					'label' => _x( 'Longitude', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_longitude',
-					'content' => $form->get_input( 'plm_longitude', 'required' ),
-				),
-				'plm_altitude' => array(
-					'label' => _x( 'Altitude in Meters', 'option label', 'wpsso-plm' ),
-					'th_class' => 'medium', 'tooltip' => 'post-plm_altitude',
-					'content' => $form->get_input( 'plm_altitude' ),
-				),
-			);
+			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Select an Address',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_id' ).
+			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_id', $address_names,
+				'full_name', '', true ).'</td>';
 
-			return $form->get_md_form_rows( $table_rows, $form_rows, $head, $mod );
+			$table_rows['subsection_schema_place'] = '<td></td><td class="subsection" colspan="3"><h4>'.
+				_x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' ).'</h4></td>';
+
+			$table_rows['plm_addr_streetaddr'] = $form->get_th_html( _x( 'Street Address',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_streetaddr' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'wide' ).'</td>';
+
+			$table_rows['plm_addr_po_box_number'] = $form->get_th_html( _x( 'P.O. Box Number',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_po_box_number' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value().'</td>';
+
+			$table_rows['plm_addr_city'] = $form->get_th_html( _x( 'City',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_city' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value().'</td>';
+
+			$table_rows['plm_addr_state'] = $form->get_th_html( _x( 'State / Province',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_state' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value().'</td>';
+
+			$table_rows['plm_addr_zipcode'] = $form->get_th_html( _x( 'Zip / Postal Code',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_zipcode' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value().'</td>';
+
+			$table_rows['plm_addr_country'] = $form->get_th_html( _x( 'Country', 
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_country' ). 
+			'<td class="blank"colspan="3">'.$form->get_no_select_country( 'plm_addr_country' ).'</td>';
+
+			$table_rows['subsection_og_location'] = '<td></td><td class="subsection" colspan="3"><h4>'.
+				_x( 'Facebook / Open Graph Location', 'metabox title', 'wpsso-plm' ).'</h4></td>';
+
+			$table_rows['plm_addr_latitude'] = $form->get_th_html( _x( 'Latitude',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_latitude' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input( '', 'required' ).'</td>';
+
+			$table_rows['plm_addr_longitude'] = $form->get_th_html( _x( 'Longitude',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_longitude' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input( '', 'required' ).'</td>';
+
+			$table_rows['plm_addr_altitude'] = $form->get_th_html( _x( 'Altitude in Meters',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_altitude' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input().'</td>';
+
+			$table_rows['subsection_schema_localbusiness'] = '<td></td><td class="subsection" colspan="3"><h4>'.
+				_x( 'Schema Local Business', 'metabox title', 'wpsso-plm' ).'</h4></td>';
+
+			$row_number = 1;
+			$half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
+
+			foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
+				if ( $row_number === 1 )
+					$th_cell = $form->get_th_html( _x( 'Business Hours',
+						'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_days' );
+				else $th_cell = '<td></td>';
+
+				$table_rows['plm_addr_day_'.$day] = $th_cell.
+					'<td class="blank short">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.$label.'</td>'.
+					'<td class="blank">Opens at '.$form->get_no_select( 'plm_addr_day_'.$day.'_open',
+						$half_hours, 'medium', '', true ).'</td>'.
+					'<td class="blank">Closes at '.$form->get_no_select( 'plm_addr_day_'.$day.'_close',
+						$half_hours, 'medium', '', true ).'</td>';
+
+				$row_number++;
+			}
+
+			$table_rows['plm_addr_season_dates'] = $form->get_th_html( _x( 'Seasonal Business Dates',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_season_dates' ). 
+			'<td class="blank" colspan="3">Open from '.$form->get_no_input_date().
+				' through '.$form->get_no_input_date().'</td>';
+
+			$table_rows['plm_addr_menu_url'] = $form->get_th_html( _x( 'Restaurant Menu URL',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_menu_url' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'wide' ).'</td>';
+
+			$table_rows['plm_addr_accept_res'] = $form->get_th_html( _x( 'Accepts Reservations',
+				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_accept_res' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_checkbox( 'plm_addr_accept_res' ).'</td>';
+
+			return $table_rows;
 		}
 	}
 }

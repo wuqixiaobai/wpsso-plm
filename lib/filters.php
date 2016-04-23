@@ -20,7 +20,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_add_to_post' => 0,
 					'plm_add_to_page' => 1,
 					'plm_add_to_attachment' => 0,
-					'plm_def_country' => 'none',	// alpha2 country code
+					'plm_addr_for_home' => 'none',
+					'plm_addr_def_country' => 'none',	// alpha2 country code
 				),
 			),
 		);
@@ -31,8 +32,12 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,			// option defaults
 				'get_md_defaults' => 1,			// meta data defaults
+				'get_post_options' => 1,		// meta data post options
 				'og_prefix_ns' => 1,			// open graph namespace
 				'og_seed' => 3,				// open graph meta tags
+				'schema_head_type' => 3,		// $type_id, $mod
+				'schema_meta_itemprop' => 3,		// $mt_schema, $use_post, $mod
+				'schema_noscript_array' => 4,		// $ret, $use_post, $mod
 			) );
 
 			if ( is_admin() ) {
@@ -52,34 +57,37 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_get_defaults( $def_opts ) {
 			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
-
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to' );
-
 			return $def_opts;
 		}
 
 		public function filter_get_md_defaults( $def_opts ) {
-			return array_merge( $def_opts, 
-				/*
-				 * WpssoPlmConfig::$cf['form']['plm_md_place'] = array(
-				 * 	'plm_streetaddr' => '',		// Street Address
-				 * 	'plm_po_box_number' => '',	// P.O. Box Number
-				 * 	'plm_city' => '',		// City
-				 * 	'plm_state' => '',		// State / Province
-				 * 	'plm_zipcode' => '',		// Zip / Postal Code
-				 * 	'plm_country' => '',		// Country
-				 * 	'plm_latitude' => '',		// Latitude
-				 * 	'plm_longitude' => '',		// Longitude
-				 * 	'plm_altitude' => '',		// Altitude in Meters
-				 * ),
-				 */
-				WpssoPlmConfig::$cf['form']['plm_md_place'],
+			return array_merge( $def_opts, WpssoPlmConfig::$cf['form']['plm_addr_opts'],
 				array(
-					'plm_place' => 0,					// Content is a Place
-					'plm_type' => 'geo',					// Schema Place Type
-					'plm_addr_id' => 'custom',				// Select an Address
-					'plm_country' => $this->p->options['plm_def_country'],	// Country
+					'plm_addr_id' => 'custom',						// Select an Address
+					'plm_addr_country' => $this->p->options['plm_addr_def_country'],	// Country
+				)
+			);
+		}
+
+		public function filter_get_post_options( $opts ) {
+			$opts_version = empty( $opts['plugin_wpssoplm_opt_version'] ) ?
+				0 : $opts['plugin_wpssoplm_opt_version'];
+
+			if ( $opts_version <= 8 ) {
+				$opts = SucomUtil::rename_keys( $opts, array(
+					'plm_streetaddr' => 'plm_addr_streetaddr',
+					'plm_po_box_number' => 'plm_addr_po_box_number',
+					'plm_city' => 'plm_addr_city',
+					'plm_state' => 'plm_addr_state',
+					'plm_zipcode' => 'plm_addr_zipcode',
+					'plm_country' => 'plm_addr_country',
+					'plm_latitude' => 'plm_addr_latitude',
+					'plm_longitude' => 'plm_addr_longitude',
+					'plm_altitude' => 'plm_addr_altitude',
 				) );
+			}
+			return $opts;
 		}
 
 		public function filter_og_prefix_ns( $ns ) {
@@ -94,59 +102,167 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			if ( ! is_array( $mod ) )
 				$mod = $this->p->util->get_page_mod( $use_post );	// get post/user/term id, module name, and module object reference
 
-			// sanity checks
-			if ( ! $mod['is_post'] ) {	// aka "not singular"
-				if ( $this->p->debug->enabled )
-					$this->p->debug->log( 'exiting early: index page (not singular)' );
+			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) === false )
 				return $og;     // abort
 
-			} elseif ( ! $mod['post_type'] ) {
-				if ( $this->p->debug->enabled )
-					$this->p->debug->log( 'exiting early: module post_type is empty' );
-				return $og;
+			/*
+			 * og:type
+			 * og:latitude
+			 * og:longitude
+			 * og:altitude
+			 *
+			 * place:street_address
+			 * place:po_box_number
+			 * place:locality
+			 * place:region
+			 * place:postal_code
+			 * place:country_name
+			 * place:location:latitude
+			 * place:location:longitude
+			 * place:location:altitude
+			 *
+			 */
+			$og['og:type'] = 'place';
+			foreach ( WpssoPlmAddress::$place_mt as $key => $mt_name )
+				$og[$mt_name] = isset( $addr_opts[$key] ) ?
+					$addr_opts[$key] : '';
 
-			} elseif ( empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) ) {
-				if ( $this->p->debug->enabled )
-					$this->p->debug->log( 'exiting early: plm_add_to_'.$mod['post_type'].' is empty' );
-				return $og;	// abort
+			if ( ! empty( $addr_opts['plm_addr_latitude'] ) && 
+				! empty( $addr_opts['plm_addr_longitude'] ) ) {
+
+				foreach( array( 'place:location', 'og' ) as $mt_prefix ) {
+					$og[$mt_prefix.':latitude'] = $addr_opts['plm_addr_latitude'];
+					$og[$mt_prefix.':longitude'] = $addr_opts['plm_addr_longitude'];
+					if ( ! empty( $addr_opts['plm_altitude'] ) )
+						$og[$mt_prefix.':altitude'] = $addr_opts['plm_addr_altitude'];
+				}
 			}
 
-			$opts = WpssoPlmAddress::get_md_options( $mod );
-
-			// the latitude and longitude values are both required for the place meta tags
-			if ( ! empty( $opts['plm_latitude'] ) && 
-				! empty( $opts['plm_longitude'] ) ) {
-
-				$og_place = array(
-					'og:latitude' => $opts['plm_latitude'],
-					'og:longitude' => $opts['plm_longitude'],
-					'place:location:latitude' => $opts['plm_latitude'],
-					'place:location:longitude' => $opts['plm_longitude'],
-				);
-
-				// optional altitude
-				if ( ! empty( $opts['plm_altitude'] ) ) {
-					$og_place['og:altitude'] = $opts['plm_altitude'];
-					$og_place['place:location:altitude'] = $opts['plm_altitude'];
+			/*
+			 * Non-standard meta tags for internal use (input to JSON-LD extension)
+			 */
+			$addr_defs = WpssoPlmConfig::$cf['form']['plm_addr_opts'];
+			foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
+				if ( ! empty( $addr_opts['plm_addr_day_'.$day] ) ) {
+					foreach ( array( 'open', 'close' ) as $hour ) {
+						$key = 'plm_addr_day_'.$day.'_'.$hour;
+						$og['place:business:day:'.$day.':'.$hour] = isset( $addr_opts[$key] ) ?
+							$addr_opts[$key] : $addr_defs[$key];
+					}
 				}
+			}
 
-				ksort( $og_place );
-
-				return array_merge( $og, apply_filters( $this->p->cf['lca'].'_og_place', $og_place, $use_post, $mod ) );
+			foreach ( array(
+				'plm_addr_season_from_date' => 'place:business:season:from',
+				'plm_addr_season_to_date' => 'place:business:season:to',
+				'plm_addr_menu_url' => 'place:business:menu_url',
+				'plm_addr_accept_res' => 'place:business:accepts_reservations',
+			) as $key => $mt_name ) {
+				if ( $key == 'plm_addr_accept_res' )
+					$og[$mt_name] = empty( $addr_opts[$key] ) ?
+						'false' : 'true';
+				else $og[$mt_name] = isset( $addr_opts[$key] ) ?
+					$addr_opts[$key] : '';
 			}
 
 			return $og;
 		}
 
-		public function filter_save_options( $opts, $options_name, $network ) {
+		public function filter_schema_head_type( $type_id, $mod, $is_md_type ) {
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
 
-			$address_ids = WpssoPlmAddress::get_ids( $opts );
+			// return a default - don't override custom head types
+			if ( empty( $is_md_type ) ) {
+				if ( WpssoPlmAddress::has_place( $mod ) !== false ) {
+					if ( WpssoPlmAddress::has_days( $mod ) !== false )
+						$type_id = 'local.business';
+					else $type_id = 'place';
+				} elseif ( $this->p->debug->enabled )
+					$this->p->debug->log( 'not a schema place: no place options found' );
+			}
+
+			return $type_id;
+		}
+
+		public function filter_schema_meta_itemprop( $mt_schema, $use_post, $mod ) {
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
+
+			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) !== false ) {
+				$mt_schema['address'] = $addr_opts['plm_addr_streetaddr'].
+					( empty( $addr_opts['plm_addr_po_box_number'] ) ?
+						'' : ' #'.$addr_opts['plm_addr_po_box_number'] ).', '.
+					$addr_opts['plm_addr_city'].', '.
+					$addr_opts['plm_addr_state'].', '.
+					$addr_opts['plm_addr_zipcode'].', '.
+					$addr_opts['plm_addr_country'];
+
+				foreach ( array(
+					'plm_addr_menu_url' => 'menu',
+					'plm_addr_accept_res' => 'acceptsreservations',
+				) as $key => $mt_name ) {
+					if ( $key == 'plm_addr_accept_res' )
+						$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ?
+							'false' : 'true';
+					else $mt_schema[$mt_name] = isset( $addr_opts[$key] ) ?
+						$addr_opts[$key] : '';
+				}
+			}
+
+			return $mt_schema;
+		}
+
+		public function filter_schema_noscript_array( $ret, $use_post, $mod, $mt_og ) {
+			$mt_business = SucomUtil::preg_grep_keys( '/^place:business:(day|season):/', $mt_og );
+			/*
+			 * Array (
+			 *	[place:business:day:monday:open] => 09:00
+			 *	[place:business:day:monday:close] => 17:00
+			 *	[place:business:day:publicholidays:open] => 09:00
+			 *	[place:business:day:publicholidays:close] => 17:00
+			 *	[place:business:season:from] => 2016-04-01
+			 *	[place:business:season:to] => 2016-05-01
+			 * )
+			 */
+			if ( ! empty( $mt_business ) ) {
+				foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
+					$mt_day = array();
+
+					if ( ! empty( $mt_business['place:business:day:'.$day.':open'] ) &&
+						! empty( $mt_business['place:business:day:'.$day.':open'] ) ) {
+
+						$mt_day[] = array( array( '<noscript itemprop="openingHoursSpecification" '.
+							'itemscope itemtype="https://schema.org/OpeningHoursSpecification">'."\n" ) );
+						$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop', 'openinghoursspecification.dayofweek', $day );
+
+						foreach ( array(
+							'place:business:day:'.$day.':open' => 'openinghoursspecification.opens',
+							'place:business:day:'.$day.':close' => 'openinghoursspecification.closes',
+							'place:business:season:from' => 'openinghoursspecification.validfrom',
+							'place:business:season:to' => 'openinghoursspecification.validthrough',
+						) as $mt_key => $prop_name )
+							if ( isset( $mt_business[$mt_key] ) )
+								$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop', $prop_name, $mt_business[$mt_key] );
+
+						$mt_day[] = array( array( '</noscript>'."\n" ) );
+					}
+					foreach ( $mt_day as $arr )
+						$ret[] = $arr[0];
+				}
+			}
+			return $ret;
+		}
+
+		public function filter_save_options( $opts, $options_name, $network ) {
+			$address_names = WpssoPlmAddress::get_names( $opts );
 
 			// remove all addresses with an empty name value
-			foreach ( $address_ids as $id => $name )
-				if ( empty( $name ) )
-					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/',
-						$opts, true );	// $invert = true
+			foreach ( $address_names as $id => $name ) {
+				if ( trim( $name ) === '' ) {
+					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/', $opts, true );	// $invert = true
+				}
+			}
 
 			return $opts;
 		}
@@ -161,17 +277,23 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$key = preg_replace( '/#.*$/', '', $key );
 
 			switch ( $key ) {
-				case 'plm_type':
-				case 'plm_def_country':
+				case 'plm_addr_for_home':
+				case 'plm_addr_def_country':
 				case 'plm_addr_id':		// 'none', 'custom', or numeric
-				case ( preg_match( '/^plm_(addr_)?(country)(_[0-9]+)?/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(country|type)(_[0-9]+)?/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case ( preg_match( '/^plm_(addr_)?(latitude|longitude|altitude|po_box_number)(_[0-9]+)?/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|po_box_number)(_[0-9]+)?/', $key ) ? true : false ):
 					return 'blank_num';	// must be numeric (blank or zero is ok)
 					break;
-				case ( preg_match( '/^plm_(addr_)?(streetaddr|city|state|zipcode)(_[0-9]+)?/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(streetaddr|city|state|zipcode)(_[0-9]+)?/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
+					break;
+				case ( preg_match( '/^plm_addr_day_[a-z]+_(open|close)/', $key ) ? true : false ):
+					return 'time';
+					break;
+				case ( preg_match( '/^plm_addr_season_(from|to)_date(_[0-9]+)?/', $key ) ? true : false ):
+					return 'date';
 					break;
 			}
 			return $type;
@@ -182,14 +304,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$short = $this->p->cf['plugin'][$lca]['short'];
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
-				case 'tooltip-side-addr-contact-editor':
-					$text = sprintf( __( '%s includes an Address and Contacts editor to manage physical locations and contact information.', 'wpsso-plm' ), $short_pro );
+				case 'tooltip-side-place-location-for-non-static-homepage':
+					$text = sprintf( __( 'If an address is selected for a non-static homepage, %1$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, location and address meta tags for the homepage.', 'wpsso-plm' ), $short );
 					break;
-				case 'tooltip-side-location-meta-tags':
-					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional %4$s meta tags.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Facebook / Open Graph' );
-					break;
-				case 'tooltip-side-place-meta-tags':
-					$text = sprintf( __( 'If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional %4$s meta tags.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short, 'Pinterest Rich Pin / Schema <em>Place</em>' );
+				case 'tooltip-side-place-location-tab':
+					$text = sprintf( __( 'If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, %3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, location and address meta tags for that webpage.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short_pro );
 					break;
 			}
 			return $text;
@@ -200,40 +319,34 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				return $text;
 
 			switch ( $idx ) {
-				case 'tooltip-post-plm_place':
-					$text = sprintf( __( 'Share this webpage as an Open Graph and Pinterest Rich Pin / Schema <em>Place</em>. If the WPSSO JSON Pro extension is active, the webpage will also include Schema JSON-LD markup for the Schema type <a href="%1$s">%1$s</a>.', 'wpsso-plm' ), 'http://schema.org/Place' );
-					break;
-				case 'tooltip-post-plm_type':
-					$text = __( 'Select the type of address entered &mdash; either a Geographic <em>Place</em> or a Postal Address.', 'wpsso-plm' );
-					break;
 				case 'tooltip-post-plm_addr_id':
 					$text = __( 'Select an address or enter a customized address bellow.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_streetaddr':
+				case 'tooltip-post-plm_addr_streetaddr':
 					$text = __( 'An optional Street Address for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_po_box_number':
+				case 'tooltip-post-plm_addr_po_box_number':
 					$text = __( 'An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD markup.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_city':
+				case 'tooltip-post-plm_addr_city':
 					$text = __( 'An optional City name for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_state':
+				case 'tooltip-post-plm_addr_state':
 					$text = __( 'An optional State or Province name for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_zipcode':
+				case 'tooltip-post-plm_addr_zipcode':
 					$text = __( 'An optional Zip or Postal Code for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_country':
+				case 'tooltip-post-plm_addr_country':
 					$text = __( 'An optional Country for the <em>Place</em> meta tags.', 'wpsso-plm' );
 					break;
-				case 'tooltip-post-plm_latitude':
+				case 'tooltip-post-plm_addr_latitude':
 					$text = __( 'The numeric <em>decimal degrees</em> latitude for the content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
 					break;
-				case 'tooltip-post-plm_longitude':
+				case 'tooltip-post-plm_addr_longitude':
 					$text = __( 'The numeric <em>decimal degrees</em> longitude for the content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
 					break;
-				case 'tooltip-post-plm_altitude':
+				case 'tooltip-post-plm_addr_altitude':
 					$text = __( 'An optional numeric altitude (in meters above sea level) for the content of this webpage.', 'wpsso-plm' );
 					break;
 			}
@@ -250,15 +363,15 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_status_gpl_features( $features, $lca, $info ) {
-			$features['Location Meta Tags'] = array( 
-				'status' => 'on',
-			);
+			$has_addr_for_home = $this->p->options['plm_addr_for_home'] === '' ||
+				$this->p->options['plm_addr_for_home'] === 'none' ? false : true;	// can be 0
+			$features['Place / Location for Non-static Homepage'] = array( 'status' => $has_addr_for_home ? 'on' : 'off' );
 			return $features;
 		}
 
 		public function filter_status_pro_features( $features, $lca, $info ) {
 			$aop = $this->p->check->aop( $lca );
-			$features['Addr / Contact Editor'] = array( 
+			$features['Place / Location Tab'] = array( 
 				'status' => $aop ? 'on' : 'off',
 				'td_class' => $aop ? '' : 'blank',
 			);

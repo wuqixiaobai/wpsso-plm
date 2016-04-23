@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 1.5.4-1\n"
+"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 2.0.0-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2016-04-08 08:03-0400\n"
-"PO-Revision-Date: 2016-04-08 08:06-0400\n"
+"PO-Revision-Date: 2016-04-21 07:23-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -52,28 +52,16 @@ msgstr "Adresse postale"
 
 #: lib/config-gettext-extract.php:10
 msgctxt "plugin description"
-msgid ""
-"WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
-"Rich Pin / Schema \"Place\" meta tags."
-msgstr ""
-"Une extension WPSSO pour fournir les balises méta Facebook / Open Graph de "
-"\"Position\" et Pinterest Rich Pin / Schéma de \"Place\"."
+msgid "WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest Rich Pin / Schema \"Place\" meta tags."
+msgstr "Une extension WPSSO pour fournir les balises méta Facebook / Open Graph de \"Position\" et Pinterest Rich Pin / Schéma de \"Place\"."
 
 #: lib/filters.php:186
-msgid ""
-"%s includes an Address and Contacts editor to manage physical locations and "
-"contact information."
-msgstr ""
-"%s comprend un éditeur d'adresse et de contacts pour gérer vos emplacements "
-"et coordonnées."
+msgid "%s includes an Address and Contacts editor to manage physical locations and contact information."
+msgstr "%s comprend un éditeur d'adresse et de contacts pour gérer vos emplacements et coordonnées."
 
 #: lib/filters.php:189 lib/filters.php:192
-msgid ""
-"If address information is entered under the <em>%1$s</em> tab (in the %2$s "
-"metabox), %3$s will include additional %4$s meta tags."
-msgstr ""
-"Si des informations d'adresse sont entrées sous l'onglet <em>%1$s</em> (dans "
-"le %2$s metabox), %3$s ajoutera des balises méta supplémentaires pour %4$s."
+msgid "If address information is entered under the <em>%1$s</em> tab (in the %2$s metabox), %3$s will include additional %4$s meta tags."
+msgstr "Si des informations d'adresse sont entrées sous l'onglet <em>%1$s</em> (dans le %2$s metabox), %3$s ajoutera des balises méta supplémentaires pour %4$s."
 
 #: lib/filters.php:189 lib/filters.php:192 lib/filters.php:246
 #: lib/gpl/admin/post.php:30 lib/pro/admin/post.php:41
@@ -87,41 +75,24 @@ msgid "Social Settings"
 msgstr "Réglages Sociaux"
 
 #: lib/filters.php:204
-msgid ""
-"Share this webpage as an Open Graph and Pinterest Rich Pin / Schema "
-"<em>Place</em>. If the WPSSO JSON Pro extension is active, the webpage will "
-"also include Schema JSON-LD markup for the Schema type <a href=\"%1$s\">"
-"%1$s</a>."
-msgstr ""
-"Partager cette page Web en tant que <em>Place</em> Facebook / Open Graph et "
-"Pinterest Rich Pin / Schéma. Si l'extension WPSSO JSON est aussi active, la "
-"page Web inclura les balises Schéma JSON-LD pour le type de Schéma <a href="
-"\"%1$s\">%1$s</a>."
+msgid "Share this webpage as an Open Graph and Pinterest Rich Pin / Schema <em>Place</em>. If the WPSSO JSON Pro extension is active, the webpage will also include Schema JSON-LD markup for the Schema type <a href=\"%1$s\">%1$s</a>."
+msgstr "Partager cette page Web en tant que <em>Place</em> Facebook / Open Graph et Pinterest Rich Pin / Schéma. Si l'extension WPSSO JSON est aussi active, la page Web inclura les balises Schéma JSON-LD pour le type de Schéma <a href=\"%1$s\">%1$s</a>."
 
 #: lib/filters.php:207
-msgid ""
-"Select the type of address entered &mdash; either a Geographic <em>Place</"
-"em> or a Postal Address."
-msgstr ""
-"Sélectionnez le type d'adresse indiquée - soit une <em>Place</em> "
-"géographique ou une adresse postale."
+msgid "Select the type of address entered &mdash; either a Geographic <em>Place</em> or a Postal Address."
+msgstr "Sélectionnez le type d'adresse indiquée - soit une <em>Place</em> géographique ou une adresse postale."
 
 #: lib/filters.php:210
 msgid "Select an address or enter a customized address bellow."
-msgstr ""
-"Sélectionnez une adresse ou complétez une adresse personnalisée ci-dessous."
+msgstr "Sélectionnez une adresse ou complétez une adresse personnalisée ci-dessous."
 
 #: lib/filters.php:213
 msgid "An optional Street Address for the <em>Place</em> meta tags."
 msgstr "Une adresse de rue optionnel pour les balises méta de <em>Place</em>."
 
 #: lib/filters.php:216
-msgid ""
-"An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD "
-"markup."
-msgstr ""
-"Un Numéro de Boîte Postale optionnel pour les balises JSON-LD de Schéma "
-"<em>Place</em>."
+msgid "An optional Post Office Box Number for the <em>Place</em> Schema JSON-LD markup."
+msgstr "Un Numéro de Boîte Postale optionnel pour les balises JSON-LD de Schéma <em>Place</em>."
 
 #: lib/filters.php:219
 msgid "An optional City name for the <em>Place</em> meta tags."
@@ -129,69 +100,39 @@ msgstr "Un nom de ville optionnel pour les balises méta de <em>Place</em>."
 
 #: lib/filters.php:222
 msgid "An optional State or Province name for the <em>Place</em> meta tags."
-msgstr ""
-"Un nom d'État ou de Province optionnel pour les balises méta de <em>Place</"
-"em>."
+msgstr "Un nom d'État ou de Province optionnel pour les balises méta de <em>Place</em>."
 
 #: lib/filters.php:225
 msgid "An optional Zip or Postal Code for the <em>Place</em> meta tags."
-msgstr ""
-"Un Zip ou Code Postal optionnel pour les balises méta de <em>Place</em>."
+msgstr "Un Zip ou Code Postal optionnel pour les balises méta de <em>Place</em>."
 
 #: lib/filters.php:228
 msgid "An optional Country for the <em>Place</em> meta tags."
 msgstr "Un nom de pays optionnel pour les balises méta de <em>Place</em>."
 
 #: lib/filters.php:231
-msgid ""
-"The numeric <em>decimal degrees</em> latitude for the content of this "
-"webpage."
-msgstr ""
-"Les <em>degrés décimaux</em> numérique de latitude pour le contenu de cette "
-"page Web."
+msgid "The numeric <em>decimal degrees</em> latitude for the content of this webpage."
+msgstr "Les <em>degrés décimaux</em> numérique de latitude pour le contenu de cette page Web."
 
 #: lib/filters.php:231 lib/filters.php:234
-msgid ""
-"You may use a service like <a href=\"http://www.gps-coordinates.net/"
-"\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
-"GPS coordinates of a street address."
-msgstr ""
-"Vous pouvez utiliser un service comme le <a href=\"http://www.coordonnees-"
-"gps.fr/conversion-coordonnees-gps\">Convertisseur de coordonnées GPS</a> "
-"(par exemple), pour trouver les coordonnées GPS approximatives d'une adresse "
-"postale."
+msgid "You may use a service like <a href=\"http://www.gps-coordinates.net/\">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address."
+msgstr "Vous pouvez utiliser un service comme le <a href=\"http://www.coordonnees-gps.fr/conversion-coordonnees-gps\">Convertisseur de coordonnées GPS</a> (par exemple), pour trouver les coordonnées GPS approximatives d'une adresse postale."
 
 #: lib/filters.php:231 lib/filters.php:234
 msgid "This field is required to include the Place and Location meta tags."
-msgstr ""
-"Ce champ est requis pour inclure les balises méta de Place et Position."
+msgstr "Ce champ est requis pour inclure les balises méta de Place et Position."
 
 #: lib/filters.php:234
-msgid ""
-"The numeric <em>decimal degrees</em> longitude for the content of this "
-"webpage."
-msgstr ""
-"Les <em>degrés décimaux</em> numérique de longitude pour le contenu de cette "
-"page Web."
+msgid "The numeric <em>decimal degrees</em> longitude for the content of this webpage."
+msgstr "Les <em>degrés décimaux</em> numérique de longitude pour le contenu de cette page Web."
 
 #: lib/filters.php:237
-msgid ""
-"An optional numeric altitude (in meters above sea level) for the content of "
-"this webpage."
-msgstr ""
-"Une altitude numérique optionnel (en mètres au-dessus du niveau de mer) pour "
-"le contenu de cette page Web."
+msgid "An optional numeric altitude (in meters above sea level) for the content of this webpage."
+msgstr "Une altitude numérique optionnel (en mètres au-dessus du niveau de mer) pour le contenu de cette page Web."
 
 #: lib/filters.php:246
-msgid ""
-"A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
-"custom post types, allowing you to enter specific address information for "
-"that webpage (ie. GPS coordinates and/or street address)."
-msgstr ""
-"Un onglet <em>%1$s</em> peut être ajouté à la metabox %2$s pour les "
-"Articles, Pages et les articles de type personnalisé, vous permettant "
-"d'entrer des informations sur un endroit spécifique (c'est à dire, des "
-"coordonnées GPS et/ou adresse postale)."
+msgid "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address)."
+msgstr "Un onglet <em>%1$s</em> peut être ajouté à la metabox %2$s pour les Articles, Pages et les articles de type personnalisé, vous permettant d'entrer des informations sur un endroit spécifique (c'est à dire, des coordonnées GPS et/ou adresse postale)."
 
 #: lib/gpl/admin/contact.php:30
 msgctxt "option label"
@@ -303,28 +244,16 @@ msgid "Show Tab on Post Types"
 msgstr "Afficher l'onglet sur articles de type"
 
 #: wpsso-plm.php:80
-msgid ""
-"The %1$s extension requires the %2$s plugin &mdash; please install and "
-"activate the %3$s plugin before trying to re-activate the %4$s extension."
-msgstr ""
-"L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer "
-"l'extension %3$s avant d'essayer de re-activer %4$s."
+msgid "The %1$s extension requires the %2$s plugin &mdash; please install and activate the %3$s plugin before trying to re-activate the %4$s extension."
+msgstr "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer l'extension %3$s avant d'essayer de re-activer %4$s."
 
 #: wpsso-plm.php:82
-msgid ""
-"The %1$s extension requires the %2$s plugin &mdash; please install and "
-"activate the %3$s plugin."
-msgstr ""
-"L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer "
-"l'extension %3$s."
+msgid "The %1$s extension requires the %2$s plugin &mdash; please install and activate the %3$s plugin."
+msgstr "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer l'extension %3$s."
 
 #: wpsso-plm.php:132
-msgid ""
-"The %1$s extension version %2$s requires the use of %3$s version %4$s or "
-"newer (version %5$s is currently installed)."
-msgstr ""
-"L'extension %1$s version %2$s requiert l'utilisation de %3$s version %4$s ou "
-"plus récente (la version %5$s est actuellement installée)."
+msgid "The %1$s extension version %2$s requires the use of %3$s version %4$s or newer (version %5$s is currently installed)."
+msgstr "L'extension %1$s version %2$s requiert l'utilisation de %3$s version %4$s ou plus récente (la version %5$s est actuellement installée)."
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Place and Location Meta (WPSSO PLM)"
@@ -335,12 +264,8 @@ msgid "http://surniaulula.com/extend/plugins/wpsso-plm/"
 msgstr "http://surniaulula.com/extend/plugins/wpsso-plm/"
 
 #. Description of the plugin/theme
-msgid ""
-"WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest "
-"Rich Pin / Schema \"Place\" meta tags."
-msgstr ""
-"Une extension WPSSO pour fournir les balises méta Facebook / Open Graph de "
-"\"Position\" et Pinterest Rich Pin / Schéma de \"Place\"."
+msgid "WPSSO extension to provide Facebook / Open Graph \"Location\" and Pinterest Rich Pin / Schema \"Place\" meta tags."
+msgstr "Une extension WPSSO pour fournir les balises méta Facebook / Open Graph de \"Position\" et Pinterest Rich Pin / Schéma de \"Place\"."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"

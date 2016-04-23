@@ -15,8 +15,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '1.5.5-1',		// plugin version
-					'opt_version' => '8',		// increment when changing default options
+					'version' => '2.0.0-dev1',		// plugin version
+					'opt_version' => '10',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.',
@@ -48,22 +48,18 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'lib' => array(
 						// submenu items must have unique keys
 						'submenu' => array (
-							'plm-general' => 'Place / Location Meta',	// general settings
-							'plm-contact' => 'Addresses / Contacts',
+							'plm-general' => 'Place / Location and Local Business',	// general settings
 						),
 						'gpl' => array(
 							'admin' => array(
-								'contact' => 'Contact Settings',
+								'general' => 'General Settings',
 								'post' => 'Post Settings',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
-								'contact' => 'Contact Settings',
+								'general' => 'General Settings',
 								'post' => 'Post Settings',
-							),
-							'head' => array(
-								'place' => 'Place Meta Tags',
 							),
 						),
 					),
@@ -75,20 +71,44 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'custom' => '[Custom Address]',
 					'new' => '[New Address]',
 				),
-				'plm_type' => array(
+				'plm_addr_type' => array(
 					'geo' => 'Geographic',
 					'postal' => 'Postal Address',
 				),
-				'plm_md_place' => array(
-					'plm_streetaddr' => '',		// Street Address
-					'plm_po_box_number' => '',	// P.O. Box Number
-					'plm_city' => '',		// City
-					'plm_state' => '',		// State / Province
-					'plm_zipcode' => '',		// Zip / Postal Code
-					'plm_country' => '',		// Country
-					'plm_latitude' => '',		// Latitude
-					'plm_longitude' => '',		// Longitude
-					'plm_altitude' => '',		// Altitude in Meters
+				'plm_addr_opts' => array(
+					'plm_addr_streetaddr' => '',		// Street Address
+					'plm_addr_po_box_number' => '',		// P.O. Box Number
+					'plm_addr_city' => '',			// City
+					'plm_addr_state' => '',			// State / Province
+					'plm_addr_zipcode' => '',		// Zip / Postal Code
+					'plm_addr_country' => '',		// Country
+					'plm_addr_latitude' => '',		// Latitude
+					'plm_addr_longitude' => '',		// Longitude
+					'plm_addr_altitude' => '',		// Altitude in Meters
+					'plm_addr_day_sunday' => 0,
+					'plm_addr_day_sunday_open' => '09:00',
+					'plm_addr_day_sunday_close' => '17:00',
+					'plm_addr_day_monday' => 0,
+					'plm_addr_day_monday_open' => '09:00',
+					'plm_addr_day_monday_close' => '17:00',
+					'plm_addr_day_tuesday' => 0,
+					'plm_addr_day_tuesday_open' => '09:00',
+					'plm_addr_day_tuesday_close' => '17:00',
+					'plm_addr_day_wednesday' => 0,
+					'plm_addr_day_wednesday_open' => '09:00',
+					'plm_addr_day_wednesday_close' => '17:00',
+					'plm_addr_day_thursday' => 0,
+					'plm_addr_day_thursday_open' => '09:00',
+					'plm_addr_day_thursday_close' => '17:00',
+					'plm_addr_day_friday' => 0,
+					'plm_addr_day_friday_open' => '09:00',
+					'plm_addr_day_friday_close' => '17:00',
+					'plm_addr_day_saturday' => 0,
+					'plm_addr_day_saturday_open' => '09:00',
+					'plm_addr_day_saturday_close' => '17:00',
+					'plm_addr_day_publicholidays' => 0,
+					'plm_addr_day_publicholidays_open' => '09:00',
+					'plm_addr_day_publicholidays_close' => '17:00',
 				),
 			),
 		);
