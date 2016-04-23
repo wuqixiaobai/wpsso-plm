@@ -92,55 +92,28 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 2.0.0-dev1 (TBD)**
+**Version 2.0.0-dev1 (2016/04/23)**
 
 Official announcement: N/A
 
 * *New Features*
-	* Added support for business hours.
-	* Added support for the Schema Type *LocalBusiness* (complete markup requires the [WPSSO JSON Pro](https://wpsso.com/extends/plugins/wpsso-schema-json-ld/) extension).
-* *Improvements*
-	* Enabled all custom address, location, and business hours fields under the *Place / Location* tab in the Social Settings metabox (Free version).
-	* Added support for all Pinterest Rich Pin *Place* meta tags (Free version).
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
-**Version 1.5.5-1 (2016/04/08)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
+	* Complete re-write of the WPSSO PLM extension.
+	* New "Place / Location and Local Business" settings page, including:
+		* Pinterest Rich Pin / Schema Place settings for business addresses.
+		* Facebook / Open Graph Location settings for geo coordinates information.
+		* Schema Local Business settings with open / closing hours, seasonal dates, restaurant menu URL, and if the restaurant / business accepts reservations.
+	* Open Graph Location, Schema Place or LocalBusiness meta tags for the non-static home page.
+	* Open Graph Location, Schema Place or LocalBusiness meta tags for Posts, Pages, and custom post types (Pro version).
 * *Improvements*
 	* None
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Changed `is_front_page()` to `$mod['is_front']` checks where possible, and `SucomUtil::is_front_page()` elsewhere.
-
-**Version 1.5.4-1 (2016/03/31)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Minor code optimization for the 'wpsso_og_seed' filter.
-	* Adopted a new version numbering system: `{major}.{minor}.{bugfix}-{stage}{level}`
+	* WPSSO PLM adds Open Graph and Schema meta tags to webpage headers. The WPSSO JSON (Pro version) extension can work in combination with WPSSO PLM and add Schema Place or LocalBusiness JSON-LD to webpage headers.
 
 == Upgrade Notice ==
 
-= 1.5.5-1 =
+= 2.0.0-dev1 =
 
-(2016/04/08) Changed is_front_page() calls for WPSSO v3.29.0.
-
-= 1.5.4-1 =
-
-(2016/03/31) Minor code optimization for the 'wpsso_og_seed' filter. Adopted a standard version numbering system.
+(2016/04/23) Complete re-write of the WPSSO PLM extension. Features Pinterest Rich Pin / Schema Place, Facebook / Open Graph Location, and Schema Local Business settings.
 
