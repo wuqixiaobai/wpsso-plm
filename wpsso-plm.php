@@ -12,7 +12,7 @@
  * Description: WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.
  * Requires At Least: 3.1
  * Tested Up To: 4.5
- * Version: 2.0.0-dev1
+ * Version: 2.0.0-dev3
  * 
  * Version Numbers: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -38,7 +38,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		private static $instance = null;
 		private static $wpsso_short = 'WPSSO';
 		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
-		private static $wpsso_min_version = '3.29.7-dev2';
+		private static $wpsso_min_version = '3.29.7-dev3';
 		private static $wpsso_has_min_ver = true;
 
 		public static function &get_instance() {

@@ -4,6 +4,7 @@ _x( '09:00', 'option value', 'wpsso-plm' );
 _x( '17:00', 'option value', 'wpsso-plm' );
 _x( '[Custom Address]', 'option value', 'wpsso-plm' );
 _x( 'Geographic', 'option value', 'wpsso-plm' );
+_x( 'local.business', 'option value', 'wpsso-plm' );
 _x( '[New Address]', 'option value', 'wpsso-plm' );
 _x( '[None]', 'option value', 'wpsso-plm' );
 _x( 'Place / Location and Local Business', 'lib file description', 'wpsso-plm' );

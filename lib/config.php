@@ -15,8 +15,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.0.0-dev1',		// plugin version
-					'opt_version' => '10',		// increment when changing default options
+					'version' => '2.0.0-dev3',		// plugin version
+					'opt_version' => '11',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.',
@@ -76,15 +76,16 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'postal' => 'Postal Address',
 				),
 				'plm_addr_opts' => array(
-					'plm_addr_streetaddr' => '',		// Street Address
-					'plm_addr_po_box_number' => '',		// P.O. Box Number
-					'plm_addr_city' => '',			// City
-					'plm_addr_state' => '',			// State / Province
-					'plm_addr_zipcode' => '',		// Zip / Postal Code
-					'plm_addr_country' => '',		// Country
-					'plm_addr_latitude' => '',		// Latitude
-					'plm_addr_longitude' => '',		// Longitude
-					'plm_addr_altitude' => '',		// Altitude in Meters
+					'plm_addr_streetaddr' => '',			// Street Address
+					'plm_addr_po_box_number' => '',			// P.O. Box Number
+					'plm_addr_city' => '',				// City
+					'plm_addr_state' => '',				// State / Province
+					'plm_addr_zipcode' => '',			// Zip / Postal Code
+					'plm_addr_country' => '',			// Country
+					'plm_addr_latitude' => '',			// Latitude
+					'plm_addr_longitude' => '',			// Longitude
+					'plm_addr_altitude' => '',			// Altitude in Meters
+					'plm_addr_business_type' => 'local.business',
 					'plm_addr_day_sunday' => 0,
 					'plm_addr_day_sunday_open' => '09:00',
 					'plm_addr_day_sunday_close' => '17:00',
