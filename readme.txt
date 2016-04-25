@@ -92,7 +92,7 @@ Purchase the [WPSSO Place and Location Meta (WPSSO PLM) Pro](http://wpsso.com/ex
 
 = Changelog / Release Notes =
 
-**Version 2.0.0-dev1 (2016/04/23)**
+**Version 2.0.0-dev3 (2016/04/25)**
 
 Official announcement: N/A
 
@@ -113,7 +113,7 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.0.0-dev1 =
+= 2.0.0-dev3 =
 
-(2016/04/23) Complete re-write of the WPSSO PLM extension. Features Pinterest Rich Pin / Schema Place, Facebook / Open Graph Location, and Schema Local Business settings.
+(2016/04/25) Complete re-write of the WPSSO PLM extension. Features Pinterest Rich Pin / Schema Place, Facebook / Open Graph Location, and Schema Local Business settings.
 
