@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$table_rows['plm_addr_business_type'] = $form->get_th_html( _x( 'Local Business Type',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_type' ). 
-			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type_'.$id,
+			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
 				$business_types, 'schema_type', '', true ).'</td>';
 
 			$row_number = 1;
@@ -119,7 +119,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">Open from '.$form->get_no_input_date().
 				' through '.$form->get_no_input_date().'</td>';
 
-			$table_rows['plm_addr_menu_url'] = $form->get_th_html( _x( 'Restaurant Menu URL',
+			$table_rows['plm_addr_menu_url'] = $form->get_th_html( _x( 'Food Menu URL',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_menu_url' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'wide' ).'</td>';
 

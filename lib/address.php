@@ -175,7 +175,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 			$md_opts = $mod['obj']->get_options( $mod['id'] );
 			if ( is_array( $md_opts  ) ) {
-				if ( ! empty( $md_opts['plm_addr_id'] ) && 
+				if ( isset( $md_opts['plm_addr_id'] ) && 		// allow for 0
 					is_numeric( $md_opts['plm_addr_id'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $md_opts['plm_addr_id'], $wpsso->options ) ) !== false ) {
 						if ( $wpsso->debug->enabled )

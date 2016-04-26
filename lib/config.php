@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.0.0-dev3',		// plugin version
+					'version' => '2.0.0-rc1',		// plugin version
 					'opt_version' => '11',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
@@ -110,6 +110,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_addr_day_publicholidays' => 0,
 					'plm_addr_day_publicholidays_open' => '09:00',
 					'plm_addr_day_publicholidays_close' => '17:00',
+					'plm_addr_menu_url' => '',
+					'plm_addr_accept_res' => '',
 				),
 			),
 		);

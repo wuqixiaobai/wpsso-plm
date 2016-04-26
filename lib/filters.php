@@ -182,7 +182,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				if ( ( $addr_opts = WpssoPlmAddress::has_days( $mod ) ) !== false ) {
 					$business_type_id = empty( $addr_opts['plm_addr_business_type'] ) ?
 						'local.business' : $addr_opts['plm_addr_business_type'];
-					$business_type_value = $this->p->schema->get_item_type_value( $business_type_id, 'local.business' );
+					$business_type_value = $this->p->schema->get_item_type_url( $business_type_id, 'local.business' );
 					$item_types[$business_type_value] = true;
 				} else $item_types['http://schema.org/Place'] = true;
 			} elseif ( $this->p->debug->enabled )
@@ -303,21 +303,29 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			switch ( $key ) {
 				case 'plm_addr_for_home':
 				case 'plm_addr_def_country':
-				case 'plm_addr_id':		// 'none', 'custom', or numeric
-				case ( preg_match( '/^plm_addr_(country|type)(_[0-9]+)?/', $key ) ? true : false ):
+				case 'plm_addr_id':		// 'none', 'custom', or numeric (including 0)
+				case 'plm_addr_business_type':
+				case ( preg_match( '/^plm_addr_(country|type)(_[0-9]+)?$/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|po_box_number)(_[0-9]+)?/', $key ) ? true : false ):
-					return 'blank_num';	// must be numeric (blank or zero is ok)
-					break;
-				case ( preg_match( '/^plm_addr_(streetaddr|city|state|zipcode)(_[0-9]+)?/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(streetaddr|city|state|zipcode)(_[0-9]+)?$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
-				case ( preg_match( '/^plm_addr_day_[a-z]+_(open|close)/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|po_box_number)(_[0-9]+)?$/', $key ) ? true : false ):
+					return 'blank_num';	// must be numeric (blank or zero is ok)
+					break;
+				case ( preg_match( '/^plm_addr_day_[a-z]+_(open|close)(_[0-9]+)?$/', $key ) ? true : false ):
 					return 'time';
 					break;
-				case ( preg_match( '/^plm_addr_season_(from|to)_date(_[0-9]+)?/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_season_(from|to)_date(_[0-9]+)?$/', $key ) ? true : false ):
 					return 'date';
+					break;
+				case 'plm_addr_menu_url':
+					return 'url';
+					break;
+				case 'plm_addr_accept_res':
+				case ( preg_match( '/^plm_addr_day_[a-z]+(_[0-9]+)?$/', $key ) ? true : false ):
+					return 'checkbox';
 					break;
 			}
 			return $type;
@@ -329,10 +337,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-place-location-for-non-static-homepage':
-					$text = sprintf( __( 'If an address is selected for a non-static homepage, %1$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, location and address meta tags for the homepage.', 'wpsso-plm' ), $short );
+					$text = sprintf( __( 'If an address is selected for a non-static homepage, %1$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location and address meta tags for the homepage.', 'wpsso-plm' ), $short );
 					break;
 				case 'tooltip-side-place-location-tab':
-					$text = sprintf( __( 'If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, %3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, location and address meta tags for that webpage.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short_pro );
+					$text = sprintf( __( 'If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, %3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location and address meta tags for that webpage.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short_pro );
 					break;
 			}
 			return $text;
@@ -374,25 +382,41 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'An optional Post Office Box Number for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_city':
-					$text = __( 'An optional City name for the <em>Place</em> meta tags.', 'wpsso-plm' );
+					$text = __( 'An optional City name for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_state':
-					$text = __( 'An optional State or Province name for the <em>Place</em> meta tags.', 'wpsso-plm' );
+					$text = __( 'An optional State or Province name for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_zipcode':
-					$text = __( 'An optional Zip or Postal Code for the <em>Place</em> meta tags.', 'wpsso-plm' );
+					$text = __( 'An optional Zip or Postal Code for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_country':
-					$text = __( 'An optional Country for the <em>Place</em> meta tags.', 'wpsso-plm' );
+					$text = __( 'An optional Country for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_latitude':
-					$text = __( 'The numeric <em>decimal degrees</em> latitude for the content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
+					$text = __( 'The numeric <em>decimal degrees</em> latitude for the main content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_longitude':
-					$text = __( 'The numeric <em>decimal degrees</em> longitude for the content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' ).' <strong>'.__( 'This field is required to include the Place and Location meta tags.', 'wpsso-plm' ).'</strong>';
+					$text = __( 'The numeric <em>decimal degrees</em> longitude for the main content of this webpage.', 'wpsso-plm' ).' '.__( 'You may use a service like <a href="http://www.gps-coordinates.net/">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_altitude':
-					$text = __( 'An optional numeric altitude (in meters above sea level) for the content of this webpage.', 'wpsso-plm' );
+					$text = __( 'An optional numeric altitude (in meters above sea level) for the main content of this webpage.', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_business_type':
+					$text = __( 'A more descriptive Schema type for this local business. You must select a food establishement (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu and/or reservation information.', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_days':
+					$text = __( 'Select the days and hours this business is open.', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_season_dates':
+					$text = __( 'This business is only open for part of the year, between these two dates.', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_menu_url':
+					$text = __( 'The menu URL for this food establishement (fast food restaurant, ice cream shop, restaurant, etc.)', 'wpsso-plm' );
+					break;
+					break;
+				case 'tooltip-plm_addr_accept_res':
+					$text = __( 'This food establishement accepts reservations.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_add_to':
 					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) );

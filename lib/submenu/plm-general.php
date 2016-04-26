@@ -218,7 +218,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="3">Open from '.$this->form->get_input_date( 'plm_addr_season_from_date_'.$id ).
 							' through '.$this->form->get_input_date( 'plm_addr_season_to_date_'.$id ).'</td>';
 		
-						$table_rows['plm_addr_menu_url_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Restaurant Menu URL',
+						$table_rows['plm_addr_menu_url_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Food Establishment Menu URL',
 							'option label', 'wpsso-plm' ), '', 'plm_addr_menu_url' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_menu_url_'.$id, 'wide' ).'</td>';
 		

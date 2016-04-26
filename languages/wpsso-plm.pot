@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 2.0.0-dev3\n"
+"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 2.0.0-rc1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2016-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -64,122 +64,153 @@ msgid ""
 "Rich Pin / Schema \"Place\" meta tags."
 msgstr ""
 
-#: lib/filters.php:332
+#: lib/filters.php:340
 msgid ""
 "If an address is selected for a non-static homepage, %1$s will include "
 "additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</"
-"em>, location and address meta tags for the homepage."
+"em>, geographic location and address meta tags for the homepage."
 msgstr ""
 
-#: lib/filters.php:335
+#: lib/filters.php:343
 msgid ""
 "If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, "
 "%3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / "
-"Schema <em>Place</em>, location and address meta tags for that webpage."
+"Schema <em>Place</em>, geographic location and address meta tags for that "
+"webpage."
 msgstr ""
 
-#: lib/filters.php:335 lib/filters.php:398 lib/gpl/admin/post.php:30
+#: lib/filters.php:343 lib/filters.php:422 lib/gpl/admin/post.php:30
 #: lib/pro/admin/post.php:41
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:335 lib/filters.php:359 lib/filters.php:398
+#: lib/filters.php:343 lib/filters.php:367 lib/filters.php:422
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr ""
 
-#: lib/filters.php:347
+#: lib/filters.php:355
 msgid "Select an address or enter a customized address bellow."
 msgstr ""
 
-#: lib/filters.php:359
+#: lib/filters.php:367
 msgid ""
 "Select an address to include as a Schema <em>Place</em> or <em>Local "
 "Business</em> in your non-static home page."
 msgstr ""
 
-#: lib/filters.php:359
+#: lib/filters.php:367
 msgid ""
 "An address for a static home page can be selected in the %1$s metabox when "
 "editing the static page."
 msgstr ""
 
-#: lib/filters.php:362
+#: lib/filters.php:370
 msgid "A default country to use when creating a new address."
 msgstr ""
 
-#: lib/filters.php:365
+#: lib/filters.php:373
 msgid ""
 "Select an address to edit. The address and business information is used for "
 "Open Graph meta tags and Schema markup."
 msgstr ""
 
-#: lib/filters.php:368
+#: lib/filters.php:376
 msgid ""
 "Enter a descriptive name for this address. The address name appears only in "
 "select fields of editing and settings ages. Leave the address name blank to "
 "delete this address."
 msgstr ""
 
-#: lib/filters.php:371
+#: lib/filters.php:379
 msgid ""
 "An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</"
 "em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:374
+#: lib/filters.php:382
 msgid ""
 "An optional Post Office Box Number for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:377
-msgid "An optional City name for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:380
-msgid "An optional State or Province name for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:383
-msgid "An optional Zip or Postal Code for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:386
-msgid "An optional Country for the <em>Place</em> meta tags."
-msgstr ""
-
-#: lib/filters.php:389
+#: lib/filters.php:385
 msgid ""
-"The numeric <em>decimal degrees</em> latitude for the content of this "
+"An optional City name for the Pinterest Rich Pin / Schema <em>Place</em> "
+"meta tags and related markup."
+msgstr ""
+
+#: lib/filters.php:388
+msgid ""
+"An optional State or Province name for the Pinterest Rich Pin / Schema "
+"<em>Place</em> meta tags and related markup."
+msgstr ""
+
+#: lib/filters.php:391
+msgid ""
+"An optional Zip or Postal Code for the Pinterest Rich Pin / Schema "
+"<em>Place</em> meta tags and related markup."
+msgstr ""
+
+#: lib/filters.php:394
+msgid ""
+"An optional Country for the Pinterest Rich Pin / Schema <em>Place</em> meta "
+"tags and related markup."
+msgstr ""
+
+#: lib/filters.php:397
+msgid ""
+"The numeric <em>decimal degrees</em> latitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:389 lib/filters.php:392
+#: lib/filters.php:397 lib/filters.php:400
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:389 lib/filters.php:392
-msgid "This field is required to include the Place and Location meta tags."
-msgstr ""
-
-#: lib/filters.php:392
+#: lib/filters.php:400
 msgid ""
-"The numeric <em>decimal degrees</em> longitude for the content of this "
+"The numeric <em>decimal degrees</em> longitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:395
+#: lib/filters.php:403
 msgid ""
-"An optional numeric altitude (in meters above sea level) for the content of "
-"this webpage."
+"An optional numeric altitude (in meters above sea level) for the main "
+"content of this webpage."
 msgstr ""
 
-#: lib/filters.php:398
+#: lib/filters.php:406
+msgid ""
+"A more descriptive Schema type for this local business. You must select a "
+"food establishement (fast food restaurant, ice cream shop, restaurant, etc.) "
+"to include Schema markup for a food menu and/or reservation information."
+msgstr ""
+
+#: lib/filters.php:409
+msgid "Select the days and hours this business is open."
+msgstr ""
+
+#: lib/filters.php:412
+msgid ""
+"This business is only open for part of the year, between these two dates."
+msgstr ""
+
+#: lib/filters.php:415
+msgid ""
+"The menu URL for this food establishement (fast food restaurant, ice cream "
+"shop, restaurant, etc.)"
+msgstr ""
+
+#: lib/filters.php:419
+msgid "This food establishement accepts reservations."
+msgstr ""
+
+#: lib/filters.php:422
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
 "custom post types, allowing you to enter specific address information for "
@@ -282,9 +313,9 @@ msgid "Seasonal Business Dates"
 msgstr ""
 
 #: lib/gpl/admin/post.php:122 lib/pro/admin/post.php:219
-#: lib/pro/admin/post.php:232 lib/submenu/plm-general.php:221
+#: lib/pro/admin/post.php:232
 msgctxt "option label"
-msgid "Restaurant Menu URL"
+msgid "Food Menu URL"
 msgstr ""
 
 #: lib/gpl/admin/post.php:126 lib/pro/admin/post.php:223
@@ -331,6 +362,11 @@ msgstr ""
 #: lib/submenu/plm-general.php:127
 msgctxt "option comment"
 msgid "leave blank to delete an address"
+msgstr ""
+
+#: lib/submenu/plm-general.php:221
+msgctxt "option label"
+msgid "Food Establishment Menu URL"
 msgstr ""
 
 #: wpsso-plm.php:80
