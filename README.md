@@ -1,8 +1,8 @@
-<h1>WPSSO Place / Location and Local Business Meta for FB / Open Graph, Pinterest, Google / Schema</h1>
+<h1>WPSSO Place / Location and Local Business Meta for Pinterest, Facebook, and Google</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place / Location and Local Business Meta (WPSSO PLM)</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot;, Pinterest &quot;Place&quot; and Google / Schema &quot;Local Business&quot; meta</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Pinterest &quot;Place&quot;, Facebook / Open Graph &quot;Location&quot;, and Google / Schema &quot;Local Business&quot; met</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.0.0-1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.5</td></tr>
