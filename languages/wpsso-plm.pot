@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 2.0.0-rc1\n"
+"Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 2.0.0-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2016-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +119,7 @@ msgstr ""
 #: lib/filters.php:375
 msgid ""
 "Enter a descriptive name for this address. The address name appears only in "
-"select fields of editing and settings ages. Leave the address name blank to "
+"select fields of editing and settings pages. Leave the address name blank to "
 "delete this address."
 msgstr ""
 
