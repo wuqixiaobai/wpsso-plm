@@ -30,26 +30,30 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 **WPSSO PLM Free / Basic Features**
 
-* Adds a *Place / Location* tab in the Social Settings metabox for Posts, Pages, and custom post types (e-commerce product pages, etc.), where you can enter a custom street address, city, state / province, zip / postal code, country, latitude, longitude, altitude, and business hours.
-* Provides Facebook / Open Graph and Pinterest Rich Pin / Schema *Place*, location, and address meta tags:
-	* og:latitude
-	* og:longitude
-	* og:altitude
-	* place:street_address
-	* place:locality
-	* place:region
-	* place:postal_code
-	* place:country_name
-	* place:location:latitude
-	* place:location:longitude
-	* place:location:altitude
-	* address
-* Defines the Schema Type as a *Place* or *LocalBusiness* (complete markup requires the [WPSSO JSON Pro](https://wpsso.com/extends/plugins/wpsso-schema-json-ld/) extension). 
+* Select an Address for a Non-static Homepage
+* Manage Multiple Addresses / Contact Information
+	* Pinterest Rich Pin / Schema Place
+		* Street Address
+		* P.O. Box Number
+		* City
+		* State / Province
+		* Zip / Postal Code
+		* Country
+	* Facebook / Open Graph Location
+		* Latitude
+		* Longitude
+		* Altitude in Meters
+	* Schema Local Business
+		* Local Business Type
+		* Business Days and Hours
+		* Seasonal Business Dates
+		* Food Establishment Menu URL
+		* Accepts Reservations
+* Combine with the [WPSSO Schema JSON-LD (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) version extension to include complete Schema Place and Local Business JSON-LD markup.
 
 **WPSSO PLM Pro / Power-User Features**
 
-* Manage a default set of addresses, including their geo coordinates and business hours.
-* Select a default address under the *Place / Location* tab instead of entering custom values.
+* Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.
 
 = Extends the WPSSO Social Plugin =
 
