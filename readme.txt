@@ -1,5 +1,5 @@
-=== WPSSO Place and Local Business Meta - Facebook / Open Graph, Pinterest, Google / Schema ===
-Plugin Name: WPSSO Place and Local Business Meta (WPSSO PLM)
+=== WPSSO Place / Location and Local Business Meta for FB / Open Graph, Pinterest, Google / Schema ===
+Plugin Name: WPSSO Place / Location and Local Business Meta (WPSSO PLM)
 Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
 Domain Path: /languages
@@ -18,7 +18,7 @@ WPSSO extension to provide Facebook / Open Graph "Location", Pinterest "Place" a
 
 <p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" style="width:33%;min-width:128px;max-width:256px;float:left;margin:0 40px 20px 0;" /><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
 
-WPSSO Place and Local Business Meta (WPSSO PLM) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](https://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph *Location* and Pinterest Rich Pin / Schema *Place* meta tags in your webpages.
+WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](https://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph *Location* and Pinterest Rich Pin / Schema *Place* meta tags in your webpages.
 
 = Available in Multiple Languages =
 
@@ -57,7 +57,7 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 You can use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO, but the [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) version requires the use of the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) version as well.
 
-Purchase the [WPSSO Place and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
+Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
 
 == Installation ==
 
