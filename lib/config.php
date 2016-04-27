@@ -18,8 +18,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'version' => '2.0.0-1',		// plugin version
 					'opt_version' => '11',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
-					'name' => 'WPSSO Place and Location Meta (WPSSO PLM)',
-					'desc' => 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.',
+					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
+					'desc' => 'WPSSO extension to provide FB / Open Graph "Location", Pinterest "Place" and Google / Schema "Local Business" meta tags.',
 					'slug' => 'wpsso-plm',
 					'base' => 'wpsso-plm/wpsso-plm.php',
 					'update_auth' => 'tid',

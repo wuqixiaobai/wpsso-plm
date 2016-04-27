@@ -9,5 +9,5 @@ _x( '[New Address]', 'option value', 'wpsso-plm' );
 _x( '[None]', 'option value', 'wpsso-plm' );
 _x( 'Place / Location and Local Business', 'lib file description', 'wpsso-plm' );
 _x( 'Postal Address', 'option value', 'wpsso-plm' );
-_x( 'WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.', 'plugin description', 'wpsso-plm' );
+_x( 'WPSSO extension to provide FB / Open Graph "Location", Pinterest "Place" and Google / Schema "Local Business" meta tags.', 'plugin description', 'wpsso-plm' );
 ?>

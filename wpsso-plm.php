@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: WPSSO Place and Location Meta (WPSSO PLM)
+ * Plugin Name: WPSSO Place / Location and Local Business Meta (WPSSO PLM)
  * Plugin Slug: wpsso-plm
  * Text Domain: wpsso-plm
  * Domain Path: /languages
@@ -9,7 +9,7 @@
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: WPSSO extension to provide Facebook / Open Graph "Location" and Pinterest Rich Pin / Schema "Place" meta tags.
+ * Description: WPSSO extension to provide FB / Open Graph "Location", Pinterest "Place" and Google / Schema "Local Business" meta tags.
  * Requires At Least: 3.1
  * Tested Up To: 4.5
  * Version: 2.0.0-1
