@@ -111,7 +111,18 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 					list( $first_id, $next_id ) = WpssoPlmAddress::get_first_next_ids( $address_names );
 					$address_names[$next_id] = WpssoPlmConfig::$cf['form']['plm_address']['new'];
 
-					$this->form->defaults['plm_addr_id'] = 0;	// default can also be 'custom' in social settings metabox
+					// check to make sure the selected id exists
+					// if not, then unset to use the default
+					if ( isset( $this->form->options['plm_addr_id'] ) ) {
+						$id = $this->form->options['plm_addr_id'];
+						if ( isset( $this->form->options['plm_addr_name_'.$id] ) &&
+							trim( $this->form->options['plm_addr_name_'.$id] ) === '' )
+								unset( $this->form->options['plm_addr_id'] );
+					}
+
+					// default can also be 'custom' in the social settings metabox
+					$this->form->defaults['plm_addr_id'] = 0;
+
 					$table_rows['plm_addr_id'] = $this->form->get_th_html( _x( 'Edit an Address',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_id' ).
 					'<td colspan="3">'.$this->form->get_select( 'plm_addr_id', $address_names,

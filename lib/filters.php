@@ -281,9 +281,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$address_names = WpssoPlmAddress::get_names( $opts );
 
 			// remove all addresses with an empty name value
+			// remove the associated plm_addr_id value if required
 			foreach ( $address_names as $id => $name ) {
 				if ( trim( $name ) === '' ) {
-					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/', $opts, true );	// $invert = true
+					if ( isset( $opts['plm_addr_id'] ) &&
+						$opts['plm_addr_id'] === $id )
+							unset( $opts['plm_addr_id'] );
+					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/',
+						$opts, true );	// $invert = true
 				}
 			}
 
