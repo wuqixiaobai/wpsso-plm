@@ -1,9 +1,9 @@
-<h1>WPSSO Place and Location Meta Tags for Facebook, Open Graph, Pinterest, and Schema</h1>
+<h1>WPSSO Place / Location and Local Business Meta for FB / Open Graph, Pinterest, Google</h1>
 
 <table>
-<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place and Location Meta (WPSSO PLM)</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Facebook / Open Graph &quot;Location&quot; and Pinterest Rich Pin / Schema &quot;Place&quot; meta tags.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.5.5-1</td></tr>
+<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place / Location and Local Business Meta (WPSSO PLM)</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide FB / Open Graph &quot;Location&quot;, Pinterest &quot;Place&quot; and Google / Schema &quot;Local Business&quot; meta tags.</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.0.0-1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.5</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
@@ -16,7 +16,7 @@
 
 <p align="center"><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" /></p><p><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
 
-<p>WPSSO Place and Location Meta (WPSSO PLM) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph <em>Location</em> and Pinterest Rich Pin / Schema <em>Place</em> meta tags in your webpages.</p>
+<p>WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph <em>Location</em> and Pinterest Rich Pin / Schema <em>Place</em> meta tags in your webpages.</p>
 
 <h4>Available in Multiple Languages</h4>
 
@@ -64,7 +64,7 @@
 
 <p>You can use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO, but the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro</a> version requires the use of the <a href="http://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> version as well.</p>
 
-<p>Purchase the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO Place and Location Meta (WPSSO PLM) Pro</a> extension (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
+<p>Purchase the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro</a> extension (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 
 <h2>Installation</h2>
