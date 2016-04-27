@@ -115,7 +115,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmgeneral' ) && class_exists( 'WpssoAdmin'
 					// if not, then unset to use the default
 					if ( isset( $this->form->options['plm_addr_id'] ) ) {
 						$id = $this->form->options['plm_addr_id'];
-						if ( isset( $this->form->options['plm_addr_name_'.$id] ) &&
+						// test if the address name is missing or blank
+						if ( ! isset( $this->form->options['plm_addr_name_'.$id] ) ||
 							trim( $this->form->options['plm_addr_name_'.$id] ) === '' )
 								unset( $this->form->options['plm_addr_id'] );
 					}

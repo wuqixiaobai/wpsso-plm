@@ -39,6 +39,16 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$business_types = $this->p->schema->get_schema_types_select( $this->p->cf['head']['schema_type']['place']['local.business'], false );
 			$address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_address']['custom'] );
 
+			// check to make sure the selected id exists
+			// if not, then unset to use the default
+			if ( isset( $form->options['plm_addr_id'] ) ) {
+				$id = $form->options['plm_addr_id'];
+				// test if the address name is missing or blank
+				if ( ! isset( $form->options['plm_addr_name_'.$id] ) ||
+					trim( $form->options['plm_addr_name_'.$id] ) === '' )
+						unset( $form->options['plm_addr_id'] );
+			}
+
 			$table_rows[] = '<td colspan="4" align="center">'.
 				$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssoplm' ) ).'</td>';
 
