@@ -398,8 +398,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WPSSO extension to provide FB / Open Graph \"Location\", Pinterest \"Place\" "
-"and Google / Schema \"Local Business\" meta tags."
+"WPSSO extension to provide Facebook / Open Graph \"Location\", Pinterest "
+"\"Place\" and Google / Schema \"Local Business\" meta tags."
 msgstr ""
 
 #. Author of the plugin/theme

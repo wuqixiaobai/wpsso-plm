@@ -9,7 +9,7 @@
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: WPSSO extension to provide FB / Open Graph "Location", Pinterest "Place" and Google / Schema "Local Business" meta tags.
+ * Description: WPSSO extension to provide Facebook / Open Graph "Location", Pinterest "Place" and Google / Schema "Local Business" meta tags.
  * Requires At Least: 3.1
  * Tested Up To: 4.5
  * Version: 2.0.0-1
