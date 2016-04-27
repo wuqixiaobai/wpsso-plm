@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'get_post_options' => 1,		// meta data post options
 				'og_prefix_ns' => 1,			// open graph namespace
 				'og_seed' => 3,				// open graph meta tags
-				'json_item_types' => 2,			// $item_types, $mod
+				'json_schema_type_ids' => 2,		// $type_ids, $mod
 				'schema_head_type' => 3,		// $type_id, $mod
 				'schema_meta_itemprop' => 3,		// $mt_schema, $use_post, $mod
 				'schema_noscript_array' => 4,		// $ret, $use_post, $mod
@@ -169,26 +169,25 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $og;
 		}
 
-		public function filter_json_item_types( $item_types, $mod ) {
+		public function filter_json_schema_type_ids( $type_ids, $mod ) {
 			/*
 			 * Array (
-			 *	[http://schema.org/WebSite] => 1
-			 *	[http://schema.org/Organization] => 1
-			 *	[http://schema.org/Person] => 1
-			 *	[http://schema.org/LocalBusiness] => 1
+			 *	[local.business] => 1
+			 *	[website] => 1
+			 *	[organization] => 1
+			 *	[person] => 1
 			 * )
 			 */
 			if ( WpssoPlmAddress::has_place( $mod ) !== false ) {
 				if ( ( $addr_opts = WpssoPlmAddress::has_days( $mod ) ) !== false ) {
 					$business_type_id = empty( $addr_opts['plm_addr_business_type'] ) ?
 						'local.business' : $addr_opts['plm_addr_business_type'];
-					$business_type_value = $this->p->schema->get_item_type_url( $business_type_id, 'local.business' );
-					$item_types[$business_type_value] = true;
-				} else $item_types['http://schema.org/Place'] = true;
+					$type_ids[$business_type_id] = true;
+				} else $type_ids['place'] = true;
 			} elseif ( $this->p->debug->enabled )
 				$this->p->debug->log( 'not a schema place: no place options found' );
 
-			return $item_types;
+			return $type_ids;
 		}
 
 		public function filter_schema_head_type( $type_id, $mod, $is_md_type ) {
@@ -403,7 +402,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'An optional numeric altitude (in meters above sea level) for the main content of this webpage.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_business_type':
-					$text = __( 'A more descriptive Schema type for this local business. You must select a food establishement (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu and/or reservation information.', 'wpsso-plm' );
+					$text = __( 'A more descriptive Schema type for this local business. You must select a food establishment (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu and/or reservation information.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_days':
 					$text = __( 'Select the days and hours this business is open.', 'wpsso-plm' );
@@ -412,11 +411,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'This business is only open for part of the year, between these two dates.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_menu_url':
-					$text = __( 'The menu URL for this food establishement (fast food restaurant, ice cream shop, restaurant, etc.)', 'wpsso-plm' );
+					$text = __( 'The menu URL for this food establishment (fast food restaurant, ice cream shop, restaurant, etc.)', 'wpsso-plm' );
 					break;
 					break;
 				case 'tooltip-plm_addr_accept_res':
-					$text = __( 'This food establishement accepts reservations.', 'wpsso-plm' );
+					$text = __( 'This food establishment accepts reservations.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_add_to':
 					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) );

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Place and Location Meta (WPSSO PLM) 2.0.0-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2016-04-26 13:22-0400\n"
-"PO-Revision-Date: 2016-04-26 14:25-0400\n"
+"PO-Revision-Date: 2016-04-27 07:06-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -98,7 +98,7 @@ msgstr ""
 
 #: lib/filters.php:370
 msgid "A default country to use when creating a new address."
-msgstr ""
+msgstr "Un pays par défaut à utiliser lors de la création d'une nouvelle adresse."
 
 #: lib/filters.php:373
 msgid "Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup."
@@ -150,7 +150,7 @@ msgstr "Une altitude numérique optionnel (en mètres au-dessus du niveau de mer
 
 #: lib/filters.php:406
 msgid "A more descriptive Schema type for this local business. You must select a food establishement (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu and/or reservation information."
-msgstr ""
+msgstr "Un type de schéma plus descriptif pour cette entreprise locale. Vous devez sélectionner un etablisement alimentaire (restauration rapide, magasin de crème glacée, restaurant, etc.) pour inclure le schéma de balisage pour un menu de nourriture et / ou des informations de réservation."
 
 #: lib/filters.php:409
 msgid "Select the days and hours this business is open."
@@ -247,37 +247,37 @@ msgstr "Altitude en mètres"
 #: lib/submenu/plm-general.php:184
 msgctxt "metabox title"
 msgid "Schema Local Business"
-msgstr ""
+msgstr "Schéma Entreprise Locale"
 
 #: lib/gpl/admin/post.php:95 lib/pro/admin/post.php:165
 #: lib/pro/admin/post.php:173 lib/submenu/plm-general.php:191
 msgctxt "option label"
 msgid "Local Business Type"
-msgstr ""
+msgstr "Type de l'entreprise locale"
 
 #: lib/gpl/admin/post.php:103 lib/pro/admin/post.php:182
 #: lib/submenu/plm-general.php:199
 msgctxt "option label"
 msgid "Business Hours"
-msgstr ""
+msgstr "Heures d'ouverture"
 
 #: lib/gpl/admin/post.php:117 lib/pro/admin/post.php:214
 #: lib/pro/admin/post.php:227 lib/submenu/plm-general.php:216
 msgctxt "option label"
 msgid "Seasonal Business Dates"
-msgstr ""
+msgstr "Dates d'affaires saisonniers"
 
 #: lib/gpl/admin/post.php:122 lib/pro/admin/post.php:219
 #: lib/pro/admin/post.php:232
 msgctxt "option label"
 msgid "Food Menu URL"
-msgstr ""
+msgstr "URL du menu alimentaire"
 
 #: lib/gpl/admin/post.php:126 lib/pro/admin/post.php:223
 #: lib/pro/admin/post.php:237 lib/submenu/plm-general.php:225
 msgctxt "option label"
 msgid "Accepts Reservations"
-msgstr ""
+msgstr "Accepte des réservations"
 
 #: lib/submenu/plm-general.php:28
 msgctxt "metabox title"
@@ -297,12 +297,12 @@ msgstr "Afficher l'onglet sur articles de type"
 #: lib/submenu/plm-general.php:94
 msgctxt "option label"
 msgid "Address for Non-static Homepage"
-msgstr ""
+msgstr "Adresse pour page d'accueil non-statique"
 
 #: lib/submenu/plm-general.php:99
 msgctxt "option label"
 msgid "Address Default Country"
-msgstr ""
+msgstr "Pays par défaut pour adresses"
 
 #: lib/submenu/plm-general.php:115
 msgctxt "option label"
@@ -322,7 +322,7 @@ msgstr "laissez vide pour supprimer une adresse"
 #: lib/submenu/plm-general.php:221
 msgctxt "option label"
 msgid "Food Establishment Menu URL"
-msgstr ""
+msgstr "URL du menu de l'établissement alimentaire"
 
 #: wpsso-plm.php:80
 msgid "The %1$s extension requires the %2$s plugin &mdash; please install and activate the %3$s plugin before trying to re-activate the %4$s extension."
