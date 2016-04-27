@@ -12,7 +12,7 @@ Requires At Least: 3.1
 Tested Up To: 4.5
 Stable Tag: 2.0.0-1
 
-WPSSO extension to provide Pinterest "Place", Facebook / Open Graph "Location", and Google / Schema "Local Business" meta tags.
+WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, and Google / Schema Local Business meta tags.
 
 == Description ==
 
