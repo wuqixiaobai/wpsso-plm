@@ -341,10 +341,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-place-location-for-non-static-homepage':
-					$text = sprintf( __( 'If an address is selected for a non-static homepage, %1$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location and address meta tags for the homepage.', 'wpsso-plm' ), $short );
+					$text = sprintf( __( 'If an address is selected for a non-static homepage, %1$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location, and postal address meta tags for the homepage.', 'wpsso-plm' ), $short );
 					break;
 				case 'tooltip-side-place-location-tab':
-					$text = sprintf( __( 'If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, %3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location and address meta tags for that webpage.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short_pro );
+					$text = sprintf( __( 'If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, %3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location, and postal address meta tags for that webpage.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short_pro );
 					break;
 			}
 			return $text;
@@ -377,7 +377,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_name':
-					$text = __( 'Enter a descriptive name for this address. The address name appears only in select fields of editing and settings pages. Leave the address name blank to delete this address.', 'wpsso-plm' );
+					$text = __( 'Enter a descriptive name for this address. The address name appears in drop-down fields on some editing and settings pages. Leave the address name blank to remove the address.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_streetaddr':
 					$text = __( 'An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
