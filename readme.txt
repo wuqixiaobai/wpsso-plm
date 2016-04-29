@@ -55,7 +55,9 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 * Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.
 
-**Example WPSSO PLM Meta Tags**
+= Examples =
+
+* Example WPSSO PLM Meta Tags
 
 `
 <head itemscope itemtype="http://schema.org/Restaurant">
@@ -84,7 +86,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 </head>
 `
 
-**Example WPSSO PLM Meta Tags with WPSSO JSON Pro Markup**
+* Example WPSSO PLM Meta Tags with WPSSO JSON Pro Markup
 
 `
 <head>
