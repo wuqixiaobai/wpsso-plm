@@ -79,7 +79,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
     	<meta itemprop="validthrough" content="2016-09-01"/>
     </noscript>
 
-    <meta itemprop="menu" content="http://surniaulula.com/example-restaurant-menu.html"/>
+    <meta itemprop="menu" content="http://restaurant.example.com/restaurant-menu.html"/>
     <meta itemprop="acceptsreservations" content="true"/>
 </head>
 `
@@ -103,19 +103,19 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
     <script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "Restaurant",
-            "url": "http://adm.surniaulula.vbox/",
-            "name": "Surnia Ulula (Admin) - Administration Website",
-        "description": "Administration Website",
+            "url": "http://restaurant.example.com/",
+            "name": "Restaurant Name",
+        "description": "A great family owned restaurant. ;-)",
         "mainEntityOfPage": {
             "@context": "http://schema.org",
             "@type": "WebPage",
-            "@id": "http://adm.surniaulula.vbox/"
+            "@id": "http://restaurant.example.com/"
         },
         "image": [
             {
                 "@context": "http://schema.org",
                 "@type": "ImageObject",
-                "url": "http://adm.surniaulula.vbox/wp-content/uploads/2016/02/JSM-e1454504960490-800x663.jpg",
+                "url": "http://restaurant.example.com/wp-content/uploads/restaurant-image.jpg",
                 "width": 800,
                 "height": 663
             }
@@ -147,7 +147,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
                 "validThrough": "2016-09-01"
             }
         ],
-        "menu": "http://surniaulula.com/example-restaurant-menu.html",
+        "menu": "http://restaurant.example.com/restaurant-menu.html",
         "acceptsReservations": "true"
     }</script>
 </head>
