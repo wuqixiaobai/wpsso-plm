@@ -62,7 +62,7 @@
 <li>Accepts Reservations</li>
 </ul></li>
 </ul></li>
-<li>Combine with the <a href="http://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD (WPSSO JSON) Pro</a> version extension to include complete Schema Place and Local Business JSON-LD markup.</li>
+<li>Combine WPSSO PLM with the <a href="http://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD (WPSSO JSON) Pro</a> extension to include complete Place and Local Business using Schema JSON-LD markup.</li>
 </ul>
 
 <p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
@@ -70,6 +70,98 @@
 <ul>
 <li>Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.</li>
 </ul>
+
+<p><strong>Example WPSSO PLM Meta Tags</strong></p>
+
+<pre><code>&lt;meta property="og:type" content="place"/&gt;
+&lt;meta property="og:latitude" content="10"/&gt;
+&lt;meta property="og:longitude" content="-10"/&gt;
+
+&lt;meta property="place:street_address" content="123 A Road"/&gt;
+&lt;meta property="place:locality" content="Cityname"/&gt;
+&lt;meta property="place:region" content="Somestate"/&gt;
+&lt;meta property="place:postal_code" content="123456"/&gt;
+&lt;meta property="place:country_name" content="US"/&gt;
+&lt;meta property="place:location:latitude" content="10"/&gt;
+&lt;meta property="place:location:longitude" content="-10"/&gt;
+
+&lt;noscript itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification"&gt;
+    &lt;meta itemprop="dayofweek" content="saturday"/&gt;
+    &lt;meta itemprop="opens" content="12:00"/&gt;
+    &lt;meta itemprop="closes" content="22:00"/&gt;
+    &lt;meta itemprop="validfrom" content="2016-05-01"/&gt;
+    &lt;meta itemprop="validthrough" content="2016-09-01"/&gt;
+&lt;/noscript&gt;
+
+&lt;meta itemprop="menu" content="http://surniaulula.com/example-restaurant-menu.html"/&gt;
+&lt;meta itemprop="acceptsreservations" content="true"/&gt;
+</code></pre>
+
+<p><strong>Example WPSSO PLM Meta Tags and WPSSO Schema JSON-LD Pro Markup</strong></p>
+
+<pre><code>&lt;meta property="og:type" content="place"/&gt;
+&lt;meta property="og:latitude" content="10"/&gt;
+&lt;meta property="og:longitude" content="-10"/&gt;
+
+&lt;meta property="place:street_address" content="123 A Road"/&gt;
+&lt;meta property="place:locality" content="Cityname"/&gt;
+&lt;meta property="place:region" content="Somestate"/&gt;
+&lt;meta property="place:postal_code" content="123456"/&gt;
+&lt;meta property="place:country_name" content="US"/&gt;
+&lt;meta property="place:location:latitude" content="10"/&gt;
+&lt;meta property="place:location:longitude" content="-10"/&gt;
+
+&lt;script type="application/ld+json"&gt;{
+    "@context": "http://schema.org",
+    "@type": "Restaurant",
+    "url": "http://adm.surniaulula.vbox/",
+    "name": "Surnia Ulula (Admin) - Administration Website",
+    "description": "Administration Website",
+    "mainEntityOfPage": {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "@id": "http://adm.surniaulula.vbox/"
+    },
+    "image": [
+        {
+            "@context": "http://schema.org",
+            "@type": "ImageObject",
+            "url": "http://adm.surniaulula.vbox/wp-content/uploads/2016/02/JSM-e1454504960490-800x663.jpg",
+            "width": 800,
+            "height": 663
+        }
+    ],
+    "address": {
+        "@context": "http://schema.org",
+        "@type": "PostalAddress",
+        "streetAddress": "123 A Road",
+        "postOfficeBoxNumber": 7,
+        "addressLocality": "Cityname",
+        "addressRegion": "Somestate",
+        "postalCode": "123456",
+        "addressCountry": "US"
+    },
+    "geo": {
+        "@context": "http://schema.org",
+        "@type": "GeoCoordinates",
+        "latitude": 10,
+        "longitude": -10
+    },
+    "openingHoursSpecification": [
+        {
+            "@context": "http://schema.org",
+            "@type": "openingHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "12:00",
+            "closes": "22:00",
+            "validFrom": "2016-05-01",
+            "validThrough": "2016-09-01"
+        }
+    ],
+    "menu": "http://surniaulula.com/example-restaurant-menu.html",
+    "acceptsReservations": "true"
+}&lt;/script&gt;
+</code></pre>
 
 <h4>Extends the WPSSO Social Plugin</h4>
 

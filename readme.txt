@@ -49,11 +49,105 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 		* Seasonal Business Dates
 		* Food Establishment Menu URL
 		* Accepts Reservations
-* Combine with the [WPSSO Schema JSON-LD (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) version extension to include complete Schema Place and Local Business JSON-LD markup.
+* Combine WPSSO PLM with the [WPSSO Schema JSON-LD (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
 **WPSSO PLM Pro / Power-User Features**
 
 * Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.
+
+**Example WPSSO PLM Meta Tags**
+
+`
+<meta property="og:type" content="place"/>
+<meta property="og:latitude" content="10"/>
+<meta property="og:longitude" content="-10"/>
+
+<meta property="place:street_address" content="123 A Road"/>
+<meta property="place:locality" content="Cityname"/>
+<meta property="place:region" content="Somestate"/>
+<meta property="place:postal_code" content="123456"/>
+<meta property="place:country_name" content="US"/>
+<meta property="place:location:latitude" content="10"/>
+<meta property="place:location:longitude" content="-10"/>
+
+<noscript itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+	<meta itemprop="dayofweek" content="saturday"/>
+	<meta itemprop="opens" content="12:00"/>
+	<meta itemprop="closes" content="22:00"/>
+	<meta itemprop="validfrom" content="2016-05-01"/>
+	<meta itemprop="validthrough" content="2016-09-01"/>
+</noscript>
+
+<meta itemprop="menu" content="http://surniaulula.com/example-restaurant-menu.html"/>
+<meta itemprop="acceptsreservations" content="true"/>
+`
+
+**Example WPSSO PLM Meta Tags and WPSSO Schema JSON-LD Pro Markup**
+
+`
+<meta property="og:type" content="place"/>
+<meta property="og:latitude" content="10"/>
+<meta property="og:longitude" content="-10"/>
+
+<meta property="place:street_address" content="123 A Road"/>
+<meta property="place:locality" content="Cityname"/>
+<meta property="place:region" content="Somestate"/>
+<meta property="place:postal_code" content="123456"/>
+<meta property="place:country_name" content="US"/>
+<meta property="place:location:latitude" content="10"/>
+<meta property="place:location:longitude" content="-10"/>
+
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Restaurant",
+    "url": "http://adm.surniaulula.vbox/",
+    "name": "Surnia Ulula (Admin) - Administration Website",
+    "description": "Administration Website",
+    "mainEntityOfPage": {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "@id": "http://adm.surniaulula.vbox/"
+    },
+    "image": [
+        {
+            "@context": "http://schema.org",
+            "@type": "ImageObject",
+            "url": "http://adm.surniaulula.vbox/wp-content/uploads/2016/02/JSM-e1454504960490-800x663.jpg",
+            "width": 800,
+            "height": 663
+        }
+    ],
+    "address": {
+        "@context": "http://schema.org",
+        "@type": "PostalAddress",
+        "streetAddress": "123 A Road",
+        "postOfficeBoxNumber": 7,
+        "addressLocality": "Cityname",
+        "addressRegion": "Somestate",
+        "postalCode": "123456",
+        "addressCountry": "US"
+    },
+    "geo": {
+        "@context": "http://schema.org",
+        "@type": "GeoCoordinates",
+        "latitude": 10,
+        "longitude": -10
+    },
+    "openingHoursSpecification": [
+        {
+            "@context": "http://schema.org",
+            "@type": "openingHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "12:00",
+            "closes": "22:00",
+            "validFrom": "2016-05-01",
+            "validThrough": "2016-09-01"
+        }
+    ],
+    "menu": "http://surniaulula.com/example-restaurant-menu.html",
+    "acceptsReservations": "true"
+}</script>
+`
 
 = Extends the WPSSO Social Plugin =
 
