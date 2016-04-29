@@ -99,7 +99,7 @@
 &lt;/head&gt;
 </code></pre>
 
-<p><strong>Example WPSSO PLM Meta Tags and WPSSO Schema JSON-LD Pro Markup</strong></p>
+<p><strong>Example WPSSO PLM Meta Tags with WPSSO JSON Pro Markup</strong></p>
 
 <pre><code>&lt;head&gt;
     &lt;meta property="og:type" content="place"/&gt;

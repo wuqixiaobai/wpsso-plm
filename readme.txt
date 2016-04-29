@@ -84,7 +84,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 </head>
 `
 
-**Example WPSSO PLM Meta Tags and WPSSO Schema JSON-LD Pro Markup**
+**Example WPSSO PLM Meta Tags with WPSSO JSON Pro Markup**
 
 `
 <head>
