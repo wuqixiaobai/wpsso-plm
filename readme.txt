@@ -57,7 +57,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 = Examples =
 
-* Example WPSSO PLM Meta Tags
+* Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video ("application/x-shockwave-flash" and "text/html" embed) meta tags have been excluded for brevety. ;-)
 
 `
 <head itemscope itemtype="http://schema.org/Restaurant">
@@ -86,7 +86,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 </head>
 `
 
-* Example WPSSO PLM Meta Tags with WPSSO JSON Pro Markup
+* Example WPSSO PLM meta tags with WPSSO JSON Pro markup for a Restaurant (Local Business). The image and video ("application/x-shockwave-flash" and "text/html" embed) meta tags and markup have been excluded for brevety. ;-)
 
 `
 <head>
@@ -113,15 +113,6 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
             "@type": "WebPage",
             "@id": "http://restaurant.example.com/"
         },
-        "image": [
-            {
-                "@context": "http://schema.org",
-                "@type": "ImageObject",
-                "url": "http://restaurant.example.com/wp-content/uploads/restaurant-image.jpg",
-                "width": 800,
-                "height": 663
-            }
-        ],
         "address": {
             "@context": "http://schema.org",
             "@type": "PostalAddress",
