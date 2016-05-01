@@ -55,6 +55,14 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 * Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.
 
+= Extends the WPSSO Social Plugin =
+
+The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.
+
+You can use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO, but the [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) version requires the use of the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) version as well.
+
+Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
+
 = Examples =
 
 * Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video ("application/x-shockwave-flash" and "text/html" embed) meta tags have been excluded for brevety. ;-)
@@ -145,14 +153,6 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
     }</script>
 </head>
 `
-
-= Extends the WPSSO Social Plugin =
-
-The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.
-
-You can use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO, but the [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) version requires the use of the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) version as well.
-
-Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
 
 == Installation ==
 

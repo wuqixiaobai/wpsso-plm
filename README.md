@@ -71,6 +71,14 @@
 <li>Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.</li>
 </ul>
 
+<h4>Extends the WPSSO Social Plugin</h4>
+
+<p>The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.</p>
+
+<p>You can use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO, but the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro</a> version requires the use of the <a href="http://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> version as well.</p>
+
+<p>Purchase the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro</a> extension (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
+
 <h4>Examples</h4>
 
 <ul>
@@ -162,14 +170,6 @@
 
 <p></head></p></li>
 </ul>
-
-<h4>Extends the WPSSO Social Plugin</h4>
-
-<p>The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.</p>
-
-<p>You can use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO, but the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro</a> version requires the use of the <a href="http://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> version as well.</p>
-
-<p>Purchase the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro</a> extension (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 
 <h2>Installation</h2>
