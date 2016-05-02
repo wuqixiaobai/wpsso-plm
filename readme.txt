@@ -63,7 +63,7 @@ You can use the Free version of WPSSO PLM with *both* the Free and Pro versions 
 
 Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
 
-= Examples =
+= Example Meta Tags and Markup =
 
 * Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video ("application/x-shockwave-flash" and "text/html" embed) meta tags have been excluded for brevety. ;-)
 
@@ -175,8 +175,8 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 == Screenshots ==
 
-01. The WPSSO PLM Settings Page
-02. The Place and Location Tab
+01. The WPSSO PLM settings page - manage a selection of addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
+02. The Place / Location tab in the Social Settings metabox on individual posts, pages, and custom post types - manage custom addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
 
 == Changelog ==
 
