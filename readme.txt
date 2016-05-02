@@ -175,8 +175,9 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 == Screenshots ==
 
-01. The WPSSO PLM settings page - manage a selection of addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
-02. The Place / Location tab in the Social Settings metabox on individual posts, pages, and custom post types - manage custom addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
+01. The WPSSO PLM settings page &mdash; manage a selection of addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
+02. The Place / Location tab in the Social Settings metabox on individual posts, pages, and custom post types &mdash; manage custom addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
+03. Google's Structured Data Testing Tool &mdash; Results for an example Restaurant webpage showing the WPSSO PLM meta tags.
 
 == Changelog ==
 
