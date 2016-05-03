@@ -94,66 +94,6 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 </head>
 `
 
-* Example WPSSO PLM meta tags with WPSSO JSON Pro markup for a Restaurant (Local Business). The image and video ("application/x-shockwave-flash" and "text/html" embed) meta tags and markup have been excluded for brevety. ;-)
-
-`
-<head>
-    <meta property="og:type" content="place"/>
-    <meta property="og:latitude" content="10"/>
-    <meta property="og:longitude" content="-10"/>
-
-    <meta property="place:street_address" content="123 A Road"/>
-    <meta property="place:locality" content="Cityname"/>
-    <meta property="place:region" content="Somestate"/>
-    <meta property="place:postal_code" content="123456"/>
-    <meta property="place:country_name" content="US"/>
-    <meta property="place:location:latitude" content="10"/>
-    <meta property="place:location:longitude" content="-10"/>
-
-    <script type="application/ld+json">{
-        "@context": "http://schema.org",
-        "@type": "Restaurant",
-            "url": "http://restaurant.example.com/",
-            "name": "Restaurant Name",
-        "description": "A great family owned restaurant. ;-)",
-        "mainEntityOfPage": {
-            "@context": "http://schema.org",
-            "@type": "WebPage",
-            "@id": "http://restaurant.example.com/"
-        },
-        "address": {
-            "@context": "http://schema.org",
-            "@type": "PostalAddress",
-            "streetAddress": "123 A Road",
-            "postOfficeBoxNumber": 7,
-            "addressLocality": "Cityname",
-            "addressRegion": "Somestate",
-            "postalCode": "123456",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@context": "http://schema.org",
-            "@type": "GeoCoordinates",
-            "latitude": 10,
-            "longitude": -10
-        },
-        "openingHoursSpecification": [
-            {
-                "@context": "http://schema.org",
-                "@type": "openingHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "12:00",
-                "closes": "22:00",
-                "validFrom": "2016-05-01",
-                "validThrough": "2016-09-01"
-            }
-        ],
-        "menu": "http://restaurant.example.com/restaurant-menu.html",
-        "acceptsReservations": "true"
-    }</script>
-</head>
-`
-
 == Installation ==
 
 = Install and Uninstall =
