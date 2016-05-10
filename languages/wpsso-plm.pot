@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO "
-"PLM) 2.0.0-1\n"
+"PLM) 2.0.1-dev1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2016-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -65,157 +65,141 @@ msgid ""
 "and Google / Schema Local Business meta tags."
 msgstr ""
 
-#: lib/filters.php:344
-msgid ""
-"If an address is selected for a non-static homepage, %1$s will include "
-"additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</"
-"em>, geographic location, and postal address meta tags for the homepage."
-msgstr ""
-
-#: lib/filters.php:347
-msgid ""
-"If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, "
-"%3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / "
-"Schema <em>Place</em>, geographic location, and postal address meta tags for "
-"that webpage."
-msgstr ""
-
-#: lib/filters.php:347 lib/filters.php:426 lib/gpl/admin/post.php:30
-#: lib/pro/admin/post.php:41
-msgctxt "metabox tab"
-msgid "Place / Location"
-msgstr ""
-
-#: lib/filters.php:347 lib/filters.php:371 lib/filters.php:426
-msgctxt "metabox title"
-msgid "Social Settings"
-msgstr ""
-
-#: lib/filters.php:359
+#: lib/filters.php:343
 msgid "Select an address or enter a customized address bellow."
 msgstr ""
 
-#: lib/filters.php:371
+#: lib/filters.php:355
 msgid ""
 "Select an address to include as a Schema <em>Place</em> or <em>Local "
 "Business</em> in your non-static home page."
 msgstr ""
 
-#: lib/filters.php:371
+#: lib/filters.php:355
 msgid ""
 "An address for a static home page can be selected in the %1$s metabox when "
 "editing the static page."
 msgstr ""
 
-#: lib/filters.php:374
+#: lib/filters.php:355 lib/filters.php:410
+msgctxt "metabox title"
+msgid "Social Settings"
+msgstr ""
+
+#: lib/filters.php:358
 msgid "A default country to use when creating a new address."
 msgstr ""
 
-#: lib/filters.php:377
+#: lib/filters.php:361
 msgid ""
 "Select an address to edit. The address and business information is used for "
 "Open Graph meta tags and Schema markup."
 msgstr ""
 
-#: lib/filters.php:380
+#: lib/filters.php:364
 msgid ""
 "Enter a descriptive name for this address. The address name appears in drop-"
 "down fields on some editing and settings pages. Leave the address name blank "
 "to remove the address."
 msgstr ""
 
-#: lib/filters.php:383
+#: lib/filters.php:367
 msgid ""
 "An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</"
 "em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:386
+#: lib/filters.php:370
 msgid ""
 "An optional Post Office Box Number for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:389
+#: lib/filters.php:373
 msgid ""
 "An optional City name for the Pinterest Rich Pin / Schema <em>Place</em> "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:392
+#: lib/filters.php:376
 msgid ""
 "An optional State or Province name for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:395
+#: lib/filters.php:379
 msgid ""
 "An optional Zip or Postal Code for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:398
+#: lib/filters.php:382
 msgid ""
 "An optional Country for the Pinterest Rich Pin / Schema <em>Place</em> meta "
 "tags and related markup."
 msgstr ""
 
-#: lib/filters.php:401
+#: lib/filters.php:385
 msgid ""
 "The numeric <em>decimal degrees</em> latitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:401 lib/filters.php:404
+#: lib/filters.php:385 lib/filters.php:388
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:404
+#: lib/filters.php:388
 msgid ""
 "The numeric <em>decimal degrees</em> longitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:407
+#: lib/filters.php:391
 msgid ""
 "An optional numeric altitude (in meters above sea level) for the main "
 "content of this webpage."
 msgstr ""
 
-#: lib/filters.php:410
+#: lib/filters.php:394
 msgid ""
 "A more descriptive Schema type for this local business. You must select a "
 "food establishment (fast food restaurant, ice cream shop, restaurant, etc.) "
 "to include Schema markup for a food menu and/or reservation information."
 msgstr ""
 
-#: lib/filters.php:413
+#: lib/filters.php:397
 msgid "Select the days and hours this business is open."
 msgstr ""
 
-#: lib/filters.php:416
+#: lib/filters.php:400
 msgid ""
 "This business is only open for part of the year, between these two dates."
 msgstr ""
 
-#: lib/filters.php:419
+#: lib/filters.php:403
 msgid ""
 "The menu URL for this food establishment (fast food restaurant, ice cream "
 "shop, restaurant, etc.)"
 msgstr ""
 
-#: lib/filters.php:423
+#: lib/filters.php:407
 msgid "This food establishment accepts reservations."
 msgstr ""
 
-#: lib/filters.php:426
+#: lib/filters.php:410
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
 "custom post types, allowing you to enter specific address information for "
 "that webpage (ie. GPS coordinates and/or street address)."
+msgstr ""
+
+#: lib/filters.php:410 lib/gpl/admin/post.php:30 lib/pro/admin/post.php:41
+msgctxt "metabox tab"
+msgid "Place / Location"
 msgstr ""
 
 #: lib/gpl/admin/post.php:55 lib/pro/admin/post.php:65

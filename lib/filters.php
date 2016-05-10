@@ -45,7 +45,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'option_type' => 2,
 					'save_options' => 3,
-					'messages_tooltip_side' => 2,
 					'messages_tooltip_post' => 3,
 					'messages_tooltip' => 2,
 				) );
@@ -335,21 +334,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $type;
 		}
 
-		public function filter_messages_tooltip_side( $text, $idx ) {
-			$lca =  $this->p->cf['lca'];
-			$short = $this->p->cf['plugin'][$lca]['short'];
-			$short_pro = $short.' Pro';
-			switch ( $idx ) {
-				case 'tooltip-side-place-location-for-non-static-homepage':
-					$text = sprintf( __( 'If an address is selected for a non-static homepage, %1$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location, and postal address meta tags for the homepage.', 'wpsso-plm' ), $short );
-					break;
-				case 'tooltip-side-place-location-tab':
-					$text = sprintf( __( 'If an address is selected under the <em>%1$s</em> tab in the %2$s metabox, %3$s will include additional Facebook / Open Graph and Pinterest Rich Pin / Schema <em>Place</em>, geographic location, and postal address meta tags for that webpage.', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ), $short_pro );
-					break;
-			}
-			return $text;
-		}
-
 		public function filter_messages_tooltip_post( $text, $idx, $atts ) {
 			if ( strpos( $idx, 'tooltip-post-plm_' ) !== 0 )
 				return $text;
@@ -432,13 +416,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_status_gpl_features( $features, $lca, $info ) {
 			$has_addr_for_home = $this->p->options['plm_addr_for_home'] === '' ||
 				$this->p->options['plm_addr_for_home'] === 'none' ? false : true;	// can be 0
-			$features['Place / Location for Non-static Homepage'] = array( 'status' => $has_addr_for_home ? 'on' : 'off' );
+			$features['(code) Place / Location for Non-static Homepage'] = array( 'status' => $has_addr_for_home ? 'on' : 'off' );
 			return $features;
 		}
 
 		public function filter_status_pro_features( $features, $lca, $info ) {
 			$aop = $this->p->check->aop( $lca );
-			$features['Place / Location Tab'] = array( 
+			$features['(tool) Custom Place / Location and Local Business Meta'] = array( 
 				'status' => $aop ? 'on' : 'off',
 				'td_class' => $aop ? '' : 'blank',
 			);
