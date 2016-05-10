@@ -128,6 +128,19 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
+**Version 2.0.1-dev1 (2016/05/10)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* Categorized the display of Free / Pro features in the sidebar metabox.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.0.0-1 (2016/04/27)**
 
 Official announcement: N/A
@@ -147,6 +160,10 @@ Official announcement: N/A
 	* WPSSO PLM adds Open Graph and Schema meta tags to webpage headers. The WPSSO JSON (Pro version) extension can work in combination with WPSSO PLM to add Schema Place or LocalBusiness JSON-LD to webpage headers.
 
 == Upgrade Notice ==
+
+= 2.0.1-dev1 =
+
+(2016/05/10) Categorized the display of Free / Pro features in the sidebar metabox.
 
 = 2.0.0-1 =
 
