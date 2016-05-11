@@ -5,18 +5,18 @@ Text Domain: wpsso-plm
 Domain Path: /languages
 Contributors: jsmoriss
 Donate Link: https://wpsso.com/
-Tags: wpsso, place, location, venue, longitude, latitude, address, local, business, hours
+Tags: wpsso, place, location, venue, longitude, latitude, address, local, business, hours, seo
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.1
 Tested Up To: 4.5.2
 Stable Tag: 2.0.0-1
 
-WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, and Google / Schema Local Business meta tags.
+WPSSO extension to provide Place / Location, Local Business and Local SEO meta tags.
 
 == Description ==
 
-<p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" style="width:33%;min-width:128px;max-width:256px;float:left;margin:0 40px 20px 0;" /><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
+<p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" style="width:33%;min-width:128px;max-width:256px;float:left;margin:0 40px 20px 0;" /><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc? Let PInterest, Facebook, Google, and other search engines know by using this plugin.</p>
 
 WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](https://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph *Location* and Pinterest Rich Pin / Schema *Place* meta tags in your webpages.
 

@@ -2,19 +2,19 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place / Location and Local Business Meta (WPSSO PLM)</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, and Google / Schema Local Business meta tags.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Place / Location, Local Business and Local SEO meta tags.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.0.0-1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.5.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>Website URL</th><td><a href="https://wpsso.com/">https://wpsso.com/</a></td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="http://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
-<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>wpsso, place, location, venue, longitude, latitude, address, local, business, hours</td></tr>
+<tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>wpsso, place, location, venue, longitude, latitude, address, local, business, hours, seo</td></tr>
 </table>
 
 <h2>Description</h2>
 
-<p align="center"><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" /></p><p><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc?</p>
+<p align="center"><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" /></p><p><strong>Do you have location specific webpages on your website</strong>, like contact information, store locations, e-commerce products, etc? Let PInterest, Facebook, Google, and other search engines know by using this plugin.</p>
 
 <p>WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph <em>Location</em> and Pinterest Rich Pin / Schema <em>Place</em> meta tags in your webpages.</p>
 
