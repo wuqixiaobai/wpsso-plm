@@ -421,7 +421,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_status_pro_features( $features, $lca, $info ) {
-			$aop = $this->p->check->aop( $lca );
+			$aop = $this->p->check->aop( $ext, true, $this->p->is_avail['aop'] );
 			$features['(tool) Custom Place / Location and Local Business Meta'] = array( 
 				'status' => $aop ? 'on' : 'off',
 				'td_class' => $aop ? '' : 'blank',
