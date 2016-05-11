@@ -1,4 +1,4 @@
-<h1>WPSSO Place / Location and Local Business Meta for Pinterest, Facebook, and Google</h1>
+<h1>WPSSO Place / Location and Local Business + SEO Meta for Pinterest, Facebook, and Google</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place / Location and Local Business Meta (WPSSO PLM)</td></tr>
