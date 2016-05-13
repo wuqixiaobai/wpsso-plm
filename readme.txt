@@ -128,7 +128,7 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
-**Version 2.0.1-dev1 (2016/05/10)**
+**Version 2.0.1-rc1 (2016/05/13)**
 
 Official announcement: N/A
 
@@ -161,9 +161,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.0.1-dev1 =
+= 2.0.1-rc1 =
 
-(2016/05/10) Categorized the display of Free / Pro features in the sidebar metabox.
+(2016/05/13) Categorized the display of Free / Pro features in the sidebar metabox.
 
 = 2.0.0-1 =
 
