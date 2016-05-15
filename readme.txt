@@ -141,31 +141,9 @@ Official announcement: N/A
 * *Developer Notes*
 	* None
 
-**Version 2.0.0-1 (2016/04/27)**
-
-Official announcement: N/A
-
-* *New Features*
-	* New "Place / Location and Local Business" settings page, including:
-		* Pinterest Rich Pin / Schema Place settings for business addresses.
-		* Facebook / Open Graph Location settings for geo coordinates information.
-		* New Schema Local Business settings with open / closing hours, seasonal dates, food establishment menu URL, and if it accepts reservations.
-	* Open Graph Location, Schema Place or LocalBusiness meta tags for the non-static home page.
-	* Open Graph Location, Schema Place or LocalBusiness meta tags for Posts, Pages, and custom post types (Pro version).
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* WPSSO PLM adds Open Graph and Schema meta tags to webpage headers. The WPSSO JSON (Pro version) extension can work in combination with WPSSO PLM to add Schema Place or LocalBusiness JSON-LD to webpage headers.
-
 == Upgrade Notice ==
 
 = 2.0.1-1 =
 
 (2016/05/14) Categorized the display of Free / Pro features in the sidebar metabox.
-
-= 2.0.0-1 =
-
-(2016/04/27) New Schema Local Business settings with open / closing hours, seasonal dates, food establishment menu URL, and if it accepts reservations.
 
