@@ -81,36 +81,33 @@
 
 <h4>Example Meta Tags and Markup</h4>
 
-<ul>
-<li><p>Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video ("application/x-shockwave-flash" and "text/html" embed) meta tags have been excluded for brevety. ;-)</p>
+<p>Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The <a href="http://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD (WPSSO JSON) Pro</a> extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.</p>
 
-<p><head itemscope itemtype="http://schema.org/Restaurant">
-    <meta property="og:type" content="place"/>
-    <meta property="og:latitude" content="10"/>
-    <meta property="og:longitude" content="-10"/></p>
+<pre><code>&lt;head itemscope itemtype="http://schema.org/Restaurant"&gt;
+    &lt;meta property="og:type" content="place"/&gt;
+    &lt;meta property="og:latitude" content="10"/&gt;
+    &lt;meta property="og:longitude" content="-10"/&gt;
 
-<pre><code>&lt;meta property="place:street_address" content="123 A Road"/&gt;
-&lt;meta property="place:locality" content="Cityname"/&gt;
-&lt;meta property="place:region" content="Somestate"/&gt;
-&lt;meta property="place:postal_code" content="123456"/&gt;
-&lt;meta property="place:country_name" content="US"/&gt;
-&lt;meta property="place:location:latitude" content="10"/&gt;
-&lt;meta property="place:location:longitude" content="-10"/&gt;
+    &lt;meta property="place:street_address" content="123 A Road"/&gt;
+    &lt;meta property="place:locality" content="Cityname"/&gt;
+    &lt;meta property="place:region" content="Somestate"/&gt;
+    &lt;meta property="place:postal_code" content="123456"/&gt;
+    &lt;meta property="place:country_name" content="US"/&gt;
+    &lt;meta property="place:location:latitude" content="10"/&gt;
+    &lt;meta property="place:location:longitude" content="-10"/&gt;
 
-&lt;noscript itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification"&gt;
-    &lt;meta itemprop="dayofweek" content="saturday"/&gt;
-    &lt;meta itemprop="opens" content="12:00"/&gt;
-    &lt;meta itemprop="closes" content="22:00"/&gt;
-    &lt;meta itemprop="validfrom" content="2016-05-01"/&gt;
-    &lt;meta itemprop="validthrough" content="2016-09-01"/&gt;
-&lt;/noscript&gt;
+    &lt;noscript itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification"&gt;
+        &lt;meta itemprop="dayofweek" content="saturday"/&gt;
+        &lt;meta itemprop="opens" content="12:00"/&gt;
+        &lt;meta itemprop="closes" content="22:00"/&gt;
+        &lt;meta itemprop="validfrom" content="2016-05-01"/&gt;
+        &lt;meta itemprop="validthrough" content="2016-09-01"/&gt;
+    &lt;/noscript&gt;
 
-&lt;meta itemprop="menu" content="http://restaurant.example.com/restaurant-menu.html"/&gt;
-&lt;meta itemprop="acceptsreservations" content="true"/&gt;
+    &lt;meta itemprop="menu" content="http://restaurant.example.com/restaurant-menu.html"/&gt;
+    &lt;meta itemprop="acceptsreservations" content="true"/&gt;
+&lt;/head&gt;
 </code></pre>
-
-<p></head></p></li>
-</ul>
 
 
 <h2>Installation</h2>
