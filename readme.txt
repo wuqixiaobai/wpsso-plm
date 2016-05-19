@@ -67,32 +67,32 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The [WPSSO Schema JSON-LD (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.
 
-`
-<head itemscope itemtype="http://schema.org/Restaurant">
-    <meta property="og:type" content="place"/>
-    <meta property="og:latitude" content="10"/>
-    <meta property="og:longitude" content="-10"/>
+<pre>
+&lt;head itemscope itemtype="http://schema.org/Restaurant"&gt;
+    &lt;meta property="og:type" content="place"/&gt;
+    &lt;meta property="og:latitude" content="10"/&gt;
+    &lt;meta property="og:longitude" content="-10"/&gt;
 
-    <meta property="place:street_address" content="123 A Road"/>
-    <meta property="place:locality" content="Cityname"/>
-    <meta property="place:region" content="Somestate"/>
-    <meta property="place:postal_code" content="123456"/>
-    <meta property="place:country_name" content="US"/>
-    <meta property="place:location:latitude" content="10"/>
-    <meta property="place:location:longitude" content="-10"/>
+    &lt;meta property="place:street_address" content="123 A Road"/&gt;
+    &lt;meta property="place:locality" content="Cityname"/&gt;
+    &lt;meta property="place:region" content="Somestate"/&gt;
+    &lt;meta property="place:postal_code" content="123456"/&gt;
+    &lt;meta property="place:country_name" content="US"/&gt;
+    &lt;meta property="place:location:latitude" content="10"/&gt;
+    &lt;meta property="place:location:longitude" content="-10"/&gt;
 
-    <noscript itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification">
-    	<meta itemprop="dayofweek" content="saturday"/>
-    	<meta itemprop="opens" content="12:00"/>
-    	<meta itemprop="closes" content="22:00"/>
-    	<meta itemprop="validfrom" content="2016-05-01"/>
-    	<meta itemprop="validthrough" content="2016-09-01"/>
-    </noscript>
+    &lt;noscript itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification"&gt;
+    	&lt;meta itemprop="dayofweek" content="saturday"/&gt;
+    	&lt;meta itemprop="opens" content="12:00"/&gt;
+    	&lt;meta itemprop="closes" content="22:00"/&gt;
+    	&lt;meta itemprop="validfrom" content="2016-05-01"/&gt;
+    	&lt;meta itemprop="validthrough" content="2016-09-01"/&gt;
+    &lt;/noscript&gt;
 
-    <meta itemprop="menu" content="http://restaurant.example.com/restaurant-menu.html"/>
-    <meta itemprop="acceptsreservations" content="true"/>
-</head>
-`
+    &lt;meta itemprop="menu" content="http://restaurant.example.com/restaurant-menu.html"/&gt;
+    &lt;meta itemprop="acceptsreservations" content="true"/&gt;
+&lt;/head&gt;
+</pre>
 
 == Installation ==
 

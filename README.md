@@ -83,7 +83,8 @@
 
 <p>Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The <a href="http://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD (WPSSO JSON) Pro</a> extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.</p>
 
-<pre><code>&lt;head itemscope itemtype="http://schema.org/Restaurant"&gt;
+<pre>
+&lt;head itemscope itemtype="http://schema.org/Restaurant"&gt;
     &lt;meta property="og:type" content="place"/&gt;
     &lt;meta property="og:latitude" content="10"/&gt;
     &lt;meta property="og:longitude" content="-10"/&gt;
@@ -107,7 +108,7 @@
     &lt;meta itemprop="menu" content="http://restaurant.example.com/restaurant-menu.html"/&gt;
     &lt;meta itemprop="acceptsreservations" content="true"/&gt;
 &lt;/head&gt;
-</code></pre>
+</pre>
 
 
 <h2>Installation</h2>
