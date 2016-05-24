@@ -38,7 +38,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'json_schema_type_ids' => 2,		// $type_ids, $mod
 				'schema_head_type' => 3,		// $type_id, $mod
 				'schema_meta_itemprop' => 3,		// $mt_schema, $use_post, $mod
-				'schema_noscript_array' => 4,		// $ret, $use_post, $mod
+				'schema_noscript_array' => 3,		// $ret, $mod, $mt_og
 			) );
 
 			if ( is_admin() ) {
@@ -235,7 +235,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $mt_schema;
 		}
 
-		public function filter_schema_noscript_array( $ret, $use_post, $mod, $mt_og ) {
+		public function filter_schema_noscript_array( $ret, $mod, $mt_og ) {
 			/*
 			 * Array (
 			 *	[place:business:day:monday:open] => 09:00
@@ -255,7 +255,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 						$mt_day[] = array( array( '<noscript itemprop="openingHoursSpecification" '.
 							'itemscope itemtype="https://schema.org/OpeningHoursSpecification">'."\n" ) );
-						$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop', 'openinghoursspecification.dayofweek', $day );
+						$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
+							'openinghoursspecification.dayofweek', $day, $mod );
 
 						foreach ( array(
 							'place:business:day:'.$day.':open' => 'openinghoursspecification.opens',
@@ -264,7 +265,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 							'place:business:season:to' => 'openinghoursspecification.validthrough',
 						) as $mt_key => $prop_name )
 							if ( isset( $mt_business[$mt_key] ) )
-								$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop', $prop_name, $mt_business[$mt_key] );
+								$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
+									$prop_name, $mt_business[$mt_key], $mod );
 
 						$mt_day[] = array( array( '</noscript>'."\n" ) );
 					}

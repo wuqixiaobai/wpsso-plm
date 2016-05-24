@@ -12,7 +12,7 @@
  * Description: WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags.
  * Requires At Least: 3.1
  * Tested Up To: 4.5.2
- * Version: 2.0.1-1
+ * Version: 2.0.2-dev1
  * 
  * Version Numbers: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -38,7 +38,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		private static $instance = null;
 		private static $wpsso_short = 'WPSSO';
 		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
-		private static $wpsso_min_version = '3.31.0-1';
+		private static $wpsso_min_version = '3.32.1-dev2';
 		private static $wpsso_has_min_ver = true;
 
 		public static function &get_instance() {
