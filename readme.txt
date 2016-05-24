@@ -128,6 +128,20 @@ Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and vid
 
 = Changelog / Release Notes =
 
+**Version 2.0.2-dev1 (2016/05/24)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Removed `$use_post` from the 'wpsso_schema_noscript_array' filter for WPSSO v3.32.1-1.
+	* Updated WpssoHead `get_single_mt()` arguments to include the `$mod` variable for WPSSO v3.32.1-1.
+
 **Version 2.0.1-1 (2016/05/14)**
 
 Official announcement: N/A
@@ -142,6 +156,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.0.2-dev1 =
+
+(2016/05/24) Changes to some method and filter arguments for WPSSO v3.32.1-1.
 
 = 2.0.1-1 =
 
