@@ -48,7 +48,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 **WPSSO PLM Pro / Power-User Features**
 
-* Extends the features of WPSSO Pro (all WPSSO Pro extensions require a licensed and active WPSSO Pro plugin).
+* Extends the features of WPSSO Pro (requires a licensed and active WPSSO Pro plugin).
 * Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.
 
 = Example Meta Tags and Markup =
