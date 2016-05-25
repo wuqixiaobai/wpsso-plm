@@ -20,16 +20,11 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 
 WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](https://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options, to include Facebook / Open Graph *Location*, Pinterest Rich Pin / Schema *Place*, and Google / Schema *Local Business* meta tags in your webpages.
 
-= Available in Multiple Languages =
-
-* English (US)
-* French (France)
-* More to come...
-
 = Quick List of Features =
 
 **WPSSO PLM Free / Basic Features**
 
+* Extends the features of either the Free or Pro versions of WPSSO.
 * Select an Address for a Non-static Homepage
 * Manage Multiple Addresses / Contact Information
 	* Pinterest Rich Pin / Schema Place
@@ -53,15 +48,8 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 **WPSSO PLM Pro / Power-User Features**
 
+* Extends the features of WPSSO Pro (all WPSSO Pro extensions require a licensed and active WPSSO Pro plugin).
 * Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.
-
-= Extends the WPSSO Social Plugin =
-
-The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.
-
-You can use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO, but the [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) version requires the use of the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) version as well.
-
-Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
 
 = Example Meta Tags and Markup =
 
@@ -93,6 +81,20 @@ Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and vid
     &lt;meta itemprop="acceptsreservations" content="true"/&gt;
 &lt;/head&gt;
 </pre>
+
+= Available in Multiple Languages =
+
+* English (US)
+* French (France)
+* More to come...
+
+= Extends the WPSSO Plugin =
+
+The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.
+
+You can use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO, but the [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) version requires the use of the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) version as well.
+
+Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
 
 == Installation ==
 
