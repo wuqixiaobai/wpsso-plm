@@ -130,7 +130,7 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
-**Version 2.0.2-dev1 (2016/05/24)**
+**Version 2.0.2-rc1 (2016/05/24)**
 
 Official announcement: N/A
 
@@ -159,7 +159,7 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.0.2-dev1 =
+= 2.0.2-rc1 =
 
 (2016/05/24) Changes to some method and filter arguments for WPSSO v3.32.1-1.
 
