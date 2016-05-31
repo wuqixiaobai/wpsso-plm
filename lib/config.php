@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'lib' => array(
 						// submenu items must have unique keys
 						'submenu' => array (
-							'plm-general' => 'Place / Location and Local Business',	// general settings
+							'plm-general' => 'Place / Location',	// general settings
 						),
 						'gpl' => array(
 							'admin' => array(

@@ -50,7 +50,7 @@ msgstr ""
 
 #: lib/config-gettext-extract.php:10
 msgctxt "lib file description"
-msgid "Place / Location and Local Business"
+msgid "Place / Location"
 msgstr ""
 
 #: lib/config-gettext-extract.php:11
