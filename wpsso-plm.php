@@ -33,6 +33,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 		public $p;			// Wpsso
 		public $reg;			// WpssoPlmRegister
+		public $address;		// WpssoPlmAddress
 		public $filters;		// WpssoPlmFilters
 
 		private static $instance = null;

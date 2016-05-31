@@ -53,6 +53,12 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			} elseif ( $wpsso->debug->enabled )
 				$wpsso->debug->log( 'not home index and no module object' );
 
+			if ( $wpsso->debug->enabled ) {
+				if ( $addr_opts === false )
+					$wpsso->debug->log( 'no place options found' );
+				else $wpsso->debug->log( count( $addr_opts ).' place options found' );
+			}
+
 			return $addr_opts;
 		}
 
