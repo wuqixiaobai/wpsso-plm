@@ -34,29 +34,31 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 		}
 
 		public function show_metabox_contact() {
+			$lca = $this->p->cf['lca'];
 			$metabox = 'contact';
 
 			echo '<table class="sucom-setting" style="padding-bottom:0;">';
-			foreach ( apply_filters( $this->p->cf['lca'].'_'.$metabox.'_general_rows', 
+			foreach ( apply_filters( $lca.'_'.$metabox.'_general_rows', 
 				$this->get_table_rows( $metabox, 'general' ), $this->form ) as $row )
 					echo '<tr>'.$row.'</tr>';
 			echo '</table>';
 
-			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', array( 
+			$tabs = apply_filters( $lca.'_'.$metabox.'_tabs', array( 
 				'address' => 'Addresses',
 			) );
 
 			$table_rows = array();
 			foreach ( $tabs as $key => $title )
-				$table_rows[$key] = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_'.$key.'_rows', 
+				$table_rows[$key] = apply_filters( $lca.'_'.$metabox.'_'.$key.'_rows', 
 					$this->get_table_rows( $metabox, $key ), $this->form );
 			$this->p->util->do_metabox_tabs( $metabox, $tabs, $table_rows );
 		}
 
 		public function show_metabox_general() {
+			$lca = $this->p->cf['lca'];
 			$metabox = 'plm';
 			echo '<table class="sucom-setting">';
-			foreach ( apply_filters( $this->p->cf['lca'].'_'.$metabox.'_general_rows', 
+			foreach ( apply_filters( $lca.'_'.$metabox.'_general_rows', 
 				$this->get_table_rows( $metabox, 'general' ), $this->form ) as $row )
 					echo '<tr>'.$row.'</tr>';
 			echo '</table>';
@@ -87,9 +89,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'contact-general':
 
-					$custom_names = array( 'none' => '' );
-					$address_names = WpssoPlmAddress::get_names( $this->p->options );
-					$address_names = WpssoUtil::array_merge_recursive_distinct( $custom_names, $address_names );
+					$address_names = WpssoPlmAddress::get_names( $this->p->options, true );	// $add_none = true
 
 					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for Non-static Homepage',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_for_home' ).

@@ -204,10 +204,12 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		// options may be provided when saving post meta data
-		public static function get_names( array &$opts ) {
+		public static function get_names( array &$opts, $add_none = false ) {
 			$names = SucomUtil::preg_grep_keys( '/^plm_addr_name_([0-9]+)$/', $opts, false, '$1' );
-			natsort( $names );		// sort values to display in select box
-			return $names;
+			asort( $names );	// sort values to display in select box
+			if ( $add_none )
+				return array_merge( array( 'none' => '[None]' ), $names );
+			else return $names;
 		}
 
 		public static function get_first_next_ids( array &$names ) {
