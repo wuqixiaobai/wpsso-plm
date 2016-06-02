@@ -130,7 +130,7 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
-**Version 2.0.3-dev1 (2016/06/01)**
+**Version 2.0.3-1 (2016/06/02)**
 
 Official announcement: N/A
 
@@ -172,9 +172,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.0.3-dev1 =
+= 2.0.3-1 =
 
-(2016/06/01) Added an argument to the WpssoPlmAddress get_names() method.
+(2016/06/02) Added an argument to the WpssoPlmAddress get_names() method.
 
 = 2.0.2-1 =
 
