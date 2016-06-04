@@ -44,7 +44,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 		* Seasonal Business Dates
 		* Food Establishment Menu URL
 		* Accepts Reservations
-* Combine WPSSO PLM with the [WPSSO Schema JSON-LD (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
+* Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
 **WPSSO PLM Pro / Power-User Features**
 
@@ -53,7 +53,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 = Example Meta Tags and Markup =
 
-Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The [WPSSO Schema JSON-LD (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.
+Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.
 
 <pre>
 &lt;head itemscope itemtype="http://schema.org/Restaurant"&gt;
@@ -130,6 +130,19 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
+**Version 2.0.4-1 (2016/06/04)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* Fixed incorrect detection of missing places options for posts / pages.
+* *Developer Notes*
+	* None
+
 **Version 2.0.3-1 (2016/06/02)**
 
 Official announcement: N/A
@@ -171,6 +184,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.0.4-1 =
+
+(2016/06/04) Fixed incorrect detection of missing places options for posts / pages.
 
 = 2.0.3-1 =
 
