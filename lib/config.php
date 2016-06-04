@@ -66,7 +66,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 				),
 			),
 			'form' => array(
-				'plm_address' => array(
+				'plm_add_select' => array(
 					'none' => '[None]',
 					'custom' => '[Custom Address]',
 					'new' => '[New Address]',
@@ -76,6 +76,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'postal' => 'Postal Address',
 				),
 				'plm_addr_opts' => array(
+					'plm_addr_name' => '',				// Name
 					'plm_addr_streetaddr' => '',			// Street Address
 					'plm_addr_po_box_number' => '',			// P.O. Box Number
 					'plm_addr_city' => '',				// City

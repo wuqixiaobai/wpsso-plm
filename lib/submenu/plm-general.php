@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$business_types = $this->p->schema->get_schema_types_select( $this->p->cf['head']['schema_type']['place']['local.business'], false );
 					$address_names = WpssoPlmAddress::get_names( $this->p->options );
 					list( $first_id, $next_id ) = WpssoPlmAddress::get_first_next_ids( $address_names );
-					$address_names[$next_id] = WpssoPlmConfig::$cf['form']['plm_address']['new'];
+					$address_names[$next_id] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
 
 					// check to make sure the selected id exists
 					// if not, then unset to use the default

@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
 			$business_types = $this->p->schema->get_schema_types_select( $this->p->cf['head']['schema_type']['place']['local.business'], false );
-			$address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_address']['custom'] );
+			$address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'] );
 
 			// check to make sure the selected id exists
 			// if not, then unset to use the default
