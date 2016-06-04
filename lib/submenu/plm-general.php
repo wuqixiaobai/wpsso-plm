@@ -116,8 +116,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					if ( isset( $this->form->options['plm_addr_id'] ) ) {
 						$id = $this->form->options['plm_addr_id'];
 						// test if the address name is missing or blank
-						if ( ! isset( $this->form->options['plm_addr_name_'.$id] ) ||
-							trim( $this->form->options['plm_addr_name_'.$id] ) === '' )
+						if ( ! isset( $this->p->options['plm_addr_name_'.$id] ) ||
+							trim( $this->p->options['plm_addr_name_'.$id] ) === '' )
 								unset( $this->form->options['plm_addr_id'] );
 					}
 
@@ -128,7 +128,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'option label', 'wpsso-plm' ), '', 'plm_addr_id' ).
 					'<td colspan="3">'.$this->form->get_select( 'plm_addr_id', $address_names,
 						'long_name', '', true, false, true, 'unhide_rows' ).'</td>';
-		
+
 					foreach ( $address_names as $id => $name ) {
 						$tr_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="plm_addr_id plm_addr_id_'.$id.'" style="display:none">';

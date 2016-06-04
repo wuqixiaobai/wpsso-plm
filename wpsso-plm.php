@@ -112,7 +112,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 				return;		// stop here
 
 			$this->filters = new WpssoPlmFilters( $this->p );
-			$this->address = new WpssoPlmAddress( $this->p );
+			//$this->address = new WpssoPlmAddress( $this->p );	// class contains only static methods
 		}
 
 		public function wpsso_init_plugin() {
