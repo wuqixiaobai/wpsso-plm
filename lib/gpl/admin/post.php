@@ -44,8 +44,8 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			if ( isset( $form->options['plm_addr_id'] ) ) {
 				$id = $form->options['plm_addr_id'];
 				// test if the address name is missing or blank
-				if ( ! isset( $form->options['plm_addr_name_'.$id] ) ||
-					trim( $form->options['plm_addr_name_'.$id] ) === '' )
+				if ( ! isset( $this->p->options['plm_addr_name_'.$id] ) ||
+					trim( $this->p->options['plm_addr_name_'.$id] ) === '' )
 						unset( $form->options['plm_addr_id'] );
 			}
 
@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Select an Address',
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_id' ).
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_id', $address_names,
-				'full_name', '', true ).'</td>';
+				'long_name', '', true ).'</td>';
 
 			$table_rows['subsection_schema_place'] = '<td></td><td class="subsection" colspan="3"><h4>'.
 				_x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' ).'</h4></td>';
@@ -105,7 +105,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_addr_business_type'] = $form->get_th_html( _x( 'Local Business Type',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_type' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
-				$business_types, 'schema_type', '', true ).'</td>';
+				$business_types, 'long_name', '', true ).'</td>';
 
 			$row_number = 1;
 			foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {

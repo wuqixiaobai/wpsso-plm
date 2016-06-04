@@ -17,6 +17,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		private static $md_opts = array();	// meta data cache
 
 		public static $place_mt = array(
+			'plm_addr_name' => 'place:name',
 			'plm_addr_streetaddr' => 'place:street_address',
 			'plm_addr_po_box_number' => 'place:po_box_number',
 			'plm_addr_city' => 'place:locality',

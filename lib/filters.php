@@ -363,7 +363,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_name':
-					$text = __( 'Enter a descriptive name for this address. The address name appears in drop-down fields on some editing and settings pages. Leave the address name blank to remove the address.', 'wpsso-plm' );
+					$text = __( 'Enter a descriptive name for this address. The address name appears in drop-down fields and the Schema Place name property. Leave the address name blank to remove the address.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_streetaddr':
 					$text = __( 'An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );

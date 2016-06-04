@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for Non-static Homepage',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_for_home' ).
 					'<td>'.$this->form->get_select( 'plm_addr_for_home', $address_names,
-						'full_name', '', true, false, true ).'</td>';
+						'long_name', '', true, false, true ).'</td>';
 		
 					$table_rows['plm_addr_def_country'] = $this->form->get_th_html( _x( 'Address Default Country',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_def_country' ).
@@ -127,7 +127,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$table_rows['plm_addr_id'] = $this->form->get_th_html( _x( 'Edit an Address',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_id' ).
 					'<td colspan="3">'.$this->form->get_select( 'plm_addr_id', $address_names,
-						'full_name', '', true, false, true, 'unhide_rows' ).'</td>';
+						'long_name', '', true, false, true, 'unhide_rows' ).'</td>';
 		
 					foreach ( $address_names as $id => $name ) {
 						$tr_addr_id = '<!-- address id '.$id.' -->'.
@@ -135,7 +135,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 		
 						$table_rows['plm_addr_name_'.$id] = "\n".$tr_addr_id.$this->form->get_th_html( _x( 'Address Name',
 							'option label', 'wpsso-plm' ), '', 'plm_addr_name' ). 
-						'<td colspan="3">'.$this->form->get_input( 'plm_addr_name_'.$id, 'full_name required' ).' '.
+						'<td colspan="3">'.$this->form->get_input( 'plm_addr_name_'.$id, 'long_name required' ).' '.
 							_x( 'leave blank to delete an address', 'option comment', 'wpsso-plm' ).'</td>';
 					}
 
@@ -203,7 +203,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$table_rows['plm_addr_business_type_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Local Business Type',
 							'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
 						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id,
-							$business_types, 'schema_type' ).'</td>';
+							$business_types, 'long_name' ).'</td>';
 		
 						$row_number = 1;
 						foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {

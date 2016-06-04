@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO "
-"PLM) 2.0.3-1\n"
+"PLM) 2.0.4-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2016-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr ""
 #: lib/filters.php:366
 msgid ""
 "Enter a descriptive name for this address. The address name appears in drop-"
-"down fields on some editing and settings pages. Leave the address name blank "
+"down fields and the Schema Place name property. Leave the address name blank "
 "to remove the address."
 msgstr ""
 
