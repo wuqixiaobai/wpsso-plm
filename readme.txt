@@ -130,7 +130,7 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
-**Version 2.0.4-1 (2016/06/04)**
+**Version 2.0.5-1 (2016/06/05)**
 
 Official announcement: N/A
 
@@ -139,65 +139,13 @@ Official announcement: N/A
 * *Improvements*
 	* None
 * *Bugfixes*
-	* Fixed incorrect detection of missing places options for posts / pages.
-* *Developer Notes*
-	* None
-
-**Version 2.0.3-1 (2016/06/02)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Added an argument to the WpssoPlmAddress `get_names()` method.
-
-**Version 2.0.2-1 (2016/05/27)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Removed `$use_post` from the 'wpsso_schema_noscript_array' filter for WPSSO v3.32.1-1.
-	* Updated WpssoHead `get_single_mt()` arguments to include the `$mod` variable for WPSSO v3.32.1-1.
-
-**Version 2.0.1-1 (2016/05/14)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* Categorized the display of Free / Pro features in the sidebar metabox.
-* *Bugfixes*
-	* None
+	* Fixed missing comment string argument to `get_single_mt()` when creating container meta tags.
 * *Developer Notes*
 	* None
 
 == Upgrade Notice ==
 
-= 2.0.4-1 =
+= 2.0.5-1 =
 
-(2016/06/04) Fixed incorrect detection of missing places options for posts / pages.
-
-= 2.0.3-1 =
-
-(2016/06/02) Added an argument to the WpssoPlmAddress get_names() method.
-
-= 2.0.2-1 =
-
-(2016/05/27) Changes to some method and filter arguments for WPSSO v3.32.1-1.
-
-= 2.0.1-1 =
-
-(2016/05/14) Categorized the display of Free / Pro features in the sidebar metabox.
+(2016/06/05) Fixed missing comment string argument to `get_single_mt()` when creating container meta tags.
 
