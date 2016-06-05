@@ -256,7 +256,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 						$mt_day[] = array( array( '<noscript itemprop="openingHoursSpecification" '.
 							'itemscope itemtype="https://schema.org/OpeningHoursSpecification">'."\n" ) );
 						$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
-							'openinghoursspecification.dayofweek', $day, $mod );
+							'openinghoursspecification.dayofweek', $day, '', $mod );
 
 						foreach ( array(
 							'place:business:day:'.$day.':open' => 'openinghoursspecification.opens',
@@ -266,7 +266,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 						) as $mt_key => $prop_name )
 							if ( isset( $mt_business[$mt_key] ) )
 								$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
-									$prop_name, $mt_business[$mt_key], $mod );
+									$prop_name, $mt_business[$mt_key], '', $mod );
 
 						$mt_day[] = array( array( '</noscript>'."\n" ) );
 					}
@@ -276,24 +276,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				}
 			}
 			return $ret;
-		}
-
-		public function filter_save_options( $opts, $options_name, $network ) {
-			$address_names = WpssoPlmAddress::get_names( $opts );
-
-			// remove all addresses with an empty name value
-			// remove the associated plm_addr_id value if required
-			foreach ( $address_names as $id => $name ) {
-				if ( trim( $name ) === '' ) {
-					if ( isset( $opts['plm_addr_id'] ) &&
-						$opts['plm_addr_id'] === $id )
-							unset( $opts['plm_addr_id'] );
-					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/',
-						$opts, true );	// $invert = true
-				}
-			}
-
-			return $opts;
 		}
 
 		public function filter_option_type( $type, $key ) {
@@ -334,6 +316,23 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					break;
 			}
 			return $type;
+		}
+
+		public function filter_save_options( $opts, $options_name, $network ) {
+			$address_names = WpssoPlmAddress::get_names( $opts, false );	// $add_none = false
+
+			// remove all addresses with an empty name value
+			// remove the associated plm_addr_id value if required
+			foreach ( $address_names as $id => $name ) {
+				if ( trim( $name ) === '' ) {
+					if ( isset( $opts['plm_addr_id'] ) &&
+						$opts['plm_addr_id'] === $id )
+							unset( $opts['plm_addr_id'] );
+					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/', $opts, true );	// $invert = true
+				}
+			}
+
+			return $opts;
 		}
 
 		public function filter_messages_tooltip_post( $text, $idx, $atts ) {

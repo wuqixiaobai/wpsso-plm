@@ -106,8 +106,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 				case 'contact-address':
 
 					$half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
-					$business_types = $this->p->schema->get_schema_types_select( $this->p->cf['head']['schema_type']['place']['local.business'], false );
-					$address_names = WpssoPlmAddress::get_names( $this->p->options );
+					$business_types = $this->p->schema->get_schema_types_select(
+						$this->p->cf['head']['schema_type']['place']['local.business'],
+						false	// $add_none = false
+					);
+
+					$address_names = WpssoPlmAddress::get_names( $this->p->options, false );	// $add_none = false
 					list( $first_id, $next_id ) = WpssoPlmAddress::get_first_next_ids( $address_names );
 					$address_names[$next_id] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
 
