@@ -130,6 +130,20 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
+**Version 2.0.6-1 (2016/06/05)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Replaced the `WpssoPlmAddress::get_names()` method by `SucomUtil::get_multi_key_locale()`.
+	* Replaced the `WpssoPlmAddress::get_first_next_ids()` method by `SucomUtil::get_first_next_nums()`.
+
 **Version 2.0.5-1 (2016/06/05)**
 
 Official announcement: N/A
@@ -144,6 +158,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.0.6-dev1 =
+
+(2016/06/05) Moved two methods from WpssoPlmAddress to SucomUtil in WPSSO v3.32.4-dev1.
 
 = 2.0.5-1 =
 
