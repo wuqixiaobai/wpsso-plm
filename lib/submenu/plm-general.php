@@ -89,7 +89,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'contact-general':
 
-					$address_names = WpssoPlmAddress::get_names( $this->p->options, true );	// $add_none = true
+					$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, true );	// $add_none = true
 
 					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for Non-static Homepage',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_for_home' ).
@@ -111,9 +111,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						false	// $add_none = false
 					);
 
-					$address_names = WpssoPlmAddress::get_names( $this->p->options, false );	// $add_none = false
-					list( $first_id, $next_id ) = WpssoPlmAddress::get_first_next_ids( $address_names );
-					$address_names[$next_id] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
+					$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, false );	// $add_none = false
+					list( $first_num, $next_num ) = SucomUtil::get_first_next_nums( $address_names );
+					$address_names[$next_num] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
 
 					// check to make sure the selected id exists
 					// if not, then unset to use the default

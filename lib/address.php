@@ -203,25 +203,6 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			// just in case - make sure we have a complete array
 			else return array_merge( WpssoPlmConfig::$cf['form']['plm_addr_opts'], $addr_opts );
 		}
-
-		// options may be provided when saving post meta data
-		public static function get_names( array &$opts, $add_none = false ) {
-			$names = SucomUtil::preg_grep_keys( '/^plm_addr_name_([0-9]+)$/', $opts, false, '$1' );
-			asort( $names );	// sort values to display in select box
-			if ( $add_none )
-				return array_merge( array( 'none' => '[None]' ), $names );
-			else return $names;
-		}
-
-		public static function get_first_next_ids( array &$names ) {
-			ksort( $names );		// sort keys to find highest / lowest key integer
-			$sorted_keys = array_keys( $names );
-			$first_id = (int) reset( $sorted_keys );
-			$last_id = (int) end( $sorted_keys );
-			$next_id = isset( $names[0] ) ? $last_id + 1 : 0;
-			natsort( $names );		// sort values to display in select box
-			return array( $first_id, $next_id );
-		}
 	}
 }
 

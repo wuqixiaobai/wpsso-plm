@@ -279,39 +279,37 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_option_type( $type, $key ) {
-			// check for previous filter values
+
 			if ( ! empty( $type ) )
 				return $type;
-
-			// remove localization for more generic match
-			if ( strpos( $key, '#' ) !== false )
-				$key = preg_replace( '/#.*$/', '', $key );
+			elseif ( strpos( $key, 'plm_' ) !== 0 )
+				return $type;
 
 			switch ( $key ) {
 				case 'plm_addr_for_home':
 				case 'plm_addr_def_country':
 				case 'plm_addr_id':		// 'none', 'custom', or numeric (including 0)
 				case 'plm_addr_business_type':
-				case ( preg_match( '/^plm_addr_(country|type)(_[0-9]+)?$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(country|type)$/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case ( preg_match( '/^plm_addr_(streetaddr|city|state|zipcode)(_[0-9]+)?$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
-				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|po_box_number)(_[0-9]+)?$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|po_box_number)$/', $key ) ? true : false ):
 					return 'blank_num';	// must be numeric (blank or zero is ok)
 					break;
-				case ( preg_match( '/^plm_addr_day_[a-z]+_(open|close)(_[0-9]+)?$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_day_[a-z]+_(open|close)$/', $key ) ? true : false ):
 					return 'time';
 					break;
-				case ( preg_match( '/^plm_addr_season_(from|to)_date(_[0-9]+)?$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_season_(from|to)_date$/', $key ) ? true : false ):
 					return 'date';
 					break;
 				case 'plm_addr_menu_url':
 					return 'url';
 					break;
 				case 'plm_addr_accept_res':
-				case ( preg_match( '/^plm_addr_day_[a-z]+(_[0-9]+)?$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_day_[a-z]+$/', $key ) ? true : false ):
 					return 'checkbox';
 					break;
 			}
@@ -319,17 +317,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
-			$address_names = WpssoPlmAddress::get_names( $opts, false );	// $add_none = false
+			$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
 
 			// remove all addresses with an empty name value
 			// remove the associated plm_addr_id value if required
-			foreach ( $address_names as $id => $name ) {
+			foreach ( $address_names as $num => $name ) {
 				if ( trim( $name ) === '' ) {
 					if ( isset( $opts['plm_addr_id'] ) &&
-						$opts['plm_addr_id'] === $id )
+						$opts['plm_addr_id'] === $num )
 							unset( $opts['plm_addr_id'] );
-					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$id.'$/', $opts, true );	// $invert = true
-				}
+					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$num.'$/', $opts, true );	// $invert = true
+				} else $opts['plm_addr_name_'.$num] = $name;
 			}
 
 			return $opts;

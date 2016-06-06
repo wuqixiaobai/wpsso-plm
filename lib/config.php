@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.0.5-1',		// plugin version
+					'version' => '2.0.6-dev1',		// plugin version
 					'opt_version' => '11',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
@@ -66,7 +66,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 				),
 			),
 			'form' => array(
-				'plm_add_select' => array(
+				'plm_addr_select' => array(
 					'none' => '[None]',
 					'custom' => '[Custom Address]',
 					'new' => '[New Address]',
