@@ -25,7 +25,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 		protected function add_meta_boxes() {
 			add_meta_box( $this->pagehook.'_contact', 
-				_x( 'Addresses / Contact Information', 'metabox title', 'wpsso-plm' ), 
+				_x( 'Addresses and Contact Information', 'metabox title', 'wpsso-plm' ), 
 					array( &$this, 'show_metabox_contact' ), $this->pagehook, 'normal' );
 
 			add_meta_box( $this->pagehook.'_general',
@@ -37,14 +37,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			$lca = $this->p->cf['lca'];
 			$metabox = 'contact';
 
-			echo '<table class="sucom-setting" style="padding-bottom:0;">';
-			foreach ( apply_filters( $lca.'_'.$metabox.'_general_rows', 
-				$this->get_table_rows( $metabox, 'general' ), $this->form ) as $row )
-					echo '<tr>'.$row.'</tr>';
-			echo '</table>';
-
 			$tabs = apply_filters( $lca.'_'.$metabox.'_tabs', array( 
-				'address' => 'Addresses',
+				'address' => _x( 'Addresses / Local Business', 'metabox tab', 'wpsso-plm' ),
 			) );
 
 			$table_rows = array();
@@ -69,6 +63,18 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			switch ( $metabox.'-'.$key ) {
 				case 'plm-general':
 
+					$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, true );	// $add_none = true
+
+					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for Non-static Homepage',
+						'option label', 'wpsso-plm' ), '', 'plm_addr_for_home' ).
+					'<td>'.$this->form->get_select( 'plm_addr_for_home', $address_names,
+						'long_name', '', true, false, true ).'</td>';
+		
+					$table_rows['plm_addr_def_country'] = $this->form->get_th_html( _x( 'Address Default Country',
+						'option label', 'wpsso-plm' ), '', 'plm_addr_def_country' ).
+					'<td>'.$this->form->get_select_country( 'plm_addr_def_country',
+					 	'', '', false, $this->p->options['plm_addr_def_country'] ).'</td>';
+
 					if ( ! $aop = $this->p->check->aop( 'wpssoplm', true, $this->p->is_avail['aop'] ) )
 						$table_rows[] = '<td colspan="2">'.
 							$this->p->msgs->get( 'pro-feature-msg', 
@@ -84,22 +90,6 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$table_rows['plm_add_to'] = $this->form->get_th_html( _x( 'Show Tab on Post Types',
 						'option label', 'wpsso-plm' ), '', 'plm_add_to' ).
 					( $aop ? '<td>' : '<td class="blank">' ).$checkboxes.'</td>';
-
-					break;
-
-				case 'contact-general':
-
-					$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, true );	// $add_none = true
-
-					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for Non-static Homepage',
-						'option label', 'wpsso-plm' ), '', 'plm_addr_for_home' ).
-					'<td>'.$this->form->get_select( 'plm_addr_for_home', $address_names,
-						'long_name', '', true, false, true ).'</td>';
-		
-					$table_rows['plm_addr_def_country'] = $this->form->get_th_html( _x( 'Address Default Country',
-						'option label', 'wpsso-plm' ), '', 'plm_addr_def_country' ).
-					'<td>'.$this->form->get_select_country( 'plm_addr_def_country',
-					 	'', '', false, $this->p->options['plm_addr_def_country'] ).'</td>';
 
 					break;
 
