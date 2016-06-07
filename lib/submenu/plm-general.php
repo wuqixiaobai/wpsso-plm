@@ -112,21 +112,17 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					);
 
 					$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, false );	// $add_none = false
-					list( $first_num, $next_num ) = SucomUtil::get_first_next_nums( $address_names );
+					list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $address_names );
 					$address_names[$next_num] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
 
 					// check to make sure the selected id exists
 					// if not, then unset to use the default
 					if ( isset( $this->form->options['plm_addr_id'] ) ) {
-						$id = $this->form->options['plm_addr_id'];
-						// test if the address name is missing or blank
-						if ( ! isset( $this->p->options['plm_addr_name_'.$id] ) ||
-							trim( $this->p->options['plm_addr_name_'.$id] ) === '' )
+						$def_id = $this->form->options['plm_addr_id'];
+						if ( ! isset( $this->p->options['plm_addr_name_'.$def_id] ) ||
+							trim( $this->p->options['plm_addr_name_'.$def_id] ) === '' )
 								unset( $this->form->options['plm_addr_id'] );
 					}
-
-					// default can also be 'custom' in the social settings metabox
-					$this->form->defaults['plm_addr_id'] = 0;
 
 					$table_rows['plm_addr_id'] = $this->form->get_th_html( _x( 'Edit an Address',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_id' ).
@@ -137,10 +133,13 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$tr_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="plm_addr_id plm_addr_id_'.$id.'" style="display:none">';
 		
+						$table_rows['plm_addr_delete_'.$id] = "\n".$tr_addr_id.$this->form->get_th_html().
+						'<td colspan="3">'.$this->form->get_checkbox( 'plm_addr_delete_'.$id ).' <font color="red">'.
+						_x( 'delete this address', 'option comment', 'wpsso-plm' ).'</font></td>';
+
 						$table_rows['plm_addr_name_'.$id] = "\n".$tr_addr_id.$this->form->get_th_html( _x( 'Address Name',
 							'option label', 'wpsso-plm' ), '', 'plm_addr_name' ). 
-						'<td colspan="3">'.$this->form->get_input( 'plm_addr_name_'.$id, 'long_name required' ).' '.
-							_x( 'leave blank to delete an address', 'option comment', 'wpsso-plm' ).'</td>';
+						'<td colspan="3">'.$this->form->get_input( 'plm_addr_name_'.$id, 'long_name required' ).'</td>';
 					}
 
 					$table_rows['subsection_schema_place'] = '<th></th><td class="subsection" colspan="3"><h4>'.
@@ -202,7 +201,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					foreach ( $address_names as $id => $name ) {
 						$tr_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="plm_addr_id plm_addr_id_'.$id.'" style="display:none">';
-		
+
 						$this->form->defaults['plm_addr_business_type_'.$id] = WpssoPlmConfig::$cf['form']['plm_addr_opts']['plm_addr_business_type'];
 						$table_rows['plm_addr_business_type_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Local Business Type',
 							'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 

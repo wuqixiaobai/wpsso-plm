@@ -42,10 +42,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			// check to make sure the selected id exists
 			// if not, then unset to use the default
 			if ( isset( $form->options['plm_addr_id'] ) ) {
-				$id = $form->options['plm_addr_id'];
+				$def_id = $form->options['plm_addr_id'];
 				// test if the address name is missing or blank
-				if ( ! isset( $this->p->options['plm_addr_name_'.$id] ) ||
-					trim( $this->p->options['plm_addr_name_'.$id] ) === '' )
+				if ( ! isset( $this->p->options['plm_addr_name_'.$def_id] ) ||
+					trim( $this->p->options['plm_addr_name_'.$def_id] ) === '' )
 						unset( $form->options['plm_addr_id'] );
 			}
 

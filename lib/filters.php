@@ -17,6 +17,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public static $cf = array(
 			'opt' => array(				// options
 				'defaults' => array(
+					'plm_addr_id' => 0,	// Edit an Address
 					'plm_add_to_post' => 0,
 					'plm_add_to_page' => 1,
 					'plm_add_to_attachment' => 0,
@@ -318,16 +319,26 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_save_options( $opts, $options_name, $network ) {
 			$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
+			list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $address_names );
 
-			// remove all addresses with an empty name value
-			// remove the associated plm_addr_id value if required
 			foreach ( $address_names as $num => $name ) {
-				if ( trim( $name ) === '' ) {
+				$name = trim( $name );
+
+				if ( ! empty( $opts['plm_addr_delete_'.$num] ) ||
+					( $name === '' && $num === $last_num ) ) {	// remove the empty "New Address"
+
 					if ( isset( $opts['plm_addr_id'] ) &&
 						$opts['plm_addr_id'] === $num )
 							unset( $opts['plm_addr_id'] );
-					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$num.'$/', $opts, true );	// $invert = true
-				} else $opts['plm_addr_name_'.$num] = $name;
+
+					// remove address id, including all localized keys
+					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$num.'(#.*)?$/', $opts, true );	// $invert = true
+
+				} elseif ( $name === '' )	// just in case
+					$opts['plm_addr_name_'.$num] = sprintf( _x( 'Address #%d',
+						'option value', 'wpsso-plm' ), $num );
+
+				else $opts['plm_addr_name_'.$num] = $name;
 			}
 
 			return $opts;
@@ -360,7 +371,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_name':
-					$text = __( 'Enter a descriptive name for this address. The address name appears in drop-down fields and the Schema Place name property. Leave the address name blank to remove the address.', 'wpsso-plm' );
+					$text = __( 'Enter a descriptive name for this address. The address name appears in drop-down fields and the Schema Place name property.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_streetaddr':
 					$text = __( 'An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );
