@@ -124,8 +124,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							'<tr class="plm_addr_id plm_addr_id_'.$id.'" style="display:none">';
 		
 						$table_rows['plm_addr_delete_'.$id] = "\n".$tr_addr_id.$this->form->get_th_html().
-						'<td colspan="3">'.$this->form->get_checkbox( 'plm_addr_delete_'.$id ).' <font color="red">'.
-						_x( 'delete this address', 'option comment', 'wpsso-plm' ).'</font></td>';
+						'<td colspan="3">'.$this->form->get_checkbox( 'plm_addr_delete_'.$id ).' '.
+						_x( 'delete this address', 'option comment', 'wpsso-plm' ).'</td>';
 
 						$table_rows['plm_addr_name_'.$id] = "\n".$tr_addr_id.$this->form->get_th_html( _x( 'Address Name',
 							'option label', 'wpsso-plm' ), '', 'plm_addr_name' ). 

@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( $mod['is_home_index'] ) {
 				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
 					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
-					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'], $wpsso->options ) ) === false ) {
+					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
 						if ( $wpsso->debug->enabled )
 							$wpsso->debug->log( 'no place options for address id '.$wpsso->options['plm_addr_for_home'] );
 					}
@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( $mod['is_home_index'] ) {
 				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
 					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
-					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'], $wpsso->options ) ) === false ) {
+					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
 						if ( $wpsso->debug->enabled )
 							$wpsso->debug->log( 'no business days for address id '.$wpsso->options['plm_addr_for_home'] );
 					} else {
@@ -132,7 +132,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( $mod['is_home_index'] ) {
 				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
 					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
-					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'], $wpsso->options ) ) === false ) {
+					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
 						if ( $wpsso->debug->enabled )
 							$wpsso->debug->log( 'no geo coordinates for address id '.$wpsso->options['plm_addr_for_home'] );
 					} else {
@@ -184,7 +184,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( is_array( $md_opts  ) ) {
 				if ( isset( $md_opts['plm_addr_id'] ) && 		// allow for 0
 					is_numeric( $md_opts['plm_addr_id'] ) ) {
-					if ( ( $addr_opts = self::get_addr_id( $md_opts['plm_addr_id'], $wpsso->options ) ) !== false ) {
+					if ( ( $addr_opts = self::get_addr_id( $md_opts['plm_addr_id'] ) ) !== false ) {
 						if ( $wpsso->debug->enabled )
 							$wpsso->debug->log( 'using address ID '.$md_opts['plm_addr_id'].' options' );
 						$md_opts = array_merge( $md_opts, $addr_opts );
@@ -196,12 +196,19 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		// get a specific address id
-		public static function get_addr_id( $id, array $opts ) {
-			$addr_opts = SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'$/', $opts, false, '$1' );
+		public static function get_addr_id( $id, $mixed = 'current' ) {
+			$wpsso =& Wpsso::get_instance();
+			$addr_opts = array();
+
+			if ( is_numeric( $id ) ) {	// just in case
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'(#.*)?$/',
+					$wpsso->options, false, '$1' ) as $key => $value )
+						$addr_opts[$key] = SucomUtil::get_locale_opt( $key.'_'.$id, $wpsso->options, $mixed );
+			}
+
 			if ( empty( $addr_opts ) )
 				return false; 
-			// just in case - make sure we have a complete array
-			else return array_merge( WpssoPlmConfig::$cf['form']['plm_addr_opts'], $addr_opts );
+			else return array_merge( WpssoPlmConfig::$cf['form']['plm_addr_opts'], $addr_opts );	// complete the array
 		}
 	}
 }
