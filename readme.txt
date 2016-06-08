@@ -130,7 +130,7 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
-**Version 2.0.6-dev2 (2016/06/07)**
+**Version 2.0.6-dev3 (2016/06/08)**
 
 Official announcement: N/A
 
@@ -141,6 +141,7 @@ Official announcement: N/A
 * *Bugfixes*
 	* None
 * *Developer Notes*
+	* Added localization support when retrieving address information.
 	* Replaced the `WpssoPlmAddress::get_names()` method by `SucomUtil::get_multi_key_locale()`.
 	* Replaced the `WpssoPlmAddress::get_first_next_ids()` method by `SucomUtil::get_first_last_next_nums()`.
 
@@ -159,9 +160,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.0.6-dev2 =
+= 2.0.6-dev3 =
 
-(2016/06/07) Moved two methods from WpssoPlmAddress to SucomUtil in WPSSO v3.32.4-1.
+(2016/06/08) Added a new checkbox to delete addresses. Moved two methods from WpssoPlmAddress to SucomUtil for WPSSO v3.32.4-1.
 
 = 2.0.5-1 =
 
