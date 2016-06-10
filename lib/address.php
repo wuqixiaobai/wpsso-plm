@@ -33,6 +33,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		public static function has_place( array &$mod ) {
+
 			$wpsso =& Wpsso::get_instance();
 			if ( $wpsso->debug->enabled )
 				$wpsso->debug->mark();
@@ -77,6 +78,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		public static function has_days( array &$mod ) {
+
 			$wpsso =& Wpsso::get_instance();
 			if ( $wpsso->debug->enabled )
 				$wpsso->debug->mark();
@@ -124,6 +126,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		public static function has_geo( array &$mod ) {
+
 			$wpsso =& Wpsso::get_instance();
 			if ( $wpsso->debug->enabled )
 				$wpsso->debug->mark();
@@ -197,7 +200,11 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 		// get a specific address id
 		public static function get_addr_id( $id, $mixed = 'current' ) {
+
 			$wpsso =& Wpsso::get_instance();
+			if ( $wpsso->debug->enabled )
+				$wpsso->debug->mark();
+
 			$addr_opts = array();
 
 			if ( is_numeric( $id ) ) {	// just in case
