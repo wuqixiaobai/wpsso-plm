@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'get_post_options' => 1,		// meta data post options
 				'og_prefix_ns' => 1,			// open graph namespace
 				'og_seed' => 3,				// open graph meta tags
-				'json_schema_type_ids' => 2,		// $type_ids, $mod
+				'json_array_type_ids' => 2,		// $type_ids, $mod
 				'schema_head_type' => 3,		// $type_id, $mod
 				'schema_meta_itemprop' => 3,		// $mt_schema, $use_post, $mod
 				'schema_noscript_array' => 3,		// $ret, $mod, $mt_og
@@ -169,7 +169,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $og;
 		}
 
-		public function filter_json_schema_type_ids( $type_ids, $mod ) {
+		public function filter_json_array_type_ids( $type_ids, $mod ) {
 			/*
 			 * Array (
 			 *	[local.business] => 1

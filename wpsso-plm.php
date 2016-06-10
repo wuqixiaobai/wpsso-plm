@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		private static $instance = null;
 		private static $wpsso_short = 'WPSSO';
 		private static $wpsso_name = 'WordPress Social Sharing Optimization (WPSSO)';
-		private static $wpsso_min_version = '3.32.4-dev3';
+		private static $wpsso_min_version = '3.32.4-dev5';
 		private static $wpsso_has_min_ver = true;
 
 		public static function &get_instance() {
@@ -102,7 +102,6 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			$this->p->is_avail['plm'] = true;
 
 			if ( is_admin() ) {
-				$this->p->is_avail['admin']['contact'] = true;
 				$this->p->is_avail['admin']['post'] = true;
 			}
 		}

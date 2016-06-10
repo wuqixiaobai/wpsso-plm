@@ -52,13 +52,11 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						),
 						'gpl' => array(
 							'admin' => array(
-								'general' => 'General Settings',
 								'post' => 'Post Settings',
 							),
 						),
 						'pro' => array(
 							'admin' => array(
-								'general' => 'General Settings',
 								'post' => 'Post Settings',
 							),
 						),
