@@ -92,7 +92,7 @@ Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and vid
 
 The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.
 
-You can use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO, but the [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) version requires the use of the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) version as well.
+Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO. The [WPSSO PLM Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (along with all WPSSO Pro extensions) requires the [WPSSO Pro](http://wpsso.com/extend/plugins/wpsso/) plugin as well.
 
 Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](http://wpsso.com/extend/plugins/wpsso-plm/) extension (includes a *No Risk 30 Day Refund Policy*).
 
