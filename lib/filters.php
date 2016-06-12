@@ -40,6 +40,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'schema_head_type' => 3,		// $type_id, $mod
 				'schema_meta_itemprop' => 3,		// $mt_schema, $use_post, $mod
 				'schema_noscript_array' => 3,		// $ret, $mod, $mt_og
+				'place_options' => 3,			// $place_opts, $mod, $place_id
 			) );
 
 			if ( is_admin() ) {
@@ -108,26 +109,29 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			/*
 			 * og:type
-			 * og:latitude
-			 * og:longitude
-			 * og:altitude
-			 *
+			 */
+			$og['og:type'] = 'place';
+
+			/*
 			 * place:street_address
 			 * place:po_box_number
 			 * place:locality
 			 * place:region
 			 * place:postal_code
 			 * place:country_name
-			 * place:location:latitude
-			 * place:location:longitude
-			 * place:location:altitude
-			 *
 			 */
-			$og['og:type'] = 'place';
 			foreach ( WpssoPlmAddress::$place_mt as $key => $mt_name )
 				$og[$mt_name] = isset( $addr_opts[$key] ) ?
 					$addr_opts[$key] : '';
 
+			/*
+			 * og:latitude
+			 * og:longitude
+			 * og:altitude
+			 * place:location:latitude
+			 * place:location:longitude
+			 * place:location:altitude
+			 */
 			if ( ! empty( $addr_opts['plm_addr_latitude'] ) && 
 				! empty( $addr_opts['plm_addr_longitude'] ) ) {
 
@@ -159,11 +163,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_addr_menu_url' => 'place:business:menu_url',
 				'plm_addr_accept_res' => 'place:business:accepts_reservations',
 			) as $key => $mt_name ) {
-				if ( $key == 'plm_addr_accept_res' )
-					$og[$mt_name] = empty( $addr_opts[$key] ) ?
-						'false' : 'true';
-				else $og[$mt_name] = isset( $addr_opts[$key] ) ?
-					$addr_opts[$key] : '';
+				if ( $key === 'plm_addr_accept_res' )
+					$og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
+				else $og[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
 			}
 
 			return $og;
@@ -277,6 +279,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				}
 			}
 			return $ret;
+		}
+
+		public function filter_place_options( $place_opts, $mod, $place_id ) {
+			if ( $place_id === 'custom' || is_numeric( $place_id ) ) {	// just in case
+				$addr_opts = WpssoPlmAddress::get_addr_id( $place_id, $mod );
+				return SucomUtil::preg_grep_keys( '/^plm_addr_/',	// rename plm_addr to place
+					$addr_opts, false, 'place_' );
+			} else return $place_opts;
 		}
 
 		public function filter_option_type( $type, $key ) {

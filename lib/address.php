@@ -67,7 +67,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		public static function has_md_place( array &$mod ) {
 			if ( ! is_object( $mod['obj'] ) )	// just in case
 				return false;
-			$md_opts = WpssoPlmAddress::get_md_options( $mod );
+			$md_opts = self::get_md_options( $mod );
 			if ( is_array( $md_opts  ) ) {
 				foreach ( self::$place_mt as $key => $mt_name ) {
 					if ( ! empty( $md_opts[$key] ) )
@@ -199,6 +199,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		// get a specific address id
+		// if $id is 'custom', then $mixed must be the $mod array
 		public static function get_addr_id( $id, $mixed = 'current' ) {
 
 			$wpsso =& Wpsso::get_instance();
@@ -207,8 +208,17 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 			$addr_opts = array();
 
-			if ( is_numeric( $id ) ) {	// just in case
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'(#.*)?$/',
+			if ( $id === 'custom' &&	// get custom address values from the post
+				isset( $mixed['obj'] ) &&
+					is_object( $mixed['obj'] ) ) {
+
+				$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)(#.*)?$/', 	// filter for all address options
+					$md_opts, false, '$1' ) as $key => $value )
+						$addr_opts[$key] = SucomUtil::get_locale_opt( $key, $md_opts, $mixed );
+
+			} elseif ( is_numeric( $id ) ) {
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'(#.*)?$/', 
 					$wpsso->options, false, '$1' ) as $key => $value )
 						$addr_opts[$key] = SucomUtil::get_locale_opt( $key.'_'.$id, $wpsso->options, $mixed );
 			}
