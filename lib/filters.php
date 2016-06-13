@@ -328,6 +328,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
+
 			$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
 			list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $address_names );
 
