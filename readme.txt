@@ -130,7 +130,7 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
-**Version 2.0.6-dev5 (2016/06/12)**
+**Version 2.0.6-1 (2016/06/13)**
 
 Official announcement: N/A
 
@@ -161,9 +161,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.0.6-dev5 =
+= 2.0.6-1 =
 
-(2016/06/12) Added a new checkbox to delete addresses. Replaced two methods in WpssoPlmAddress for SucomUtil methods. Added a new hook for the 'wpsso_place_options' filter.
+(2016/06/13) Added a new checkbox to delete addresses. Replaced two methods in WpssoPlmAddress for SucomUtil methods. Added a new hook for the 'wpsso_place_options' filter.
 
 = 2.0.5-1 =
 
