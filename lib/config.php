@@ -142,7 +142,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 				if ( file_exists( $filepath ) ) {
 					require_once( $filepath );
 					if ( empty( $classname ) )
-						return SucomUtil::sanitize_classname( 'wpssoplm'.$filespec );
+						return SucomUtil::sanitize_classname( 'wpssoplm'.$filespec, false );	// $underscore = false
 					else return $classname;
 				}
 			}
