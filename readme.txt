@@ -146,26 +146,9 @@ Official announcement: N/A
 	* Replaced the `WpssoPlmAddress::get_first_next_ids()` method by `SucomUtil::get_first_last_next_nums()`.
 	* Added a new hook for the 'wpsso_place_options' filter.
 
-**Version 2.0.5-1 (2016/06/05)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* Fixed missing comment string argument to `get_single_mt()` when creating container meta tags.
-* *Developer Notes*
-	* None
-
 == Upgrade Notice ==
 
 = 2.0.6-1 =
 
 (2016/06/14) Added a new checkbox to delete addresses. Replaced two methods in WpssoPlmAddress for SucomUtil methods. Added a new hook for the 'wpsso_place_options' filter.
-
-= 2.0.5-1 =
-
-(2016/06/05) Fixed missing comment string argument to `get_single_mt()` when creating container meta tags.
 
