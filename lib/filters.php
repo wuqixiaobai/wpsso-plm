@@ -40,7 +40,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'schema_head_type' => 3,		// $type_id, $mod
 				'schema_meta_itemprop' => 3,		// $mt_schema, $use_post, $mod
 				'schema_noscript_array' => 3,		// $ret, $mod, $mt_og
-				'place_options' => 3,			// $place_opts, $mod, $place_id
+				'get_place_options' => 3,		// $place_opts, $mod, $place_id
 			) );
 
 			if ( is_admin() ) {
@@ -281,7 +281,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $ret;
 		}
 
-		public function filter_place_options( $place_opts, $mod, $place_id ) {
+		public function filter_get_place_options( $place_opts, $mod, $place_id ) {
 			if ( $place_id === 'custom' || is_numeric( $place_id ) ) {	// just in case
 				$addr_opts = WpssoPlmAddress::get_addr_id( $place_id, $mod );
 				return SucomUtil::preg_grep_keys( '/^plm_addr_/',	// rename plm_addr to place
