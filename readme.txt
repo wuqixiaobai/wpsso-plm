@@ -130,6 +130,19 @@ Purchase the [WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro](ht
 
 = Changelog / Release Notes =
 
+**Version 2.0.7-dev1 (2016/06/19)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Renamed the 'wpsso_place_options' filter to 'wpsso_get_place_options'.
+
 **Version 2.0.6-1 (2016/06/14)**
 
 Official announcement: N/A
@@ -147,6 +160,10 @@ Official announcement: N/A
 	* Added a new hook for the 'wpsso_place_options' filter.
 
 == Upgrade Notice ==
+
+= 2.0.7-dev1 =
+
+(2016/06/19) Renamed the 'wpsso_place_options' filter to 'wpsso_get_place_options'.
 
 = 2.0.6-1 =
 
