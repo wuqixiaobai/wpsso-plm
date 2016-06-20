@@ -227,11 +227,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_addr_menu_url' => 'menu',
 					'plm_addr_accept_res' => 'acceptsreservations',
 				) as $key => $mt_name ) {
-					if ( $key == 'plm_addr_accept_res' )
-						$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ?
-							'false' : 'true';
-					else $mt_schema[$mt_name] = isset( $addr_opts[$key] ) ?
-						$addr_opts[$key] : '';
+					if ( $key === 'plm_addr_accept_res' )
+						$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
+					else $mt_schema[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
 				}
 			}
 
@@ -282,7 +280,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_place_options( $place_opts, $mod, $place_id ) {
-			if ( $place_id === 'custom' || is_numeric( $place_id ) ) {	// just in case
+			if ( $place_opts !== false )    // first come, first served
+				return $place_opts;
+			elseif ( $place_id === 'custom' || is_numeric( $place_id ) ) {	// just in case
 				$addr_opts = WpssoPlmAddress::get_addr_id( $place_id, $mod );
 				return SucomUtil::preg_grep_keys( '/^plm_addr_/',	// rename plm_addr to place
 					$addr_opts, false, 'place_' );
