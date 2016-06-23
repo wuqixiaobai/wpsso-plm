@@ -13,8 +13,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 	class WpssoPlmAddress {
 
 		private $p;
-
-		private static $md_opts = array();	// meta data cache
+		private static $mod_md_opts = array();	// get_md_options() meta data cache
 
 		public static $place_mt = array(
 			'plm_addr_name' => 'place:name',
@@ -177,11 +176,11 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( $wpsso->debug->enabled )
 				$wpsso->debug->mark();
 
-			if ( ! isset( self::$md_opts[$mod['name']][$mod['id']] ) )	// make sure a cache entry exists
-				self::$md_opts[$mod['name']][$mod['id']] = array();
-			else return self::$md_opts[$mod['name']][$mod['id']];		// return the cache entry
+			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) )	// make sure a cache entry exists
+				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
+			else return self::$mod_md_opts[$mod['name']][$mod['id']];	// return the cache entry
 
-			$md_opts =& self::$md_opts[$mod['name']][$mod['id']];		// shortcut variable
+			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];	// shortcut variable
 
 			$md_opts = $mod['obj']->get_options( $mod['id'] );
 			if ( is_array( $md_opts  ) ) {
