@@ -202,14 +202,12 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		public static function get_addr_id( $id, $mixed = 'current' ) {
 
 			$wpsso =& Wpsso::get_instance();
-			
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->args( array( 
 					'id' => $id,
 					'mixed' => $mixed,
 				) );
 			}
-
 
 			$addr_opts = array();
 
@@ -223,8 +221,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 						$addr_opts[$key] = SucomUtil::get_locale_opt( $key, $md_opts, $mixed );
 
 			} elseif ( is_numeric( $id ) ) {
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'(#.*)?$/', 
-					$wpsso->options, false, '$1' ) as $key => $value )
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'(#.*)?$/', $wpsso->options, false, '$1' ) as $key => $value )
 						$addr_opts[$key] = SucomUtil::get_locale_opt( $key.'_'.$id, $wpsso->options, $mixed );
 			}
 
