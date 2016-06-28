@@ -61,7 +61,7 @@
 <p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
 
 <ul>
-<li>Extends the features of WPSSO Pro (requires a licensed and active WPSSO Pro plugin).</li>
+<li>Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).</li>
 <li>Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.</li>
 </ul>
 

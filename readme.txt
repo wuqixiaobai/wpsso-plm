@@ -48,7 +48,7 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 
 **WPSSO PLM Pro / Power-User Features**
 
-* Extends the features of WPSSO Pro (requires a licensed and active WPSSO Pro plugin).
+* Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).
 * Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.
 
 = Example Meta Tags and Markup =
@@ -164,8 +164,4 @@ Official announcement: N/A
 = 2.0.7-1 =
 
 (2016/06/21) Renamed the 'wpsso_place_options' filter to 'wpsso_get_place_options'.
-
-= 2.0.6-1 =
-
-(2016/06/14) Added a new checkbox to delete addresses. Replaced two methods in WpssoPlmAddress for SucomUtil methods. Added a new hook for the 'wpsso_place_options' filter.
 
