@@ -108,9 +108,9 @@
 
 <p>The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.</p>
 
-<p>Use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO. The <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO PLM Pro</a> extension (along with all WPSSO Pro extensions) requires the <a href="http://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> plugin as well.</p>
+<p>Use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO. The <a href="http://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro</a> extension (along with all WPSSO Pro extensions) requires the <a href="http://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro</a> plugin as well.</p>
 
-<p>Purchase the <a href="http://wpsso.com/extend/plugins/wpsso-plm/">WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro</a> extension (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
+<p><a href="http://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro extension</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 
 <h2>Installation</h2>
