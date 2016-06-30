@@ -4,7 +4,7 @@ Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
 Domain Path: /languages
 Contributors: jsmoriss
-Donate Link: https://wpsso.com/
+Donate Link: https://wpsso.com/?utm_source=wpssoplm-readme-donate
 Tags: wpsso, place, location, venue, longitude, latitude, address, local, business, hours, seo
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
