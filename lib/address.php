@@ -197,6 +197,15 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			return $md_opts;
 		}
 
+		public static function get_addr_names() {
+
+			$wpsso =& Wpsso::get_instance();
+			if ( $wpsso->debug->enabled )
+				$wpsso->debug->mark();
+
+			return SucomUtil::get_multi_key_locale( 'plm_addr_name', $wpsso->options, false );
+		}
+
 		// get a specific address id
 		// if $id is 'custom', then $mixed must be the $mod array
 		public static function get_addr_id( $id, $mixed = 'current' ) {
