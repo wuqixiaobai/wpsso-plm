@@ -143,42 +143,9 @@ Official announcement: N/A
 * *Developer Notes*
 	* Updated the 'wpsso_get_config' filter to use the new version argument in WPSSO v3.33.5-1.
 
-**Version 2.0.7-1 (2016/06/21)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Renamed the 'wpsso_place_options' filter to 'wpsso_get_place_options'.
-
-**Version 2.0.6-1 (2016/06/14)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added a new checkbox to delete addresses (instead of leaving its name blank).
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Added localization support when retrieving address information.
-	* Replaced the `WpssoPlmAddress::get_names()` method by `SucomUtil::get_multi_key_locale()`.
-	* Replaced the `WpssoPlmAddress::get_first_next_ids()` method by `SucomUtil::get_first_last_next_nums()`.
-	* Added a new hook for the 'wpsso_place_options' filter.
-
 == Upgrade Notice ==
 
 = 2.0.8-1 =
 
 (2016/07/18) Updated the 'wpsso_get_config' filter to use the new version argument in WPSSO v3.33.5-1.
-
-= 2.0.7-1 =
-
-(2016/06/21) Renamed the 'wpsso_place_options' filter to 'wpsso_get_place_options'.
 
