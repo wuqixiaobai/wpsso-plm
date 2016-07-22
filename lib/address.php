@@ -212,7 +212,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->args( array( 
+				$wpsso->debug->log_args( array( 
 					'id' => $id,
 					'mixed' => $mixed,
 				) );
