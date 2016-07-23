@@ -130,7 +130,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.0.9-dev1 (2016/07/22)**
+**Version 2.0.9-1 (2016/07/23)**
 
 Official announcement: N/A
 
@@ -158,9 +158,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.0.9-dev1 =
+= 2.0.9-1 =
 
-(2016/07/22) Renamed the SucomDebug args() method calls to log_args().
+(2016/07/23) Renamed the SucomDebug args() method calls to log_args().
 
 = 2.0.8-1 =
 
