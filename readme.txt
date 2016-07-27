@@ -125,7 +125,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Free / Basic Version Repository =
 
-* [GitHub](https://github.com/SurniaUlula/wpsso-plm)
+* [GitHub](https://surniaulula.github.io/wpsso-plm/)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
 = Changelog / Release Notes =
