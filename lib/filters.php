@@ -38,7 +38,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'og_seed' => 3,				// open graph meta tags
 				'json_array_type_ids' => 2,		// $type_ids, $mod
 				'schema_head_type' => 3,		// $type_id, $mod
-				'schema_meta_itemprop' => 3,		// $mt_schema, $use_post, $mod
+				'schema_meta_itemprop' => 2,		// $mt_schema, $mod
 				'schema_noscript_array' => 3,		// $ret, $mod, $mt_og
 				'get_place_options' => 3,		// $opts, $mod, $place_id
 			) );
@@ -211,7 +211,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $type_id;
 		}
 
-		public function filter_schema_meta_itemprop( $mt_schema, $use_post, $mod ) {
+		public function filter_schema_meta_itemprop( $mt_schema, $mod ) {
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
 
