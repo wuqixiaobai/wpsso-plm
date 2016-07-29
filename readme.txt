@@ -130,7 +130,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.0.9-1 (2016/07/23)**
+**Version 2.0.10-1 (2016/07/29)**
 
 Official announcement: N/A
 
@@ -141,24 +141,11 @@ Official announcement: N/A
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed the SucomDebug `args()` method calls to `log_args()`.
-
-**Version 2.0.8-1 (2016/07/18)**
-
-Official announcement: N/A
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Updated the 'wpsso_get_config' filter to use the new version argument in WPSSO v3.33.5-1.
+	* Updated the 'wpsso_schema_meta_itemprop' filter for WPSSO 3.33.8-1.
 
 == Upgrade Notice ==
 
-= 2.0.9-1 =
+= 2.0.10-1 =
 
-(2016/07/23) Renamed the SucomDebug args() method calls to log_args().
+(2016/07/29) Updated the 'wpsso_schema_meta_itemprop' filter for WPSSO 3.33.8-1.
 
