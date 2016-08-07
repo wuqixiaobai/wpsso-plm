@@ -5,6 +5,7 @@
  * Text Domain: wpsso-plm
  * Domain Path: /languages
  * Plugin URI: http://surniaulula.com/extend/plugins/wpsso-plm/
+ * Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
  * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
