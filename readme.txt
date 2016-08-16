@@ -132,6 +132,19 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
+**Version 2.1.0-rc1 (2016/08/16)**
+
+Official announcement: N/A
+
+* *New Features*
+	* Added a new "Service Radius" option for Schema Local Business.
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.0.10-1 (2016/07/29)**
 
 Official announcement: N/A
@@ -146,6 +159,10 @@ Official announcement: N/A
 	* Updated the 'wpsso_schema_meta_itemprop' filter for WPSSO 3.33.8-1.
 
 == Upgrade Notice ==
+
+= 2.1.0-rc1 =
+
+(2016/08/16) Added a new "Service Radius" option for Schema Local Business.
 
 = 2.0.10-1 =
 
