@@ -43,15 +43,16 @@
 <ul>
 <li>Latitude</li>
 <li>Longitude</li>
-<li>Altitude in Meters</li>
+<li>Altitude</li>
 </ul></li>
 <li>Schema Local Business
 
 <ul>
 <li>Local Business Type</li>
-<li>Business Days and Hours</li>
-<li>Seasonal Business Dates</li>
-<li>Food Establishment Menu URL</li>
+<li>Business Days + Hours</li>
+<li>Business Dates (Season)</li>
+<li>Service Radius</li>
+<li>Food Menu URL</li>
 <li>Accepts Reservations</li>
 </ul></li>
 </ul></li>

@@ -38,12 +38,13 @@ WPSSO Place / Location and Local Business Meta (WPSSO PLM) works in conjunction 
 	* Facebook / Open Graph Location
 		* Latitude
 		* Longitude
-		* Altitude in Meters
+		* Altitude
 	* Schema Local Business
 		* Local Business Type
-		* Business Days and Hours
-		* Seasonal Business Dates
-		* Food Establishment Menu URL
+		* Business Days + Hours
+		* Business Dates (Season)
+		* Service Radius
+		* Food Menu URL
 		* Accepts Reservations
 * Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
