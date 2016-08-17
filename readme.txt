@@ -132,7 +132,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.1.0-rc1 (2016/08/16)**
+**Version 2.1.0-rc2 (2016/08/17)**
 
 Official announcement: N/A
 
@@ -160,9 +160,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.1.0-rc1 =
+= 2.1.0-rc2 =
 
-(2016/08/16) Added a new "Service Radius" option for Schema Local Business.
+(2016/08/17) Added a new "Service Radius" option for Schema Local Business.
 
 = 2.0.10-1 =
 
