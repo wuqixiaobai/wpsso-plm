@@ -98,7 +98,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $ns;
 		}
 
-		public function filter_og_seed( $og = array(), $use_post = false, $mod = false ) {
+		public function filter_og_seed( $og, $use_post, $mod ) {
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
 
