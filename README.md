@@ -16,18 +16,13 @@
 
 <p align="center"><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" /></p><p><strong>Does your website or business use location information?</strong></p>
 
-<p>&lt;</p>
-
-<p>ul>
+<ul>
 <li>Geo coordinates (latitude, longitude, altitude).</li>
 <li>Store or business location / street address.</li>
 <li>Business hours (daily and seasonal).</li>
 <li>Restaurant menu URL?</li>
-<li>Service area.</li></p>
-
-<p>&lt;</p>
-
-<p>ul></p>
+<li>Service area.</li>
+</ul>
 
 <p><strong>Let Pinterest, Facebook and Google know about your locations by using this plugin.</strong></p>
 

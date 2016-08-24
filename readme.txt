@@ -25,7 +25,7 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 <li>Business hours (daily and seasonal).</li>
 <li>Restaurant menu URL?</li>
 <li>Service area.</li>
-<ul>
+</ul>
 
 <p><strong>Let Pinterest, Facebook and Google know about your locations by using this plugin.</strong></p>
 
