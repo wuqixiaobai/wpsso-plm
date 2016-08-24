@@ -20,7 +20,7 @@
 <li>Geo coordinates (latitude, longitude, altitude).</li>
 <li>Store or business location / street address.</li>
 <li>Business hours (daily and seasonal).</li>
-<li>Restaurant menu URL?</li>
+<li>Restaurant menu URL.</li>
 <li>Service area.</li>
 </ul>
 
