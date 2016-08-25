@@ -53,10 +53,10 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 
 			require_once ( dirname( __FILE__ ).'/lib/config.php' );
 			WpssoPlmConfig::set_constants( __FILE__ );
-			WpssoPlmConfig::require_libs( __FILE__ );
-			$this->reg = new WpssoPlmRegister();		// activate, deactivate, uninstall hooks
+			WpssoPlmConfig::require_libs( __FILE__ );	// includes the register.php class library
 
 			if ( is_admin() ) {
+				$this->reg = new WpssoPlmRegister();	// activate, deactivate, uninstall hooks
 				load_plugin_textdomain( 'wpsso-plm', false, 'wpsso-plm/languages/' );
 				add_action( 'admin_init', array( &$this, 'check_for_wpsso' ) );
 			}
