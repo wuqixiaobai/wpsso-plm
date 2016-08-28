@@ -27,8 +27,7 @@
 <p><strong>Let Pinterest, Facebook and Google know about your locations</strong> &mdash; WPSSO PLM includes Facebook / Open Graph *Location*, Pinterest Rich Pin / Schema *Place*, and Google / Schema *Local Business* meta tags in your webpages.</p>
 
 <blockquote>
-<p><strong>Prerequisite:</strong></p>
-<p>WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin.</p>
+<p><strong>Prerequisite:</strong> WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin.</p>
 </blockquote>
 
 <h4>Quick List of Features</h4>
