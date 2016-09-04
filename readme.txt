@@ -144,6 +144,19 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
+**Version 2.1.1-dev1 (2016/09/04)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Updated the SucomNotice method calls for WPSSO v3.35.0-1.
+
 **Version 2.1.0-1 (2016/08/18)**
 
 Official announcement: N/A
@@ -158,6 +171,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.1.1-dev1 =
+
+(2016/09/04) Updated the SucomNotice method calls for WPSSO v3.35.0-1.
 
 = 2.1.0-1 =
 
