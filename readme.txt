@@ -157,26 +157,9 @@ Official announcement: N/A
 * *Developer Notes*
 	* Updated the SucomNotice method calls for WPSSO v3.35.0-1.
 
-**Version 2.1.0-1 (2016/08/18)**
-
-Official announcement: N/A
-
-* *New Features*
-	* Added a new "Service Radius" option for Schema Local Business.
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
 == Upgrade Notice ==
 
 = 2.1.1-1 =
 
 (2016/09/10) Updated the SucomNotice method calls for WPSSO v3.35.0-1.
-
-= 2.1.0-1 =
-
-(2016/08/18) Added a new "Service Radius" option for Schema Local Business.
 
