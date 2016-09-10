@@ -11,7 +11,7 @@ Tags: wpsso, place, location, venue, longitude, latitude, address, local, busine
 Contributors: jsmoriss
 Requires At Least: 3.1
 Tested Up To: 4.6
-Stable Tag: 2.1.0-1
+Stable Tag: 2.1.1-1
 
 WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags.
 
