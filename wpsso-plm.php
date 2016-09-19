@@ -12,7 +12,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags.
  * Requires At Least: 3.1
- * Tested Up To: 4.6
+ * Tested Up To: 4.6.1
  * Version: 2.1.1-1
  * 
  * Version Numbers: {major}.{minor}.{bugfix}-{stage}{level}
