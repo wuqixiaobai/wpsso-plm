@@ -204,8 +204,8 @@ msgstr ""
 
 #: lib/filters.php:443
 msgid ""
-"A comma-delimited list of accepted payment options offered by the local "
-"business (example: Cash, Credit Card)."
+"A comma-delimited list of payment options accepted by the local business "
+"(example: Cash, Credit Card)."
 msgstr ""
 
 #: lib/filters.php:446

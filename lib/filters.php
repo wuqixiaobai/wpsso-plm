@@ -440,7 +440,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'A comma-delimited list of <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency codes</a> accepted by the local business (example: USD, CAD).', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_payment_accepted':
-					$text = __( 'A comma-delimited list of accepted payment options offered by the local business (example: Cash, Credit Card).', 'wpsso-plm' );
+					$text = __( 'A comma-delimited list of payment options accepted by the local business (example: Cash, Credit Card).', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_price_range':
 					$text = __( 'The price range of goods or services provided by the local business (example: $10-100).', 'wpsso-plm' );
