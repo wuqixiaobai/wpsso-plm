@@ -56,6 +56,7 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 		* Business Days + Hours
 		* Business Dates (Season)
 		* Service Radius
+		* Price Range
 		* Food Menu URL
 		* Accepts Reservations
 * Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
@@ -144,6 +145,22 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
+**Version 2.2.0-rc1 (2016/10/14)**
+
+Official announcement: N/A
+
+* *New Features*
+	* Added new Local Business options:
+		* Currencies Accepted
+		* Payment Accepted
+		* Price Range
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.1.1-1 (2016/09/10)**
 
 Official announcement: N/A
@@ -158,6 +175,10 @@ Official announcement: N/A
 	* Updated the SucomNotice method calls for WPSSO v3.35.0-1.
 
 == Upgrade Notice ==
+
+= 2.2.0-rc1 =
+
+(2016/10/14) Added new Local Business options: Currencies Accepted, Payment Accepted, and Price Range.
 
 = 2.1.1-1 =
 
