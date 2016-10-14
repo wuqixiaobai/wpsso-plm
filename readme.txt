@@ -56,6 +56,8 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 		* Business Days + Hours
 		* Business Dates (Season)
 		* Service Radius
+		* Currencies Accepted
+		* Payment Accepted
 		* Price Range
 		* Food Menu URL
 		* Accepts Reservations
@@ -71,7 +73,7 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](http://wpsso.com/extend/plugins/wpsso-json/) extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.
 
 <pre>
-&lt;head itemscope itemtype="http://schema.org/Restaurant"&gt;
+&lt;head itemscope itemtype="https://schema.org/Restaurant"&gt;
     &lt;meta property="og:type" content="place"/&gt;
     &lt;meta property="og:latitude" content="10"/&gt;
     &lt;meta property="og:longitude" content="-10"/&gt;
@@ -150,7 +152,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 Official announcement: N/A
 
 * *New Features*
-	* Added new Local Business options:
+	* Added Local Business options for the WPSSO Schema JSON-LD Markup extension:
 		* Currencies Accepted
 		* Payment Accepted
 		* Price Range
@@ -178,7 +180,7 @@ Official announcement: N/A
 
 = 2.2.0-rc1 =
 
-(2016/10/14) Added new Local Business options: Currencies Accepted, Payment Accepted, and Price Range.
+(2016/10/14) Added Local Business options for the WPSSO Schema JSON-LD Markup extension: Currencies Accepted, Payment Accepted, and Price Range.
 
 = 2.1.1-1 =
 
