@@ -163,6 +163,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_addr_season_from_date' => 'place:business:season:from',
 				'plm_addr_season_to_date' => 'place:business:season:to',
 				'plm_addr_service_radius' => 'place:business:service_radius',
+				'plm_addr_currencies_accepted' => 'place:business:currencies_accepted',
+				'plm_addr_payment_accepted' => 'place:business:payment_accepted',
+				'plm_addr_price_range' => 'place:business:price_range',
 				'plm_addr_accept_res' => 'place:business:accepts_reservations',
 				'plm_addr_menu_url' => 'place:business:menu_url',
 			) as $key => $mt_name ) {
@@ -335,6 +338,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					return 'not_blank';
 					break;
 				case ( preg_match( '/^plm_addr_(streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted|price_range)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
 				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|service_radius|po_box_number)$/', $key ) ? true : false ):
@@ -430,13 +434,22 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'This business is only open for part of the year, between these two dates.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_service_radius':
-					$text = __( 'The geographic area where a service is provided.', 'wpsso-plm' );
+					$text = __( 'The geographic area where a service is provided, in meters around the location.', 'wpsso-plm' );
 					break;
-				case 'tooltip-plm_addr_accept_res':
-					$text = __( 'This food establishment accepts reservations.', 'wpsso-plm' );
+				case 'tooltip-plm_addr_currencies_accepted':
+					$text = __( 'A comma-delimited list of <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217 currency codes</a> accepted by the local business (example: USD, CAD).', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_payment_accepted':
+					$text = __( 'A comma-delimited list of accepted payment options offered by the local business (example: Cash, Credit Card).', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_price_range':
+					$text = __( 'The price range of goods or services provided by the local business (example: $10-100).', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_menu_url':
 					$text = __( 'The menu URL for this food establishment (fast food restaurant, ice cream shop, restaurant, etc.)', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_accept_res':
+					$text = __( 'This food establishment accepts reservations.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_add_to':
 					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) );

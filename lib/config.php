@@ -15,8 +15,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.1.1-1',		// plugin version
-					'opt_version' => '11',		// increment when changing default options
+					'version' => '2.2.0-rc1',		// plugin version
+					'opt_version' => '12',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags.',
@@ -110,6 +110,9 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_addr_day_publicholidays_open' => '09:00',
 					'plm_addr_day_publicholidays_close' => '17:00',
 					'plm_addr_service_radius' => '',
+					'plm_addr_currencies_accepted' => '',
+					'plm_addr_payment_accepted' => '',
+					'plm_addr_price_range' => '',
 					'plm_addr_accept_res' => '',
 					'plm_addr_menu_url' => '',
 				),

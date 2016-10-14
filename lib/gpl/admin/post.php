@@ -117,6 +117,14 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'medium' ).' '.
 				_x( 'meters from location', 'option comment', 'wpsso-plm' ).'</td>';
 
+			foreach ( array(
+				'currencies_accepted' => _x( 'Currencies Accepted', 'option label', 'wpsso-plm' ),
+				'payment_accepted' => _x( 'Payment Accepted', 'option label', 'wpsso-plm' ),
+				'price_range' => _x( 'Price Range', 'option label', 'wpsso-plm' ),
+			) as $opt_name => $opt_label )
+				$table_rows['plm_addr_'.$opt_name] = $form->get_th_html( $opt_label, 'medium', 'plm_addr_'.$opt_name ). 
+				'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
+
 			$table_rows['plm_addr_accept_res'] = $form->get_th_html( _x( 'Accepts Reservations',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_accept_res' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_checkbox( 'plm_addr_accept_res' ).'</td>';

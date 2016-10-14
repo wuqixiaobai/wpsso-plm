@@ -123,8 +123,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="3">'.$this->form->get_checkbox( 'plm_addr_delete_'.$id ).' <em>'.
 						_x( 'delete this address', 'option comment', 'wpsso-plm' ).'</em></td>';
 
-						$table_rows['plm_addr_name_'.$id] = "\n".$tr_addr_id.$this->form->get_th_html( _x( 'Address Name',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_name' ). 
+						$table_rows['plm_addr_name_'.$id] = "\n".$tr_addr_id.
+						$this->form->get_th_html( _x( 'Address Name', 'option label', 'wpsso-plm' ), '', 'plm_addr_name' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_name_'.$id, 'long_name required' ).'</td>';
 					}
 
@@ -135,29 +135,29 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$tr_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="plm_addr_id plm_addr_id_'.$id.'" style="display:none">';
 		
-						$table_rows['plm_addr_streetaddr_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Street Address',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_streetaddr' ). 
+						$table_rows['plm_addr_streetaddr_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Street Address', 'option label', 'wpsso-plm' ), '', 'plm_addr_streetaddr' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_streetaddr_'.$id, 'wide' ).'</td>';
 		
-						$table_rows['plm_addr_po_box_number_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'P.O. Box Number',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_po_box_number' ). 
+						$table_rows['plm_addr_po_box_number_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'P.O. Box Number', 'option label', 'wpsso-plm' ), '', 'plm_addr_po_box_number' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_po_box_number_'.$id ).'</td>';
 		
-						$table_rows['plm_addr_city_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'City',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_city' ). 
+						$table_rows['plm_addr_city_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'City', 'option label', 'wpsso-plm' ), '', 'plm_addr_city' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_city_'.$id ).'</td>';
 		
-						$table_rows['plm_addr_state_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'State / Province',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_state' ). 
+						$table_rows['plm_addr_state_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'State / Province', 'option label', 'wpsso-plm' ), '', 'plm_addr_state' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_state_'.$id ).'</td>';
 		
-						$table_rows['plm_addr_zipcode_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Zip / Postal Code',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_zipcode' ). 
+						$table_rows['plm_addr_zipcode_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Zip / Postal Code', 'option label', 'wpsso-plm' ), '', 'plm_addr_zipcode' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_zipcode_'.$id ).'</td>';
 		
 						$this->form->defaults['plm_addr_country_'.$id] = $this->p->options['plm_addr_def_country'];	// set default value
-						$table_rows['plm_addr_country_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Country',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_country' ). 
+						$table_rows['plm_addr_country_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Country', 'option label', 'wpsso-plm' ), '', 'plm_addr_country' ). 
 						'<td colspan="3">'.$this->form->get_select_country( 'plm_addr_country_'.$id ).'</td>';
 					}
 
@@ -168,18 +168,18 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$tr_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="plm_addr_id plm_addr_id_'.$id.'" style="display:none">';
 		
-						$table_rows['plm_addr_latitude_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Latitude',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_latitude' ). 
+						$table_rows['plm_addr_latitude_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Latitude', 'option label', 'wpsso-plm' ), '', 'plm_addr_latitude' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_latitude_'.$id, 'required' ).' '.
 							_x( 'decimal degrees', 'option comment', 'wpsso-plm' ).'</td>';
 		
-						$table_rows['plm_addr_longitude_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Longitude',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_longitude' ). 
+						$table_rows['plm_addr_longitude_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Longitude', 'option label', 'wpsso-plm' ), '', 'plm_addr_longitude' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_longitude_'.$id, 'required' ).' '.
 							_x( 'decimal degrees', 'option comment', 'wpsso-plm' ).'</td>';
 		
-						$table_rows['plm_addr_altitude_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Altitude',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_altitude' ). 
+						$table_rows['plm_addr_altitude_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Altitude', 'option label', 'wpsso-plm' ), '', 'plm_addr_altitude' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_altitude_'.$id ).' '.
 							_x( 'meters above sea level', 'option comment', 'wpsso-plm' ).'</td>';
 					}
@@ -192,10 +192,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							'<tr class="plm_addr_id plm_addr_id_'.$id.'" style="display:none">';
 
 						$this->form->defaults['plm_addr_business_type_'.$id] = WpssoPlmConfig::$cf['form']['plm_addr_opts']['plm_addr_business_type'];
-						$table_rows['plm_addr_business_type_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Local Business Type',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
-						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id,
-							$business_types, 'long_name' ).'</td>';
+						$table_rows['plm_addr_business_type_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Local Business Type', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
+						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id, $business_types, 'long_name' ).'</td>';
 		
 						$row_number = 1;
 						foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
@@ -217,22 +216,31 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							$row_number++;
 						}
 		
-						$table_rows['plm_addr_season_dates_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Business Dates (Season)',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_season_dates' ). 
+						$table_rows['plm_addr_season_dates_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Business Dates (Season)', 'option label', 'wpsso-plm' ), '', 'plm_addr_season_dates' ). 
 						'<td colspan="3">Open from '.$this->form->get_input_date( 'plm_addr_season_from_date_'.$id ).
 							' through '.$this->form->get_input_date( 'plm_addr_season_to_date_'.$id ).'</td>';
 		
-						$table_rows['plm_addr_service_radius_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Service Radius',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_service_radius' ). 
+						$table_rows['plm_addr_service_radius_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Service Radius', 'option label', 'wpsso-plm' ), '', 'plm_addr_service_radius' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_service_radius_'.$id, 'medium' ).' '.
 							_x( 'meters from location', 'option comment', 'wpsso-plm' ).'</td>';
 		
-						$table_rows['plm_addr_menu_url_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Food Menu URL',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_menu_url' ). 
+						foreach ( array(
+							'currencies_accepted' => _x( 'Currencies Accepted', 'option label', 'wpsso-plm' ),
+							'payment_accepted' => _x( 'Payment Accepted', 'option label', 'wpsso-plm' ),
+							'price_range' => _x( 'Price Range', 'option label', 'wpsso-plm' ),
+						) as $opt_name => $opt_label )
+							$table_rows['plm_addr_'.$opt_name.'_'.$id] = $tr_addr_id.
+							$this->form->get_th_html( $opt_label, '', 'plm_addr_'.$opt_name ). 
+							'<td colspan="3">'.$this->form->get_input( 'plm_addr_'.$opt_name.'_'.$id ).'</td>';
+		
+						$table_rows['plm_addr_menu_url_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Food Menu URL', 'option label', 'wpsso-plm' ), '', 'plm_addr_menu_url' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_menu_url_'.$id, 'wide' ).'</td>';
 		
-						$table_rows['plm_addr_accept_res_'.$id] = $tr_addr_id.$this->form->get_th_html( _x( 'Accepts Reservations',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_accept_res' ). 
+						$table_rows['plm_addr_accept_res_'.$id] = $tr_addr_id.
+						$this->form->get_th_html( _x( 'Accepts Reservations', 'option label', 'wpsso-plm' ), '', 'plm_addr_accept_res' ). 
 						'<td colspan="3">'.$this->form->get_checkbox( 'plm_addr_accept_res_'.$id ).'</td>';
 
 					}
