@@ -147,7 +147,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.2.0-rc1 (2016/10/14)**
+**Version 2.2.0-1 (2016/10/15)**
 
 Official announcement: N/A
 
@@ -178,9 +178,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.2.0-rc1 =
+= 2.2.0-1 =
 
-(2016/10/14) Added Local Business options for the WPSSO Schema JSON-LD Markup extension: Currencies Accepted, Payment Accepted, and Price Range.
+(2016/10/15) Added Local Business options for the WPSSO Schema JSON-LD Markup extension: Currencies Accepted, Payment Accepted, and Price Range.
 
 = 2.1.1-1 =
 
