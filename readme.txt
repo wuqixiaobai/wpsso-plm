@@ -4,14 +4,14 @@ Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
 Domain Path: /languages
 License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl.txt
+License URI: https://www.gnu.org/licenses/gpl.txt
 Donate Link: https://wpsso.com/?utm_source=wpssoplm-readme-donate
 Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
 Tags: wpsso, seo, place, location, address, venue, restaurant, longitude, latitude, local, business, local business, seasonal, hours, coordinates
 Contributors: jsmoriss
 Requires At Least: 3.1
 Tested Up To: 4.6.1
-Stable Tag: 2.1.1-1
+Stable Tag: 2.2.0-1
 
 WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags.
 
@@ -181,8 +181,4 @@ Official announcement: N/A
 = 2.2.0-1 =
 
 (2016/10/15) Added Local Business options for the WPSSO Schema JSON-LD Markup extension: Currencies Accepted, Payment Accepted, and Price Range.
-
-= 2.1.1-1 =
-
-(2016/09/10) Updated the SucomNotice method calls for WPSSO v3.35.0-1.
 
