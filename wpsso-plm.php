@@ -9,7 +9,7 @@
  * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
- * License URI: http://www.gnu.org/licenses/gpl.txt
+ * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags.
  * Requires At Least: 3.1
  * Tested Up To: 4.6.1
