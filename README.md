@@ -71,7 +71,7 @@
 <li>Accepts Reservations</li>
 </ul></li>
 </ul></li>
-<li>Combine WPSSO PLM with the <a href="http://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro</a> extension to include complete Place and Local Business using Schema JSON-LD markup.</li>
+<li>Combine WPSSO PLM with the <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro</a> extension to include complete Place and Local Business using Schema JSON-LD markup.</li>
 </ul>
 
 <p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
@@ -83,7 +83,7 @@
 
 <h4>Example Meta Tags and Markup</h4>
 
-<p>Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The <a href="http://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro</a> extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.</p>
+<p>Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro</a> extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.</p>
 
 <pre>
 &lt;head itemscope itemtype="https://schema.org/Restaurant"&gt;
@@ -124,9 +124,9 @@
 
 <p>The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.</p>
 
-<p>Use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO. The <a href="http://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> (along with all WPSSO Pro extensions) requires the <a href="http://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro plugin</a> as well.</p>
+<p>Use the Free version of WPSSO PLM with <em>both</em> the Free and Pro versions of WPSSO. The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> (along with all WPSSO Pro extensions) requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro plugin</a> as well.</p>
 
-<p><a href="http://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro extension</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
+<p><a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro extension</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 
 <h2>Installation</h2>
@@ -134,8 +134,8 @@
 <h4>Install and Uninstall</h4>
 
 <ul>
-<li><a href="http://wpsso.com/codex/plugins/wpsso-plm/installation/install-the-plugin/">Install the Plugin</a></li>
-<li><a href="http://wpsso.com/codex/plugins/wpsso-plm/installation/uninstall-the-plugin/">Uninstall the Plugin</a></li>
+<li><a href="https://wpsso.com/codex/plugins/wpsso-plm/installation/install-the-plugin/">Install the Plugin</a></li>
+<li><a href="https://wpsso.com/codex/plugins/wpsso-plm/installation/uninstall-the-plugin/">Uninstall the Plugin</a></li>
 </ul>
 
 
