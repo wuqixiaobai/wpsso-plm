@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.2.0-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2016-10-14 09:45-0700\n"
-"PO-Revision-Date: 2016-10-14 09:48-0700\n"
+"POT-Creation-Date: 2016-10-17 09:57-0700\n"
+"PO-Revision-Date: 2016-10-17 09:57-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -397,8 +397,8 @@ msgid "WPSSO Place / Location and Local Business Meta (WPSSO PLM)"
 msgstr "WPSSO Place / Location and Local Business Meta (WPSSO PLM)"
 
 #. Plugin URI of the plugin/theme
-msgid "http://surniaulula.com/extend/plugins/wpsso-plm/"
-msgstr "http://surniaulula.com/extend/plugins/wpsso-plm/"
+msgid "https://surniaulula.com/extend/plugins/wpsso-plm/"
+msgstr "https://surniaulula.com/extend/plugins/wpsso-plm/"
 
 #. Description of the plugin/theme
 msgid "WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags."
@@ -409,5 +409,5 @@ msgid "JS Morisset"
 msgstr "JS Morisset"
 
 #. Author URI of the plugin/theme
-msgid "http://surniaulula.com/"
-msgstr "http://surniaulula.com/"
+msgid "https://surniaulula.com/"
+msgstr "https://surniaulula.com/"
