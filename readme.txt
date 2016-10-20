@@ -147,7 +147,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.2.1-dev1 (TBD)**
+**Version 2.2.1-dev1 (2016/10/20)**
 
 Official announcement: N/A
 
@@ -158,7 +158,7 @@ Official announcement: N/A
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Changes for WPSSO v3.36-3-1:
+	* Minor code changes required for WPSSO v3.36-3-1:
 		* Renamed the Social Settings 'header' index name to 'text'.
 
 **Version 2.2.0-1 (2016/10/15)**
@@ -178,6 +178,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.1-dev1 =
+
+(2016/10/20) Minor code changes required for WPSSO v3.36-3-1.
 
 = 2.2.0-1 =
 
