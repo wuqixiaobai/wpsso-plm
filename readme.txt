@@ -147,7 +147,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.2.1-rc1 (2016/10/20)**
+**Version 2.2.1-rc1 (2016/10/21)**
 
 Official announcement: N/A
 
@@ -181,7 +181,7 @@ Official announcement: N/A
 
 = 2.2.1-rc1 =
 
-(2016/10/20) Minor code changes required for WPSSO v3.36-3-1.
+(2016/10/21) Minor code changes required for WPSSO v3.36-3-1.
 
 = 2.2.0-1 =
 
