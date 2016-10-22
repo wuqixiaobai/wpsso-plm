@@ -184,7 +184,3 @@ Official announcement: N/A
 
 (2016/10/22) Minor code changes required for WPSSO v3.36-3-1.
 
-= 2.2.0-1 =
-
-(2016/10/15) Added Local Business options for the WPSSO Schema JSON-LD Markup extension: Currencies Accepted, Payment Accepted, and Price Range.
-
