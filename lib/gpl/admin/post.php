@@ -14,12 +14,17 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
+
 			$this->p->util->add_plugin_filters( $this, array( 
 				'post_plm_rows' => 4,			// $table_rows, $form, $head, $mod
 			) );
 		}
 
 		public function filter_post_plm_rows( $table_rows, $form, $head, $mod ) {
+			if ( $this->p->debug->enabled )
+				$this->p->debug->mark();
 
 			$half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
 			$all_types = $this->p->schema->get_schema_types( false );		// $flatten = false
