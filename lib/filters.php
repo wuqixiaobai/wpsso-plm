@@ -364,7 +364,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_post_social_settings_tabs( $tabs, $mod ) {
 			if ( empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) )
 				return $tabs;
-			else return SucomUtil::after_key( $tabs, 'text', 'plm',
+			else return SucomUtil::get_after_key( $tabs, 'text', 'plm',
 				_x( 'Place / Location', 'metabox tab', 'wpsso-plm' ) );
 		}
 
