@@ -147,6 +147,21 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
+**Version 2.2.2-dev1 (TBD)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Minor code changes required for WPSSO v3.37.0-1:
+		* Renamed the 'wpsso_json_array_type_ids' filter to 'wpsso_json_array_schema_type_ids'.
+		* Renamed the SucomUtil::after_key() method to SucomUtil::get_after_key().
+
 **Version 2.2.1-1 (2016/10/22)**
 
 Official announcement: N/A
