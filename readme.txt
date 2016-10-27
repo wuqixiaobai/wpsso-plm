@@ -159,8 +159,8 @@ Official announcement: N/A
 	* None
 * *Developer Notes*
 	* Minor code changes required for WPSSO v3.37.0-1:
-		* Renamed the 'wpsso_json_array_type_ids' filter to 'wpsso_json_array_schema_type_ids'.
 		* Renamed the SucomUtil::after_key() method to SucomUtil::get_after_key().
+		* Renamed the 'wpsso_json_array_type_ids' filter to 'wpsso_json_array_schema_type_ids'.
 
 **Version 2.2.1-1 (2016/10/22)**
 
