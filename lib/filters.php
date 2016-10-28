@@ -76,7 +76,6 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_get_post_options( $opts ) {
 			$opts_version = empty( $opts['plugin_wpssoplm_opt_version'] ) ?
 				0 : $opts['plugin_wpssoplm_opt_version'];
-
 			if ( $opts_version <= 8 ) {
 				$opts = SucomUtil::rename_keys( $opts, array(
 					'plm_streetaddr' => 'plm_addr_streetaddr',
@@ -114,6 +113,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$og['og:type'] = 'place';
 
 			/*
+			 * place:name
 			 * place:street_address
 			 * place:po_box_number
 			 * place:locality
@@ -337,7 +337,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case ( preg_match( '/^plm_addr_(country|type)$/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case ( preg_match( '/^plm_addr_(streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(name|alt_name|desc|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
 				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted|price_range)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
@@ -395,7 +395,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_name':
-					$text = __( 'Enter a descriptive name for this address. The address name appears in drop-down fields and the Schema Place name property.', 'wpsso-plm' );
+					$text = __( 'Enter a descriptive name for this address. The address name may appear in forms and the Schema Place name property.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_streetaddr':
 					$text = __( 'An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup.', 'wpsso-plm' );

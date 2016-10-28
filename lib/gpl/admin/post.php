@@ -28,7 +28,8 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
 			$all_types = $this->p->schema->get_schema_types( false );		// $flatten = false
-			$business_types = $this->p->schema->get_schema_types_select( $all_types['place']['local.business'], false );	// $add_none = false
+			$business_types = $this->p->schema->get_schema_types_select( $all_types['thing']['place']['local.business'],
+				false );	// $add_none = false
 			$address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'] );
 
 			unset( $form->options['plm_addr_id'] );
@@ -44,6 +45,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$table_rows['subsection_schema_place'] = '<td></td><td class="subsection" colspan="3"><h4>'.
 				_x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' ).'</h4></td>';
+
+			$table_rows['plm_addr_name'] = $form->get_th_html( _x( 'Address Name',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_name' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'long_name' ).'</td>';
 
 			$table_rows['plm_addr_streetaddr'] = $form->get_th_html( _x( 'Street Address',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_streetaddr' ). 
