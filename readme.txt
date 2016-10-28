@@ -154,7 +154,7 @@ Official announcement: N/A
 * *New Features*
 	* None
 * *Improvements*
-	* None
+	* Added an "Address Name" option to the custom settings metabox.
 * *Bugfixes*
 	* None
 * *Developer Notes*
