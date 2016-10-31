@@ -147,7 +147,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.2.2-dev3 (2016/10/30)**
+**Version 2.2.2-dev4 (2016/10/30)**
 
 Official announcement: N/A
 
@@ -195,7 +195,7 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.2.2-dev3 =
+= 2.2.2-dev4 =
 
 (2016/10/30) Minor code changes required for WPSSO v3.37.0-1. Added an "Address Name" option to the custom settings metabox.
 
