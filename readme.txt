@@ -147,7 +147,7 @@ Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO
 
 = Changelog / Release Notes =
 
-**Version 2.2.2-b2 (2016/11/01)**
+**Version 2.2.2-rc1 (2016/11/01)**
 
 Official announcement: N/A
 
@@ -156,7 +156,7 @@ Official announcement: N/A
 * *Improvements*
 	* Added an "Address Name" option to the custom settings metabox.
 * *Bugfixes*
-	* None
+	* Fixed drop-down values allowing the adding of a "[New Address]".
 * *Developer Notes*
 	* Minor code changes required for WPSSO v3.37.0-1:
 		* Renamed the SucomUtil::after_key() method to SucomUtil::get_after_key().
@@ -195,7 +195,7 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.2.2-b2 =
+= 2.2.2-rc1 =
 
 (2016/11/01) Minor code changes required for WPSSO v3.37.0-1. Added an "Address Name" option to the custom settings metabox.
 
