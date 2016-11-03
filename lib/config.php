@@ -32,18 +32,18 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'url' => array(
 						// wordpress
 						'download' => 'https://wordpress.org/plugins/wpsso-plm/',
+						'forum' => 'https://wordpress.org/support/plugin/wpsso-plm',
 						'review' => 'https://wordpress.org/support/view/plugin-reviews/wpsso-plm?filter=5&rate=5#postform',
-						'readme' => 'https://plugins.svn.wordpress.org/wpsso-plm/trunk/readme.txt',
-						'wp_support' => 'https://wordpress.org/support/plugin/wpsso-plm',
-						// surniaulula
+						// github
+						'readme_txt' => 'https://raw.githubusercontent.com/SurniaUlula/wpsso-plm/master/readme.txt',
+						// wpsso
 						'update' => 'https://wpsso.com/extend/plugins/wpsso-plm/update/',
 						'purchase' => 'https://wpsso.com/extend/plugins/wpsso-plm/',
 						'changelog' => 'https://wpsso.com/extend/plugins/wpsso-plm/changelog/',
 						'codex' => 'https://wpsso.com/codex/plugins/wpsso-plm/',
 						'faq' => 'https://wpsso.com/codex/plugins/wpsso-plm/faq/',
 						'notes' => 'https://wpsso.com/codex/plugins/wpsso-plm/notes/',
-						'feed' => 'https://wpsso.com/category/application/wordpress/wp-plugins/wpsso-plm/feed/',
-						'pro_support' => 'http://wpsso-plm.support.wpsso.com/',
+						'support' => 'http://wpsso-plm.support.wpsso.com/',
 					),
 					'lib' => array(
 						// submenu items must have unique keys
