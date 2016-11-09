@@ -158,6 +158,21 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 2.2.3-dev1 (2016/11/09)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Minor code changes required for WPSSO v3.37.1-1.
+		* Renamed the 'wpsso_schema_head_type' filter to 'wpsso_schema_type_id' for WPSSO v3.37.1-1.
+		* Renamed the WpssoSchema::get_schema_types() method to WpssoSchema::get_schema_types_array().
+
 **Version 2.2.2-1 (2016/11/03)**
 
 Official announcement: N/A
@@ -205,6 +220,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.3-dev1 =
+
+(2016/11/09) Minor code changes required for WPSSO v3.37.1-1.
 
 = 2.2.2-1 =
 
