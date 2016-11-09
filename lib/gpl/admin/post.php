@@ -27,7 +27,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$this->p->debug->mark();
 
 			$half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
-			$all_types = $this->p->schema->get_schema_types( false );		// $flatten = false
+			$all_types = $this->p->schema->get_schema_types_array( false );		// $flatten = false
 			$business_types = $this->p->schema->get_schema_types_select( $all_types['thing']['place']['local.business'],
 				false );	// $add_none = false
 			$address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'] );
