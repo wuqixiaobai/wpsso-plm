@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'json_array_schema_type_ids' => 2,	// $type_ids, $mod
 				'schema_meta_itemprop' => 2,		// $mt_schema, $mod
 				'schema_noscript_array' => 3,		// $ret, $mod, $mt_og
-				'schema_type_id' => 3,			// $type_id, $mod
+				'schema_type_id' => 3,			// $type_id, $mod, $is_md_type
 				'get_place_options' => 3,		// $opts, $mod, $place_id
 			) );
 
