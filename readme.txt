@@ -9,7 +9,7 @@ Donate Link: https://wpsso.com/?utm_source=wpssoplm-readme-donate
 Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
 Tags: wpsso, seo, place, location, address, venue, restaurant, longitude, latitude, local, business, local business, seasonal, hours, coordinates
 Contributors: jsmoriss
-Requires At Least: 3.5
+Requires At Least: 3.7
 Tested Up To: 4.6.1
 Stable Tag: 2.2.3-1
 
