@@ -158,6 +158,20 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 2.2.4-dev1 (2016/11/20)**
+
+Official announcement: N/A
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Refactored the min_version_notice() method and moved variables to config class.
+	* Refactored the show_metabox_banner() method for the Place / Location settings page.
+
 **Version 2.2.3-1 (2016/11/12)**
 
 Official announcement: N/A
@@ -220,6 +234,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.4-dev1 =
+
+(2016/11/20) Refactored the min_version_notice() and show_metabox_banner() methods.
 
 = 2.2.3-1 =
 
