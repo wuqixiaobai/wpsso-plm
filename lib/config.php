@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.2.3-1',		// plugin version
+					'version' => '2.2.4-dev1',		// plugin version
 					'opt_version' => '12',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
@@ -25,6 +25,11 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'update_auth' => 'tid',
 					'text_domain' => 'wpsso-plm',
 					'domain_path' => '/languages',
+					'req' => array(
+						'short' => 'WPSSO',
+						'name' => 'WordPress Social Sharing Optimization (WPSSO)',
+						'min_version' => '3.37.3-1',
+					),
 					'img' => array(
 						'icon_small' => 'images/icon-128x128.png',
 						'icon_medium' => 'images/icon-256x256.png',
