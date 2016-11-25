@@ -11,7 +11,7 @@ Tags: wpsso, seo, place, location, address, venue, restaurant, longitude, latitu
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.6.1
-Stable Tag: 2.2.3-1
+Stable Tag: 2.2.4-1
 
 WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags.
 
@@ -159,7 +159,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.4-rc2 (2016/11/25)**
+**Version 2.2.4-1 (2016/11/25)**
 
 Official announcement: N/A
 
@@ -238,11 +238,7 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.2.4-rc2 =
+= 2.2.4-1 =
 
 (2016/11/25) Added Schema itemprop meta tags for business telephone, currenciesAccepted, paymentAccepted, and priceRange. Refactored the min_version_notice() and show_metabox_banner() methods.
-
-= 2.2.3-1 =
-
-(2016/11/12) Minor code changes required for WPSSO v3.37.1-1.
 
