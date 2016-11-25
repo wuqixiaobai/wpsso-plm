@@ -61,6 +61,7 @@
 
 <ul>
 <li>Local Business Type</li>
+<li>Business Telephone</li>
 <li>Business Days + Hours</li>
 <li>Business Dates (Season)</li>
 <li>Service Radius</li>

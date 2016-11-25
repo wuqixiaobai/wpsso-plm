@@ -53,6 +53,7 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 		* Altitude
 	* Schema Local Business
 		* Local Business Type
+		* Business Telephone
 		* Business Days + Hours
 		* Business Dates (Season)
 		* Service Radius
@@ -165,7 +166,8 @@ Official announcement: N/A
 * *New Features*
 	* None
 * *Improvements*
-	* None
+	* Added Local Business options:
+		* Business Telephone
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -222,7 +224,7 @@ Official announcement: N/A
 Official announcement: N/A
 
 * *New Features*
-	* Added Local Business options for the WPSSO Schema JSON-LD Markup extension:
+	* Added Local Business options:
 		* Currencies Accepted
 		* Payment Accepted
 		* Price Range
