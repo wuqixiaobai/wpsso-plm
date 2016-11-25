@@ -100,6 +100,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
 				$business_types, 'long_name', '', true ).'</td>';
 
+			$table_rows['plm_addr_business_phone'] = $form->get_th_html( _x( 'Business Telephone',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_phone' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
+
 			$row_number = 1;
 			foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
 				if ( $row_number === 1 )
@@ -135,13 +139,13 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$table_rows['plm_addr_'.$opt_name] = $form->get_th_html( $opt_label, 'medium', 'plm_addr_'.$opt_name ). 
 				'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
 
-			$table_rows['plm_addr_accept_res'] = $form->get_th_html( _x( 'Accepts Reservations',
-				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_accept_res' ). 
-			'<td class="blank" colspan="3">'.$form->get_no_checkbox( 'plm_addr_accept_res' ).'</td>';
-
 			$table_rows['plm_addr_menu_url'] = $form->get_th_html( _x( 'Food Menu URL',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_menu_url' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'wide' ).'</td>';
+
+			$table_rows['plm_addr_accept_res'] = $form->get_th_html( _x( 'Accepts Reservations',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_accept_res' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_checkbox( 'plm_addr_accept_res' ).'</td>';
 
 			return $table_rows;
 		}

@@ -37,8 +37,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'og_prefix_ns' => 1,			// open graph namespace
 				'og_seed' => 3,				// open graph meta tags
 				'json_array_schema_type_ids' => 2,	// $type_ids, $mod
-				'schema_meta_itemprop' => 2,		// $mt_schema, $mod
-				'schema_noscript_array' => 3,		// $ret, $mod, $mt_og
+				'schema_meta_itemprop' => 4,		// $mt_schema, $mod, $mt_og, $page_type_id
+				'schema_noscript_array' => 4,		// $ret, $mod, $mt_og, $page_type_id
 				'schema_type_id' => 3,			// $type_id, $mod, $is_md_type
 				'get_place_options' => 3,		// $opts, $mod, $place_id
 			) );
@@ -160,14 +160,15 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			foreach ( array(
+				'plm_addr_business_phone' => 'place:business:telephone',
 				'plm_addr_season_from_date' => 'place:business:season:from',
 				'plm_addr_season_to_date' => 'place:business:season:to',
 				'plm_addr_service_radius' => 'place:business:service_radius',
 				'plm_addr_currencies_accepted' => 'place:business:currencies_accepted',
 				'plm_addr_payment_accepted' => 'place:business:payment_accepted',
 				'plm_addr_price_range' => 'place:business:price_range',
-				'plm_addr_accept_res' => 'place:business:accepts_reservations',
 				'plm_addr_menu_url' => 'place:business:menu_url',
+				'plm_addr_accept_res' => 'place:business:accepts_reservations',
 			) as $key => $mt_name ) {
 				if ( $key === 'plm_addr_accept_res' )
 					$og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
@@ -216,7 +217,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $type_id;
 		}
 
-		public function filter_schema_meta_itemprop( $mt_schema, $mod ) {
+		public function filter_schema_meta_itemprop( $mt_schema, $mod, $mt_og, $page_type_id ) {
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
 
@@ -229,20 +230,26 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$addr_opts['plm_addr_zipcode'].', '.
 					$addr_opts['plm_addr_country'];
 
-				foreach ( array(
-					'plm_addr_menu_url' => 'menu',
-					'plm_addr_accept_res' => 'acceptsreservations',
-				) as $key => $mt_name ) {
-					if ( $key === 'plm_addr_accept_res' )
-						$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
-					else $mt_schema[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
+				if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {
+					foreach ( array(
+						'plm_addr_business_phone' => 'telephone',
+						'plm_addr_currencies_accepted' => 'currenciesAccepted',
+						'plm_addr_payment_accepted' => 'paymentAccepted',
+						'plm_addr_price_range' => 'priceRange',
+						'plm_addr_menu_url' => 'menu',
+						'plm_addr_accept_res' => 'acceptsreservations',
+					) as $key => $mt_name ) {
+						if ( $key === 'plm_addr_accept_res' )
+							$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
+						else $mt_schema[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
+					}
 				}
 			}
 
 			return $mt_schema;
 		}
 
-		public function filter_schema_noscript_array( $ret, $mod, $mt_og ) {
+		public function filter_schema_noscript_array( $ret, $mod, $mt_og, $page_type_id ) {
 			/*
 			 * Array (
 			 *	[place:business:day:monday:open] => 09:00
@@ -253,33 +260,35 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 *	[place:business:season:to] => 2016-05-01
 			 * )
 			 */
-			$mt_business = SucomUtil::preg_grep_keys( '/^place:business:(day|season):/', $mt_og );
-			if ( ! empty( $mt_business ) ) {
-				foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
-					$mt_day = array();
-					if ( ! empty( $mt_business['place:business:day:'.$day.':open'] ) &&
-						! empty( $mt_business['place:business:day:'.$day.':open'] ) ) {
-
-						$mt_day[] = array( array( '<noscript itemprop="openingHoursSpecification" '.
-							'itemscope itemtype="https://schema.org/OpeningHoursSpecification">'."\n" ) );
-						$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
-							'openinghoursspecification.dayofweek', $day, '', $mod );
-
-						foreach ( array(
-							'place:business:day:'.$day.':open' => 'openinghoursspecification.opens',
-							'place:business:day:'.$day.':close' => 'openinghoursspecification.closes',
-							'place:business:season:from' => 'openinghoursspecification.validfrom',
-							'place:business:season:to' => 'openinghoursspecification.validthrough',
-						) as $mt_key => $prop_name )
-							if ( isset( $mt_business[$mt_key] ) )
-								$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
-									$prop_name, $mt_business[$mt_key], '', $mod );
-
-						$mt_day[] = array( array( '</noscript>'."\n" ) );
+			if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {
+				$mt_business = SucomUtil::preg_grep_keys( '/^place:business:/', $mt_og );
+				if ( ! empty( $mt_business ) ) {
+					foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
+						$mt_day = array();
+						if ( ! empty( $mt_business['place:business:day:'.$day.':open'] ) &&
+							! empty( $mt_business['place:business:day:'.$day.':open'] ) ) {
+	
+							$mt_day[] = array( array( '<noscript itemprop="openingHoursSpecification" '.
+								'itemscope itemtype="https://schema.org/OpeningHoursSpecification">'."\n" ) );
+							$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
+								'openinghoursspecification.dayofweek', $day, '', $mod );
+	
+							foreach ( array(
+								'place:business:day:'.$day.':open' => 'openinghoursspecification.opens',
+								'place:business:day:'.$day.':close' => 'openinghoursspecification.closes',
+								'place:business:season:from' => 'openinghoursspecification.validfrom',
+								'place:business:season:to' => 'openinghoursspecification.validthrough',
+							) as $mt_key => $prop_name )
+								if ( isset( $mt_business[$mt_key] ) )
+									$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
+										$prop_name, $mt_business[$mt_key], '', $mod );
+	
+							$mt_day[] = array( array( '</noscript>'."\n" ) );
+						}
+						foreach ( $mt_day as $arr )
+							foreach ( $arr as $el )
+								$ret[] = $el;
 					}
-					foreach ( $mt_day as $arr )
-						foreach ( $arr as $el )
-							$ret[] = $el;
 				}
 			}
 			return $ret;
@@ -337,8 +346,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case ( preg_match( '/^plm_addr_(country|type)$/', $key ) ? true : false ):
 					return 'not_blank';
 					break;
-				case ( preg_match( '/^plm_addr_(name|alt_name|desc|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
-				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted|price_range)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(name|alt_name|desc|phone|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(business_phone|currencies_accepted|payment_accepted|price_range)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
 				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|service_radius|po_box_number)$/', $key ) ? true : false ):
@@ -426,6 +435,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					break;
 				case 'tooltip-plm_addr_business_type':
 					$text = __( 'A more descriptive Schema type for this local business. You must select a food establishment (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu URL and/or reservation information.', 'wpsso-plm' );
+					break;
+				case 'tooltip-plm_addr_business_phone':
+					$text = __( 'An optional Telephone number for this local business.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_days':
 					$text = __( 'Select the days and hours this business is open.', 'wpsso-plm' );

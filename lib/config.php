@@ -92,6 +92,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_addr_longitude' => '',			// Longitude
 					'plm_addr_altitude' => '',			// Altitude
 					'plm_addr_business_type' => 'local.business',
+					'plm_addr_business_phone' => '',
 					'plm_addr_day_sunday' => 0,
 					'plm_addr_day_sunday_open' => '09:00',
 					'plm_addr_day_sunday_close' => '17:00',
