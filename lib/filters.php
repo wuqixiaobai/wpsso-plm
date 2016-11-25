@@ -222,6 +222,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 
 			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) !== false ) {
+
 				$mt_schema['address'] = $addr_opts['plm_addr_streetaddr'].
 					( empty( $addr_opts['plm_addr_po_box_number'] ) ?
 						'' : ' #'.$addr_opts['plm_addr_po_box_number'] ).', '.
@@ -230,7 +231,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$addr_opts['plm_addr_zipcode'].', '.
 					$addr_opts['plm_addr_country'];
 
-				if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {
+				if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
 					foreach ( array(
 						'plm_addr_business_phone' => 'telephone',
 						'plm_addr_currencies_accepted' => 'currenciesAccepted',
@@ -288,8 +289,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 							$mt_day[] = array( array( '</noscript>'."\n" ) );
 						}
 						foreach ( $mt_day as $arr )
-							foreach ( $arr as $el )
-								$ret[] = $el;
+							foreach ( $arr as $val )
+								$ret[] = $val;
 					}
 				}
 			}
