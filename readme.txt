@@ -166,9 +166,9 @@ Official announcement: N/A
 * *New Features*
 	* None
 * *Improvements*
+	* Added Schema itemprop meta tags for business telephone, currenciesAccepted, paymentAccepted, and priceRange.
 	* Added Local Business options:
 		* Business Telephone
-	* Added Schema itemprop meta tags for business telephone, currenciesAccepted, paymentAccepted, and priceRange.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -240,7 +240,7 @@ Official announcement: N/A
 
 = 2.2.4-rc2 =
 
-(2016/11/25) Refactored the min_version_notice() and show_metabox_banner() methods.
+(2016/11/25) Added Schema itemprop meta tags for business telephone, currenciesAccepted, paymentAccepted, and priceRange. Refactored the min_version_notice() and show_metabox_banner() methods.
 
 = 2.2.3-1 =
 
