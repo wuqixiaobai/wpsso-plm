@@ -260,8 +260,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 *	[place:business:season:to] => 2016-05-01
 			 * )
 			 */
-			if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {
+			if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
+
 				$mt_business = SucomUtil::preg_grep_keys( '/^place:business:/', $mt_og );
+
 				if ( ! empty( $mt_business ) ) {
 					foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
 						$mt_day = array();
