@@ -168,6 +168,7 @@ Official announcement: N/A
 * *Improvements*
 	* Added Local Business options:
 		* Business Telephone
+	* Added Schema itemprop meta tags for business telephone, currenciesAccepted, paymentAccepted, and priceRange.
 * *Bugfixes*
 	* None
 * *Developer Notes*
