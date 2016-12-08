@@ -64,6 +64,8 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 		* Accepts Reservations
 * Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
+= Quick List of Features (Continued) =
+
 **WPSSO PLM Pro / Power-User Features**
 
 * Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).

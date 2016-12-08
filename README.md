@@ -75,6 +75,8 @@
 <li>Combine WPSSO PLM with the <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro</a> extension to include complete Place and Local Business using Schema JSON-LD markup.</li>
 </ul>
 
+<h4>Quick List of Features (Continued)</h4>
+
 <p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
 
 <ul>
