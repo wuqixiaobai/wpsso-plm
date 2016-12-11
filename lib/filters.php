@@ -167,8 +167,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_addr_currencies_accepted' => 'place:business:currencies_accepted',
 				'plm_addr_payment_accepted' => 'place:business:payment_accepted',
 				'plm_addr_price_range' => 'place:business:price_range',
-				'plm_addr_menu_url' => 'place:business:menu_url',
 				'plm_addr_accept_res' => 'place:business:accepts_reservations',
+				'plm_addr_menu_url' => 'place:business:menu_url',
 			) as $key => $mt_name ) {
 				if ( $key === 'plm_addr_accept_res' )
 					$og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
@@ -237,8 +237,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 						'plm_addr_currencies_accepted' => 'currenciesAccepted',
 						'plm_addr_payment_accepted' => 'paymentAccepted',
 						'plm_addr_price_range' => 'priceRange',
-						'plm_addr_menu_url' => 'menu',
 						'plm_addr_accept_res' => 'acceptsreservations',
+						'plm_addr_menu_url' => 'menu',
 					) as $key => $mt_name ) {
 						if ( $key === 'plm_addr_accept_res' )
 							$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
@@ -350,8 +350,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					return 'not_blank';
 					break;
 				case ( preg_match( '/^plm_addr_(name|alt_name|desc|phone|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
-				case ( preg_match( '/^plm_addr_(business_phone|currencies_accepted|payment_accepted|price_range)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(business_phone|price_range)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
+					break;
+				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted)$/', $key ) ? true : false ):
+					return 'csv_blank';	// comma-delimited strings that can be blank
 					break;
 				case ( preg_match( '/^plm_addr_(latitude|longitude|altitude|service_radius|po_box_number)$/', $key ) ? true : false ):
 					return 'blank_num';	// must be numeric (blank or zero is ok)
@@ -364,6 +367,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					break;
 				case 'plm_addr_menu_url':
 					return 'url';
+					break;
+				case 'plm_addr_order_urls':
+					return 'csv_urls';
 					break;
 				case 'plm_addr_accept_res':
 				case ( preg_match( '/^plm_addr_day_[a-z]+$/', $key ) ? true : false ):
@@ -460,11 +466,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-plm_addr_price_range':
 					$text = __( 'The price range of goods or services provided by the local business (example: $10-100).', 'wpsso-plm' );
 					break;
+				case 'tooltip-plm_addr_accept_res':
+					$text = __( 'This food establishment accepts reservations.', 'wpsso-plm' );
+					break;
 				case 'tooltip-plm_addr_menu_url':
 					$text = __( 'The menu URL for this food establishment (fast food restaurant, ice cream shop, restaurant, etc.)', 'wpsso-plm' );
 					break;
-				case 'tooltip-plm_addr_accept_res':
-					$text = __( 'This food establishment accepts reservations.', 'wpsso-plm' );
+				case 'tooltip-plm_addr_order_urls':
+					$text = __( 'Comma-delimited web and app URLs to order products.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_add_to':
 					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) );

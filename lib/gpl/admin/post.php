@@ -139,13 +139,17 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$table_rows['plm_addr_'.$opt_name] = $form->get_th_html( $opt_label, 'medium', 'plm_addr_'.$opt_name ). 
 				'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
 
+			$table_rows['plm_addr_accept_res'] = $form->get_th_html( _x( 'Accepts Reservations',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_accept_res' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_checkbox( 'plm_addr_accept_res' ).'</td>';
+
 			$table_rows['plm_addr_menu_url'] = $form->get_th_html( _x( 'Food Menu URL',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_menu_url' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'wide' ).'</td>';
 
-			$table_rows['plm_addr_accept_res'] = $form->get_th_html( _x( 'Accepts Reservations',
-				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_accept_res' ). 
-			'<td class="blank" colspan="3">'.$form->get_no_checkbox( 'plm_addr_accept_res' ).'</td>';
+			$table_rows['plm_addr_order_urls'] = $form->get_th_html( _x( 'Order Action URL(s)',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_order_urls' ). 
+			'<td class="blank" colspan="3">'.$form->get_no_input_value( '', 'wide' ).'</td>';
 
 			return $table_rows;
 		}
