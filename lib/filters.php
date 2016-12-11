@@ -176,7 +176,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					if ( $key === 'plm_addr_accept_res' )
 						$og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
 					elseif ( $key === 'plm_addr_order_urls' )
-						$og[$mt_name] = explode( ',', $addr_opts[$key] );
+						$og[$mt_name] =  SucomUtil::explode_csv( $addr_opts[$key] );
 					else $og[$mt_name] = $addr_opts[$key];
 				} else $og[$mt_name] = '';
 			}
