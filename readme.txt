@@ -161,7 +161,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.5-dev1 (2016/12/11)**
+**Version 2.2.5-dev2 (2016/12/11)**
 
 Official announcement: N/A
 
@@ -252,6 +252,10 @@ Official announcement: N/A
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.5-dev2 =
+
+(2016/12/11) Added a new "Order Action URL(s)" option.
 
 = 2.2.4-1 =
 
