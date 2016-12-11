@@ -490,7 +490,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'The menu URL for this food establishment (fast food restaurant, ice cream shop, restaurant, etc.)', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_order_urls':
-					$text = __( 'Comma-delimited web and app URLs to order products.', 'wpsso-plm' );
+					$text = __( 'Comma-delimited website and mobile app URLs to order products. The WPSSO JSON extension is required to add Order Action URL(s) to the Schema potentialAction property.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_add_to':
 					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) );

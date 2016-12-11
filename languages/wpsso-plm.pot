@@ -229,7 +229,10 @@ msgid ""
 msgstr ""
 
 #: lib/filters.php:493
-msgid "Comma-delimited web and app URLs to order products."
+msgid ""
+"Comma-delimited website and mobile app URLs to order products. The WPSSO "
+"JSON extension is required to add Order Action URL(s) to the Schema "
+"potentialAction property."
 msgstr ""
 
 #: lib/filters.php:496
