@@ -161,7 +161,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.5-dev2 (2016/12/11)**
+**Version 2.2.5-rc1 (2016/12/11)**
 
 Official announcement: N/A
 
@@ -172,7 +172,7 @@ Official announcement: N/A
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Added a 'wpsso_json_prop_https_schema_org_potentialaction' hook to include "Order Action URL(s)" in the main entity Schema markup.
+	* Added a filter hook to include "Order Action URL(s)" in the main entity Schema markup.
 
 **Version 2.2.4-1 (2016/11/25)**
 
@@ -253,9 +253,9 @@ Official announcement: N/A
 
 == Upgrade Notice ==
 
-= 2.2.5-dev2 =
+= 2.2.5-rc1 =
 
-(2016/12/11) Added a new "Order Action URL(s)" option.
+(2016/12/11) Added a new "Order Action URL(s)" option. Added a filter hook to include "Order Action URL(s)" in the main entity Schema markup.
 
 = 2.2.4-1 =
 
