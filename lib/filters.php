@@ -31,16 +31,17 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p =& $plugin;
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'get_defaults' => 1,			// option defaults
-				'get_md_defaults' => 1,			// meta data defaults
-				'get_post_options' => 1,		// meta data post options
-				'og_prefix_ns' => 1,			// open graph namespace
-				'og_seed' => 3,				// open graph meta tags
-				'json_array_schema_type_ids' => 2,	// $type_ids, $mod
-				'schema_meta_itemprop' => 4,		// $mt_schema, $mod, $mt_og, $page_type_id
-				'schema_noscript_array' => 4,		// $ret, $mod, $mt_og, $page_type_id
-				'schema_type_id' => 3,			// $type_id, $mod, $is_md_type
-				'get_place_options' => 3,		// $opts, $mod, $place_id
+				'get_defaults' => 1,					// option defaults
+				'get_md_defaults' => 1,					// meta data defaults
+				'get_post_options' => 1,				// meta data post options
+				'og_prefix_ns' => 1,					// open graph namespace
+				'og_seed' => 3,						// open graph meta tags
+				'json_prop_https_schema_org_potentialaction' => 5,	// $action_data, $mod, $mt_og, $page_type_id, $is_main
+				'json_array_schema_type_ids' => 2,			// $type_ids, $mod
+				'schema_meta_itemprop' => 4,				// $mt_schema, $mod, $mt_og, $page_type_id
+				'schema_noscript_array' => 4,				// $ret, $mod, $mt_og, $page_type_id
+				'schema_type_id' => 3,					// $type_id, $mod, $is_md_type
+				'get_place_options' => 3,				// $opts, $mod, $place_id
 			) );
 
 			if ( is_admin() ) {
@@ -169,13 +170,29 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_addr_price_range' => 'place:business:price_range',
 				'plm_addr_accept_res' => 'place:business:accepts_reservations',
 				'plm_addr_menu_url' => 'place:business:menu_url',
+				'plm_addr_order_urls' => 'place:business:order_url',
 			) as $key => $mt_name ) {
-				if ( $key === 'plm_addr_accept_res' )
-					$og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
-				else $og[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
+				if ( isset( $addr_opts[$key] ) ) {
+					if ( $key === 'plm_addr_accept_res' )
+						$og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
+					elseif ( $key === 'plm_addr_order_urls' )
+						$og[$mt_name] = explode( ',', $addr_opts[$key] );
+					else $og[$mt_name] = $addr_opts[$key];
+				} else $og[$mt_name] = '';
 			}
 
 			return $og;
+		}
+
+		public function filter_json_prop_https_schema_org_potentialaction( $action_data, $mod, $mt_og, $page_type_id, $is_main ) {
+			if ( $is_main && ! empty( $mt_og['place:business:order_url'] ) ) {
+				$action_data[] = array(
+					'@context' => 'https://schema.org',
+					'@type' => 'OrderAction',
+					'target' => $mt_og['place:business:order_url'],
+				);
+			}
+			return $action_data;
 		}
 
 		public function filter_json_array_schema_type_ids( $type_ids, $mod ) {
