@@ -60,8 +60,9 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 		* Currencies Accepted
 		* Payment Accepted
 		* Price Range
-		* Food Menu URL
 		* Accepts Reservations
+		* Food Menu URL
+		* Order Action URL(s)
 * Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
 = Quick List of Features (Continued) =

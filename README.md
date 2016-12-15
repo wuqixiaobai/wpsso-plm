@@ -68,8 +68,9 @@
 <li>Currencies Accepted</li>
 <li>Payment Accepted</li>
 <li>Price Range</li>
-<li>Food Menu URL</li>
 <li>Accepts Reservations</li>
+<li>Food Menu URL</li>
+<li>Order Action URL(s)</li>
 </ul></li>
 </ul></li>
 <li>Combine WPSSO PLM with the <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro</a> extension to include complete Place and Local Business using Schema JSON-LD markup.</li>
