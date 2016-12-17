@@ -164,8 +164,6 @@ Note that the production stage level can be incremented on occasion for simple t
 
 **Version 2.2.5-1 (2016/12/12)**
 
-Official announcement: N/A
-
 * *New Features*
 	* None
 * *Improvements*
@@ -176,8 +174,6 @@ Official announcement: N/A
 	* Added a filter hook to include "Order Action URL(s)" in the main entity Schema markup.
 
 **Version 2.2.4-1 (2016/11/25)**
-
-Official announcement: N/A
 
 * *New Features*
 	* None
@@ -193,8 +189,6 @@ Official announcement: N/A
 
 **Version 2.2.3-1 (2016/11/12)**
 
-Official announcement: N/A
-
 * *New Features*
 	* None
 * *Improvements*
@@ -207,8 +201,6 @@ Official announcement: N/A
 		* Renamed the WpssoSchema::get_schema_types() method to WpssoSchema::get_schema_types_array().
 
 **Version 2.2.2-1 (2016/11/03)**
-
-Official announcement: N/A
 
 * *New Features*
 	* None
@@ -223,8 +215,6 @@ Official announcement: N/A
 
 **Version 2.2.1-1 (2016/10/22)**
 
-Official announcement: N/A
-
 * *New Features*
 	* None
 * *Improvements*
@@ -237,8 +227,6 @@ Official announcement: N/A
 		* Renamed the Social Settings 'header' index name to 'text'.
 
 **Version 2.2.0-1 (2016/10/15)**
-
-Official announcement: N/A
 
 * *New Features*
 	* Added Local Business options:
