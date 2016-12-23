@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.2.4-1\n"
+"Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.2.5-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2016-12-11 13:50+1000\n"
-"PO-Revision-Date: 2016-12-11 13:54+1000\n"
+"POT-Creation-Date: 2016-12-24 08:45+1100\n"
+"PO-Revision-Date: 2016-12-24 09:11+1100\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -166,15 +166,15 @@ msgstr "La zone géographique où un service est fourni, en mètres autour de l�
 
 #: lib/filters.php:478
 msgid "A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 currency codes</a> accepted by the local business (example: USD, CAD)."
-msgstr "Une liste séparée par des virgules des <a href=\"https://fr.wikipedia.org/wiki/ISO_4217\">codes ISO 4217 des devises</a> acceptées par l’entreprise locale (exemple : USD, CAD)."
+msgstr "Une liste séparée par des virgules des <a href=\"https://fr.wikipedia.org/wiki/ISO_4217\">codes ISO 4217 des devises</a> acceptées par l’entreprise locale (exemple: USD, CAD)."
 
 #: lib/filters.php:481
 msgid "A comma-delimited list of payment options accepted by the local business (example: Cash, Credit Card)."
-msgstr "Une liste séparée par des virgules des modes de paiement acceptés par l’entreprise locale (exemple : Cash, Credit Card)."
+msgstr "Une liste séparée par des virgules des modes de paiement acceptés par l’entreprise locale (exemple: Cash, Credit Card)."
 
 #: lib/filters.php:484
 msgid "The price range of goods or services provided by the local business (example: $10-100)."
-msgstr "L'échelle de prix des biens ou services fournis par l’entreprise locale (exemple : $10-100)."
+msgstr "L'échelle de prix des biens ou services fournis par l’entreprise locale (exemple: $10-100)."
 
 #: lib/filters.php:487
 msgid "This food establishment accepts reservations."
