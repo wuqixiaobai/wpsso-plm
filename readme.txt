@@ -103,12 +103,6 @@ Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and vid
 &lt;/head&gt;
 </pre>
 
-= Available in Multiple Languages =
-
-* English (US)
-* French (France)
-* More to come...
-
 = Extends the WPSSO Plugin =
 
 The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.
