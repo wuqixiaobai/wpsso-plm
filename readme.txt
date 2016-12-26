@@ -7,7 +7,7 @@ License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Donate Link: https://wpsso.com/?utm_source=wpssoplm-readme-donate
 Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
-Tags: wpsso, seo, place, location, address, venue, restaurant, longitude, latitude, local, business, local business, seasonal, hours, coordinates
+Tags: local, seo, place, location, address, venue, restaurant, longitude, latitude, business, local business, seasonal, hours, coordinates
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7
