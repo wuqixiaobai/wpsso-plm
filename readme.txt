@@ -192,7 +192,7 @@ Note that the production stage level can be incremented on occasion for simple t
 * *Developer Notes*
 	* Minor code changes required for WPSSO v3.37.1-1.
 		* Renamed the 'wpsso_schema_head_type' filter to 'wpsso_schema_type_id' for WPSSO v3.37.1-1.
-		* Renamed the WpssoSchema::get_schema_types() method to WpssoSchema::get_schema_types_array().
+		* Renamed the WpssoSchema get_schema_types() method to get_schema_types_array().
 
 **Version 2.2.2-1 (2016/11/03)**
 
@@ -204,7 +204,7 @@ Note that the production stage level can be incremented on occasion for simple t
 	* Fixed drop-down values allowing the adding of a "[New Address]".
 * *Developer Notes*
 	* Minor code changes required for WPSSO v3.37.0-1:
-		* Renamed the SucomUtil::after_key() method to SucomUtil::get_after_key().
+		* Renamed the SucomUtil after_key() method to get_after_key().
 		* Renamed the 'wpsso_json_array_type_ids' filter to 'wpsso_json_array_schema_type_ids'.
 
 **Version 2.2.1-1 (2016/10/22)**
