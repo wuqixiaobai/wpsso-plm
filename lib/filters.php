@@ -53,8 +53,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'messages_tooltip' => 2,
 				) );
 				$this->p->util->add_plugin_filters( $this, array( 
-					'status_gpl_features' => 3,
-					'status_pro_features' => 3,
+					'status_gpl_features' => 4,
+					'status_pro_features' => 4,
 				), 10, 'wpssoplm' );			// hook into our own filters
 			}
 		}
@@ -499,18 +499,18 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $text;
 		}
 
-		public function filter_status_gpl_features( $features, $lca, $info ) {
+		public function filter_status_gpl_features( $features, $lca, $info, $pkg ) {
 			$has_addr_for_home = $this->p->options['plm_addr_for_home'] === '' ||
 				$this->p->options['plm_addr_for_home'] === 'none' ? false : true;	// can be 0
 			$features['(code) Place / Location for Non-static Homepage'] = array( 'status' => $has_addr_for_home ? 'on' : 'off' );
 			return $features;
 		}
 
-		public function filter_status_pro_features( $features, $lca, $info ) {
-			$aop = $this->p->check->aop( $lca, true, $this->p->is_avail['aop'] );
+		public function filter_status_pro_features( $features, $lca, $info, $pkg ) {
 			$features['(tool) Custom Place / Location and Local Business Meta'] = array( 
-				'status' => $aop ? 'on' : 'off',
-				'td_class' => $aop ? '' : 'blank',
+				'td_class' => $pkg['aop'] ? '' : 'blank',
+				'purchase' => $pkg['purchase'],
+				'status' => $pkg['aop'] ? 'on' : 'off',
 			);
 			return $features;
 		}
