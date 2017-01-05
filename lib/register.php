@@ -13,7 +13,6 @@ if ( ! class_exists( 'WpssoPlmRegister' ) ) {
 	class WpssoPlmRegister {
 
 		public function __construct() {
-
 			register_activation_hook( WPSSOPLM_FILEPATH, array( &$this, 'network_activate' ) );
 			//register_deactivation_hook( WPSSOPLM_FILEPATH, array( &$this, 'network_deactivate' ) );	// nothing to do
 
