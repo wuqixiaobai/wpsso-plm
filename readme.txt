@@ -156,6 +156,17 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 2.2.6-dev1 (2017/01/06)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Added a 'plugins_loaded' action hook to load the plugin text domain.
+
 **Version 2.2.5-1 (2016/12/12)**
 
 * *New Features*
@@ -235,6 +246,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.6-dev1 =
+
+(2017/01/06) Added a 'plugins_loaded' action hook to load the plugin text domain.
 
 = 2.2.5-1 =
 
