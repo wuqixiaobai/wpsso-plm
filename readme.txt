@@ -5,7 +5,7 @@ Text Domain: wpsso-plm
 Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
-Donate Link: https://wpsso.com/?utm_source=wpssoplm-readme-donate
+Donate Link: https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-donate
 Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
 Tags: local, seo, place, location, address, venue, restaurant, longitude, latitude, business, local business, seasonal, hours, coordinates
 Contributors: jsmoriss
