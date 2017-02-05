@@ -38,7 +38,7 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 **WPSSO PLM Free / Basic Features**
 
 * Extends the features of either the Free or Pro versions of WPSSO.
-* Select an Address for a Non-static Homepage
+* Select an Address for a Blog Front Page
 * Manage Multiple Addresses / Contact Information
 	* Pinterest Rich Pin / Schema Place
 		* Street Address

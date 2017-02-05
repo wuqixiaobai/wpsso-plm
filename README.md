@@ -36,7 +36,7 @@
 
 <ul>
 <li>Extends the features of either the Free or Pro versions of WPSSO.</li>
-<li>Select an Address for a Non-static Homepage</li>
+<li>Select an Address for a Blog Front Page</li>
 <li>Manage Multiple Addresses / Contact Information
 
 <ul>
