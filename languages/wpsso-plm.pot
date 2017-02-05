@@ -428,7 +428,7 @@ msgstr ""
 
 #: lib/submenu/plm-general.php:64
 msgctxt "option label"
-msgid "Address for Non-static Homepage"
+msgid "Address for Blog Front Page"
 msgstr ""
 
 #: lib/submenu/plm-general.php:69

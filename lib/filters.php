@@ -502,7 +502,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_status_gpl_features( $features, $lca, $info, $pkg ) {
 			$has_addr_for_home = $this->p->options['plm_addr_for_home'] === '' ||
 				$this->p->options['plm_addr_for_home'] === 'none' ? false : true;	// can be 0
-			$features['(code) Place / Location for Non-static Homepage'] = array( 'status' => $has_addr_for_home ? 'on' : 'off' );
+			$features['(code) Place / Location for Blog Front Page'] = array( 'status' => $has_addr_for_home ? 'on' : 'off' );
 			return $features;
 		}
 

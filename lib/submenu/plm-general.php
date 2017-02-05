@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 					$this->form->__address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, true );	// $add_none = true
 
-					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for Non-static Homepage',
+					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for Blog Front Page',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_for_home' ).
 					'<td>'.$this->form->get_select( 'plm_addr_for_home', $this->form->__address_names,
 						'long_name', '', true, false, true ).'</td>';
