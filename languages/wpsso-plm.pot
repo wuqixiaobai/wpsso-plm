@@ -82,12 +82,12 @@ msgstr ""
 #: lib/filters.php:424
 msgid ""
 "Select an address to include as a Schema <em>Place</em> or <em>Local "
-"Business</em> in your non-static home page."
+"Business</em> in your blog (non-static) front page."
 msgstr ""
 
 #: lib/filters.php:424
 msgid ""
-"An address for a static home page can be selected in the %1$s metabox when "
+"An address for a static front page can be selected in the %1$s metabox when "
 "editing the static page."
 msgstr ""
 
@@ -428,7 +428,7 @@ msgstr ""
 
 #: lib/submenu/plm-general.php:64
 msgctxt "option label"
-msgid "Address for Blog Front Page"
+msgid "Address for a Blog Front Page"
 msgstr ""
 
 #: lib/submenu/plm-general.php:69

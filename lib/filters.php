@@ -421,7 +421,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			switch ( $idx ) {
 				case 'tooltip-plm_addr_for_home':
-					$text = __( 'Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your non-static home page.', 'wpsso-plm' ).' '.sprintf( __( 'An address for a static home page can be selected in the %1$s metabox when editing the static page.', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso-plm' ) );
+					$text = __( 'Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page.', 'wpsso-plm' ).' '.sprintf( __( 'An address for a static front page can be selected in the %1$s metabox when editing the static page.', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso-plm' ) );
 					break;
 				case 'tooltip-plm_addr_def_country':
 					$text = __( 'A default country to use when creating a new address.', 'wpsso-plm' );
