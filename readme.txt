@@ -40,7 +40,7 @@ As yourself, "How does the location information relate to the webpage content?"
 * If the location information is directly about your content &mdash; for example, if the content is about a house; the location of that house &mdash; then all you need is the WPSSO PLM extension.
 * If the location information is instead about the publisher of that content (and not the content itself), then you will need to use both the WPSSO ORG and WPSSO PLM extensions.
 * The Free version adds location information to the main entity (aka the primary Schema type) of a *blog front page*. If you use a *static front page*, or would like to include location information about the content of other posts / pages, you'll need the Pro version.
-* WPSSO can express some location information using meta tags, but consider using the WPSSO JSON extension as well to include all of the available location information as Schema JSON-LD markup.
+* WPSSO can express some location information using meta tags, but consider using the WPSSO JSON extension to include all of the available location information in the Schema JSON-LD markup for Google.
 
 = Quick List of Features =
 
