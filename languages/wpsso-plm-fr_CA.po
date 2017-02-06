@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.2.6-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2016-12-24 08:45+1100\n"
-"PO-Revision-Date: 2017-01-21 07:29+0800\n"
+"POT-Creation-Date: 2017-02-06 09:28+0800\n"
+"PO-Revision-Date: 2017-02-06 09:29+0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -80,12 +80,12 @@ msgid "Select an address or enter a customized address bellow."
 msgstr "Sélectionnez une adresse ou complétez une adresse personnalisée ci-dessous."
 
 #: lib/filters.php:424
-msgid "Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your non-static home page."
-msgstr "Sélectionnez une adresse a utiliser dans le Schéma <em>Place</em> ou un <em>d'Entreprise Locale</em> pour votre page d'accueil non-statique."
+msgid "Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page."
+msgstr "Sélectionnez une adresse a utiliser dans le Schéma <em>Place</em> ou un <em>d'Entreprise Locale</em> pour votre page blog (non-statique) d'avant."
 
 #: lib/filters.php:424
-msgid "An address for a static home page can be selected in the %1$s metabox when editing the static page."
-msgstr "Une adresse pour une page d'accueil statique peut être sélectionnée dans la métabox %1$s lors de la rédaction de la page statique."
+msgid "An address for a static front page can be selected in the %1$s metabox when editing the static page."
+msgstr "Une adresse pour une page statique d'avant peut être sélectionnée dans la métabox %1$s lors de la rédaction de la page statique."
 
 #: lib/filters.php:424 lib/filters.php:496
 msgctxt "metabox title"
@@ -378,8 +378,8 @@ msgstr "Adresses / Entreprise Locale"
 
 #: lib/submenu/plm-general.php:64
 msgctxt "option label"
-msgid "Address for Non-static Homepage"
-msgstr "Adresse pour page d'accueil non-statique"
+msgid "Address for a Blog Front Page"
+msgstr "Adresse pour page blog d'avant"
 
 #: lib/submenu/plm-general.php:69
 msgctxt "option label"
@@ -401,15 +401,15 @@ msgctxt "option comment"
 msgid "delete this address"
 msgstr "supprimer cette adresse"
 
-#: wpsso-plm.php:80
+#: wpsso-plm.php:84
 msgid "%1$s is an extension for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating the %4$s extension."
 msgstr "%1$s est une extension pour %2$s &mdash; s'il vous plaît installer et activer %3$s avant d'essayer de re-activer l'extension %4$s."
 
-#: wpsso-plm.php:82
+#: wpsso-plm.php:86
 msgid "The %1$s extension requires the %2$s plugin &mdash; please install and activate the %3$s plugin."
 msgstr "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer l'extension %3$s."
 
-#: wpsso-plm.php:143
+#: wpsso-plm.php:147
 msgid "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently installed)."
 msgstr "L'extension %1$s v%2$s requiert l'utilisation de %3$s v%4$s ou plus récente (v%5$s est actuellement installée)."
 
