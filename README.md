@@ -30,14 +30,25 @@
 <p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> creates complete and accurate meta tags and Schema markup for Social Sharing Optimization (SSO) and SEO.</p>
 </blockquote>
 
+<h4>How Do I Use It?</h4>
+
+<p>As yourself, "How does the location information relate to the webpage content?"</p>
+
+<ul>
+<li>If the location information is directly about your content &mdash; for example, if the content is about a house; the location of that house &mdash; then all you need is the WPSSO PLM extension.</li>
+<li>If the location information is instead about the publisher of that content (and not the content itself), then you will need to use both the WPSSO ORG and WPSSO PLM extensions.</li>
+<li>The Free version adds location information to the main entity (aka the primary Schema type) of a <em>blog front page</em>. If you use a <em>static front page</em>, or would like to include location information about the content of other posts / pages, you'll need the Pro version.</li>
+<li>WPSSO can express some location information using meta tags, but consider using the WPSSO JSON extension as well to include all the location information as Schema JSON-LD markup.</li>
+</ul>
+
 <h4>Quick List of Features</h4>
 
 <p><strong>WPSSO PLM Free / Basic Features</strong></p>
 
 <ul>
 <li>Extends the features of either the Free or Pro versions of WPSSO.</li>
-<li>Select an Address for a Blog Front Page</li>
-<li>Manage Multiple Addresses / Contact Information
+<li>Select an Address for a Blog Front Page (added to the main entity of the blog front page).</li>
+<li>Manage Multiple Addresses / Contact Information:
 
 <ul>
 <li>Pinterest Rich Pin / Schema Place
@@ -82,39 +93,15 @@
 
 <ul>
 <li>Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).</li>
-<li>Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types. Allows the selection of an existing Address, or entering custom Address information.</li>
+<li>Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types.</li>
+<li>Allows the selection of an existing Address, or custom Address information, to include location information for the webpage content.</li>
 </ul>
 
-<h4>Example Meta Tags and Markup</h4>
+<h4>Markup Examples</h4>
 
-<p>Example WPSSO PLM meta tags for a Restaurant (Local Business). The image and video meta tags for the restaurant have been excluded for brevety. ;-) The <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro</a> extension can be used to include complete Schema JSON-LD markup instead of Schema meta tags.</p>
-
-<pre>
-&lt;head itemscope itemtype="https://schema.org/Restaurant"&gt;
-    &lt;meta property="og:type" content="place"/&gt;
-    &lt;meta property="og:latitude" content="10"/&gt;
-    &lt;meta property="og:longitude" content="-10"/&gt;
-
-    &lt;meta property="place:street_address" content="123 A Road"/&gt;
-    &lt;meta property="place:locality" content="Cityname"/&gt;
-    &lt;meta property="place:region" content="Somestate"/&gt;
-    &lt;meta property="place:postal_code" content="123456"/&gt;
-    &lt;meta property="place:country_name" content="US"/&gt;
-    &lt;meta property="place:location:latitude" content="10"/&gt;
-    &lt;meta property="place:location:longitude" content="-10"/&gt;
-
-    &lt;noscript itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification"&gt;
-        &lt;meta itemprop="dayofweek" content="saturday"/&gt;
-        &lt;meta itemprop="opens" content="12:00"/&gt;
-        &lt;meta itemprop="closes" content="22:00"/&gt;
-        &lt;meta itemprop="validfrom" content="2016-05-01"/&gt;
-        &lt;meta itemprop="validthrough" content="2016-09-01"/&gt;
-    &lt;/noscript&gt;
-
-    &lt;meta itemprop="menu" content="http://restaurant.example.com/restaurant-menu.html"/&gt;
-    &lt;meta itemprop="acceptsreservations" content="true"/&gt;
-&lt;/head&gt;
-</pre>
+<ul>
+<li><a href="http://wpsso.com/codex/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/">Markup Example for a Restaurant</a> using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).</li>
+</ul>
 
 <h4>Extends the WPSSO Plugin</h4>
 
