@@ -35,12 +35,12 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 
 = How Do I Use It? =
 
-As yourself, "How does the location information relate to the webpage content?"
+The WPSSO PLM extension can be used in two different ways:
 
-* If the location information is directly about your content &mdash; for example, if the content is about a house; the location of that house &mdash; then all you need is the WPSSO PLM extension.
-* If the location information is instead about the publisher of that content (and not the content itself), then you will need to use both the WPSSO ORG and WPSSO PLM extensions.
-* The Free version adds location information to the main entity (aka the primary Schema type) of a *blog front page*. If you use a *static front page*, or would like to include location information about the content in other posts / pages, you'll need the Pro version.
-* WPSSO can express some location information using meta tags, but consider using the WPSSO JSON extension to include all of the available location information in the Schema JSON-LD markup for Google.
+* To provide location information for the content of the current webpage.
+* To provide location information for an Organization, which in turn is related to the content (for example, the content publisher). To assign location information to an Organization, you will also need to use the WPSSO ORG extension.
+
+The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
 = Quick List of Features =
 
