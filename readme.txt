@@ -17,21 +17,9 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 
 == Description ==
 
-<p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" style="width:33%;min-width:128px;max-width:256px;float:left;margin:0 40px 20px 0;" /><strong>Include location / local business meta tags for your website, business, and/or webpage content:</strong></p>
+<p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="256" height="256" style="width:33%;min-width:128px;max-width:256px;float:left;margin:0 40px 20px 0;" /><strong>Provides location / local business information for your website, business, and/or content.</strong></p>
 
-<ul>
-<li>Geo coordinates (latitude, longitude, altitude).</li>
-<li>Store or business location / street address.</li>
-<li>Business hours (daily and seasonal).</li>
-<li>Restaurant menu URL.</li>
-<li>Service area.</li>
-</ul>
-
-<p><strong>Let Pinterest, Facebook and Google know about your locations</strong> &mdash; WPSSO PLM includes Facebook / Open Graph <em>Location</em> Pinterest Rich Pin / Schema <em>Place</em> and Google / Schema <em>Local Business</em> meta tags in your webpages.</p>
-
-<blockquote>
-<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> creates complete and accurate meta tags and Schema markup for Social Sharing Optimization (SSO) and SEO.</p>
-</blockquote>
+<p><strong>Let Pinterest, Facebook and Google know about your locations</strong> &mdash; WPSSO PLM includes Pinterest Rich Pin / Schema <em>Place</em>, Facebook / Open Graph <em>Location</em>, and Google / Schema <em>Local Business</em> meta tags in your webpages.</p>
 
 = How Do I Use It? =
 
@@ -41,6 +29,10 @@ The WPSSO PLM extension can be used in two different ways:
 * To provide location information for an Organization, which in turn is related to the content (for example, the content publisher). To assign location information to an Organization, you will also need to use the WPSSO ORG extension.
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
+
+<blockquote>
+<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> creates complete and accurate meta tags and Schema markup for Social Sharing Optimization (SSO) and SEO.</p>
+</blockquote>
 
 = Quick List of Features =
 
