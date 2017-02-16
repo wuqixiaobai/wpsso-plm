@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.2.6-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2017-02-06 09:28+0800\n"
-"PO-Revision-Date: 2017-02-06 09:29+0800\n"
+"PO-Revision-Date: 2017-02-16 16:14+0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -63,7 +63,7 @@ msgstr "Adresse postale"
 #: lib/config-gettext-extract.php:12
 msgctxt "plugin description"
 msgid "WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags."
-msgstr "Extension WPSSO pour fournir des balises méta Pinterest Place, Facebook / Open Graph de Position, et Schéma d'Entreprise Locale."
+msgstr "Extension WPSSO pour fournir des balises méta Pinterest place, Facebook / Open Graph de position, et Schéma d'entreprise locale."
 
 #: lib/filters.php:345
 msgctxt "option value"
@@ -423,7 +423,7 @@ msgstr "https://surniaulula.com/extend/plugins/wpsso-plm/"
 
 #. Description of the plugin/theme
 msgid "WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business + Local SEO meta tags."
-msgstr "Extension WPSSO pour fournir des balises méta Pinterest Place, Facebook / Open Graph de Position, et Schéma d'Entreprise Locale."
+msgstr "Extension WPSSO pour fournir des balises méta Pinterest place, Facebook / Open Graph de position, et Schéma d'entreprise locale."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
