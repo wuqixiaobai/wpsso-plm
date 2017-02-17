@@ -131,6 +131,17 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 2.2.7-dev2 (2017/02/17)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Updated the SucomUtil::rename_keys() call for WPSSO v3.39.9-1 compatibility.
+
 **Version 2.2.6-1 (2017/01/08)**
 
 * *New Features*
@@ -221,6 +232,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.7-dev2 =
+
+(2017/02/17) Minor update for WPSSO v3.39.9-1 compatibility.
 
 = 2.2.6-1 =
 
