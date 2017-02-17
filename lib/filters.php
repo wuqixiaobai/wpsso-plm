@@ -78,7 +78,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$opts_version = empty( $opts['plugin_wpssoplm_opt_version'] ) ?
 				0 : $opts['plugin_wpssoplm_opt_version'];
 			if ( $opts_version <= 8 ) {
-				$opts = SucomUtil::rename_keys( $opts, array(
+				SucomUtil::rename_keys( $opts, array(
 					'plm_streetaddr' => 'plm_addr_streetaddr',
 					'plm_po_box_number' => 'plm_addr_po_box_number',
 					'plm_city' => 'plm_addr_city',
@@ -88,7 +88,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_latitude' => 'plm_addr_latitude',
 					'plm_longitude' => 'plm_addr_longitude',
 					'plm_altitude' => 'plm_addr_altitude',
-				) );
+				) );	// $key_mods = true
 			}
 			return $opts;
 		}
