@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,					// option defaults
 				'get_md_defaults' => 1,					// meta data defaults
-				'rename_meta_options_keys' => 1,				// meta data post options
+				'rename_md_options_keys' => 1,				// meta data post options
 				'og_prefix_ns' => 1,					// open graph namespace
 				'og_seed' => 3,						// open graph meta tags
 				'json_prop_https_schema_org_potentialaction' => 5,	// $action_data, $mod, $mt_og, $page_type_id, $is_main
@@ -74,7 +74,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			);
 		}
 
-		public function filter_rename_meta_options_keys( $options_keys ) {
+		public function filter_rename_md_options_keys( $options_keys ) {
 			$options_keys['wpssoplm'] = array(
 				8 => array(
 					'plm_streetaddr' => 'plm_addr_streetaddr',
