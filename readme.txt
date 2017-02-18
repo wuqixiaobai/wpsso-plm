@@ -131,7 +131,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.7-rc1 (2017/02/18)**
+**Version 2.2.7-1 (2017/02/19)**
 
 * *New Features*
 	* None
@@ -234,9 +234,9 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
-= 2.2.7-rc1 =
+= 2.2.7-1 =
 
-(2017/02/18) Minor update for WPSSO v3.39.9-1 compatibility.
+(2017/02/19) Minor update for WPSSO v3.39.9-1 compatibility.
 
 = 2.2.6-1 =
 
