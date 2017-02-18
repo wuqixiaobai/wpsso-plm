@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,					// option defaults
 				'get_md_defaults' => 1,					// meta data defaults
-				'get_post_options' => 1,				// meta data post options
+				'rename_meta_options_keys' => 1,				// meta data post options
 				'og_prefix_ns' => 1,					// open graph namespace
 				'og_seed' => 3,						// open graph meta tags
 				'json_prop_https_schema_org_potentialaction' => 5,	// $action_data, $mod, $mt_og, $page_type_id, $is_main
@@ -74,11 +74,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			);
 		}
 
-		public function filter_get_post_options( $opts ) {
-			$opts_version = empty( $opts['plugin_wpssoplm_opt_version'] ) ?
-				0 : $opts['plugin_wpssoplm_opt_version'];
-			if ( $opts_version <= 8 ) {
-				SucomUtil::rename_keys( $opts, array(
+		public function filter_rename_meta_options_keys( $options_keys ) {
+			$options_keys['wpssoplm'] = array(
+				8 => array(
 					'plm_streetaddr' => 'plm_addr_streetaddr',
 					'plm_po_box_number' => 'plm_addr_po_box_number',
 					'plm_city' => 'plm_addr_city',
@@ -88,9 +86,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_latitude' => 'plm_addr_latitude',
 					'plm_longitude' => 'plm_addr_longitude',
 					'plm_altitude' => 'plm_addr_altitude',
-				) );	// $key_mods = true
-			}
-			return $opts;
+				)
+			);
+			return $options_keys;
 		}
 
 		public function filter_og_prefix_ns( $ns ) {
