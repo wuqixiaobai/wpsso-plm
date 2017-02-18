@@ -131,7 +131,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.7-rc1 (2017/02/17)**
+**Version 2.2.7-rc1 (2017/02/18)**
 
 * *New Features*
 	* None
@@ -140,7 +140,8 @@ Note that the production stage level can be incremented on occasion for simple t
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Updated the SucomUtil::rename_keys() call for WPSSO v3.39.9-1 compatibility.
+	* Minor update for WPSSO v3.39.9-1 compatibility:
+		* Added a hook for the new 'wpsso_rename_md_options_keys' filter.
 
 **Version 2.2.6-1 (2017/01/08)**
 
@@ -235,7 +236,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = 2.2.7-rc1 =
 
-(2017/02/17) Minor update for WPSSO v3.39.9-1 compatibility.
+(2017/02/18) Minor update for WPSSO v3.39.9-1 compatibility.
 
 = 2.2.6-1 =
 
