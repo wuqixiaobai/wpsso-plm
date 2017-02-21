@@ -105,6 +105,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				return $mt_og;     // abort
 
 			/*
+			 * og:type
+			 */
+			$og['og:type'] = 'place';	// pre-define to optimize
+
+			/*
 			 * place:name
 			 * place:street_address
 			 * place:po_box_number
