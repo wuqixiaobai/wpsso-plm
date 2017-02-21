@@ -34,8 +34,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'get_defaults' => 1,					// option defaults
 				'get_md_defaults' => 1,					// meta data defaults
 				'rename_md_options_keys' => 1,				// meta data post options
-				'og_prefix_ns' => 1,					// open graph namespace
-				'og_seed' => 3,						// open graph meta tags
+				'og_ns' => 1,						// open graph namespace
+				'og_seed' => 2,						// open graph meta tags
 				'json_prop_https_schema_org_potentialaction' => 5,	// $action_data, $mod, $mt_og, $page_type_id, $is_main
 				'json_array_schema_type_ids' => 2,			// $type_ids, $mod
 				'schema_meta_itemprop' => 4,				// $mt_schema, $mod, $mt_og, $page_type_id
@@ -91,17 +91,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $options_keys;
 		}
 
-		public function filter_og_prefix_ns( $ns ) {
+		public function filter_og_ns( $ns ) {
 			$ns['place'] = 'http://ogp.me/ns/place#';
 			return $ns;
 		}
 
-		public function filter_og_seed( $og, $use_post, $mod ) {
+		public function filter_og_seed( array $og, array $mod ) {
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
-
-			if ( ! is_array( $mod ) )
-				$mod = $this->p->util->get_page_mod( $use_post );	// get post/user/term id, module name, and module object reference
 
 			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) === false )
 				return $og;     // abort

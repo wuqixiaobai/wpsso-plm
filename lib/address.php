@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 				$this->p->debug->mark();
 		}
 
-		public static function has_place( array &$mod ) {
+		public static function has_place( array $mod ) {
 
 			$wpsso =& Wpsso::get_instance();
 			if ( $wpsso->debug->enabled )
