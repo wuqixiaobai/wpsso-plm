@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'get_defaults' => 1,					// option defaults
 				'get_md_defaults' => 1,					// meta data defaults
 				'rename_md_options_keys' => 1,				// meta data post options
-				'og_ns' => 1,						// open graph namespace
+				'og_type' => 2,						// open graph namespace
 				'og_seed' => 2,						// open graph meta tags
 				'json_prop_https_schema_org_potentialaction' => 5,	// $action_data, $mod, $mt_og, $page_type_id, $is_main
 				'json_array_schema_type_ids' => 2,			// $type_ids, $mod
@@ -91,22 +91,18 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $options_keys;
 		}
 
-		public function filter_og_ns( $ns ) {
-			$ns['place'] = 'http://ogp.me/ns/place#';
-			return $ns;
+		public function filter_og_type( $og_type, $mod ) {
+			if ( WpssoPlmAddress::has_place( $mod ) )
+				return 'place';
+			else return $og_type;
 		}
 
-		public function filter_og_seed( array $og, array $mod ) {
+		public function filter_og_seed( array $mt_og, array $mod ) {
 			if ( $this->p->debug->enabled )
 				$this->p->debug->mark();
 
 			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) === false )
-				return $og;     // abort
-
-			/*
-			 * og:type
-			 */
-			$og['og:type'] = 'place';
+				return $mt_og;     // abort
 
 			/*
 			 * place:name
@@ -118,7 +114,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 * place:country_name
 			 */
 			foreach ( WpssoPlmAddress::$place_mt as $key => $mt_name )
-				$og[$mt_name] = isset( $addr_opts[$key] ) && 
+				$mt_og[$mt_name] = isset( $addr_opts[$key] ) && 
 					$addr_opts[$key] !== 'none' ?
 						$addr_opts[$key] : '';
 
@@ -134,10 +130,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				! empty( $addr_opts['plm_addr_longitude'] ) ) {
 
 				foreach( array( 'place:location', 'og' ) as $mt_prefix ) {
-					$og[$mt_prefix.':latitude'] = $addr_opts['plm_addr_latitude'];
-					$og[$mt_prefix.':longitude'] = $addr_opts['plm_addr_longitude'];
+					$mt_og[$mt_prefix.':latitude'] = $addr_opts['plm_addr_latitude'];
+					$mt_og[$mt_prefix.':longitude'] = $addr_opts['plm_addr_longitude'];
 					if ( ! empty( $addr_opts['plm_altitude'] ) )
-						$og[$mt_prefix.':altitude'] = $addr_opts['plm_addr_altitude'];
+						$mt_og[$mt_prefix.':altitude'] = $addr_opts['plm_addr_altitude'];
 				}
 			}
 
@@ -149,7 +145,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				if ( ! empty( $addr_opts['plm_addr_day_'.$day] ) ) {
 					foreach ( array( 'open', 'close' ) as $hour ) {
 						$key = 'plm_addr_day_'.$day.'_'.$hour;
-						$og['place:business:day:'.$day.':'.$hour] = isset( $addr_opts[$key] ) ?
+						$mt_og['place:business:day:'.$day.':'.$hour] = isset( $addr_opts[$key] ) ?
 							$addr_opts[$key] : $addr_defs[$key];
 					}
 				}
@@ -169,14 +165,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			) as $key => $mt_name ) {
 				if ( isset( $addr_opts[$key] ) ) {
 					if ( $key === 'plm_addr_accept_res' )
-						$og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
+						$mt_og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
 					elseif ( $key === 'plm_addr_order_urls' )
-						$og[$mt_name] =  SucomUtil::explode_csv( $addr_opts[$key] );
-					else $og[$mt_name] = $addr_opts[$key];
-				} else $og[$mt_name] = '';
+						$mt_og[$mt_name] =  SucomUtil::explode_csv( $addr_opts[$key] );
+					else $mt_og[$mt_name] = $addr_opts[$key];
+				} else $mt_og[$mt_name] = '';
 			}
 
-			return $og;
+			return $mt_og;
 		}
 
 		public function filter_json_prop_https_schema_org_potentialaction( $action_data, $mod, $mt_og, $page_type_id, $is_main ) {
