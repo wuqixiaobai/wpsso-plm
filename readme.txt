@@ -131,7 +131,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.8-dev3 (2017/02/21)**
+**Version 2.2.8-dev4 (2017/02/21)**
 
 * *New Features*
 	* None
@@ -140,7 +140,7 @@ Note that the production stage level can be incremented on occasion for simple t
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Minor update for WPSSO v3.39.10-1 compatibility:
+	* Minor update for WPSSO v3.40.0-1 compatibility:
 		* Removed the $use_post argument from the 'wpsso_og_seed' filter.
 
 **Version 2.2.7-1 (2017/02/19)**
@@ -246,9 +246,9 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
-= 2.2.8-dev3 =
+= 2.2.8-dev4 =
 
-(2017/02/19) Minor update for WPSSO v3.39.10-1 compatibility.
+(2017/02/19) Minor update for WPSSO v3.40.0-1 compatibility.
 
 = 2.2.7-1 =
 
