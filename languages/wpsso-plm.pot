@@ -451,13 +451,13 @@ msgctxt "option comment"
 msgid "delete this address"
 msgstr ""
 
-#: wpsso-plm.php:82
+#: wpsso-plm.php:78
 msgid ""
 "%1$s is an extension for the %2$s plugin &mdash; please install and activate "
 "the %3$s plugin before activating %4$s."
 msgstr ""
 
-#: wpsso-plm.php:83
+#: wpsso-plm.php:79
 msgid ""
 "The %1$s extension requires the %2$s plugin &mdash; please install and "
 "activate the %3$s plugin."
