@@ -62,7 +62,7 @@ msgstr ""
 msgctxt "plugin description"
 msgid ""
 "WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, "
-"Schema Local Business + Local SEO meta tags."
+"Schema Local Business, and Local SEO meta tags."
 msgstr ""
 
 #: lib/filters.php:341
@@ -480,7 +480,7 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, "
-"Schema Local Business + Local SEO meta tags."
+"Schema Local Business, and Local SEO meta tags."
 msgstr ""
 
 #. Author of the plugin/theme
