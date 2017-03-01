@@ -66,17 +66,18 @@ if ( ! class_exists( 'WpssoPlmRegister' ) ) {
 		}
 
 		private function activate_plugin() {
-			$lca = 'wpssoplm';
-			$version = WpssoPlmConfig::$cf['plugin'][$lca]['version'];	// only our config
+			$version = WpssoPlmConfig::$cf['plugin']['wpssoplm']['version'];	// only our config
 			if ( class_exists( 'WpssoUtil' ) )
-				WpssoUtil::save_all_times( $lca, $version );
+				WpssoUtil::save_all_times( 'wpssoplm', $version );
 			else WpssoPlm::required_notice( true );			// $deactivate = true
 		}
 
 		private function deactivate_plugin() {
+			// nothing to do
 		}
 
 		private static function uninstall_plugin() {
+			// nothing to do
 		}
 	}
 }
