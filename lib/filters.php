@@ -61,18 +61,24 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_defaults( $def_opts ) {
-			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
+			$def_opts = array_merge( 
+				$def_opts,
+				self::$cf['opt']['defaults']
+			);
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to' );
 			return $def_opts;
 		}
 
 		public function filter_get_md_defaults( $def_opts ) {
-			return array_merge( $def_opts, WpssoPlmConfig::$cf['form']['plm_addr_opts'],
+			$def_opts = array_merge( 
+				$def_opts,
+				WpssoPlmConfig::$cf['form']['plm_addr_opts'],
 				array(
 					'plm_addr_id' => 'custom',						// Select an Address
 					'plm_addr_country' => $this->p->options['plm_addr_def_country'],	// Country
 				)
 			);
+			return $def_opts;
 		}
 
 		public function filter_rename_md_options_keys( $options_keys ) {
@@ -147,6 +153,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 * Non-standard meta tags for internal use (input to JSON-LD extension)
 			 */
 			$addr_defs = WpssoPlmConfig::$cf['form']['plm_addr_opts'];
+
 			foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
 				if ( ! empty( $addr_opts['plm_addr_day_'.$day] ) ) {
 					foreach ( array( 'open', 'close' ) as $hour ) {

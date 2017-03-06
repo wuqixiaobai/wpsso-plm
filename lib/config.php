@@ -122,7 +122,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_addr_currencies_accepted' => '',
 					'plm_addr_payment_accepted' => '',
 					'plm_addr_price_range' => '',
-					'plm_addr_accept_res' => '',
+					'plm_addr_accept_res' => 0,
 					'plm_addr_menu_url' => '',
 					'plm_addr_order_urls' => '',
 				),
