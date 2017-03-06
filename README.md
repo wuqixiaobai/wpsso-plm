@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Place / Location and Local Business Meta (WPSSO PLM)</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.2.8-1</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.2.9-1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.7.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
