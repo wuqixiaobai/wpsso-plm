@@ -131,6 +131,17 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 2.2.9-1 (2017/03/07)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* Fixed a CSS id problem that prevented the automatic display/hidding of options from working properly.
+* *Developer Notes*
+	* None
+
 **Version 2.2.8-1 (2017/02/26)**
 
 * *New Features*
@@ -245,6 +256,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.9-1 =
+
+(2017/03/07) Fixed a CSS id problem that prevented the automatic display/hidding of options from working properly.
 
 = 2.2.8-1 =
 
