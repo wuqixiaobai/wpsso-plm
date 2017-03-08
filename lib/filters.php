@@ -69,16 +69,16 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $def_opts;
 		}
 
-		public function filter_get_md_defaults( $def_opts ) {
-			$def_opts = array_merge( 
-				$def_opts,
+		public function filter_get_md_defaults( $md_defs ) {
+			$md_defs = array_merge( 
+				$md_defs,
 				WpssoPlmConfig::$cf['form']['plm_addr_opts'],
 				array(
 					'plm_addr_id' => 'custom',						// Select an Address
 					'plm_addr_country' => $this->p->options['plm_addr_def_country'],	// Country
 				)
 			);
-			return $def_opts;
+			return $md_defs;
 		}
 
 		public function filter_rename_md_options_keys( $options_keys ) {
