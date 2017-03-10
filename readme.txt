@@ -31,14 +31,17 @@ The WPSSO PLM extension can be used in two different ways:
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
 <blockquote>
-<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> creates complete and accurate meta tags and Schema markup for Social Sharing Optimization (SSO) and SEO.</p>
+<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
+
+<p>The <a href="https://wordpress.org/plugins/wpsso-plm/">WPSSO PLM Free extension</a> requires the WPSSO Free or Pro plugin.<br/>
+The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-requires">WPSSO PLM Pro extension</a> requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-requires">WPSSO Pro plugin</a> as well.</p>
 </blockquote>
 
 = Quick List of Features =
 
 **WPSSO PLM Free / Basic Features**
 
-* Extends the features of either the Free or Pro versions of WPSSO.
+* Extends the features of WPSSO Free or Pro.
 * Select an Address for a Blog Front Page (added to the main entity of the blog front page).
 * Manage Multiple Addresses / Contact Information:
 	* Pinterest Rich Pin / Schema Place
@@ -82,9 +85,11 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the WPSSO PLM extension.
 
-Use the Free version of WPSSO PLM with *both* the Free and Pro versions of WPSSO. The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends) (along with all WPSSO Pro extensions) requires the [WPSSO Pro plugin](https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends) as well.
+<blockquote>
+<p>The WPSSO PLM Free extension requires either the WPSSO Free or Pro plugin. The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> (along with all WPSSO Pro extensions) requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro plugin</a> as well.</p>
+</blockquote>
 
-[Purchase the WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase) (includes a *No Risk 30 Day Refund Policy*).
+[Purchase the WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro extension here](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase) (all purchases include a *No Risk 30 Day Refund Policy*).
 
 == Installation ==
 
