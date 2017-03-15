@@ -113,7 +113,7 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 01. Place / Location settings page &mdash; manage a selection of addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
 02. Place / Location tab in the Social Settings metabox on individual posts, pages, and custom post types &mdash; manage custom addresses, geo location, business hours, the food establishment menu URL, and if reservation are accepted.
-03. Google's Structured Data Testing Tool &mdash; Results for an example Restaurant webpage showing the WPSSO PLM meta tags.
+03. Google's Structured Data Testing Tool &mdash; results for an example Restaurant webpage showing the WPSSO PLM meta tags.
 
 == Changelog ==
 
