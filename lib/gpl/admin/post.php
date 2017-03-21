@@ -15,8 +15,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
-			if ( $this->p->debug->enabled )
+
+			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
 				'post_plm_rows' => 4,			// $table_rows, $form, $head, $mod
@@ -24,14 +26,16 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 		}
 
 		public function filter_post_plm_rows( $table_rows, $form, $head, $mod ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->mark();
 
-			$this->form->__half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
-			$this->form->__all_types = $this->p->schema->get_schema_types_array( false );		// $flatten = false
-			$this->form->__business_types = $this->p->schema->get_schema_types_select( 
-				$this->form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
-			$this->form->__address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'] );
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			$form->__half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
+			$form->__all_types = $this->p->schema->get_schema_types_array( false );		// $flatten = false
+			$form->__business_types = $this->p->schema->get_schema_types_select( 
+				$form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
+			$form->__address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'] );
 
 			unset( $form->options['plm_addr_id'] );
 
@@ -41,7 +45,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Select an Address',
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_id' ).
-			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_id', $this->form->__address_names,
+			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_id', $form->__address_names,
 				'long_name', '', true ).'</td>';
 
 			$table_rows['subsection_schema_place'] = '<td></td><td class="subsection" colspan="3"><h4>'.
@@ -99,10 +103,10 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_addr_business_type'] = $form->get_th_html( _x( 'Local Business Type',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_type' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
-				$this->form->__business_types, 'long_name', '', true ).'</td>';
+				$form->__business_types, 'long_name', '', true ).'</td>';
 
-			$table_rows['plm_addr_business_phone'] = $form->get_th_html( _x( 'Business Telephone',
-				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_phone' ). 
+			$table_rows['plm_addr_phone'] = $form->get_th_html( _x( 'Business Telephone',
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_phone' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
 
 			$row_number = 1;
@@ -115,9 +119,9 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$table_rows['plm_addr_day_'.$day] = $th_cell.
 					'<td class="blank short">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.$label.'</td>'.
 					'<td class="blank">Opens at '.$form->get_no_select( 'plm_addr_day_'.$day.'_open',
-						$this->form->__half_hours, 'medium', '', true ).'</td>'.
+						$form->__half_hours, 'medium', '', true ).'</td>'.
 					'<td class="blank">Closes at '.$form->get_no_select( 'plm_addr_day_'.$day.'_close',
-						$this->form->__half_hours, 'medium', '', true ).'</td>';
+						$form->__half_hours, 'medium', '', true ).'</td>';
 
 				$row_number++;
 			}

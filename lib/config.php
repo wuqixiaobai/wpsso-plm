@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			'plugin' => array(
 				'wpssoplm' => array(
 					'version' => '2.2.10-dev1',		// plugin version
-					'opt_version' => '12',		// increment when changing default options
+					'opt_version' => '15',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.',
@@ -93,7 +93,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'plm_addr_longitude' => '',			// Longitude
 					'plm_addr_altitude' => '',			// Altitude
 					'plm_addr_business_type' => 'local.business',
-					'plm_addr_business_phone' => '',
+					'plm_addr_phone' => '',
 					'plm_addr_day_sunday' => 0,
 					'plm_addr_day_sunday_open' => '09:00',
 					'plm_addr_day_sunday_close' => '17:00',

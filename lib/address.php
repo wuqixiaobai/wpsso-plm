@@ -30,50 +30,59 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
-			if ( $this->p->debug->enabled )
+			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+			}
 		}
 
 		public static function has_place( array $mod ) {
 
 			$wpsso =& Wpsso::get_instance();
-			if ( $wpsso->debug->enabled )
+			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
+			}
 
 			$addr_opts = false;
 			if ( $mod['is_home_index'] ) {
 				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
 					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
-						if ( $wpsso->debug->enabled )
+						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'no place options for address id '.$wpsso->options['plm_addr_for_home'] );
+						}
 					}
 				}
 			} elseif ( is_object( $mod['obj'] ) ) {
 				if ( ( $addr_opts = self::has_md_place( $mod ) ) === false ) {
-					if ( $wpsso->debug->enabled )
+					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'no place options from module object' );
+					}
 				}
-			} elseif ( $wpsso->debug->enabled )
+			} elseif ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log( 'not home index and no module object' );
+			}
 
 			if ( $wpsso->debug->enabled ) {
-				if ( $addr_opts === false )
+				if ( $addr_opts === false ) {
 					$wpsso->debug->log( 'no place options found' );
-				else $wpsso->debug->log( count( $addr_opts ).' place options found' );
+				} else {
+					$wpsso->debug->log( count( $addr_opts ).' place options found' );
+				}
 			}
 
 			return $addr_opts;
 		}
 
 		public static function has_md_place( array &$mod ) {
-			if ( ! is_object( $mod['obj'] ) )	// just in case
+			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return false;
+			}
 			$md_opts = self::get_md_options( $mod );
 			if ( is_array( $md_opts  ) ) {
 				foreach ( self::$place_mt as $key => $mt_name ) {
-					if ( ! empty( $md_opts[$key] ) )
+					if ( ! empty( $md_opts[$key] ) ) {
 						return $md_opts;
+					}
 				}
 			}
 			return false;
@@ -82,8 +91,9 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		public static function has_days( array &$mod ) {
 
 			$wpsso =& Wpsso::get_instance();
-			if ( $wpsso->debug->enabled )
+			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
+			}
 
 			$addr_opts = false;
 			if ( $mod['is_home_index'] ) {
@@ -102,11 +112,13 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 				}
 			} elseif ( is_object( $mod['obj'] ) ) {
 				if ( ( $addr_opts = self::has_md_days( $mod ) ) === false ) {
-					if ( $wpsso->debug->enabled )
+					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'no business days from module object' );
+					}
 				}
-			} elseif ( $wpsso->debug->enabled )
+			} elseif ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log( 'not home index and no module object' );
+			}
 
 			return $addr_opts;
 		}
@@ -115,13 +127,15 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( ! is_object( $mod['obj'] ) )	// just in case
 				return false;
 			$wpsso =& Wpsso::get_instance();
-			if ( $wpsso->debug->enabled )
+			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
+			}
 			$md_opts = self::get_md_options( $mod );
 			if ( is_array( $md_opts  ) ) {
 				foreach ( $wpsso->cf['form']['weekdays'] as $day => $label ) {
-					if ( ! empty( $md_opts['plm_addr_day_'.$day] ) )
+					if ( ! empty( $md_opts['plm_addr_day_'.$day] ) ) {
 						return $md_opts;
+					}
 				}
 			}
 			return false;
@@ -130,31 +144,38 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		public static function has_geo( array &$mod ) {
 
 			$wpsso =& Wpsso::get_instance();
-			if ( $wpsso->debug->enabled )
+			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
+			}
 
 			$addr_opts = false;
 			if ( $mod['is_home_index'] ) {
 				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
 					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
-						if ( $wpsso->debug->enabled )
+						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'no geo coordinates for address id '.$wpsso->options['plm_addr_for_home'] );
+						}
 					} else {
-						if ( ! empty( $addr_opts['plm_addr_latitude'] ) && 
-							! empty( $addr_opts['plm_addr_longitude'] ) )
-								return $addr_opts;
-						return false;
+						// allow for latitude and/or longitude of 0
+						if ( isset( $addr_opts['plm_addr_latitude'] ) && $addr_opts['plm_addr_latitude'] !== '' && 
+							isset( $addr_opts['plm_addr_longitude'] ) && $addr_opts['plm_addr_longitude'] !== '' ) {
+							return $addr_opts;
+						} else {
+							return false;
+						}
 					}
 
 				}
 			} elseif ( is_object( $mod['obj'] ) ) {
 				if ( ( $addr_opts = self::has_md_days( $mod ) ) === false ) {
-					if ( $wpsso->debug->enabled )
+					if ( $wpsso->debug->enabled ) {
 						$wpsso->debug->log( 'no geo coordinates from module object' );
+					}
 				}
-			} elseif ( $wpsso->debug->enabled )
+			} elseif ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log( 'not home index and no module object' );
+			}
 
 			return $addr_opts;
 		}
@@ -164,34 +185,42 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 				return false;
 			$md_opts = self::get_md_options( $mod );
 			if ( is_array( $md_opts  ) ) {
-				if ( ! empty( $md_opts['plm_addr_latitude'] ) && 
-					! empty( $md_opts['plm_addr_longitude'] ) )
-						return $md_opts;
+				// allow for latitude and/or longitude of 0
+				if ( isset( $md_opts['plm_addr_latitude'] ) && $md_opts['plm_addr_latitude']!== '' && 
+					isset( $md_opts['plm_addr_longitude'] ) && $md_opts['plm_addr_longitude'] !== '' ) {
+					return $md_opts;
+				}
 			}
 			return false;
 		}
 
 		public static function get_md_options( array &$mod ) {
-			if ( ! is_object( $mod['obj'] ) )	// just in case
+			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return array();
+			}
 
 			$wpsso =& Wpsso::get_instance();
-			if ( $wpsso->debug->enabled )
+			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
+			}
 
-			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) )	// make sure a cache entry exists
+			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) ) {	// make sure a cache entry exists
 				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
-			else return self::$mod_md_opts[$mod['name']][$mod['id']];	// return the cache entry
+			} else {
+				return self::$mod_md_opts[$mod['name']][$mod['id']];		// return the cache entry
+			}
 
-			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];	// shortcut variable
+			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// shortcut variable
 
 			$md_opts = $mod['obj']->get_options( $mod['id'] );
+
 			if ( is_array( $md_opts  ) ) {
-				if ( isset( $md_opts['plm_addr_id'] ) && 		// allow for 0
+				if ( isset( $md_opts['plm_addr_id'] ) && 			// allow for 0
 					is_numeric( $md_opts['plm_addr_id'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $md_opts['plm_addr_id'] ) ) !== false ) {
-						if ( $wpsso->debug->enabled )
+						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'using address ID '.$md_opts['plm_addr_id'].' options' );
+						}
 						$md_opts = array_merge( $md_opts, $addr_opts );
 					}
 				}
@@ -203,8 +232,10 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		public static function get_addr_names() {
 
 			$wpsso =& Wpsso::get_instance();
-			if ( $wpsso->debug->enabled )
+
+			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
+			}
 
 			return SucomUtil::get_multi_key_locale( 'plm_addr_name', $wpsso->options, false );
 		}
@@ -214,6 +245,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		public static function get_addr_id( $id, $mixed = 'current' ) {
 
 			$wpsso =& Wpsso::get_instance();
+
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log_args( array( 
 					'id' => $id,
@@ -229,20 +261,25 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 				$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
 				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)(#.*)?$/', 	// filter for all address options
-					$md_opts, false, '$1' ) as $key => $value )
-						$addr_opts[$key] = SucomUtil::get_locale_opt( $key, $md_opts, $mixed );
-
+					$md_opts, false, '$1' ) as $key => $value ) {
+					$addr_opts[$key] = SucomUtil::get_locale_opt( $key, $md_opts, $mixed );
+				}
 			} elseif ( is_numeric( $id ) ) {
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'(#.*)?$/', $wpsso->options, false, '$1' ) as $key => $value )
-						$addr_opts[$key] = SucomUtil::get_locale_opt( $key.'_'.$id, $wpsso->options, $mixed );
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)_'.$id.'(#.*)?$/',
+					$wpsso->options, false, '$1' ) as $key => $value ) {
+					$addr_opts[$key] = SucomUtil::get_locale_opt( $key.'_'.$id, $wpsso->options, $mixed );
+				}
 			}
 
-			if ( $wpsso->debug->enabled )
+			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log( $addr_opts );
+			}
 
-			if ( empty( $addr_opts ) )
+			if ( empty( $addr_opts ) ) {
 				return false; 
-			else return array_merge( WpssoPlmConfig::$cf['form']['plm_addr_opts'], $addr_opts );	// complete the array
+			} else {
+				return array_merge( WpssoPlmConfig::$cf['form']['plm_addr_opts'], $addr_opts );	// complete the array
+			}
 		}
 	}
 }

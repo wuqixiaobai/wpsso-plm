@@ -195,9 +195,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$this->form->get_th_html( _x( 'Local Business Type', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
 						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id, $this->form->__business_types, 'long_name' ).'</td>';
 		
-						$table_rows['plm_addr_business_phone_'.$id] = $tr_hide_addr_id.
-						$this->form->get_th_html( _x( 'Business Telephone', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_phone' ). 
-						'<td colspan="3">'.$this->form->get_input( 'plm_addr_business_phone_'.$id ).'</td>';
+						$table_rows['plm_addr_phone_'.$id] = $tr_hide_addr_id.
+						$this->form->get_th_html( _x( 'Business Telephone', 'option label', 'wpsso-plm' ), '', 'plm_addr_phone' ). 
+						'<td colspan="3">'.$this->form->get_input( 'plm_addr_phone_'.$id ).'</td>';
 
 						$row_number = 1;
 						foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {

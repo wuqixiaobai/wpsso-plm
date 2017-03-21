@@ -34,6 +34,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,					// option defaults
 				'get_md_defaults' => 1,					// meta data defaults
+				'rename_options_keys' => 1,				// meta data post options
 				'rename_md_options_keys' => 1,				// meta data post options
 				'og_type' => 2,						// open graph namespace
 				'og_seed' => 2,						// open graph meta tags
@@ -81,9 +82,18 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $md_defs;
 		}
 
+		public function filter_rename_options_keys( $options_keys ) {
+			$options_keys['wpssoplm'] = array(
+				14 => array(	// equal to or less than
+					'plm_addr_business_phone' => 'plm_addr_phone',
+				),
+			);
+			return $options_keys;
+		}
+
 		public function filter_rename_md_options_keys( $options_keys ) {
 			$options_keys['wpssoplm'] = array(
-				8 => array(
+				8 => array(	// equal to or less than
 					'plm_streetaddr' => 'plm_addr_streetaddr',
 					'plm_po_box_number' => 'plm_addr_po_box_number',
 					'plm_city' => 'plm_addr_city',
@@ -93,7 +103,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'plm_latitude' => 'plm_addr_latitude',
 					'plm_longitude' => 'plm_addr_longitude',
 					'plm_altitude' => 'plm_addr_altitude',
-				)
+				),
+				14 => array(	// equal to or less than
+					'plm_addr_business_phone' => 'plm_addr_phone',
+				),
 			);
 			return $options_keys;
 		}
@@ -165,7 +178,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 
 			foreach ( array(
-				'plm_addr_business_phone' => 'place:business:telephone',
+				'plm_addr_phone' => 'place:business:telephone',
 				'plm_addr_season_from_date' => 'place:business:season:from',
 				'plm_addr_season_to_date' => 'place:business:season:to',
 				'plm_addr_service_radius' => 'place:business:service_radius',
@@ -177,11 +190,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'plm_addr_order_urls' => 'place:business:order_url',
 			) as $key => $mt_name ) {
 				if ( isset( $addr_opts[$key] ) ) {
-					if ( $key === 'plm_addr_accept_res' )
+					if ( $key === 'plm_addr_accept_res' ) {
 						$mt_og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
-					elseif ( $key === 'plm_addr_order_urls' )
+					} elseif ( $key === 'plm_addr_order_urls' ) {
 						$mt_og[$mt_name] =  SucomUtil::explode_csv( $addr_opts[$key] );
-					else $mt_og[$mt_name] = $addr_opts[$key];
+					} else {
+						$mt_og[$mt_name] = $addr_opts[$key];
+					}
 				} else $mt_og[$mt_name] = '';
 			}
 
@@ -254,16 +269,18 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
 					foreach ( array(
-						'plm_addr_business_phone' => 'telephone',
+						'plm_addr_phone' => 'telephone',
 						'plm_addr_currencies_accepted' => 'currenciesAccepted',
 						'plm_addr_payment_accepted' => 'paymentAccepted',
 						'plm_addr_price_range' => 'priceRange',
 						'plm_addr_accept_res' => 'acceptsreservations',
 						'plm_addr_menu_url' => 'menu',
 					) as $key => $mt_name ) {
-						if ( $key === 'plm_addr_accept_res' )
+						if ( $key === 'plm_addr_accept_res' ) {
 							$mt_schema[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
-						else $mt_schema[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
+						} else {
+							$mt_schema[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
+						}
 					}
 				}
 			}
@@ -371,7 +388,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					return 'not_blank';
 					break;
 				case ( preg_match( '/^plm_addr_(name|alt_name|desc|phone|streetaddr|city|state|zipcode)$/', $key ) ? true : false ):
-				case ( preg_match( '/^plm_addr_(business_phone|price_range)$/', $key ) ? true : false ):
+				case ( preg_match( '/^plm_addr_(phone|price_range)$/', $key ) ? true : false ):
 					return 'ok_blank';	// text strings that can be blank
 					break;
 				case ( preg_match( '/^plm_addr_(currencies_accepted|payment_accepted)$/', $key ) ? true : false ):
@@ -466,7 +483,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-plm_addr_business_type':
 					$text = __( 'A more descriptive Schema type for this local business. You must select a food establishment (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu URL and/or reservation information.', 'wpsso-plm' );
 					break;
-				case 'tooltip-plm_addr_business_phone':
+				case 'tooltip-plm_addr_phone':
 					$text = __( 'An optional Telephone number for this local business.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_addr_days':
