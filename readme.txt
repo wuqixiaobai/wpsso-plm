@@ -135,6 +135,18 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 2.2.10-dev1 (2017/03/21)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Updated the latitude and longitude values tests to allow for 0.
+	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
+
 **Version 2.2.9-1 (2017/03/07)**
 
 * *New Features*
@@ -260,6 +272,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.10-dev1 =
+
+(2017/03/21) Updated the latitude and longitude values tests to allow for 0.
 
 = 2.2.9-1 =
 
