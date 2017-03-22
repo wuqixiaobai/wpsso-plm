@@ -336,14 +336,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_place_options( $opts, $mod, $place_id ) {
-			if ( $opts !== false ) {	// first come, first served
-				return $opts;
-			} elseif ( $place_id === 'custom' || is_numeric( $place_id ) ) {	// just in case
+			if ( $opts === false && ( $place_id === 'custom' || is_numeric( $place_id ) ) ) {
 				$addr_opts = WpssoPlmAddress::get_addr_id( $place_id, $mod );
-				return SucomUtil::preg_grep_keys( '/^plm_addr_/', $addr_opts, false, 'place_' );	// rename plm_addr to place
-			} else {
-				return $opts;
+				if ( is_array( $addr_opts ) ) {	// just in xase
+					return SucomUtil::preg_grep_keys( '/^plm_addr_/', $addr_opts, false, 'place_' );	// rename plm_addr to place
+				}
 			}
+			return $opts;
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
