@@ -236,18 +236,29 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_schema_type_id( $type_id, $mod, $is_md_type ) {
-			if ( $this->p->debug->enabled )
+
+			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+			}
 
 			// return a default - don't override custom head types
 			if ( empty( $is_md_type ) ) {
 				if ( WpssoPlmAddress::has_place( $mod ) !== false ) {
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'mod is defined as a place' );
+					}
 					if ( ( $addr_opts = WpssoPlmAddress::has_days( $mod ) ) !== false ) {
 						$type_id = empty( $addr_opts['plm_addr_business_type'] ) ?
 							'local.business' : $addr_opts['plm_addr_business_type'];
-					} else $type_id = 'place';
-				} elseif ( $this->p->debug->enabled )
-					$this->p->debug->log( 'not a schema place: no place options found' );
+					} else {
+						$type_id = 'place';
+					}
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'returning schema type id '.$type_id );
+					}
+				} elseif ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'mod is not a place (no place options found)' );
+				}
 			}
 
 			return $type_id;
