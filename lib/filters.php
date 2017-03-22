@@ -193,7 +193,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					if ( $key === 'plm_addr_accept_res' ) {
 						$mt_og[$mt_name] = empty( $addr_opts[$key] ) ? 'false' : 'true';
 					} elseif ( $key === 'plm_addr_order_urls' ) {
-						$mt_og[$mt_name] =  SucomUtil::explode_csv( $addr_opts[$key] );
+						$mt_og[$mt_name] = SucomUtil::explode_csv( $addr_opts[$key] );
 					} else {
 						$mt_og[$mt_name] = $addr_opts[$key];
 					}
@@ -336,12 +336,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_place_options( $opts, $mod, $place_id ) {
-			if ( $opts !== false )    // first come, first served
+			if ( $opts !== false ) {	// first come, first served
 				return $opts;
-			elseif ( $place_id === 'custom' || is_numeric( $place_id ) ) {	// just in case
+			} elseif ( $place_id === 'custom' || is_numeric( $place_id ) ) {	// just in case
 				$addr_opts = WpssoPlmAddress::get_addr_id( $place_id, $mod );
 				return SucomUtil::preg_grep_keys( '/^plm_addr_/', $addr_opts, false, 'place_' );	// rename plm_addr to place
-			} else return $opts;
+			} else {
+				return $opts;
+			}
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
@@ -356,17 +358,19 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					( $name === '' && $num === $last_num ) ) {	// remove the empty "New Address"
 
 					if ( isset( $opts['plm_addr_id'] ) &&
-						$opts['plm_addr_id'] === $num )
-							unset( $opts['plm_addr_id'] );
+						$opts['plm_addr_id'] === $num ) {
+						unset( $opts['plm_addr_id'] );
+					}
 
 					// remove address id, including all localized keys
 					$opts = SucomUtil::preg_grep_keys( '/^plm_addr_.*_'.$num.'(#.*)?$/', $opts, true );	// $invert = true
 
-				} elseif ( $name === '' )	// just in case
+				} elseif ( $name === '' ) {	// just in case
 					$opts['plm_addr_name_'.$num] = sprintf( _x( 'Address #%d',
 						'option value', 'wpsso-plm' ), $num );
-
-				else $opts['plm_addr_name_'.$num] = $name;
+				} else {
+					$opts['plm_addr_name_'.$num] = $name;
+				}
 			}
 
 			return $opts;
