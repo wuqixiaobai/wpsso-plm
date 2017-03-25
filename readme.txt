@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
 Tags: local, seo, place, location, address, venue, restaurant, longitude, latitude, business, local business, seasonal, hours, coordinates
 Contributors: jsmoriss
-Requires At Least: 3.8
+Requires At Least: 3.7
 Tested Up To: 4.7.3
 Stable Tag: 2.2.9-1
 
@@ -134,7 +134,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.10-rc1 (2017/03/24)**
+**Version 2.2.10-rc2 (2017/03/25)**
 
 * *New Features*
 	* None
@@ -272,9 +272,9 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
-= 2.2.10-rc1 =
+= 2.2.10-rc2 =
 
-(2017/03/24) Updated the latitude and longitude values tests to allow for 0.
+(2017/03/25) Updated the latitude and longitude values tests to allow for 0.
 
 = 2.2.9-1 =
 
