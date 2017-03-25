@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.2.10-rc1',		// plugin version
+					'version' => '2.2.10-rc2',		// plugin version
 					'opt_version' => '15',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WordPress Social Sharing Optimization (WPSSO)',
-						'min_version' => '3.40.6-rc1',
+						'min_version' => '3.40.6-rc2',
 					),
 					'img' => array(
 						'icon_small' => 'images/icon-128x128.png',
@@ -143,9 +143,9 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 
 		public static function require_libs( $plugin_filepath ) {
 
-			require_once( WPSSOPLM_PLUGINDIR.'lib/register.php' );
-			require_once( WPSSOPLM_PLUGINDIR.'lib/filters.php' );
-			require_once( WPSSOPLM_PLUGINDIR.'lib/address.php' );
+			require_once WPSSOPLM_PLUGINDIR.'lib/register.php';
+			require_once WPSSOPLM_PLUGINDIR.'lib/filters.php';
+			require_once WPSSOPLM_PLUGINDIR.'lib/address.php';
 
 			add_filter( 'wpssoplm_load_lib', array( 'WpssoPlmConfig', 'load_lib' ), 10, 3 );
 		}
@@ -154,7 +154,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 			if ( $ret === false && ! empty( $filespec ) ) {
 				$filepath = WPSSOPLM_PLUGINDIR.'lib/'.$filespec.'.php';
 				if ( file_exists( $filepath ) ) {
-					require_once( $filepath );
+					require_once $filepath;
 					if ( empty( $classname ) )
 						return SucomUtil::sanitize_classname( 'wpssoplm'.$filespec, false );	// $underscore = false
 					else return $classname;
