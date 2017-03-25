@@ -134,7 +134,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 2.2.10-rc2 (2017/03/25)**
+**Version 2.2.10-1 (2017/03/25)**
 
 * *New Features*
 	* None
@@ -272,7 +272,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
-= 2.2.10-rc2 =
+= 2.2.10-1 =
 
 (2017/03/25) Updated the latitude and longitude values tests to allow for 0.
 
