@@ -66,7 +66,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$def_opts,
 				self::$cf['opt']['defaults']
 			);
-			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to' );
+			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to', 1 );
 			return $def_opts;
 		}
 
