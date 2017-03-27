@@ -72,21 +72,22 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					'<td>'.$this->form->get_select_country( 'plm_addr_def_country',
 					 	'', '', false, $this->p->options['plm_addr_def_country'] ).'</td>';
 
-					if ( ! $aop = $this->p->check->aop( 'wpssoplm', true, $this->p->is_avail['aop'] ) )
-						$table_rows[] = '<td colspan="2">'.
-							$this->p->msgs->get( 'pro-feature-msg', 
-								array( 'lca' => 'wpssoplm' ) ).'</td>';
+					if ( ! $aop = $this->p->check->aop( 'wpssoplm', true, $this->p->is_avail['aop'] ) ) {
+						$table_rows[] = '<td colspan="2">'.$this->p->msgs->get( 'pro-feature-msg', 
+							array( 'lca' => 'wpssoplm' ) ).'</td>';
+					}
 
-					$checkboxes = '';
-					foreach ( $this->p->util->get_post_types() as $post_type )
-						$checkboxes .= '<p>'.( $aop ? $this->form->get_checkbox( 'plm_add_to_'.$post_type->name ) :
-							$this->form->get_no_checkbox( 'plm_add_to_'.$post_type->name ) ).' '.
-							$post_type->label.' '.( empty( $post_type->description ) ? 
-								'' : '('.$post_type->description.')' ).'</p>';
+					$add_to_checkboxes = '';
+					foreach ( $this->p->util->get_post_types() as $post_type ) {
+						$add_to_checkboxes .= '<p>'.( $aop ? $this->form->get_checkbox( 'plm_add_to_'.$post_type->name ) :
+							$this->form->get_no_checkbox( 'plm_add_to_'.$post_type->name ) ).
+							' '.$post_type->label.( empty( $post_type->description ) ? 
+								'' : ' ('.$post_type->description.')' ).'</p>';
+					}
 
 					$table_rows['plm_add_to'] = $this->form->get_th_html( _x( 'Show Tab on Post Types',
 						'option label', 'wpsso-plm' ), '', 'plm_add_to' ).
-					( $aop ? '<td>' : '<td class="blank">' ).$checkboxes.'</td>';
+					( $aop ? '<td>' : '<td class="blank">' ).$add_to_checkboxes.'</td>';
 
 					break;
 
@@ -105,8 +106,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					if ( isset( $this->form->options['plm_addr_id'] ) ) {
 						$def_id = $this->form->options['plm_addr_id'];
 						if ( ! isset( $this->p->options['plm_addr_name_'.$def_id] ) ||
-							trim( $this->p->options['plm_addr_name_'.$def_id] ) === '' )
-								unset( $this->form->options['plm_addr_id'] );
+							trim( $this->p->options['plm_addr_name_'.$def_id] ) === '' ) {
+							unset( $this->form->options['plm_addr_id'] );
+						}
 					}
 
 					$table_rows['plm_addr_id'] = $this->form->get_th_html( _x( 'Edit an Address',
@@ -201,10 +203,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 						$row_number = 1;
 						foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
-							if ( $row_number === 1 )
+							if ( $row_number === 1 ) {
 								$th_cell = $tr_hide_addr_id.$this->form->get_th_html( _x( 'Business Days + Hours',
 									'option label', 'wpsso-plm' ), '', 'plm_addr_days' );
-							else $th_cell = $tr_hide_addr_id.'<th></th>';
+							} else {
+								$th_cell = $tr_hide_addr_id.'<th></th>';
+							}
 		
 							$this->form->defaults['plm_addr_day_'.$day.'_'.$id] = '0';		// set default value
 							$this->form->defaults['plm_addr_day_'.$day.'_open_'.$id] = '09:00';	// set default value
@@ -233,10 +237,11 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							'currencies_accepted' => _x( 'Currencies Accepted', 'option label', 'wpsso-plm' ),
 							'payment_accepted' => _x( 'Payment Accepted', 'option label', 'wpsso-plm' ),
 							'price_range' => _x( 'Price Range', 'option label', 'wpsso-plm' ),
-						) as $opt_name => $opt_label )
+						) as $opt_name => $opt_label ) {
 							$table_rows['plm_addr_'.$opt_name.'_'.$id] = $tr_hide_addr_id.
 							$this->form->get_th_html( $opt_label, '', 'plm_addr_'.$opt_name ). 
 							'<td colspan="3">'.$this->form->get_input( 'plm_addr_'.$opt_name.'_'.$id ).'</td>';
+						}
 		
 						$table_rows['plm_addr_accept_res_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Accepts Reservations', 'option label', 'wpsso-plm' ), '', 'plm_addr_accept_res' ). 
