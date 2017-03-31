@@ -70,172 +70,172 @@ msgctxt "option value"
 msgid "Address #%d"
 msgstr ""
 
-#: lib/filters.php:438 lib/filters.php:531
+#: lib/filters.php:437 lib/filters.php:530
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr ""
 
-#: lib/filters.php:447
+#: lib/filters.php:446
 msgid "Select an address or enter a customized address bellow."
 msgstr ""
 
-#: lib/filters.php:459
+#: lib/filters.php:458
 msgid ""
 "Select an address to include as a Schema <em>Place</em> or <em>Local "
 "Business</em> in your blog (non-static) front page."
 msgstr ""
 
-#: lib/filters.php:459
+#: lib/filters.php:458
 msgid ""
 "An address for a static front page can be selected in the %1$s metabox when "
 "editing the static page."
 msgstr ""
 
-#: lib/filters.php:459 lib/filters.php:531
+#: lib/filters.php:458 lib/filters.php:530
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr ""
 
-#: lib/filters.php:462
+#: lib/filters.php:461
 msgid "A default country to use when creating a new address."
 msgstr ""
 
-#: lib/filters.php:465
+#: lib/filters.php:464
 msgid ""
 "Select an address to edit. The address and business information is used for "
 "Open Graph meta tags and Schema markup."
 msgstr ""
 
-#: lib/filters.php:468
+#: lib/filters.php:467
 msgid ""
 "Enter a descriptive name for this address. The address name may appear in "
 "forms and the Schema Place name property."
 msgstr ""
 
-#: lib/filters.php:471
+#: lib/filters.php:470
 msgid ""
 "An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</"
 "em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:474
+#: lib/filters.php:473
 msgid ""
 "An optional Post Office Box Number for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:477
+#: lib/filters.php:476
 msgid ""
 "An optional City name for the Pinterest Rich Pin / Schema <em>Place</em> "
 "meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:480
+#: lib/filters.php:479
 msgid ""
 "An optional State or Province name for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:483
+#: lib/filters.php:482
 msgid ""
 "An optional Zip or Postal Code for the Pinterest Rich Pin / Schema "
 "<em>Place</em> meta tags and related markup."
 msgstr ""
 
-#: lib/filters.php:486
+#: lib/filters.php:485
 msgid ""
 "An optional Country for the Pinterest Rich Pin / Schema <em>Place</em> meta "
 "tags and related markup."
 msgstr ""
 
-#: lib/filters.php:489
+#: lib/filters.php:488
 msgid ""
 "The numeric <em>decimal degrees</em> latitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:489 lib/filters.php:492
+#: lib/filters.php:488 lib/filters.php:491
 msgid ""
 "You may use a service like <a href=\"http://www.gps-coordinates.net/"
 "\">Google Maps GPS Coordinates</a> (as an example), to find the approximate "
 "GPS coordinates of a street address."
 msgstr ""
 
-#: lib/filters.php:492
+#: lib/filters.php:491
 msgid ""
 "The numeric <em>decimal degrees</em> longitude for the main content of this "
 "webpage."
 msgstr ""
 
-#: lib/filters.php:495
+#: lib/filters.php:494
 msgid ""
 "An optional numeric altitude (in meters above sea level) for the main "
 "content of this webpage."
 msgstr ""
 
-#: lib/filters.php:498
+#: lib/filters.php:497
 msgid ""
 "A more descriptive Schema type for this local business. You must select a "
 "food establishment (fast food restaurant, ice cream shop, restaurant, etc.) "
 "to include Schema markup for a food menu URL and/or reservation information."
 msgstr ""
 
-#: lib/filters.php:501
+#: lib/filters.php:500
 msgid "An optional Telephone number for this local business."
 msgstr ""
 
-#: lib/filters.php:504
+#: lib/filters.php:503
 msgid "Select the days and hours this business is open."
 msgstr ""
 
-#: lib/filters.php:507
+#: lib/filters.php:506
 msgid ""
 "This business is only open for part of the year, between these two dates."
 msgstr ""
 
-#: lib/filters.php:510
+#: lib/filters.php:509
 msgid ""
 "The geographic area where a service is provided, in meters around the "
 "location."
 msgstr ""
 
-#: lib/filters.php:513
+#: lib/filters.php:512
 msgid ""
 "A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/"
 "ISO_4217\">ISO 4217 currency codes</a> accepted by the local business "
 "(example: USD, CAD)."
 msgstr ""
 
-#: lib/filters.php:516
+#: lib/filters.php:515
 msgid ""
 "A comma-delimited list of payment options accepted by the local business "
 "(example: Cash, Credit Card)."
 msgstr ""
 
-#: lib/filters.php:519
+#: lib/filters.php:518
 msgid ""
 "The price range of goods or services provided by the local business "
 "(example: $10-100)."
 msgstr ""
 
-#: lib/filters.php:522
+#: lib/filters.php:521
 msgid "This food establishment accepts reservations."
 msgstr ""
 
-#: lib/filters.php:525
+#: lib/filters.php:524
 msgid ""
 "The menu URL for this food establishment (fast food restaurant, ice cream "
 "shop, restaurant, etc.)"
 msgstr ""
 
-#: lib/filters.php:528
+#: lib/filters.php:527
 msgid ""
 "Comma-delimited website and mobile app URLs to order products. The WPSSO "
 "JSON extension is required to add Order Action URL(s) to the Schema "
 "potentialAction property."
 msgstr ""
 
-#: lib/filters.php:531
+#: lib/filters.php:530
 msgid ""
 "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and "
 "custom post types, allowing you to enter specific address information for "

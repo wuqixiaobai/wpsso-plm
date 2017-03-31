@@ -387,12 +387,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_option_type( $type, $key ) {
-
-			if ( ! empty( $type ) )
+			if ( ! empty( $type ) ) {
 				return $type;
-			elseif ( strpos( $key, 'plm_' ) !== 0 )
+			} elseif ( strpos( $key, 'plm_' ) !== 0 ) {
 				return $type;
-
+			}
 			switch ( $key ) {
 				case 'plm_addr_for_home':
 				case 'plm_addr_def_country':
