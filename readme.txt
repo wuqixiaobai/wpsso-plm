@@ -110,9 +110,9 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 == Screenshots ==
 
-01. WPSSO PLM settings page includes options to manage addresses, geo location, business hours, service radius, price range, menu URL, order actions, and many more.
+01. WPSSO PLM settings page includes options to manage addresses, geo location, business hours, service radius, price range, menu URL, and many more.
 02. WPSSO PLM tab in the Social Settings metabox provides options to manage custom addresses, geo location, business hours, service radius, price range, menu URL, and many more (Pro version).
-03. WPSSO PLM meta tag example for a Restaurant webpage in Google's Structured Data Testing Tool.
+03. WPSSO PLM meta tag example for the Schema type https://schema.org/Restaurant in Google's Structured Data Testing Tool.
 
 == Changelog ==
 
