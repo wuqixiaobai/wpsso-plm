@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.2.10-1',		// plugin version
+					'version' => '2.2.11-dev1',	// plugin version
 					'opt_version' => '15',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						'update' => 'https://wpsso.com/extend/plugins/wpsso-plm/update/',
 						'purchase' => 'https://wpsso.com/extend/plugins/wpsso-plm/',
 						'changelog' => 'https://wpsso.com/extend/plugins/wpsso-plm/changelog/',
-						'codex' => 'https://wpsso.com/codex/plugins/wpsso-plm/',
+						'docs' => 'https://wpsso.com/docs/plugins/wpsso-plm/',
 						'faqs' => '',
 						'notes' => '',
 						'support' => 'http://wpsso-plm.support.wpsso.com/support/tickets/new',
