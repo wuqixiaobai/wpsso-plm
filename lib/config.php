@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 						'purchase' => 'https://wpsso.com/extend/plugins/wpsso-plm/',
 						'changelog' => 'https://wpsso.com/extend/plugins/wpsso-plm/changelog/',
 						'codex' => 'https://wpsso.com/codex/plugins/wpsso-plm/',
-						'faq' => '',
+						'faqs' => '',
 						'notes' => '',
 						'support' => 'http://wpsso-plm.support.wpsso.com/support/tickets/new',
 					),
