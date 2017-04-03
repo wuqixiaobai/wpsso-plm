@@ -77,7 +77,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 = Markup Examples =
 
-* [Markup Example for a Restaurant](http://wpsso.com/codex/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).
+* [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).
 
 = Extends the WPSSO Plugin =
 
@@ -93,8 +93,8 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 
 = Install and Uninstall =
 
-* [Install the Plugin](https://wpsso.com/codex/plugins/wpsso-plm/installation/install-the-plugin/)
-* [Uninstall the Plugin](https://wpsso.com/codex/plugins/wpsso-plm/installation/uninstall-the-plugin/)
+* [Install the Plugin](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
+* [Uninstall the Plugin](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
@@ -133,6 +133,17 @@ Version components: `{major}.{minor}.{bugfix}-{stage}{level}`
 Note that the production stage level can be incremented on occasion for simple text revisions and/or translation updates. See [PHP's version_compare()](http://php.net/manual/en/function.version-compare.php) documentation for additional information on "PHP-standardized" version numbering.
 
 = Changelog / Release Notes =
+
+**Version 2.2.11-dev1 (2017/04/03)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Updated the plugin documentation and FAQ URLs.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
 
 **Version 2.2.10-1 (2017/03/25)**
 
@@ -271,6 +282,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 
 == Upgrade Notice ==
+
+= 2.2.11-dev1 =
+
+(2017/04/03) Updated the plugin documentation and FAQ URLs.
 
 = 2.2.10-1 =
 

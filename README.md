@@ -93,7 +93,7 @@
 <h4>Markup Examples</h4>
 
 <ul>
-<li><a href="http://wpsso.com/codex/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/">Markup Example for a Restaurant</a> using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).</li>
+<li><a href="http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/">Markup Example for a Restaurant</a> using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).</li>
 </ul>
 
 <h4>Extends the WPSSO Plugin</h4>
@@ -112,8 +112,8 @@
 <h4>Install and Uninstall</h4>
 
 <ul>
-<li><a href="https://wpsso.com/codex/plugins/wpsso-plm/installation/install-the-plugin/">Install the Plugin</a></li>
-<li><a href="https://wpsso.com/codex/plugins/wpsso-plm/installation/uninstall-the-plugin/">Uninstall the Plugin</a></li>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/">Install the Plugin</a></li>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/">Uninstall the Plugin</a></li>
 </ul>
 
 
