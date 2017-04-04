@@ -15,13 +15,15 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 		public function __construct( &$plugin, $id, $name, $lib, $ext ) {
 			$this->p =& $plugin;
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
 			$this->menu_id = $id;
 			$this->menu_name = $name;
 			$this->menu_lib = $lib;
-			$this->menu_ext = $ext;
-
-			if ( $this->p->debug->enabled )
-				$this->p->debug->mark();
+			$this->menu_ext = $ext;	// lowercase acronyn for plugin or extension
 		}
 
 		protected function add_meta_boxes() {
@@ -43,9 +45,10 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			) );
 
 			$table_rows = array();
-			foreach ( $tabs as $key => $title )
+			foreach ( $tabs as $key => $title ) {
 				$table_rows[$key] = apply_filters( $lca.'_'.$metabox.'_'.$key.'_rows', 
 					$this->get_table_rows( $metabox, $key ), $this->form );
+			}
 			$this->p->util->do_metabox_tabs( $metabox, $tabs, $table_rows );
 		}
 
