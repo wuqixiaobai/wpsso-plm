@@ -62,18 +62,15 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_get_defaults( $def_opts ) {
-			$def_opts = array_merge( 
-				$def_opts,
-				self::$cf['opt']['defaults']
-			);
+			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
+
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to', 1 );
+
 			return $def_opts;
 		}
 
 		public function filter_get_md_defaults( $md_defs ) {
-			$md_defs = array_merge( 
-				$md_defs,
-				WpssoPlmConfig::$cf['form']['plm_addr_opts'],
+			$md_defs = array_merge( $md_defs, WpssoPlmConfig::$cf['form']['plm_addr_opts'],
 				array(
 					'plm_addr_id' => 'custom',						// Select an Address
 					'plm_addr_country' => $this->p->options['plm_addr_def_country'],	// Country
