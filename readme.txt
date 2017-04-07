@@ -121,7 +121,7 @@ The WordPress Social Sharing Optimization (WPSSO) plugin is required to use the 
 * [GitHub](https://surniaulula.github.io/wpsso-plm/)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
-= Version Numbering Scheme =
+= Version Numbering =
 
 Version components: `{major}.{minor}.{bugfix}-{stage}{level}`
 
