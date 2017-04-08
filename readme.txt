@@ -132,6 +132,18 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
+**Version 2.2.12 (2017/04/08)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Minor revision to move URLs in the extension config to the main WPSSO plugin config.
+	* Dropped the package number from the production version string.
+
 **Version 2.2.11-1 (2017/04/05)**
 
 * *New Features*
@@ -155,131 +167,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Updated the latitude and longitude values tests to allow for 0.
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
-**Version 2.2.9-1 (2017/03/07)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* Fixed a CSS id problem that prevented the automatic display/hidding of options from working properly.
-* *Developer Notes*
-	* None
-
-**Version 2.2.8-1 (2017/02/26)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Minor update for WPSSO v3.40.0-1 compatibility:
-		* Removed the $use_post argument from the 'wpsso_og_seed' filter.
-
-**Version 2.2.7-1 (2017/02/19)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Minor update for WPSSO v3.39.9-1 compatibility:
-		* Added a hook for the new 'wpsso_rename_md_options_keys' filter.
-
-**Version 2.2.6-1 (2017/01/08)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Added a 'plugins_loaded' action hook to load the plugin text domain.
-
-**Version 2.2.5-1 (2016/12/12)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added a new "Order Action URL(s)" option.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Added a filter hook to include "Order Action URL(s)" in the main entity Schema markup.
-
-**Version 2.2.4-1 (2016/11/25)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added Schema itemprop meta tags for business telephone, currenciesAccepted, paymentAccepted, and priceRange.
-	* Added Local Business options:
-		* Business Telephone
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Refactored the min_version_notice() method and moved variables to config class.
-	* Refactored the show_metabox_banner() method for the Place / Location settings page.
-
-**Version 2.2.3-1 (2016/11/12)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Minor code changes required for WPSSO v3.37.1-1.
-		* Renamed the 'wpsso_schema_head_type' filter to 'wpsso_schema_type_id' for WPSSO v3.37.1-1.
-		* Renamed the WpssoSchema get_schema_types() method to get_schema_types_array().
-
-**Version 2.2.2-1 (2016/11/03)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added an "Address Name" option to the custom settings metabox.
-* *Bugfixes*
-	* Fixed drop-down values allowing the adding of a "[New Address]".
-* *Developer Notes*
-	* Minor code changes required for WPSSO v3.37.0-1:
-		* Renamed the SucomUtil after_key() method to get_after_key().
-		* Renamed the 'wpsso_json_array_type_ids' filter to 'wpsso_json_array_schema_type_ids'.
-
-**Version 2.2.1-1 (2016/10/22)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Minimum requirements updated to WP v3.5 and PHP v5.4.
-	* Minor code changes required for WPSSO v3.36.3-1:
-		* Renamed the Social Settings 'header' index name to 'text'.
-
-**Version 2.2.0-1 (2016/10/15)**
-
-* *New Features*
-	* Added Local Business options:
-		* Currencies Accepted
-		* Payment Accepted
-		* Price Range
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
 == Upgrade Notice ==
+
+= 2.2.12 =
+
+(2017/04/08) Minor revision to move URLs in the extension config to the main WPSSO plugin config.
 
 = 2.2.11-1 =
 
@@ -288,28 +180,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 2.2.10-1 =
 
 (2017/03/25) Updated the latitude and longitude values tests to allow for 0.
-
-= 2.2.9-1 =
-
-(2017/03/07) Fixed a CSS id problem that prevented the automatic display/hidding of options from working properly.
-
-= 2.2.8-1 =
-
-(2017/02/26) Minor update for WPSSO v3.40.0-1 compatibility.
-
-= 2.2.7-1 =
-
-(2017/02/19) Minor update for WPSSO v3.39.9-1 compatibility.
-
-= 2.2.6-1 =
-
-(2017/01/08) Added a 'plugins_loaded' action hook to load the plugin text domain.
-
-= 2.2.5-1 =
-
-(2016/12/12) Added a new "Order Action URL(s)" option. Added a filter hook to include "Order Action URL(s)" in the main entity Schema markup.
-
-= 2.2.4-1 =
-
-(2016/11/25) Added Schema itemprop meta tags for business telephone, currenciesAccepted, paymentAccepted, and priceRange. Refactored the min_version_notice() and show_metabox_banner() methods.
 
