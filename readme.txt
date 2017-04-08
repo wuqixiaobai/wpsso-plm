@@ -16,7 +16,7 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 
 == Description ==
 
-<img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" style="width:33%;min-width:128px;max-width:256px;height:auto;float:left;margin:10px 40px 40px 0;" />
+<img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="128" height="128" class="plugin_icon">
 
 <p><strong>Provides location / local business information for your website, business, and/or content.</strong></p>
 
