@@ -13,7 +13,7 @@
 
 <h2>Description</h2>
 
-<p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="128" height="128" class="plugin-icon"></p>
+<p><img src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png" width="128" height="128" class="readme-plugin-icon"></p>
 
 <p><strong>Provides location / local business information for your website, business, and/or content.</strong></p>
 
