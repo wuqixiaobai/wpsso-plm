@@ -106,8 +106,11 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$this->form->__half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );
 					$this->form->defaults['plm_addr_id'] = $first_num;	// set default value
 
+					// check to make sure the selected id exists - if not, then unset to use the default
 					if ( isset( $this->form->options['plm_addr_id'] ) ) {
 						$def_id = $this->form->options['plm_addr_id'];
+
+						// test if the address name is missing or blank
 						if ( ! isset( $this->p->options['plm_addr_name_'.$def_id] ) ||
 							trim( $this->p->options['plm_addr_name_'.$def_id] ) === '' ) {
 							unset( $this->form->options['plm_addr_id'] );

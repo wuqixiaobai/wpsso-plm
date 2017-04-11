@@ -364,8 +364,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				if ( ! empty( $opts['plm_addr_delete_'.$num] ) ||
 					( $name === '' && $num === $last_num ) ) {	// remove the empty "New Address"
 
-					if ( isset( $opts['plm_addr_id'] ) &&
-						$opts['plm_addr_id'] === $num ) {
+					if ( isset( $opts['plm_addr_id'] ) && $opts['plm_addr_id'] === $num ) {
 						unset( $opts['plm_addr_id'] );
 					}
 
