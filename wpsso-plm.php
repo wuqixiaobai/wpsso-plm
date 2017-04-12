@@ -13,7 +13,7 @@
  * Description: WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.3
- * Version: 2.2.12
+ * Version: 2.2.13-a.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		public $filters;		// WpssoPlmFilters
 
 		private static $instance;
-		private static $have_req_min = true;	// have at least minimum wpsso version
+		private static $have_req_min = true;	// have minimum wpsso version
 
 		public function __construct() {
 
@@ -107,39 +107,46 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 		}
 
 		public function wpsso_init_options() {
-			if ( method_exists( 'Wpsso', 'get_instance' ) )
+			if ( method_exists( 'Wpsso', 'get_instance' ) ) {
 				$this->p =& Wpsso::get_instance();
-			else $this->p =& $GLOBALS['wpsso'];
-
-			if ( $this->p->debug->enabled )
-				$this->p->debug->mark();
-
-			if ( self::$have_req_min === false )
-				return;
-
-			$this->p->is_avail['plm'] = true;
-
-			if ( is_admin() ) {
-				$this->p->is_avail['admin']['post'] = true;
+			} else {
+				$this->p =& $GLOBALS['wpsso'];
 			}
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( self::$have_req_min ) {
+				$this->p->is_avail['p_ext']['plm'] = true;
+				if ( is_admin() ) {
+					$this->p->is_avail['admin']['post'] = true;
+				}
+			} else {
+				$this->p->is_avail['p_ext']['plm'] = false;	// just in case
+			}
+
+
 		}
 
 		public function wpsso_init_objects() {
-			if ( $this->p->debug->enabled )
+			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+			}
 
-			if ( self::$have_req_min === false )
-				return;		// stop here
-
-			$this->filters = new WpssoPlmFilters( $this->p );
+			if ( self::$have_req_min ) {
+				$this->filters = new WpssoPlmFilters( $this->p );
+			}
 		}
 
 		public function wpsso_init_plugin() {
-			if ( $this->p->debug->enabled )
+			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+			}
 
-			if ( self::$have_req_min === false )
-				return $this->min_version_notice();
+			if ( ! self::$have_req_min ) {
+				return $this->min_version_notice();	// stop here
+			}
 		}
 
 		private function min_version_notice() {
