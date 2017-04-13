@@ -132,7 +132,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 2.2.13-b.1 (2017/04/13)**
+**Version 2.2.13-rc.1 (2017/04/14)**
 
 * *New Features*
 	* None
@@ -180,9 +180,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.2.13-b.1 =
+= 2.2.13-rc.1 =
 
-(2017/04/13) Refactored the plugin init filters and moved/renamed the registration boolean.
+(2017/04/14) Refactored the plugin init filters and moved/renamed the registration boolean.
 
 = 2.2.12 =
 
