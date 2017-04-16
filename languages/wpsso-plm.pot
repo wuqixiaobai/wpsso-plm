@@ -474,7 +474,7 @@ msgid "WPSSO Place / Location and Local Business Meta (WPSSO PLM)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://surniaulula.com/extend/plugins/wpsso-plm/"
+msgid "https://wpsso.com/extend/plugins/wpsso-plm/"
 msgstr ""
 
 #. Description of the plugin/theme
