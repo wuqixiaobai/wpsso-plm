@@ -10,7 +10,7 @@ Tags: local seo, local business, knowledge graph, location, place, address, venu
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3
-Stable Tag: 2.2.12
+Stable Tag: 2.2.13
 
 WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
@@ -132,7 +132,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 2.2.13 (2017/04/15)**
+**Version 2.2.13 (2017/04/16)**
 
 * *New Features*
 	* None
@@ -182,7 +182,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.2.13 =
 
-(2017/04/15) Refactored the plugin init filters and moved/renamed the registration boolean.
+(2017/04/16) Refactored the plugin init filters and moved/renamed the registration boolean.
 
 = 2.2.12 =
 
