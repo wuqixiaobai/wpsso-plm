@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$form->__half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );	// $format = ''
+			$form->__half_hours = SucomUtil::get_hours_range( 0, DAY_IN_SECONDS, 60 * 30, '' );	// $format = ''
 			$form->__all_types = $this->p->schema->get_schema_types_array( false );		// $flatten = false
 			$form->__business_types = $this->p->schema->get_schema_types_select( 
 				$form->__all_types['thing']['place']['local.business'], false );	// $add_none = false

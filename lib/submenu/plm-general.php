@@ -103,7 +103,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$this->form->__all_types = $this->p->schema->get_schema_types_array( false );	// $flatten = false
 					$this->form->__business_types = $this->p->schema->get_schema_types_select(
 						$this->form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
-					$this->form->__half_hours = SucomUtil::get_hours_range( 0, 86400, 60 * 30, '' );
+					$this->form->__half_hours = SucomUtil::get_hours_range( 0, DAY_IN_SECONDS, 60 * 30, '' );
 					$this->form->defaults['plm_addr_id'] = $first_num;	// set default value
 
 					// check to make sure the selected id exists - if not, then unset to use the default
