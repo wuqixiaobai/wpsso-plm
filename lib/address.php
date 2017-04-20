@@ -211,8 +211,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 
 			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// shortcut variable
-
-			$md_opts = $mod['obj']->get_options( $mod['id'] );
+			$md_opts = $mod['obj']->get_options( $mod['id'] );	// returns empty string if no meta found
 
 			if ( is_array( $md_opts  ) ) {
 				if ( isset( $md_opts['plm_addr_id'] ) && is_numeric( $md_opts['plm_addr_id'] ) ) {	// allow for 0
