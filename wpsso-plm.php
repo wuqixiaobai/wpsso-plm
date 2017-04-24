@@ -13,7 +13,7 @@
  * Description: WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.4
- * Version: 2.2.13
+ * Version: 2.2.14-dev.1
  * 
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -118,12 +118,12 @@ if ( ! class_exists( 'WpssoPlm' ) ) {
 			}
 
 			if ( self::$have_min ) {
-				$this->p->is_avail['p_ext']['plm'] = true;
+				$this->p->avail['p_ext']['plm'] = true;
 				if ( is_admin() ) {
-					$this->p->is_avail['admin']['post'] = true;
+					$this->p->avail['admin']['post'] = true;
 				}
 			} else {
-				$this->p->is_avail['p_ext']['plm'] = false;	// just in case
+				$this->p->avail['p_ext']['plm'] = false;	// just in case
 			}
 
 

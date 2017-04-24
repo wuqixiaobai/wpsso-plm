@@ -75,7 +75,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					'<td>'.$this->form->get_select_country( 'plm_addr_def_country',
 					 	'', '', false, $this->p->options['plm_addr_def_country'] ).'</td>';
 
-					if ( ! $aop = $this->p->check->aop( 'wpssoplm', true, $this->p->is_avail['aop'] ) ) {
+					if ( ! $aop = $this->p->check->aop( 'wpssoplm', true, $this->p->avail['*']['p_dir'] ) ) {
 						$table_rows[] = '<td colspan="2">'.$this->p->msgs->get( 'pro-feature-msg', 
 							array( 'lca' => 'wpssoplm' ) ).'</td>';
 					}
