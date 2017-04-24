@@ -141,7 +141,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed the $is_avail array to $avail for WPSSO v3.42.0.
+	* Code refactoring to rename the $is_avail array to $avail for WPSSO v3.42.0.
 
 **Version 2.2.13 (2017/04/16)**
 
@@ -190,6 +190,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.2.14-dev.1 =
+
+(2017/04/24) Code refactoring to rename the $is_avail array to $avail for WPSSO v3.42.0.
 
 = 2.2.13 =
 
