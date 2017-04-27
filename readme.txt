@@ -40,7 +40,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 **WPSSO PLM Free / Basic Features**
 
 * Extends the features of WPSSO Free or Pro.
-* Select an Address for a Blog Front Page (added to the main entity of the blog front page).
+* Select a Address for a Blog Front Page.
 * Manage Multiple Addresses / Contact Information:
 	* Pinterest Rich Pin / Schema Place
 		* Street Address

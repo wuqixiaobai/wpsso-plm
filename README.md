@@ -40,7 +40,7 @@
 
 <ul>
 <li>Extends the features of WPSSO Free or Pro.</li>
-<li>Select an Address for a Blog Front Page (added to the main entity of the blog front page).</li>
+<li>Select a Address for a Blog Front Page.</li>
 <li>Manage Multiple Addresses / Contact Information:
 
 <ul>
