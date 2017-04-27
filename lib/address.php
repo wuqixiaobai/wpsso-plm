@@ -100,12 +100,14 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
 					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
-						if ( $wpsso->debug->enabled )
+						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'no business days for address id '.$wpsso->options['plm_addr_for_home'] );
+						}
 					} else {
 						foreach ( $wpsso->cf['form']['weekdays'] as $day => $label ) {
-							if ( ! empty( $addr_opts['plm_addr_day_'.$day] ) )
+							if ( ! empty( $addr_opts['plm_addr_day_'.$day] ) ) {
 								return $addr_opts;
+							}
 						}
 						return false;
 					}

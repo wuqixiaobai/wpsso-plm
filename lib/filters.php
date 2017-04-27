@@ -109,17 +109,22 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_og_type( $og_type, $mod ) {
-			if ( WpssoPlmAddress::has_place( $mod ) )
+			if ( WpssoPlmAddress::has_place( $mod ) ) {
 				return 'place';
-			else return $og_type;
+			} else {
+				return $og_type;
+			}
 		}
 
 		public function filter_og_seed( array $mt_og, array $mod ) {
-			if ( $this->p->debug->enabled )
-				$this->p->debug->mark();
 
-			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) === false )
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) === false ) {
 				return $mt_og;     // abort
+			}
 
 			/*
 			 * og:type
@@ -225,9 +230,12 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$business_type_id = empty( $addr_opts['plm_addr_business_type'] ) ?
 						'local.business' : $addr_opts['plm_addr_business_type'];
 					$type_ids[$business_type_id] = true;
-				} else $type_ids['place'] = true;
-			} elseif ( $this->p->debug->enabled )
+				} else {
+					$type_ids['place'] = true;
+				}
+			} elseif ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'not a schema place: no place options found' );
+			}
 
 			return $type_ids;
 		}
@@ -530,9 +538,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_status_gpl_features( $features, $lca, $info, $pkg ) {
+
 			$has_addr_for_home = $this->p->options['plm_addr_for_home'] === '' ||
 				$this->p->options['plm_addr_for_home'] === 'none' ? false : true;	// can be 0
-			$features['(code) Place / Location for Blog Front Page'] = array( 'status' => $has_addr_for_home ? 'on' : 'off' );
+
+			$features['(code) Place / Location for Blog Front Page'] = array(
+				'status' => $has_addr_for_home ? 'on' : 'off',
+			);
+
 			return $features;
 		}
 

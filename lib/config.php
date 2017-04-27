@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.2.14-dev.1',		// plugin version
-					'opt_version' => '15',		// increment when changing default options
+					'version' => '2.2.14-dev.2',		// plugin version
+					'opt_version' => '16',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta (WPSSO PLM)',
 					'desc' => 'WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WordPress Social Sharing Optimization (WPSSO)',
-						'min_version' => '3.42.0-dev.1',
+						'min_version' => '3.42.0-dev.2',
 					),
 					'img' => array(
 						'icons' => array(
