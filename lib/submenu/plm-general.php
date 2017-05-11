@@ -195,6 +195,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						_x( 'Schema Local Business', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 		
 					foreach ( $this->form->__address_names as $id => $name ) {
+
 						$tr_hide_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="hide_plm_addr_id hide_plm_addr_id_'.$id.'" style="display:none">';
 
@@ -203,12 +204,21 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$this->form->get_th_html( _x( 'Local Business Type', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
 						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id, $this->form->__business_types, 'long_name' ).'</td>';
 		
+						$table_rows['plm_addr_def_img_id_'.$id] = $tr_hide_addr_id.
+						$this->form->get_th_html( _x( 'Location Default Image ID', 'option label', 'wpsso-plm' ), '', 'plm_addr_def_img_id' ).
+						'<td colspan="3">'.$this->form->get_image_upload_input( 'plm_addr_def_img' ).'</td>';
+	
+						$table_rows['og_def_img_url_'.$id] = $this->form->get_th_html( _x( 'or Location Default Image URL',
+							'option label', 'wpsso-plm' ), '', 'plm_addr_def_img_url' ).
+						'<td colspan="3">'.$this->form->get_image_url_input( 'plm_addr_def_img' ).'</td>';
+
 						$table_rows['plm_addr_phone_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Business Telephone', 'option label', 'wpsso-plm' ), '', 'plm_addr_phone' ). 
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_phone_'.$id ).'</td>';
 
 						$row_number = 1;
 						foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
+
 							if ( $row_number === 1 ) {
 								$th_cell = $tr_hide_addr_id.$this->form->get_th_html( _x( 'Business Days + Hours',
 									'option label', 'wpsso-plm' ), '', 'plm_addr_days' );
