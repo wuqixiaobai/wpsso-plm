@@ -456,7 +456,7 @@ msgctxt "option label"
 msgid "Location Default Image ID"
 msgstr ""
 
-#: lib/submenu/plm-general.php:211
+#: lib/submenu/plm-general.php:212
 msgctxt "option label"
 msgid "or Location Default Image URL"
 msgstr ""

@@ -206,11 +206,11 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 		
 						$table_rows['plm_addr_def_img_id_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Location Default Image ID', 'option label', 'wpsso-plm' ), '', 'plm_addr_def_img_id' ).
-						'<td colspan="3">'.$this->form->get_image_upload_input( 'plm_addr_def_img' ).'</td>';
+						'<td colspan="3">'.$this->form->get_image_upload_input( 'plm_addr_def_img_'.$id ).'</td>';
 	
-						$table_rows['og_def_img_url_'.$id] = $this->form->get_th_html( _x( 'or Location Default Image URL',
-							'option label', 'wpsso-plm' ), '', 'plm_addr_def_img_url' ).
-						'<td colspan="3">'.$this->form->get_image_url_input( 'plm_addr_def_img' ).'</td>';
+						$table_rows['plm_addr_def_img_url_'.$id] = $tr_hide_addr_id.
+						$this->form->get_th_html( _x( 'or Location Default Image URL', 'option label', 'wpsso-plm' ), '', 'plm_addr_def_img_url' ).
+						'<td colspan="3">'.$this->form->get_image_url_input( 'plm_addr_def_img_'.$id ).'</td>';
 
 						$table_rows['plm_addr_phone_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Business Telephone', 'option label', 'wpsso-plm' ), '', 'plm_addr_phone' ). 
