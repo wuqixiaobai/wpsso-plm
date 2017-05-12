@@ -55,6 +55,8 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 		* Altitude
 	* Schema Local Business
 		* Local Business Type
+		* Business Location Image ID
+		* or Business Location Image URL
 		* Business Telephone
 		* Business Days + Hours
 		* Business Dates (Season)
@@ -132,10 +134,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 2.2.15-dev.1 (TBD)**
+**Version 2.3.0-dev.1 (TBD)**
 
 * *New Features*
-	* None
+	* Added two new options in the Place / Location settings page:
+		* Business Location Image ID
+		* or Business Location Image URL
 * *Improvements*
 	* None
 * *Bugfixes*

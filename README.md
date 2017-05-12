@@ -65,6 +65,8 @@
 
 <ul>
 <li>Local Business Type</li>
+<li>Business Location Image ID</li>
+<li>or Business Location Image URL</li>
 <li>Business Telephone</li>
 <li>Business Days + Hours</li>
 <li>Business Dates (Season)</li>
