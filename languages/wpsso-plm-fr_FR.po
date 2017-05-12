@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.2.14\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2017-04-30 07:18+0200\n"
-"PO-Revision-Date: 2017-04-30 07:18+0200\n"
+"POT-Creation-Date: 2017-05-12 09:12-0400\n"
+"PO-Revision-Date: 2017-05-12 09:12-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -70,7 +70,7 @@ msgctxt "option value"
 msgid "Address #%d"
 msgstr "Adresse #%d"
 
-#: lib/filters.php:441 lib/filters.php:534
+#: lib/filters.php:441 lib/filters.php:540
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr "Place / Position"
@@ -87,7 +87,7 @@ msgstr "Sélectionnez une adresse a utiliser dans le Schéma <em>Place</em> ou u
 msgid "An address for a static front page can be selected in the %1$s metabox when editing the static page."
 msgstr "Une adresse pour une page statique d'avant peut être sélectionnée dans la métabox %1$s lors de la rédaction de la page statique."
 
-#: lib/filters.php:462 lib/filters.php:534
+#: lib/filters.php:462 lib/filters.php:540
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr "Réglages Sociaux"
@@ -149,46 +149,66 @@ msgid "A more descriptive Schema type for this local business. You must select a
 msgstr "Un type de schéma plus descriptif pour cette entreprise locale. Vous devez sélectionner un établissement alimentaire (restaurant \"fast food\", magasin de crème glacée, restaurant, etc.) pour inclure le schéma de balisage pour un URL de menu et / ou des informations de réservation."
 
 #: lib/filters.php:504
+msgid "An image ID and media library selection for your business location image."
+msgstr "La bibliothèque de média et un ID d'image pour l'image d'emplacement de l'entreprise."
+
+#: lib/filters.php:504
+msgid "The business location image is used in the Schema LocalBusiness markup for the 'location' Schema property."
+msgstr ""
+
+#: lib/filters.php:504
+msgid "The business location image is not used when an address is added to a post, page, or custom post type."
+msgstr ""
+
+#: lib/filters.php:507
+msgid "You can enter a business location image URL (including the http:// prefix) instead of choosing an image ID &mdash; if a business location image ID is specified, the image URL option is disabled."
+msgstr "Vous pouvez entrer un URL d'image pour l'emplacement de l'entreprise (y compris le préfixe http://) au lieu de choisir un ID d'image &mdash; si un ID d'image pour l'emplacement de l'entreprise est défini, l'option URL d'image est désactivée."
+
+#: lib/filters.php:507
+msgid "The image URL option allows you to use an image outside of a managed collection (WordPress Media Library or NextGEN Gallery), and/or a smaller logo style image."
+msgstr "L'option URL d'image vous permet d'utiliser une image à l'extérieur d'une collection gérée (Bibliothèque de Médias WordPress ou NextGEN Gallery), et/ou utiliser une image plus petite de style logo."
+
+#: lib/filters.php:510
 msgid "An optional Telephone number for this local business."
 msgstr "Un numéro de téléphone optionnel pour cette entreprise locale."
 
-#: lib/filters.php:507
+#: lib/filters.php:513
 msgid "Select the days and hours this business is open."
 msgstr "Sélectionnez les jours et heures, que cette entreprise est ouverte."
 
-#: lib/filters.php:510
+#: lib/filters.php:516
 msgid "This business is only open for part of the year, between these two dates."
 msgstr "Cette entreprise est ouverte uniquement pour une partie de l'année, entre ces deux dates."
 
-#: lib/filters.php:513
+#: lib/filters.php:519
 msgid "The geographic area where a service is provided, in meters around the location."
 msgstr "La zone géographique où un service est fourni, en mètres autour de l’endroit."
 
-#: lib/filters.php:516
+#: lib/filters.php:522
 msgid "A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 currency codes</a> accepted by the local business (example: USD, CAD)."
 msgstr "Une liste séparée par des virgules des <a href=\"https://fr.wikipedia.org/wiki/ISO_4217\">codes ISO 4217 des devises</a> acceptées par l’entreprise locale (exemple: USD, CAD)."
 
-#: lib/filters.php:519
+#: lib/filters.php:525
 msgid "A comma-delimited list of payment options accepted by the local business (example: Cash, Credit Card)."
 msgstr "Une liste séparée par des virgules des modes de paiement acceptés par l’entreprise locale (exemple: Cash, Credit Card)."
 
-#: lib/filters.php:522
+#: lib/filters.php:528
 msgid "The price range of goods or services provided by the local business (example: $10-100)."
 msgstr "L'échelle de prix des biens ou services fournis par l’entreprise locale (exemple: $10-100)."
 
-#: lib/filters.php:525
+#: lib/filters.php:531
 msgid "This food establishment accepts reservations."
 msgstr "Cet établissement alimentaire accepte des réservations."
 
-#: lib/filters.php:528
+#: lib/filters.php:534
 msgid "The menu URL for this food establishment (fast food restaurant, ice cream shop, restaurant, etc.)"
 msgstr "L'URL du menu pour cet établissement alimentaire (restaurant \"fast food\", magasin de crème glacée, restaurant, etc.)"
 
-#: lib/filters.php:531
+#: lib/filters.php:537
 msgid "Comma-delimited website and mobile app URLs to order products. The WPSSO JSON extension is required to add Order Action URL(s) to the Schema potentialAction property."
 msgstr "URLs délimité par des virgules du site Web et d'application mobile pour commander des produits. L'extension WPSSO JSON est requis pour ajouter les URLs d'action de commande à la propriété Schema potentialAction."
 
-#: lib/filters.php:534
+#: lib/filters.php:540
 msgid "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address)."
 msgstr "Un onglet <em>%1$s</em> peut être ajouté à la metabox %2$s pour les Articles, Pages et les articles de type personnalisé, vous permettant d'entrer des informations sur un endroit spécifique (c'est à dire, des coordonnées GPS et/ou adresse postale)."
 
@@ -290,73 +310,73 @@ msgid "Schema Local Business"
 msgstr "Schéma Entreprise Locale"
 
 #: lib/gpl/admin/post.php:103 lib/pro/admin/post.php:193
-#: lib/pro/admin/post.php:207 lib/submenu/plm-general.php:203
+#: lib/pro/admin/post.php:207 lib/submenu/plm-general.php:204
 msgctxt "option label"
 msgid "Local Business Type"
 msgstr "Type de l'entreprise locale"
 
 #: lib/gpl/admin/post.php:108 lib/pro/admin/post.php:198
-#: lib/pro/admin/post.php:212 lib/submenu/plm-general.php:207
+#: lib/pro/admin/post.php:212 lib/submenu/plm-general.php:217
 msgctxt "option label"
 msgid "Business Telephone"
 msgstr "Téléphone de l'entreprise"
 
 #: lib/gpl/admin/post.php:115 lib/pro/admin/post.php:219
-#: lib/submenu/plm-general.php:213
+#: lib/submenu/plm-general.php:224
 msgctxt "option label"
 msgid "Business Days + Hours"
 msgstr "Jours + heures d'ouverture"
 
 #: lib/gpl/admin/post.php:129 lib/pro/admin/post.php:255
-#: lib/pro/admin/post.php:287 lib/submenu/plm-general.php:233
+#: lib/pro/admin/post.php:287 lib/submenu/plm-general.php:244
 msgctxt "option label"
 msgid "Business Dates (Season)"
 msgstr "Dates d'affaires (saison)"
 
 #: lib/gpl/admin/post.php:134 lib/pro/admin/post.php:260
-#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:238
+#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:249
 msgctxt "option label"
 msgid "Service Radius"
 msgstr "Rayon de service"
 
 #: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:262
-#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:240
+#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:251
 msgctxt "option comment"
 msgid "meters from location"
 msgstr "mètres de la place / position"
 
 #: lib/gpl/admin/post.php:140 lib/pro/admin/post.php:265
-#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:243
+#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:254
 msgctxt "option label"
 msgid "Currencies Accepted"
 msgstr "Devises acceptées"
 
 #: lib/gpl/admin/post.php:141 lib/pro/admin/post.php:266
-#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:244
+#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:255
 msgctxt "option label"
 msgid "Payment Accepted"
 msgstr "Paiement accepté"
 
 #: lib/gpl/admin/post.php:142 lib/pro/admin/post.php:267
-#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:245
+#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:256
 msgctxt "option label"
 msgid "Price Range"
 msgstr "Échelle de prix"
 
 #: lib/gpl/admin/post.php:147 lib/pro/admin/post.php:274
-#: lib/pro/admin/post.php:307 lib/submenu/plm-general.php:253
+#: lib/pro/admin/post.php:307 lib/submenu/plm-general.php:264
 msgctxt "option label"
 msgid "Accepts Reservations"
 msgstr "Accepte des réservations"
 
 #: lib/gpl/admin/post.php:151 lib/pro/admin/post.php:278
-#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:257
+#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:268
 msgctxt "option label"
 msgid "Food Menu URL"
 msgstr "URL du menu alimentaire"
 
 #: lib/gpl/admin/post.php:155 lib/pro/admin/post.php:282
-#: lib/pro/admin/post.php:315 lib/submenu/plm-general.php:261
+#: lib/pro/admin/post.php:315 lib/submenu/plm-general.php:272
 msgctxt "option label"
 msgid "Order Action URL(s)"
 msgstr "URL(s) d'action de commande"
@@ -400,6 +420,16 @@ msgstr "Modifier une adresse"
 msgctxt "option comment"
 msgid "delete this address"
 msgstr "supprimer cette adresse"
+
+#: lib/submenu/plm-general.php:209
+msgctxt "option label"
+msgid "Business Location Image ID"
+msgstr "ID d'image d'emplacement de l'entreprise"
+
+#: lib/submenu/plm-general.php:213
+msgctxt "option label"
+msgid "or Business Location Image URL"
+msgstr "ou URL d'image d'emplacement de l'entreprise"
 
 #: wpsso-plm.php:78
 msgid "%1$s is an extension for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."

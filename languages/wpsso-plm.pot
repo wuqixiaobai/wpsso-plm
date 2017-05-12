@@ -206,9 +206,9 @@ msgstr ""
 
 #: lib/filters.php:507
 msgid ""
-"<strong>The image URL option allows you to use an image outside of a managed "
+"The image URL option allows you to use an image outside of a managed "
 "collection (WordPress Media Library or NextGEN Gallery), and/or a smaller "
-"logo style image</strong>."
+"logo style image."
 msgstr ""
 
 #: lib/filters.php:510
