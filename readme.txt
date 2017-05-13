@@ -37,7 +37,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 = Quick List of Features =
 
-**WPSSO PLM Free / Basic Features**
+**WPSSO PLM Free / Core Features**
 
 * Extends the features of WPSSO Free or Pro.
 * Select a Address for a Blog Front Page.
@@ -134,9 +134,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 2.3.0-dev.1 (TBD)**
+**Version 2.3.0-dev.3 (2017/05/13)**
 
-* *New Features*
+New Features*
 	* Added two new options in the Place / Location settings page:
 		* Business Location Image ID
 		* or Business Location Image URL
@@ -205,6 +205,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.0-dev.3 =
+
+(2015/05/13) Added two new options in the Place / Location settings page.
 
 = 2.2.14 =
 
