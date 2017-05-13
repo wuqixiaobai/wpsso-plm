@@ -140,10 +140,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 * place:postal_code
 			 * place:country_name
 			 */
-			foreach ( WpssoPlmAddress::$place_mt as $key => $mt_name )
+			foreach ( WpssoPlmAddress::$place_mt as $key => $mt_name ) {
 				$mt_og[$mt_name] = isset( $addr_opts[$key] ) && 
 					$addr_opts[$key] !== 'none' ?
 						$addr_opts[$key] : '';
+			}
 
 			/*
 			 * og:latitude
@@ -500,10 +501,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				case 'tooltip-plm_addr_business_type':
 					$text = __( 'A more descriptive Schema type for this local business. You must select a food establishment (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu URL and/or reservation information.', 'wpsso-plm' );
 					break;
-				case 'tooltip-plm_addr_def_img_id':
+				case 'tooltip-plm_addr_img_id':
 					$text = __( 'An image ID and media library selection for your business location image.', 'wpsso-plm' ).' '.__( 'The business location image is used in the Schema LocalBusiness markup for the \'location\' Schema property.', 'wpsso-plm' ).' '.__( 'The business location image is not used when an address is added to a post, page, or custom post type.', 'wpsso-plm' );
 					break;
-				case 'tooltip-plm_addr_def_img_url':
+				case 'tooltip-plm_addr_img_url':
 					$text = __( 'You can enter a business location image URL (including the http:// prefix) instead of choosing an image ID &mdash; if a business location image ID is specified, the image URL option is disabled.', 'wpsso-plm' ).' <strong>'.__( 'The image URL option allows you to use an image outside of a managed collection (WordPress Media Library or NextGEN Gallery), and/or a smaller logo style image.', 'wpsso-plm' ).'</strong>';
 					break;
 				case 'tooltip-plm_addr_phone':
