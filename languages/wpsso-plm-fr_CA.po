@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.2.14\n"
+"Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2017-05-12 09:12-0400\n"
-"PO-Revision-Date: 2017-05-12 09:12-0400\n"
+"POT-Creation-Date: 2017-05-14 09:16-0400\n"
+"PO-Revision-Date: 2017-05-14 09:19-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -65,150 +65,150 @@ msgctxt "plugin description"
 msgid "WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags."
 msgstr "Extension WPSSO pour fournir des balises méta Pinterest place, Facebook / Open Graph de position, et Schéma d'entreprise locale."
 
-#: lib/filters.php:383
+#: lib/filters.php:384
 msgctxt "option value"
 msgid "Address #%d"
 msgstr "Adresse #%d"
 
-#: lib/filters.php:441 lib/filters.php:540
+#: lib/filters.php:442 lib/filters.php:541
 msgctxt "metabox tab"
 msgid "Place / Location"
 msgstr "Place / Position"
 
-#: lib/filters.php:450
+#: lib/filters.php:451
 msgid "Select an address or enter a customized address bellow."
 msgstr "Sélectionnez une adresse ou complétez une adresse personnalisée ci-dessous."
 
-#: lib/filters.php:462
+#: lib/filters.php:463
 msgid "Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page."
 msgstr "Sélectionnez une adresse a utiliser dans le Schéma <em>Place</em> ou un <em>d'Entreprise Locale</em> pour votre page blog (non-statique) d'avant."
 
-#: lib/filters.php:462
+#: lib/filters.php:463
 msgid "An address for a static front page can be selected in the %1$s metabox when editing the static page."
 msgstr "Une adresse pour une page statique d'avant peut être sélectionnée dans la métabox %1$s lors de la rédaction de la page statique."
 
-#: lib/filters.php:462 lib/filters.php:540
+#: lib/filters.php:463 lib/filters.php:541
 msgctxt "metabox title"
 msgid "Social Settings"
 msgstr "Réglages Sociaux"
 
-#: lib/filters.php:465
+#: lib/filters.php:466
 msgid "A default country to use when creating a new address."
 msgstr "Un pays par défaut à utiliser lors de la création d'une nouvelle adresse."
 
-#: lib/filters.php:468
+#: lib/filters.php:469
 msgid "Select an address to edit. The address and business information is used for Open Graph meta tags and Schema markup."
 msgstr "Sélectionnez une adresse à modifier. Les informations d'adresse et d'entreprise sont utilisées pour les balises méta Open Graph et balisage de Schéma."
 
-#: lib/filters.php:471
+#: lib/filters.php:472
 msgid "Enter a descriptive name for this address. The address name may appear in forms and the Schema Place name property."
 msgstr "Entrez un nom descriptif pour cette adresse. Le nom de l’adresse peut apparaître dans les formes et la propriété de nom du Schéma Place."
 
-#: lib/filters.php:474
+#: lib/filters.php:475
 msgid "An optional Street Address used for Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup."
 msgstr "Une adresse de rue optionnel pour les balises méta et balisage Pinterest Rich Pin / Schéma de <em>Place</em>."
 
-#: lib/filters.php:477
+#: lib/filters.php:478
 msgid "An optional Post Office Box Number for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup."
 msgstr "Un numéro de boîte postale optionnel pour les balises méta et balisage Pinterest Rich Pin / Schéma de <em>Place</em>."
 
-#: lib/filters.php:480
+#: lib/filters.php:481
 msgid "An optional City name for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup."
 msgstr "Un nom de ville optionnel pour les balises méta et balisage Pinterest Rich Pin / Schéma de <em>Place</em>."
 
-#: lib/filters.php:483
+#: lib/filters.php:484
 msgid "An optional State or Province name for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup."
 msgstr "Un nom d'État ou de Province optionnel pour les balises méta et balisage Pinterest Rich Pin / Schéma de <em>Place</em>."
 
-#: lib/filters.php:486
+#: lib/filters.php:487
 msgid "An optional Zip or Postal Code for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup."
 msgstr "Un Zip ou Code Postal optionnel pour les balises méta et balisage Pinterest Rich Pin / Schéma de <em>Place</em>."
 
-#: lib/filters.php:489
+#: lib/filters.php:490
 msgid "An optional Country for the Pinterest Rich Pin / Schema <em>Place</em> meta tags and related markup."
 msgstr "Un nom de pays optionnel pour les balises méta et balisage Pinterest Rich Pin / Schéma de <em>Place</em>."
 
-#: lib/filters.php:492
+#: lib/filters.php:493
 msgid "The numeric <em>decimal degrees</em> latitude for the main content of this webpage."
 msgstr "Les <em>degrés décimaux</em> numérique de latitude pour le contenu de cette page Web."
 
-#: lib/filters.php:492 lib/filters.php:495
+#: lib/filters.php:493 lib/filters.php:496
 msgid "You may use a service like <a href=\"http://www.gps-coordinates.net/\">Google Maps GPS Coordinates</a> (as an example), to find the approximate GPS coordinates of a street address."
 msgstr "Vous pouvez utiliser un service comme le <a href=\"http://www.coordonnees-gps.fr/conversion-coordonnees-gps\">Convertisseur de coordonnées GPS</a> (par exemple), pour trouver les coordonnées GPS approximatives d'une adresse postale."
 
-#: lib/filters.php:495
+#: lib/filters.php:496
 msgid "The numeric <em>decimal degrees</em> longitude for the main content of this webpage."
 msgstr "Les <em>degrés décimaux</em> numérique de longitude pour le contenu de cette page Web."
 
-#: lib/filters.php:498
+#: lib/filters.php:499
 msgid "An optional numeric altitude (in meters above sea level) for the main content of this webpage."
 msgstr "Une altitude numérique optionnel (en mètres au-dessus du niveau de mer) pour le contenu de cette page Web."
 
-#: lib/filters.php:501
+#: lib/filters.php:502
 msgid "A more descriptive Schema type for this local business. You must select a food establishment (fast food restaurant, ice cream shop, restaurant, etc.) to include Schema markup for a food menu URL and/or reservation information."
 msgstr "Un type de schéma plus descriptif pour cette entreprise locale. Vous devez sélectionner un établissement alimentaire (restaurant \"fast food\", magasin de crème glacée, restaurant, etc.) pour inclure le schéma de balisage pour un URL de menu et / ou des informations de réservation."
 
-#: lib/filters.php:504
+#: lib/filters.php:505
 msgid "An image ID and media library selection for your business location image."
 msgstr "La bibliothèque de média et un ID d'image pour l'image d'emplacement de l'entreprise."
 
-#: lib/filters.php:504
+#: lib/filters.php:505
 msgid "The business location image is used in the Schema LocalBusiness markup for the 'location' Schema property."
-msgstr ""
+msgstr "L'image d'emplacement de l'entreprises est utilisé dans le balisage de Schéma LocalBusiness pour la propriété de Schéma 'location'."
 
-#: lib/filters.php:504
+#: lib/filters.php:505
 msgid "The business location image is not used when an address is added to a post, page, or custom post type."
-msgstr ""
+msgstr "L'image d'emplacement de l'entreprise n'est pas utilisée lorsqu'une adresse est ajoutée à un Article, Page, ou type d'article personnalisé."
 
-#: lib/filters.php:507
+#: lib/filters.php:508
 msgid "You can enter a business location image URL (including the http:// prefix) instead of choosing an image ID &mdash; if a business location image ID is specified, the image URL option is disabled."
 msgstr "Vous pouvez entrer un URL d'image pour l'emplacement de l'entreprise (y compris le préfixe http://) au lieu de choisir un ID d'image &mdash; si un ID d'image pour l'emplacement de l'entreprise est défini, l'option URL d'image est désactivée."
 
-#: lib/filters.php:507
+#: lib/filters.php:508
 msgid "The image URL option allows you to use an image outside of a managed collection (WordPress Media Library or NextGEN Gallery), and/or a smaller logo style image."
 msgstr "L'option URL d'image vous permet d'utiliser une image à l'extérieur d'une collection gérée (Bibliothèque de Médias WordPress ou NextGEN Gallery), et/ou utiliser une image plus petite de style logo."
 
-#: lib/filters.php:510
+#: lib/filters.php:511
 msgid "An optional Telephone number for this local business."
 msgstr "Un numéro de téléphone optionnel pour cette entreprise locale."
 
-#: lib/filters.php:513
+#: lib/filters.php:514
 msgid "Select the days and hours this business is open."
 msgstr "Sélectionnez les jours et heures, que cette entreprise est ouverte."
 
-#: lib/filters.php:516
+#: lib/filters.php:517
 msgid "This business is only open for part of the year, between these two dates."
 msgstr "Cette entreprise est ouverte uniquement pour une partie de l'année, entre ces deux dates."
 
-#: lib/filters.php:519
+#: lib/filters.php:520
 msgid "The geographic area where a service is provided, in meters around the location."
 msgstr "La zone géographique où un service est fourni, en mètres autour de l’endroit."
 
-#: lib/filters.php:522
+#: lib/filters.php:523
 msgid "A comma-delimited list of <a href=\"https://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 currency codes</a> accepted by the local business (example: USD, CAD)."
 msgstr "Une liste séparée par des virgules des <a href=\"https://fr.wikipedia.org/wiki/ISO_4217\">codes ISO 4217 des devises</a> acceptées par l’entreprise locale (exemple: USD, CAD)."
 
-#: lib/filters.php:525
+#: lib/filters.php:526
 msgid "A comma-delimited list of payment options accepted by the local business (example: Cash, Credit Card)."
 msgstr "Une liste séparée par des virgules des modes de paiement acceptés par l’entreprise locale (exemple: Cash, Credit Card)."
 
-#: lib/filters.php:528
+#: lib/filters.php:529
 msgid "The price range of goods or services provided by the local business (example: $10-100)."
 msgstr "L'échelle de prix des biens ou services fournis par l’entreprise locale (exemple: $10-100)."
 
-#: lib/filters.php:531
+#: lib/filters.php:532
 msgid "This food establishment accepts reservations."
 msgstr "Cet établissement alimentaire accepte des réservations."
 
-#: lib/filters.php:534
+#: lib/filters.php:535
 msgid "The menu URL for this food establishment (fast food restaurant, ice cream shop, restaurant, etc.)"
 msgstr "L'URL du menu pour cet établissement alimentaire (restaurant \"fast food\", magasin de crème glacée, restaurant, etc.)"
 
-#: lib/filters.php:537
+#: lib/filters.php:538
 msgid "Comma-delimited website and mobile app URLs to order products. The WPSSO JSON extension is required to add Order Action URL(s) to the Schema potentialAction property."
 msgstr "URLs délimité par des virgules du site Web et d'application mobile pour commander des produits. L'extension WPSSO JSON est requis pour ajouter les URLs d'action de commande à la propriété Schema potentialAction."
 
-#: lib/filters.php:540
+#: lib/filters.php:541
 msgid "A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address)."
 msgstr "Un onglet <em>%1$s</em> peut être ajouté à la metabox %2$s pour les Articles, Pages et les articles de type personnalisé, vous permettant d'entrer des informations sur un endroit spécifique (c'est à dire, des coordonnées GPS et/ou adresse postale)."
 
