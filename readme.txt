@@ -134,7 +134,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 2.3.0-dev.3 (2017/05/13)**
+**Version 2.3.0 (2017/05/14)**
 
 New Features*
 	* Added two new options in the Place / Location settings page:
@@ -206,9 +206,9 @@ New Features*
 
 == Upgrade Notice ==
 
-= 2.3.0-dev.3 =
+= 2.3.0 =
 
-(2015/05/13) Added two new options in the Place / Location settings page.
+(2015/05/14) Added two new options in the Place / Location settings page.
 
 = 2.2.14 =
 
