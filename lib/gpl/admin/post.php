@@ -101,9 +101,9 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				_x( 'Schema Local Business', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 
 			$table_rows['plm_addr_business_type'] = $form->get_th_html( _x( 'Local Business Type',
-				'option label', 'wpsso-plm' ), 'long_name', 'plm_addr_business_type' ). 
+				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_type' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
-				$form->__business_types, 'long_name', '', true ).'</td>';
+				$form->__business_types, 'schema_type', '', true ).'</td>';
 
 			$table_rows['plm_addr_phone'] = $form->get_th_html( _x( 'Business Telephone',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_phone' ). 

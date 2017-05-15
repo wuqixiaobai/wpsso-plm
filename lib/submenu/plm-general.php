@@ -200,12 +200,14 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							'<tr class="hide_plm_addr_id hide_plm_addr_id_'.$id.'" style="display:none">';
 
 						$this->form->defaults['plm_addr_business_type_'.$id] = WpssoPlmConfig::$cf['form']['plm_addr_opts']['plm_addr_business_type'];
+
 						$table_rows['plm_addr_business_type_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Local Business Type', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
 						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id,
-							$this->form->__business_types, 'long_name' ).'</td>';
+							$this->form->__business_types, 'schema_type' ).'</td>';
 		
 						$table_rows['plm_addr_img_id_'.$id] = $tr_hide_addr_id.
+
 						$this->form->get_th_html( _x( 'Business Location Image ID', 'option label', 'wpsso-plm' ), '', 'plm_addr_img_id' ).
 						'<td colspan="3">'.$this->form->get_image_upload_input( 'plm_addr_img_'.$id ).'</td>';
 	
