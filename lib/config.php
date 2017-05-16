@@ -28,7 +28,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'domain_path' => '/languages',
 					'req' => array(
 						'short' => 'WPSSO',
-						'name' => 'WordPress Social Sharing Optimization (WPSSO)',
+						'name' => 'WPSSO',
 						'min_version' => '3.43.2',
 					),
 					'img' => array(
