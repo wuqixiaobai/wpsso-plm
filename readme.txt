@@ -83,7 +83,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 = Extends the WPSSO Plugin =
 
-The WPSSO plugin is required to use the WPSSO PLM extension.
+The WPSSO (WordPress Social Sharing Optimization) plugin is required to use the WPSSO PLM extension.
 
 <blockquote>
 <p>The <a href="https://wordpress.org/plugins/wpsso-plm/">WPSSO PLM Free extension</a> works with the WPSSO Free or Pro plugin. The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> (along with all WPSSO Pro extensions) requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro plugin</a> as well.</p>
