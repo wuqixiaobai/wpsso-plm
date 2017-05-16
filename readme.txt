@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
 Tags: local seo, local business, knowledge graph, location, place, address, venue, restaurant, business hours, telephone, coordinates, meta tags
 Contributors: jsmoriss
 Requires At Least: 3.7
-Tested Up To: 4.7.4
+Tested Up To: 4.7.5
 Stable Tag: 2.3.0
 
 WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
