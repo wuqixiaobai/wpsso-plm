@@ -36,7 +36,7 @@
 
 <h4>Quick List of Features</h4>
 
-<p><strong>WPSSO PLM Free / Basic Features</strong></p>
+<p><strong>WPSSO PLM Free / Standard Features</strong></p>
 
 <ul>
 <li>Extends the features of WPSSO Free or Pro.</li>
@@ -84,7 +84,7 @@
 
 <h4>Quick List of Features (Continued)</h4>
 
-<p><strong>WPSSO PLM Pro / Power-User Features</strong></p>
+<p><strong>WPSSO PLM Pro / Additional Features</strong></p>
 
 <ul>
 <li>Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).</li>

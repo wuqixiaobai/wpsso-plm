@@ -37,7 +37,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 = Quick List of Features =
 
-**WPSSO PLM Free / Basic Features**
+**WPSSO PLM Free / Standard Features**
 
 * Extends the features of WPSSO Free or Pro.
 * Select a Address for a Blog Front Page.
@@ -71,7 +71,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 = Quick List of Features (Continued) =
 
-**WPSSO PLM Pro / Power-User Features**
+**WPSSO PLM Pro / Additional Features**
 
 * Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).
 * Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types.
