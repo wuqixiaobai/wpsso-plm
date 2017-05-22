@@ -1,5 +1,5 @@
 === WPSSO Place / Location and Local Business Meta for Pinterest, Facebook, Google, and SEO ===
-Plugin Name: WPSSO Place / Location and Local Business Meta (WPSSO PLM)
+Plugin Name: WPSSO Place / Location and Local Business Meta
 Plugin Slug: wpsso-plm
 Text Domain: wpsso-plm
 Domain Path: /languages
@@ -32,7 +32,7 @@ The WPSSO PLM extension can be used in two different ways:
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
 <blockquote>
-<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta (WPSSO PLM) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
+<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
 </blockquote>
 
 = Quick List of Features =
@@ -67,7 +67,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 		* Accepts Reservations
 		* Food Menu URL
 		* Order Action URL(s)
-* Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup (WPSSO JSON) Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
+* Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
 = Quick List of Features (Continued) =
 
@@ -85,7 +85,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 <p>The <a href="https://wordpress.org/plugins/wpsso-plm/">WPSSO PLM Free extension</a> works with the WPSSO Free or Pro plugin. The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> (along with all WPSSO Pro extensions) requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro plugin</a> as well.</p>
 
-[Purchase the WPSSO Place / Location and Local Business Meta (WPSSO PLM) Pro extension here](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase) (all purchases include a *No Risk 30 Day Refund Policy*).
+[Purchase the WPSSO Place / Location and Local Business Meta Pro extension here](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase) (all purchases include a *No Risk 30 Day Refund Policy*).
 
 == Installation ==
 
