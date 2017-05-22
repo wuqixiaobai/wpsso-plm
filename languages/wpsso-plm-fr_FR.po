@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta (WPSSO PLM) 2.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2017-05-14 09:16-0400\n"
-"PO-Revision-Date: 2017-05-14 09:19-0400\n"
+"POT-Creation-Date: 2017-05-22 09:09-0400\n"
+"PO-Revision-Date: 2017-05-22 09:09-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -310,73 +310,73 @@ msgid "Schema Local Business"
 msgstr "Schéma Entreprise Locale"
 
 #: lib/gpl/admin/post.php:103 lib/pro/admin/post.php:193
-#: lib/pro/admin/post.php:207 lib/submenu/plm-general.php:204
+#: lib/pro/admin/post.php:207 lib/submenu/plm-general.php:205
 msgctxt "option label"
 msgid "Local Business Type"
 msgstr "Type de l'entreprise locale"
 
 #: lib/gpl/admin/post.php:108 lib/pro/admin/post.php:198
-#: lib/pro/admin/post.php:212 lib/submenu/plm-general.php:217
+#: lib/pro/admin/post.php:212 lib/submenu/plm-general.php:219
 msgctxt "option label"
 msgid "Business Telephone"
 msgstr "Téléphone de l'entreprise"
 
 #: lib/gpl/admin/post.php:115 lib/pro/admin/post.php:219
-#: lib/submenu/plm-general.php:224
+#: lib/submenu/plm-general.php:226
 msgctxt "option label"
 msgid "Business Days + Hours"
 msgstr "Jours + heures d'ouverture"
 
 #: lib/gpl/admin/post.php:129 lib/pro/admin/post.php:255
-#: lib/pro/admin/post.php:287 lib/submenu/plm-general.php:244
+#: lib/pro/admin/post.php:287 lib/submenu/plm-general.php:246
 msgctxt "option label"
 msgid "Business Dates (Season)"
 msgstr "Dates d'affaires (saison)"
 
 #: lib/gpl/admin/post.php:134 lib/pro/admin/post.php:260
-#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:249
+#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:251
 msgctxt "option label"
 msgid "Service Radius"
 msgstr "Rayon de service"
 
 #: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:262
-#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:251
+#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:253
 msgctxt "option comment"
 msgid "meters from location"
 msgstr "mètres de la place / position"
 
 #: lib/gpl/admin/post.php:140 lib/pro/admin/post.php:265
-#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:254
+#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:256
 msgctxt "option label"
 msgid "Currencies Accepted"
 msgstr "Devises acceptées"
 
 #: lib/gpl/admin/post.php:141 lib/pro/admin/post.php:266
-#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:255
+#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:257
 msgctxt "option label"
 msgid "Payment Accepted"
 msgstr "Paiement accepté"
 
 #: lib/gpl/admin/post.php:142 lib/pro/admin/post.php:267
-#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:256
+#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:258
 msgctxt "option label"
 msgid "Price Range"
 msgstr "Échelle de prix"
 
 #: lib/gpl/admin/post.php:147 lib/pro/admin/post.php:274
-#: lib/pro/admin/post.php:307 lib/submenu/plm-general.php:264
+#: lib/pro/admin/post.php:307 lib/submenu/plm-general.php:266
 msgctxt "option label"
 msgid "Accepts Reservations"
 msgstr "Accepte des réservations"
 
 #: lib/gpl/admin/post.php:151 lib/pro/admin/post.php:278
-#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:268
+#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:270
 msgctxt "option label"
 msgid "Food Menu URL"
 msgstr "URL du menu alimentaire"
 
 #: lib/gpl/admin/post.php:155 lib/pro/admin/post.php:282
-#: lib/pro/admin/post.php:315 lib/submenu/plm-general.php:272
+#: lib/pro/admin/post.php:315 lib/submenu/plm-general.php:274
 msgctxt "option label"
 msgid "Order Action URL(s)"
 msgstr "URL(s) d'action de commande"
@@ -421,12 +421,12 @@ msgctxt "option comment"
 msgid "delete this address"
 msgstr "supprimer cette adresse"
 
-#: lib/submenu/plm-general.php:209
+#: lib/submenu/plm-general.php:211
 msgctxt "option label"
 msgid "Business Location Image ID"
 msgstr "ID d'image d'emplacement de l'entreprise"
 
-#: lib/submenu/plm-general.php:213
+#: lib/submenu/plm-general.php:215
 msgctxt "option label"
 msgid "or Business Location Image URL"
 msgstr "ou URL d'image d'emplacement de l'entreprise"
