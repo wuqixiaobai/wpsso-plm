@@ -376,67 +376,67 @@ msgid "Local Business Type"
 msgstr ""
 
 #: lib/gpl/admin/post.php:108 lib/pro/admin/post.php:198
-#: lib/pro/admin/post.php:212 lib/submenu/plm-general.php:219
+#: lib/pro/admin/post.php:212 lib/submenu/plm-general.php:218
 msgctxt "option label"
 msgid "Business Telephone"
 msgstr ""
 
 #: lib/gpl/admin/post.php:115 lib/pro/admin/post.php:219
-#: lib/submenu/plm-general.php:226
+#: lib/submenu/plm-general.php:225
 msgctxt "option label"
 msgid "Business Days + Hours"
 msgstr ""
 
 #: lib/gpl/admin/post.php:129 lib/pro/admin/post.php:255
-#: lib/pro/admin/post.php:287 lib/submenu/plm-general.php:246
+#: lib/pro/admin/post.php:287 lib/submenu/plm-general.php:245
 msgctxt "option label"
 msgid "Business Dates (Season)"
 msgstr ""
 
 #: lib/gpl/admin/post.php:134 lib/pro/admin/post.php:260
-#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:251
+#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:250
 msgctxt "option label"
 msgid "Service Radius"
 msgstr ""
 
 #: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:262
-#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:253
+#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:252
 msgctxt "option comment"
 msgid "meters from location"
 msgstr ""
 
 #: lib/gpl/admin/post.php:140 lib/pro/admin/post.php:265
-#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:256
+#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:255
 msgctxt "option label"
 msgid "Currencies Accepted"
 msgstr ""
 
 #: lib/gpl/admin/post.php:141 lib/pro/admin/post.php:266
-#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:257
+#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:256
 msgctxt "option label"
 msgid "Payment Accepted"
 msgstr ""
 
 #: lib/gpl/admin/post.php:142 lib/pro/admin/post.php:267
-#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:258
+#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:257
 msgctxt "option label"
 msgid "Price Range"
 msgstr ""
 
 #: lib/gpl/admin/post.php:147 lib/pro/admin/post.php:274
-#: lib/pro/admin/post.php:307 lib/submenu/plm-general.php:266
+#: lib/pro/admin/post.php:307 lib/submenu/plm-general.php:265
 msgctxt "option label"
 msgid "Accepts Reservations"
 msgstr ""
 
 #: lib/gpl/admin/post.php:151 lib/pro/admin/post.php:278
-#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:270
+#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:269
 msgctxt "option label"
 msgid "Food Menu URL"
 msgstr ""
 
 #: lib/gpl/admin/post.php:155 lib/pro/admin/post.php:282
-#: lib/pro/admin/post.php:315 lib/submenu/plm-general.php:274
+#: lib/pro/admin/post.php:315 lib/submenu/plm-general.php:273
 msgctxt "option label"
 msgid "Order Action URL(s)"
 msgstr ""
@@ -481,12 +481,12 @@ msgctxt "option comment"
 msgid "delete this address"
 msgstr ""
 
-#: lib/submenu/plm-general.php:211
+#: lib/submenu/plm-general.php:210
 msgctxt "option label"
 msgid "Business Location Image ID"
 msgstr ""
 
-#: lib/submenu/plm-general.php:215
+#: lib/submenu/plm-general.php:214
 msgctxt "option label"
 msgid "or Business Location Image URL"
 msgstr ""

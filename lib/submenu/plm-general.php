@@ -207,7 +207,6 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							$this->form->__business_types, 'schema_type' ).'</td>';
 		
 						$table_rows['plm_addr_img_id_'.$id] = $tr_hide_addr_id.
-
 						$this->form->get_th_html( _x( 'Business Location Image ID', 'option label', 'wpsso-plm' ), '', 'plm_addr_img_id' ).
 						'<td colspan="3">'.$this->form->get_image_upload_input( 'plm_addr_img_'.$id ).'</td>';
 	
