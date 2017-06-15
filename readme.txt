@@ -130,9 +130,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
+**Version 2.3.1-dev.1 (2017/06/15)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added a check for the "Business Location Image ID" image size.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 2.3.0 (2017/05/14)**
 
-New Features*
+* *New Features*
 	* Added two new options in the Place / Location settings page:
 		* Business Location Image ID
 		* or Business Location Image URL
@@ -201,6 +212,10 @@ New Features*
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.1-dev.1 =
+
+(2015/06/15) Added a check for the "Business Location Image ID" image size.
 
 = 2.3.0 =
 
