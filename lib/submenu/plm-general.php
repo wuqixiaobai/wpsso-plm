@@ -34,6 +34,13 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			add_meta_box( $this->pagehook.'_general',
 				_x( 'Place / Location Settings', 'metabox title', 'wpsso-plm' ), 
 					array( &$this, 'show_metabox_general' ), $this->pagehook, 'normal' );
+
+			// validate image sizes
+			foreach ( SucomUtil::keys_start_with( 'plm_addr_img_id_', $this->p->options ) as $key => $pid ) {
+				if ( ! empty( $pid ) ) {
+					$this->p->media->get_attachment_image_src( $pid, $this->p->cf['lca'].'-schema', false );
+				}
+			}
 		}
 
 		public function show_metabox_contact() {
@@ -100,6 +107,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$this->form->__address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, false );	// $add_none = false
 					list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $this->form->__address_names );
 					$this->form->__address_names[$next_num] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
+
 					$this->form->__all_types = $this->p->schema->get_schema_types_array( false );	// $flatten = false
 					$this->form->__business_types = $this->p->schema->get_schema_types_select(
 						$this->form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
@@ -135,6 +143,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						_x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 		
 					foreach ( $this->form->__address_names as $id => $name ) {
+
 						$tr_hide_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="hide_plm_addr_id hide_plm_addr_id_'.$id.'" style="display:none">';
 		
@@ -205,7 +214,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$this->form->get_th_html( _x( 'Local Business Type', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
 						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id,
 							$this->form->__business_types, 'schema_type' ).'</td>';
-		
+	
 						$table_rows['plm_addr_img_id_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Business Location Image ID', 'option label', 'wpsso-plm' ), '', 'plm_addr_img_id' ).
 						'<td colspan="3">'.$this->form->get_image_upload_input( 'plm_addr_img_'.$id ).'</td>';
