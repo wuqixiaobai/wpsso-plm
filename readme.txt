@@ -130,7 +130,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 2.3.1-rc.1 (2017/06/19)**
+**Version 2.3.1 (2017/06/19)**
 
 * *New Features*
 	* None
@@ -213,7 +213,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.1-rc.1 =
+= 2.3.1 =
 
 (2015/06/19) Added a check for the "Business Location Image ID" image size.
 
