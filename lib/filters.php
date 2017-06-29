@@ -370,6 +370,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			foreach ( $address_names as $num => $name ) {
 				$name = trim( $name );
 
+				// remove the image url if we have an image id
+				if ( ! empty( $opts['plm_addr_img_id_'.$num] ) ) {
+					unset( $opts['plm_addr_img_url_'.$num] );
+				}
+
 				if ( ! empty( $opts['plm_addr_delete_'.$num] ) ||
 					( $name === '' && $num === $last_num ) ) {	// remove the empty "New Address"
 
