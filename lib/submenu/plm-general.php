@@ -107,7 +107,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$this->form->__address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, false );	// $add_none = false
 					list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $this->form->__address_names );
 					$this->form->__address_names[$next_num] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
-					$this->form->__all_types = $this->p->schema->get_schema_types_array( false );	// $tangible_flat = false
+					$this->form->__all_types = $this->p->schema->get_schema_types_array( false );	// $flatten = false
 					$this->form->__business_types = $this->p->schema->get_schema_types_select(
 						$this->form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
 					$this->form->__half_hours = SucomUtil::get_hours_range( 0, DAY_IN_SECONDS, 60 * 30, '' );

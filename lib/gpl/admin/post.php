@@ -32,7 +32,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			}
 
 			$form->__half_hours = SucomUtil::get_hours_range( 0, DAY_IN_SECONDS, 60 * 30, '' );	// $format = ''
-			$form->__all_types = $this->p->schema->get_schema_types_array( false );		// $tangible_flat = false
+			$form->__all_types = $this->p->schema->get_schema_types_array( false );		// $flatten = false
 			$form->__business_types = $this->p->schema->get_schema_types_select( 
 				$form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
 			$form->__address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'] );
