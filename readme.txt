@@ -139,6 +139,18 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
+**Version 2.3.2-b.2 (2017/09/03)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Renamed the SucomForm get_image_upload_input() method to get_input_image_upload().
+	* Renamed the SucomForm get_image_url_input() method to get_input_image_url().
+
 **Version 2.3.1 (2017/06/21)**
 
 * *New Features*
@@ -222,13 +234,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
+= 2.3.2-b.2 =
+
+(2017/09/03) Renamed some SucomForm methods for WPSSO v3.45.8.
+
 = 2.3.1 =
 
-(2015/06/21) Added a check for the "Business Location Image ID" image size.
+(2017/06/21) Added a check for the "Business Location Image ID" image size.
 
 = 2.3.0 =
 
-(2015/05/14) Added two new options in the Place / Location settings page.
+(2017/05/14) Added two new options in the Place / Location settings page.
 
 = 2.2.14 =
 
