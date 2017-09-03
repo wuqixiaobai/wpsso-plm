@@ -139,7 +139,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
-**Version 2.3.2-b.2 (2017/09/03)**
+**Version 2.3.2-rc.1 (2017/09/03)**
 
 * *New Features*
 	* None
@@ -234,7 +234,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.2-b.2 =
+= 2.3.2-rc.1 =
 
 (2017/09/03) Renamed some SucomForm methods for WPSSO v3.45.8.
 
