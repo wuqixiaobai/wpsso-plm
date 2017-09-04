@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.3.0\n"
+"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.3.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
-"POT-Creation-Date: 2017-08-26 17:13-0400\n"
-"PO-Revision-Date: 2017-08-26 17:13-0400\n"
+"POT-Creation-Date: 2017-09-04 10:50-0400\n"
+"PO-Revision-Date: 2017-09-04 10:50-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -328,55 +328,55 @@ msgid "Business Days + Hours"
 msgstr "Jours + heures d'ouverture"
 
 #: lib/gpl/admin/post.php:129 lib/pro/admin/post.php:255
-#: lib/pro/admin/post.php:287 lib/submenu/plm-general.php:254
+#: lib/pro/admin/post.php:289 lib/submenu/plm-general.php:254
 msgctxt "option label"
 msgid "Business Dates (Season)"
 msgstr "Dates d'affaires (saison)"
 
 #: lib/gpl/admin/post.php:134 lib/pro/admin/post.php:260
-#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:259
+#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:259
 msgctxt "option label"
 msgid "Service Radius"
 msgstr "Rayon de service"
 
 #: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:262
-#: lib/pro/admin/post.php:294 lib/submenu/plm-general.php:261
+#: lib/pro/admin/post.php:296 lib/submenu/plm-general.php:261
 msgctxt "option comment"
 msgid "meters from location"
 msgstr "mètres de la place / position"
 
 #: lib/gpl/admin/post.php:140 lib/pro/admin/post.php:265
-#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:264
+#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:264
 msgctxt "option label"
 msgid "Currencies Accepted"
 msgstr "Devises acceptées"
 
 #: lib/gpl/admin/post.php:141 lib/pro/admin/post.php:266
-#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:265
+#: lib/pro/admin/post.php:300 lib/submenu/plm-general.php:265
 msgctxt "option label"
 msgid "Payment Accepted"
 msgstr "Paiement accepté"
 
 #: lib/gpl/admin/post.php:142 lib/pro/admin/post.php:267
-#: lib/pro/admin/post.php:299 lib/submenu/plm-general.php:266
+#: lib/pro/admin/post.php:301 lib/submenu/plm-general.php:266
 msgctxt "option label"
 msgid "Price Range"
 msgstr "Échelle de prix"
 
-#: lib/gpl/admin/post.php:147 lib/pro/admin/post.php:274
-#: lib/pro/admin/post.php:307 lib/submenu/plm-general.php:274
+#: lib/gpl/admin/post.php:148 lib/pro/admin/post.php:275
+#: lib/pro/admin/post.php:310 lib/submenu/plm-general.php:274
 msgctxt "option label"
 msgid "Accepts Reservations"
 msgstr "Accepte des réservations"
 
-#: lib/gpl/admin/post.php:151 lib/pro/admin/post.php:278
-#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:278
+#: lib/gpl/admin/post.php:152 lib/pro/admin/post.php:279
+#: lib/pro/admin/post.php:314 lib/submenu/plm-general.php:278
 msgctxt "option label"
 msgid "Food Menu URL"
 msgstr "URL du menu alimentaire"
 
-#: lib/gpl/admin/post.php:155 lib/pro/admin/post.php:282
-#: lib/pro/admin/post.php:315 lib/submenu/plm-general.php:282
+#: lib/gpl/admin/post.php:156 lib/pro/admin/post.php:283
+#: lib/pro/admin/post.php:318 lib/submenu/plm-general.php:282
 msgctxt "option label"
 msgid "Order Action URL(s)"
 msgstr "URL(s) d'action de commande"
@@ -431,15 +431,15 @@ msgctxt "option label"
 msgid "or Business Location Image URL"
 msgstr "ou URL d'image d'emplacement de l'entreprise"
 
-#: wpsso-plm.php:78
+#: wpsso-plm.php:79
 msgid "%1$s is an extension for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr "%1$s est une extension pour %2$s &mdash; s'il vous plaît installer et activer %3$s avant d'activer l'extension %4$s."
 
-#: wpsso-plm.php:80
+#: wpsso-plm.php:81
 msgid "The %1$s extension requires the %2$s plugin &mdash; please install and activate the %3$s plugin."
 msgstr "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer l'extension %3$s."
 
-#: wpsso-plm.php:162
+#: wpsso-plm.php:163
 msgid "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently installed)."
 msgstr "L'extension %1$s v%2$s requiert l'utilisation de %3$s v%4$s ou plus récente (v%5$s est actuellement installée)."
 
