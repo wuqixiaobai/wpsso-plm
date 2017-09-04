@@ -100,8 +100,8 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 = Install and Uninstall =
 
-* [Install the Plugin (Free and Pro version)](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
-* [Uninstall the Plugin](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
+* [Install the WPSSO PLM Plugin (Free and Pro version)](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
+* [Uninstall the WPSSO PLM Plugin](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
