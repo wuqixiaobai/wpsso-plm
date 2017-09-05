@@ -468,7 +468,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			switch ( $idx ) {
 				case 'tooltip-plm_addr_for_home':
-					$text = __( 'Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page.', 'wpsso-plm' ).' '.sprintf( __( 'An address for a static front page can be selected in the %1$s metabox when editing the static page.', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso-plm' ) );
+					// use WPSSO's translation for the metabox title
+					$text = __( 'Select an address to include as a Schema <em>Place</em> or <em>Local Business</em> in your blog (non-static) front page.', 'wpsso-plm' ).' '.sprintf( __( 'An address for a static front page can be selected in the %1$s metabox when editing the static page.', 'wpsso-plm' ), _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' ) );
 					break;
 				case 'tooltip-plm_addr_def_country':
 					$text = __( 'A default country to use when creating a new address.', 'wpsso-plm' );
@@ -546,7 +547,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					$text = __( 'Comma-delimited website and mobile app URLs to order products. The WPSSO JSON extension is required to add Order Action URL(s) to the Schema potentialAction property.', 'wpsso-plm' );
 					break;
 				case 'tooltip-plm_add_to':
-					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( 'Social Settings', 'metabox title', 'wpsso' ) );
+					// use WPSSO's translation for the metabox title
+					$text = sprintf( __( 'A <em>%1$s</em> tab can be added to the %2$s metabox on Posts, Pages, and custom post types, allowing you to enter specific address information for that webpage (ie. GPS coordinates and/or street address).', 'wpsso-plm' ), _x( 'Place / Location', 'metabox tab', 'wpsso-plm' ), _x( $this->p->cf['meta']['title'], 'metabox title', 'wpsso' ) );
 					break;
 			}
 			return $text;
