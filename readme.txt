@@ -118,7 +118,7 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 == Screenshots ==
 
 01. WPSSO PLM settings page includes options to manage addresses, geo location, business hours, service radius, price range, menu URL, and many more.
-02. WPSSO PLM tab in the Social / Search Optimization metabox provides options to manage custom addresses, geo location, business hours, service radius, price range, menu URL, and many more (Pro version).
+02. WPSSO PLM tab in the Social and Search Optimization metabox provides options to manage custom addresses, geo location, business hours, service radius, price range, menu URL, and many more (Pro version).
 03. WPSSO PLM meta tag example for the Schema type https://schema.org/Restaurant in Google's Structured Data Testing Tool.
 
 == Changelog ==
