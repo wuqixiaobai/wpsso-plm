@@ -26,7 +26,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			$this->menu_ext = $ext;	// lowercase acronyn for plugin or extension
 		}
 
+		// called by the extended WpssoAdmin class
 		protected function add_meta_boxes() {
+
 			add_meta_box( $this->pagehook.'_contact', 
 				_x( 'Addresses and Contact Information', 'metabox title', 'wpsso-plm' ), 
 					array( &$this, 'show_metabox_contact' ), $this->pagehook, 'normal' );
@@ -45,29 +47,29 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 		public function show_metabox_contact() {
 			$lca = $this->p->cf['lca'];
-			$metabox = 'contact';
+			$metabox_id = 'contact';
 
-			$tabs = apply_filters( $lca.'_'.$metabox.'_tabs', array( 
+			$tabs = apply_filters( $lca.'_'.$metabox_id.'_tabs', array( 
 				'address' => _x( 'Addresses / Local Business', 'metabox tab', 'wpsso-plm' ),
 			) );
 
 			$table_rows = array();
 			foreach ( $tabs as $key => $title ) {
-				$table_rows[$key] = apply_filters( $lca.'_'.$metabox.'_'.$key.'_rows', 
-					$this->get_table_rows( $metabox, $key ), $this->form );
+				$table_rows[$key] = apply_filters( $lca.'_'.$metabox_id.'_'.$key.'_rows', 
+					$this->get_table_rows( $metabox_id, $key ), $this->form );
 			}
-			$this->p->util->do_metabox_tabs( $metabox, $tabs, $table_rows );
+			$this->p->util->do_metabox_tabs( $metabox_id, $tabs, $table_rows );
 		}
 
 		public function show_metabox_general() {
-			$metabox = 'plm';
-			$this->p->util->do_table_rows( apply_filters( $this->p->cf['lca'].'_'.$metabox.'_general_rows', 
-				$this->get_table_rows( $metabox, 'general' ), $this->form ), 'metabox-'.$metabox.'-general' );
+			$metabox_id = 'plm';
+			$this->p->util->do_table_rows( apply_filters( $this->p->cf['lca'].'_'.$metabox_id.'_general_rows', 
+				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-'.$metabox_id.'-general' );
 		}
 
-		protected function get_table_rows( $metabox, $key ) {
+		protected function get_table_rows( $metabox_id, $key ) {
 			$table_rows = array();
-			switch ( $metabox.'-'.$key ) {
+			switch ( $metabox_id.'-'.$key ) {
 				case 'plm-general':
 
 					$this->form->__address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, true );	// $add_none = true

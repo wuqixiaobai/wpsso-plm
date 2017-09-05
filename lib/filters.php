@@ -50,9 +50,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'save_options' => 3,
 					'option_type' => 2,
-					'post_social_settings_tabs' => 2,	// $tabs, $mod
-					'messages_tooltip_post' => 3,
+					'post_custom_meta_tabs' => 3,		// $tabs, $mod, $metabox_id
 					'messages_tooltip' => 2,
+					'messages_tooltip_post' => 3,
 				) );
 				$this->p->util->add_plugin_filters( $this, array( 
 					'status_gpl_features' => 4,
@@ -440,11 +440,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $type;
 		}
 
-		public function filter_post_social_settings_tabs( $tabs, $mod ) {
-			if ( empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) )
-				return $tabs;
-			else return SucomUtil::get_after_key( $tabs, 'text', 'plm',
-				_x( 'Place / Location', 'metabox tab', 'wpsso-plm' ) );
+		public function filter_post_custom_meta_tabs( $tabs, $mod, $metabox_id ) {
+			if ( $metabox_id === $this->p->cf['meta']['id'] ) {
+				if ( ! empty( $this->p->options['plm_add_to_'.$mod['post_type']] ) ) {
+					SucomUtil::add_after_key( $tabs, 'text', 'plm',
+						_x( 'Place / Location', 'metabox tab', 'wpsso-plm' ) );
+				}
+			}
+			return $tabs;
 		}
 
 		public function filter_messages_tooltip_post( $text, $idx, $atts ) {
