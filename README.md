@@ -31,10 +31,10 @@
 <p>The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a <em>blog front page</em>. If you're using a <em>static front page</em>, or would like to include location information for the content of other posts / pages, you'll need the Pro version.</p>
 
 <blockquote>
-<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO core plugin</a>, which <em>automatically</em> generates complete and accurate meta tags and Schema markup from your content for social media optimization (SMO) and SEO.</p>
+<p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta is an extension for the WPSSO (Core Plugin), which <em>automatically</em> generates complete and accurate meta tags and Schema markup from your content for Social Media Optimization (SMO) and Search Engine Optimization (SEO).</p>
 
 <ul>
-<li>The WPSSO PLM Free extension works with either the WPSSO Free or Pro core plugin.</li>
+<li>The WPSSO PLM Free extension works with either the WPSSO (Core Plugin) Free or Pro versions.</li>
 <li>The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq">WPSSO PLM Pro extension</a> uses many WPSSO Pro core plugin features and requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-prereq">WPSSO Pro core plugin</a>.</li>
 <ul>
 </blockquote>
@@ -105,12 +105,11 @@
 
 <h4>Extends the WPSSO Plugin</h4>
 
-<ul>
-<li>The WPSSO PLM Free extension works with either the WPSSO Free or Pro core plugin.</li>
-<li>The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> uses many WPSSO Pro core plugin features and requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro core plugin</a>.</li>
-</ul>
+<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; The WPSSO PLM Free extension works with either the WPSSO (Core Plugin) Free or Pro version.</p>
 
-<p><a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta Pro extension here</a> (all purchases include a <em>No Risk 30 Day Refund Policy</em>).</p>
+<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> uses many WPSSO Pro (Core Plugin) features and requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro (Core Plugin)</a>.</p>
+
+<p>[jsonn style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta Pro extension here</a> (all purchases include a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 
 <h2>Installation</h2>
