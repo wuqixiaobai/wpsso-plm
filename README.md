@@ -31,6 +31,12 @@
 
 <p>The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a <em>blog front page</em>. If you're using a <em>static front page</em>, or would like to include location information for the content of other posts / pages, you'll need the Pro version.</p>
 
+<p><strong>Fast and coded for performance:</strong></p>
+
+<p>WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching). They load only the PHP library files and object classes needed, keeping the code small, fast, light, and able to support a wide range of 3rd party integration features.</p>
+
+<p>Fully tested and compatible with PHP v7.x (requires PHP v5.3 or better).</p>
+
 <blockquote>
 <p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta is an extension for the WPSSO (Core Plugin), which <em>automatically</em> generates complete and accurate meta tags and Schema markup from your content for Social Media Optimization (SMO) and Search Engine Optimization (SEO).</p>
 
@@ -87,12 +93,6 @@
 </ul>
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO PLM with the <a href="https://wpsso.com/extend/plugins/wpsso-json/">WPSSO Schema JSON-LD Markup Pro</a> extension to include complete Place and Local Business using Schema JSON-LD markup.</p>
-
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; <em>Fast and coded for performance</em>, WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching).</p>
-
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; WPSSO and its extensions load only the PHP library files and object classes needed, keeping the code small, fast, light, and able to support a wide range of 3rd party integration features.</p>
-
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Fully tested and compatible with PHP v7.x (requires PHP v5.3 or better).</p>
 
 <h4>Quick List of Features (Continued)</h4>
 
