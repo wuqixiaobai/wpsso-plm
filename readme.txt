@@ -19,16 +19,19 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-plm/assets/icon-256x256.png">
 
-<p><strong>Provides location / local business information for your website, business, and/or content.</strong></p>
+**Provides location / local business information for your website, business, and/or content.**
 
-<p><strong>Let Pinterest, Facebook and Google know about your locations</strong> &mdash; WPSSO PLM includes Pinterest Rich Pin / Schema <em>Place</em>, Facebook / Open Graph <em>Location</em>, and Google / Schema <em>Local Business</em> meta tags in your webpages.</p>
+**Let Pinterest, Facebook and Google know about your locations:**
+
+WPSSO PLM includes Pinterest Rich Pin / Schema Place, Facebook / Open Graph Location, and Google / Schema Local Business meta tags in your webpages.
 
 = How Do I Use It? =
 
 The WPSSO PLM extension can be used in two different ways:
 
-* To provide location information for the content of the current webpage.
-* To provide location information for an Organization, which in turn is related to the content (for example, the content publisher). To assign location information to an Organization, you will also need to use the WPSSO ORG extension.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for the content of the current webpage.
+
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher). To assign location information to an Organization, you will also need to use the WPSSO ORG extension.
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
@@ -37,54 +40,60 @@ The Free version of WPSSO PLM can add location information to the main entity (a
 
 <p>The WPSSO PLM Free extension works with either the Free or Pro version of WPSSO (Core Plugin).</p>
 
-<p>The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq">WPSSO PLM Pro extension</a> uses many WPSSO Pro core plugin features and requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-prereq">WPSSO Pro core plugin</a>.</p>
+<p>The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq">WPSSO PLM Pro extension</a> uses many WPSSO Pro (Core Plugin) features and requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-prereq">WPSSO Pro (Core Plugin)</a>.</p>
 </blockquote>
 
 = Quick List of Features =
 
 **WPSSO PLM Free / Standard Features**
 
-* Extends the features of WPSSO Free or Pro.
-* Select a Address for a Blog Front Page.
-* Manage Multiple Addresses / Contact Information:
-	* Pinterest Rich Pin / Schema Place
-		* Street Address
-		* P.O. Box Number
-		* City
-		* State / Province
-		* Zip / Postal Code
-		* Country
-	* Facebook / Open Graph Location
-		* Latitude
-		* Longitude
-		* Altitude
-	* Schema Local Business
-		* Local Business Type
-		* Business Location Image ID
-		* or Business Location Image URL
-		* Business Telephone
-		* Business Days + Hours
-		* Business Dates (Season)
-		* Service Radius
-		* Currencies Accepted
-		* Payment Accepted
-		* Price Range
-		* Accepts Reservations
-		* Food Menu URL
-		* Order Action URL(s)
-* Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of WPSSO Free or Pro.
+
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Select a Address for a Blog Front Page.
+
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Manage Multiple Addresses / Contact Information:
+
+* Pinterest Rich Pin / Schema Place
+	* Street Address
+	* P.O. Box Number
+	* City
+	* State / Province
+	* Zip / Postal Code
+	* Country
+* Facebook / Open Graph Location
+	* Latitude
+	* Longitude
+	* Altitude
+* Schema Local Business
+	* Local Business Type
+	* Business Location Image ID
+	* or Business Location Image URL
+	* Business Telephone
+	* Business Days + Hours
+	* Business Dates (Season)
+	* Service Radius
+	* Currencies Accepted
+	* Payment Accepted
+	* Price Range
+	* Accepts Reservations
+	* Food Menu URL
+	* Order Action URL(s)
+
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
 = Quick List of Features (Continued) =
 
 **WPSSO PLM Pro / Additional Features**
 
-* Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).
-* Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types.
-* Allows the selection of an existing Address, or custom Address information, to include location information for the webpage content.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).
+
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Add a custom "Place / Location" settings tab to Posts, Pages, and Custom Post Types.
+
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Allows the selection of a pre-defined Address, or custom Address information, to include location information for the webpage content.
 
 = Markup Examples =
 
-* [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).
 
 = Extends the WPSSO Plugin =
 
