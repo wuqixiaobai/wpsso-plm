@@ -35,11 +35,11 @@ The WPSSO PLM extension can be used in two different ways:
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
-**Fast and coded for performance:**
+**WPSSO PLM is *fast* and coded for performance:**
 
-WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching). They load only the PHP library files and object classes needed, keeping the code small, fast, light, and able to support a wide range of 3rd party integration features.
+WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes needed, keeping the code small, fast, light, and able to support a wide range of 3rd party integration features.
 
-Fully tested and compatible with PHP v7.x (requires PHP v5.3 or better).
+WPSSO PLM is fully tested and compatible with PHP v7.x (requires PHP v5.3 or better).
 
 <blockquote>
 <p><strong>Prerequisite</strong> &mdash; WPSSO Place / Location and Local Business Meta is an extension for the WPSSO (Core Plugin), which <em>automatically</em> generates complete and accurate meta tags and Schema markup from your content for Social Media Optimization (SMO) and Search Engine Optimization (SEO).</p>
