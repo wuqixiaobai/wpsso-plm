@@ -25,9 +25,7 @@ WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Sche
 
 WPSSO PLM includes Pinterest Rich Pin / Schema Place, Facebook / Open Graph Location, and Google / Schema Local Business meta tags in your webpages.
 
-= How Do I Use It? =
-
-The WPSSO PLM extension can be used in two different ways:
+**WPSSO PLM can be used in two different ways:**
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for the content of the current webpage.
 
