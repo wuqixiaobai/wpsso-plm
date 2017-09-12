@@ -108,7 +108,7 @@
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-extends">WPSSO PLM Pro extension</a> uses many WPSSO Pro (Core Plugin) features and requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-extends">WPSSO Pro (Core Plugin)</a>.</p>
 
-<p>[jsonn style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta Pro extension here</a> (all purchases include a <em>No Risk 30 Day Refund Policy</em>).</p>
+<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-purchase">Purchase the WPSSO Place / Location and Local Business Meta Pro extension here</a> (all purchases include a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 
 <h2>Installation</h2>
