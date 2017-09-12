@@ -87,6 +87,8 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
 
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Download the Free version from [GitHub](https://surniaulula.github.io/wpsso-plm/) or [WordPress.org](https://wordpress.org/plugins/wpsso-plm/).
+
 = Quick List of Features (Continued) =
 
 **WPSSO PLM Pro / Additional Features**
