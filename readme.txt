@@ -39,7 +39,7 @@ WPSSO and its extensions make full use of all available caching techniques (pers
 
 WPSSO and its extensions are fully tested and compatible with PHP v7.x (PHP v5.3 or better required).
 
-= WPSSO (Core Plugin) Prerequisite =
+<h3>WPSSO (Core Plugin) Prerequisite</h3>
 
 WPSSO Place / Location and Local Business Meta is an extension for the WPSSO (Core Plugin), which automatically generates complete and accurate meta tags and Schema markup from your content for Social Media Optimization (SMO) and Search Engine Optimization (SEO).
 
@@ -47,9 +47,9 @@ The WPSSO PLM Free extension works with either the Free or Pro version of WPSSO 
 
 The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Pro (Core Plugin) features and requires the [WPSSO Pro (Core Plugin)](https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-prereq).
 
-= Quick List of Features =
+<h3>Quick List of Features</h3>
 
-**WPSSO PLM Free / Standard Features**
+<h4>WPSSO PLM Free / Standard Features</h4>
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of WPSSO Free or Pro.
 
@@ -87,9 +87,9 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; Download the Free version from [GitHub](https://surniaulula.github.io/wpsso-plm/) or [WordPress.org](https://wordpress.org/plugins/wpsso-plm/).
 
-= Quick List of Features (Continued) =
+<h3>Quick List of Features (Continued)</h3>
 
-**WPSSO PLM Pro / Additional Features**
+<h4>WPSSO PLM Pro / Additional Features</h4>
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).
 
@@ -97,11 +97,11 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; Allows the selection of a pre-defined Address, or custom Address information, to include location information for the webpage content.
 
-= Markup Examples =
+<h3>Markup Examples</h3>
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; [Markup Example for a Restaurant](http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/) using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).
 
-= Extends the WPSSO Plugin =
+<h3>Extends the WPSSO Plugin</h3>
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; The WPSSO PLM Free extension works with either the Free or Pro version of WPSSO (Core Plugin).
 
@@ -111,20 +111,20 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 
 == Installation ==
 
-= Install and Uninstall =
+<h3>Install and Uninstall</h3>
 
 * [Install the WPSSO PLM Plugin (Free and Pro version)](https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/)
 * [Uninstall the WPSSO PLM Plugin](https://wpsso.com/docs/plugins/wpsso-plm/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
-= Frequently Asked Questions =
+<h3>Frequently Asked Questions</h3>
 
 * None
 
 == Other Notes ==
 
-= Additional Documentation =
+<h3>Additional Documentation</h3>
 
 * None
 
@@ -136,12 +136,12 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 
 == Changelog ==
 
-= Free / Basic Version Repository =
+<h3>Free / Basic Version Repository</h3>
 
 * [GitHub](https://surniaulula.github.io/wpsso-plm/)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-plm/developers/)
 
-= Version Numbering =
+<h3>Version Numbering</h3>
 
 Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
@@ -150,7 +150,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * {bugfix} = Backwards-compatible bug fixes or small improvements.
 * {stage}.{level} = Pre-production release: dev < a (alpha) < b (beta) < rc (release candidate).
 
-= Changelog / Release Notes =
+<h3>Changelog / Release Notes</h3>
 
 **Version 2.3.3 (2017/09/10)**
 

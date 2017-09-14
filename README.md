@@ -35,7 +35,7 @@
 
 <p>WPSSO and its extensions are fully tested and compatible with PHP v7.x (PHP v5.3 or better required).</p>
 
-<h4>WPSSO (Core Plugin) Prerequisite</h4>
+<h3>WPSSO (Core Plugin) Prerequisite</h3>
 
 <p>WPSSO Place / Location and Local Business Meta is an extension for the WPSSO (Core Plugin), which automatically generates complete and accurate meta tags and Schema markup from your content for Social Media Optimization (SMO) and Search Engine Optimization (SEO).</p>
 
@@ -43,9 +43,9 @@
 
 <p>The <a href="https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq">WPSSO PLM Pro extension</a> uses many WPSSO Pro (Core Plugin) features and requires the <a href="https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-prereq">WPSSO Pro (Core Plugin)</a>.</p>
 
-<h4>Quick List of Features</h4>
+<h3>Quick List of Features</h3>
 
-<p><strong>WPSSO PLM Free / Standard Features</strong></p>
+<h4>WPSSO PLM Free / Standard Features</h4>
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of WPSSO Free or Pro.</p>
 
@@ -94,9 +94,9 @@
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Download the Free version from <a href="https://surniaulula.github.io/wpsso-plm/">GitHub</a> or <a href="https://wordpress.org/plugins/wpsso-plm/">WordPress.org</a>.</p>
 
-<h4>Quick List of Features (Continued)</h4>
+<h3>Quick List of Features (Continued)</h3>
 
-<p><strong>WPSSO PLM Pro / Additional Features</strong></p>
+<h4>WPSSO PLM Pro / Additional Features</h4>
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Extends the features of WPSSO Pro (requires a licensed WPSSO Pro plugin).</p>
 
@@ -104,11 +104,11 @@
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; Allows the selection of a pre-defined Address, or custom Address information, to include location information for the webpage content.</p>
 
-<h4>Markup Examples</h4>
+<h3>Markup Examples</h3>
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; <a href="http://wpsso.com/docs/plugins/wpsso-schema-json-ld/notes/markup-examples/markup-example-for-a-restaurant/">Markup Example for a Restaurant</a> using the WPSSO PLM extension to manage the Place / Location information (address, geo coordinates, business hours – daily and seasonal, restaurant menu URL, and accepts reservation values).</p>
 
-<h4>Extends the WPSSO Plugin</h4>
+<h3>Extends the WPSSO Plugin</h3>
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; The WPSSO PLM Free extension works with either the Free or Pro version of WPSSO (Core Plugin).</p>
 
@@ -119,7 +119,7 @@
 
 <h2>Installation</h2>
 
-<h4>Install and Uninstall</h4>
+<h3>Install and Uninstall</h3>
 
 <ul>
 <li><a href="https://wpsso.com/docs/plugins/wpsso-plm/installation/install-the-plugin/">Install the WPSSO PLM Plugin (Free and Pro version)</a></li>
@@ -129,7 +129,7 @@
 
 <h2>Frequently Asked Questions</h2>
 
-<h4>Frequently Asked Questions</h4>
+<h3>Frequently Asked Questions</h3>
 
 <ul>
 <li>None</li>
@@ -139,7 +139,7 @@
 <h2>Other Notes</h2>
 
 <h3>Other Notes</h3>
-<h4>Additional Documentation</h4>
+<h3>Additional Documentation</h3>
 
 <ul>
 <li>None</li>
