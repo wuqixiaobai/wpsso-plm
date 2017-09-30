@@ -1,5 +1,5 @@
 <?php die( 'These aren\'t the droids you\'re looking for...' );
-// extract of translatable text strings from static config array(s)
+// extract of translatable text strings from static config array
 _x( '09:00', 'option value', 'wpsso-plm' );
 _x( '17:00', 'option value', 'wpsso-plm' );
 _x( '[Custom Address]', 'option value', 'wpsso-plm' );
