@@ -152,6 +152,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.4 (2017/09/30)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added the address name to the Schema "address" meta tag value.
+* *Bugfixes*
+	* Fixed the missing default country name when entering a custom address in the SSO metabox.
+* *Developer Notes*
+	* Added a new WpssoPlmAddress get_addr_line() method to better format the Schema "address" meta tag value.
+
 **Version 2.3.3 (2017/09/10)**
 
 * *New Features*
@@ -258,6 +269,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.4 =
+
+(2017/09/30) Added the address name to the Schema "address" meta tag value. Fixed the missing default country name when entering a custom address in the SSO metabox.
 
 = 2.3.3 =
 
