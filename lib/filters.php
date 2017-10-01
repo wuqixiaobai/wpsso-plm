@@ -63,9 +63,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_get_defaults( $def_opts ) {
 			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
-
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'pm_add_to', 1 );
-
 			return $def_opts;
 		}
 
@@ -271,18 +269,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		}
 
 		public function filter_schema_meta_itemprop( $mt_schema, $mod, $mt_og, $page_type_id ) {
-			if ( $this->p->debug->enabled )
+
+			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+			}
 
 			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) !== false ) {
 
-				$mt_schema['address'] = $addr_opts['plm_addr_streetaddr'].
-					( empty( $addr_opts['plm_addr_po_box_number'] ) ?
-						'' : ' #'.$addr_opts['plm_addr_po_box_number'] ).', '.
-					$addr_opts['plm_addr_city'].', '.
-					$addr_opts['plm_addr_state'].', '.
-					$addr_opts['plm_addr_zipcode'].', '.
-					$addr_opts['plm_addr_country'];
+				$mt_schema['address'] = WpssoPlmAddress::get_addr_line( $addr_opts );
 
 				if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
 					foreach ( array(

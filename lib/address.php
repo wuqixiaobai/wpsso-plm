@@ -38,6 +38,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		public static function has_place( array $mod ) {
 
 			$wpsso =& Wpsso::get_instance();
+
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
 			}
@@ -202,6 +203,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 
 			$wpsso =& Wpsso::get_instance();
+
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
 			}
@@ -213,7 +215,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 
 			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// shortcut variable
-			$md_opts = $mod['obj']->get_options( $mod['id'] );	// returns empty string if no meta found
+			$md_opts = $mod['obj']->get_options( $mod['id'] );			// returns empty string if no meta found
 
 			if ( is_array( $md_opts  ) ) {
 				if ( isset( $md_opts['plm_addr_id'] ) && is_numeric( $md_opts['plm_addr_id'] ) ) {	// allow for 0
@@ -223,10 +225,43 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 						}
 						$md_opts = array_merge( $md_opts, $addr_opts );
 					}
+				} else {
+					// add the default country if one is defined
+					if ( empty( $md_opts['plm_addr_country'] ) ) {
+						$md_opts['plm_addr_country'] = isset( $wpsso->options['plm_addr_def_country'] ) ?
+							$wpsso->options['plm_addr_def_country'] : 'none';
+					}
+					error_log( print_r( $md_opts, true ) );
 				}
 				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
 			}
 			return $md_opts;
+		}
+
+		public static function get_addr_line( array $addr_opts ) {
+			$address = '';
+			foreach ( array( 
+				'plm_addr_name',
+				'plm_addr_streetaddr',
+				'plm_addr_po_box_number',
+				'plm_addr_city',
+				'plm_addr_state',
+				'plm_addr_zipcode',
+				'plm_addr_country',
+			) as $key ) {
+				if ( isset( $addr_opts[$key] ) && $addr_opts[$key] !== '' && $addr_opts[$key] !== 'none' ) {
+					switch ( $key ) {
+						case 'plm_addr_name':
+							$addr_opts[$key] = preg_replace( '/\s*,\s*/', ' ', $addr_opts[$key] );	// just in case
+							break;
+						case 'plm_addr_po_box_number':
+							$address = rtrim( $address, ', ' ).' #';	// continue street address
+							break;
+					}
+					$address .= $addr_opts[$key].', ';
+				}
+			}
+			return rtrim( $address, ', ' );
 		}
 
 		public static function get_addr_names() {
