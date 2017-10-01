@@ -226,10 +226,16 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 */
 			if ( WpssoPlmAddress::has_place( $mod ) !== false ) {
 				if ( ( $addr_opts = WpssoPlmAddress::has_days( $mod ) ) !== false ) {
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'address is a local.business (has business days)' );
+					}
 					$business_type_id = empty( $addr_opts['plm_addr_business_type'] ) ?
 						'local.business' : $addr_opts['plm_addr_business_type'];
 					$type_ids[$business_type_id] = true;
 				} else {
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'address is not a local.business (no business days)' );
+					}
 					$type_ids['place'] = true;
 				}
 			} elseif ( $this->p->debug->enabled ) {
@@ -279,6 +285,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$mt_schema['address'] = WpssoPlmAddress::get_addr_line( $addr_opts );
 
 				if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'schema type is child of local.business' );
+					}
 					foreach ( array(
 						'plm_addr_phone' => 'telephone',
 						'plm_addr_currencies_accepted' => 'currenciesAccepted',
@@ -293,6 +302,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 							$mt_schema[$mt_name] = isset( $addr_opts[$key] ) ? $addr_opts[$key] : '';
 						}
 					}
+				} elseif ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'schema type is not a child of local.business' );
 				}
 			}
 
