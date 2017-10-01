@@ -231,7 +231,6 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 						$md_opts['plm_addr_country'] = isset( $wpsso->options['plm_addr_def_country'] ) ?
 							$wpsso->options['plm_addr_def_country'] : 'none';
 					}
-					error_log( print_r( $md_opts, true ) );
 				}
 				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
 			}
