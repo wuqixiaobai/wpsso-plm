@@ -152,6 +152,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.5 (2017/10/02)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* Added a test for a non-empty array before adding the default country.
+* *Developer Notes*
+	* None
+
 **Version 2.3.4 (2017/10/02)**
 
 * *New Features*
@@ -269,6 +280,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.5 =
+
+(2017/10/02) Added a test for a non-empty array before adding the default country.
 
 = 2.3.4 =
 
