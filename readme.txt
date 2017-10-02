@@ -152,7 +152,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.4 (2017/09/30)**
+**Version 2.3.4 (2017/10/02)**
 
 * *New Features*
 	* None
@@ -272,7 +272,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.3.4 =
 
-(2017/09/30) Added the address name to the Schema "address" meta tag value. Fixed the missing default country name when entering a custom address in the SSO metabox.
+(2017/10/02) Added the address name to the Schema "address" meta tag value. Fixed the missing default country name when entering a custom address in the SSO metabox.
 
 = 2.3.3 =
 
