@@ -219,6 +219,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			$md_opts = $mod['obj']->get_options( $mod['id'] );			// returns empty string if no meta found
 
 			if ( is_array( $md_opts  ) ) {
+
 				if ( isset( $md_opts['plm_addr_id'] ) && is_numeric( $md_opts['plm_addr_id'] ) ) {	// allow for 0
 					if ( ( $addr_opts = self::get_addr_id( $md_opts['plm_addr_id'] ) ) !== false ) {
 						if ( $wpsso->debug->enabled ) {
@@ -226,22 +227,25 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 						}
 						$md_opts = array_merge( $md_opts, $addr_opts );
 					}
-				} else {
-					// add the default country if one is defined
+				}
+
+				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
+
+				if ( ! empty( $md_opts ) ) { 
 					if ( empty( $md_opts['plm_addr_country'] ) ) {
 						$md_opts['plm_addr_country'] = isset( $wpsso->options['plm_addr_def_country'] ) ?
 							$wpsso->options['plm_addr_def_country'] : 'none';
 					}
 				}
-				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
 			}
+
 			return $md_opts;
 		}
 
+		// text value for http://schema.org/address
 		public static function get_addr_line( array $addr_opts ) {
 			$address = '';
 			foreach ( array( 
-				'plm_addr_name',
 				'plm_addr_streetaddr',
 				'plm_addr_po_box_number',
 				'plm_addr_city',
