@@ -307,8 +307,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*_)'.$id.'(#.*)?$/',
 					$wpsso->options, false, '$1' ) as $opt_prefix => $value ) {	// allow '[:_]' as separator
 					$opt_idx = rtrim( $opt_prefix, '_' );
-					$addr_opts[$opt_idx] = SucomUtil::get_locale_opt( $opt_prefix.$id,
-						$wpsso->options, $mixed );
+					$addr_opts[$opt_idx] = SucomUtil::get_locale_opt( $opt_prefix.$id, $wpsso->options, $mixed );
 				}
 			}
 
