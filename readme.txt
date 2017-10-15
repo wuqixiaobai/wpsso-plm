@@ -152,6 +152,18 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.6 (2017/10/15)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Minor code refactoring for WPSSO v3.47.0.
+		* Renamed the SucomUtil get_locale_opt() call to get_key_value.
+
 **Version 2.3.5 (2017/10/02)**
 
 * *New Features*
@@ -280,6 +292,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.6 =
+
+(2017/10/15) Minor code refactoring for WPSSO v3.47.0.
 
 = 2.3.5 =
 
