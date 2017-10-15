@@ -294,20 +294,19 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 
 			$addr_opts = array();
 
-			if ( $id === 'custom' &&	// get custom address values from the post
-				isset( $mixed['obj'] ) &&
-					is_object( $mixed['obj'] ) ) {
-
-				$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)(#.*)?$/', 	// filter for all address options
-					$md_opts, false, '$1' ) as $opt_idx => $value ) {
-					$addr_opts[$opt_idx] = SucomUtil::get_locale_opt( $opt_idx, $md_opts, $mixed );
+			if ( $id === 'custom' ) {
+				if ( isset( $mixed['obj'] ) && is_object( $mixed['obj'] ) ) {
+					$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
+					foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)(#.*)?$/', 	// filter for all address options
+						$md_opts, false, '$1' ) as $opt_idx => $value ) {
+						$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
+					}
 				}
 			} elseif ( is_numeric( $id ) ) {
 				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*_)'.$id.'(#.*)?$/',
 					$wpsso->options, false, '$1' ) as $opt_prefix => $value ) {	// allow '[:_]' as separator
 					$opt_idx = rtrim( $opt_prefix, '_' );
-					$addr_opts[$opt_idx] = SucomUtil::get_locale_opt( $opt_prefix.$id, $wpsso->options, $mixed );
+					$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix.$id, $wpsso->options, $mixed );
 				}
 			}
 
