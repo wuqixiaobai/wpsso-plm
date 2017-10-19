@@ -13,7 +13,7 @@ Tested Up To: 4.8.2
 Requires PHP: 5.3
 Stable Tag: 2.3.6
 
-WPSSO extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
+WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location, Schema Local Business, and Local SEO meta tags.
 
 == Description ==
 
@@ -33,11 +33,11 @@ WPSSO PLM includes Pinterest Rich Pin / Schema Place, Facebook / Open Graph Loca
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
-**WPSSO PLM is *super fast* and coded for performance:**
+**WPSSO PLM is *incredibly fast* and coded for performance:**
 
-WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.
+WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.
 
-WPSSO and its extensions are fully tested and compatible with PHP v7.x (PHP v5.3 or better required).
+WPSSO Core and its extensions are fully tested and compatible with PHP v7.x (PHP v5.3 or better required).
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
