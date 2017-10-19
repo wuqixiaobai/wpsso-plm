@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Place and Location Meta (WPSSO PLM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.3.4\n"
+"Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.3.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2017-10-08 08:07-0600\n"
-"PO-Revision-Date: 2017-10-08 08:07-0600\n"
+"PO-Revision-Date: 2017-10-15 06:44-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
