@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'json_array_schema_type_ids' => 2,			// $type_ids, $mod
 				'schema_meta_itemprop' => 4,				// $mt_schema, $mod, $mt_og, $page_type_id
 				'schema_noscript_array' => 4,				// $ret, $mod, $mt_og, $page_type_id
-				'schema_type_id' => 3,					// $type_id, $mod, $is_md_type
+				'schema_type_id' => 3,					// $type_id, $mod, $is_custom
 				'get_place_options' => 3,				// $opts, $mod, $place_id
 			) );
 
@@ -254,14 +254,14 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $type_ids;
 		}
 
-		public function filter_schema_type_id( $type_id, $mod, $is_md_type ) {
+		public function filter_schema_type_id( $type_id, $mod, $is_custom ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
 			// return a default - don't override custom head types
-			if ( empty( $is_md_type ) ) {
+			if ( empty( $is_custom ) ) {
 				if ( WpssoPlmAddress::has_place( $mod ) !== false ) {
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'mod is defined as a place' );
