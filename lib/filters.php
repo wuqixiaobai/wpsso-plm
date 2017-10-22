@@ -189,8 +189,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			foreach ( array(
 				'plm_addr_phone' => 'place:business:telephone',
-				'plm_addr_season_from_date' => 'place:business:season:from',
-				'plm_addr_season_to_date' => 'place:business:season:to',
+				'plm_addr_season_from_date' => 'place:business:season:from_date',
+				'plm_addr_season_to_date' => 'place:business:season:to_date',
 				'plm_addr_service_radius' => 'place:business:service_radius',
 				'plm_addr_currencies_accepted' => 'place:business:currencies_accepted',
 				'plm_addr_payment_accepted' => 'place:business:payment_accepted',
@@ -326,8 +326,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 *	[place:business:day:monday:close] => 17:00
 			 *	[place:business:day:publicholidays:open] => 09:00
 			 *	[place:business:day:publicholidays:close] => 17:00
-			 *	[place:business:season:from] => 2016-04-01
-			 *	[place:business:season:to] => 2016-05-01
+			 *	[place:business:season:from_date] => 2016-04-01
+			 *	[place:business:season:to_date] => 2016-05-01
 			 * )
 			 */
 			if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
@@ -348,12 +348,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 							foreach ( array(
 								'place:business:day:'.$day.':open' => 'openinghoursspecification.opens',
 								'place:business:day:'.$day.':close' => 'openinghoursspecification.closes',
-								'place:business:season:from' => 'openinghoursspecification.validfrom',
-								'place:business:season:to' => 'openinghoursspecification.validthrough',
+								'place:business:season:from_date' => 'openinghoursspecification.validfrom',
+								'place:business:season:to_date' => 'openinghoursspecification.validthrough',
 							) as $mt_key => $prop_name )
-								if ( isset( $mt_business[$mt_key] ) )
+								if ( isset( $mt_business[$mt_key] ) ) {
 									$mt_day[] = $this->p->head->get_single_mt( 'meta', 'itemprop',
 										$prop_name, $mt_business[$mt_key], '', $mod );
+								}
 	
 							$mt_day[] = array( array( '</noscript>'."\n" ) );
 						}
