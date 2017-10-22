@@ -152,6 +152,18 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.7-dev.4 (2017/10/22)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Minor code refactoring for WPSSO v3.47.2.
+		* Renamed internal ":from" and ":to" meta tags to ":from_date" and ":to_date".
+
 **Version 2.3.6 (2017/10/15)**
 
 * *New Features*
@@ -292,6 +304,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.7-dev.4 =
+
+(2017/10/22) Minor code refactoring for WPSSO v3.47.2.
 
 = 2.3.6 =
 
