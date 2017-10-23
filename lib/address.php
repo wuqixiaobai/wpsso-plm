@@ -232,7 +232,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
 
 				if ( ! empty( $md_opts ) ) { 
-					if ( empty( $md_opts['plm_addr_country'] ) ) {
+					if ( empty( $md_opts['plm_addr_country'] ) ) {	// alpha2 country code
 						$md_opts['plm_addr_country'] = isset( $wpsso->options['plm_addr_def_country'] ) ?
 							$wpsso->options['plm_addr_def_country'] : 'none';
 					}

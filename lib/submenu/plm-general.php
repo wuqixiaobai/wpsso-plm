@@ -81,7 +81,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 		
 					$table_rows['plm_addr_def_country'] = $this->form->get_th_html( _x( 'Address Default Country',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_def_country' ).
-					'<td>'.$this->form->get_select_country( 'plm_addr_def_country',
+					'<td>'.$this->form->get_select_country( 'plm_addr_def_country',	// alpha2 country code
 					 	'', '', false, $this->p->options['plm_addr_def_country'] ).'</td>';
 
 					if ( ! $aop = $this->p->check->aop( 'wpssoplm', true, $this->p->avail['*']['p_dir'] ) ) {

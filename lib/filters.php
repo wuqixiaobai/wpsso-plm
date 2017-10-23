@@ -80,7 +80,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$md_defs = array_merge( $md_defs, WpssoPlmConfig::$cf['form']['plm_addr_opts'],
 				array(
 					'plm_addr_id' => 'custom',						// Select an Address
-					'plm_addr_country' => $this->p->options['plm_addr_def_country'],	// Country
+					'plm_addr_country' => $this->p->options['plm_addr_def_country'],	// Country (alpha2 country code)
 				)
 			);
 			return $md_defs;
@@ -419,7 +419,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			}
 			switch ( $key ) {
 				case 'plm_addr_for_home':
-				case 'plm_addr_def_country':
+				case 'plm_addr_def_country':	// alpha2 country code
 				case 'plm_addr_id':		// 'none', 'custom', or numeric (including 0)
 				case 'plm_addr_business_type':
 				case ( preg_match( '/^plm_addr_(country|type)$/', $key ) ? true : false ):
