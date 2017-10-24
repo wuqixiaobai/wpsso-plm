@@ -163,6 +163,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Minor code refactoring for WPSSO v3.47.2.
 		* Renamed internal ":from" and ":to" meta tags to ":from_date" and ":to_date".
+		* Added a filter hook for 'wpsso_form_cache_place_addr_names' to provide address names.
 
 **Version 2.3.6 (2017/10/15)**
 
