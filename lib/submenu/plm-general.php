@@ -72,12 +72,12 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 			switch ( $metabox_id.'-'.$key ) {
 				case 'plm-general':
 
-					$this->form->__address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, true );	// $add_none = true
+					$addr_names = WpssoPlmAddress::get_addr_names( '', true );	// $add_none = true
 
 					$table_rows['plm_addr_for_home'] = $this->form->get_th_html( _x( 'Address for a Blog Front Page',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_for_home' ).
-					'<td>'.$this->form->get_select( 'plm_addr_for_home', $this->form->__address_names,
-						'long_name', '', true, false, true ).'</td>';
+					'<td>'.$this->form->get_select( 'plm_addr_for_home',
+						$addr_names, 'long_name', '', true, false, true ).'</td>';
 		
 					$table_rows['plm_addr_def_country'] = $this->form->get_th_html( _x( 'Address Default Country',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_def_country' ).
@@ -104,14 +104,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'contact-address':
 
-					// use "private" form properties for filters
-					$this->form->__address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $this->p->options, false );	// $add_none = false
-					list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $this->form->__address_names );
-					$this->form->__address_names[$next_num] = WpssoPlmConfig::$cf['form']['plm_addr_select']['new'];
-					$this->form->__all_types = $this->p->schema->get_schema_types_array( false );	// $flatten = false
-					$this->form->__business_types = $this->p->schema->get_schema_types_select(
-						$this->form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
-					$this->form->__half_hours = SucomUtil::get_hours_range( 0, DAY_IN_SECONDS, 60 * 30, '' );
+					$addr_names = WpssoPlmAddress::get_addr_names( '', false, true );	// $add_none = false
+					list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $addr_names );
 					$this->form->defaults['plm_addr_id'] = $first_num;	// set default value
 
 					// check to make sure the selected id exists - if not, then unset to use the default
@@ -127,10 +121,10 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 
 					$table_rows['plm_addr_id'] = $this->form->get_th_html( _x( 'Edit an Address',
 						'option label', 'wpsso-plm' ), '', 'plm_addr_id' ).
-					'<td colspan="3">'.$this->form->get_select( 'plm_addr_id', $this->form->__address_names,
-						'long_name', '', true, false, true, 'unhide_rows' ).'</td>';
+					'<td colspan="3">'.$this->form->get_select( 'plm_addr_id',
+						$addr_names, 'long_name', '', true, false, true, 'unhide_rows' ).'</td>';
 
-					foreach ( $this->form->__address_names as $id => $name ) {
+					foreach ( $addr_names as $id => $name ) {
 
 						$tr_hide_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="hide_plm_addr_id hide_plm_addr_id_'.$id.'" style="display:none">';
@@ -143,7 +137,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$table_rows['subsection_schema_place'] = '<th></th><td class="subsection" colspan="3"><h4>'.
 						_x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 		
-					foreach ( $this->form->__address_names as $id => $name ) {
+					foreach ( $addr_names as $id => $name ) {
 
 						$tr_hide_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="hide_plm_addr_id hide_plm_addr_id_'.$id.'" style="display:none">';
@@ -181,7 +175,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$table_rows['subsection_og_location'] = '<th></th><td class="subsection" colspan="3"><h4>'.
 						_x( 'Facebook / Open Graph Location', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 		
-					foreach ( $this->form->__address_names as $id => $name ) {
+					foreach ( $addr_names as $id => $name ) {
 
 						$tr_hide_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="hide_plm_addr_id hide_plm_addr_id_'.$id.'" style="display:none">';
@@ -205,7 +199,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 					$table_rows['subsection_schema_localbusiness'] = '<th></th><td class="subsection" colspan="3"><h4>'.
 						_x( 'Schema Local Business', 'metabox title', 'wpsso-plm' ).'</h4></td>';
 		
-					foreach ( $this->form->__address_names as $id => $name ) {
+					foreach ( $addr_names as $id => $name ) {
 
 						$tr_hide_addr_id = '<!-- address id '.$id.' -->'.
 							'<tr class="hide_plm_addr_id hide_plm_addr_id_'.$id.'" style="display:none">';
@@ -215,7 +209,7 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						$table_rows['plm_addr_business_type_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Local Business Type', 'option label', 'wpsso-plm' ), '', 'plm_addr_business_type' ). 
 						'<td colspan="3">'.$this->form->get_select( 'plm_addr_business_type_'.$id,
-							$this->form->__business_types, 'schema_type' ).'</td>';
+							$this->form->get_prop( 'business_select' ), 'schema_type' ).'</td>';
 	
 						$table_rows['plm_addr_img_id_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Business Location Image ID', 'option label', 'wpsso-plm' ), '', 'plm_addr_img_id' ).
@@ -246,9 +240,9 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							$table_rows['plm_addr_day_'.$day.'_'.$id] = $th_cell.
 								'<td class="short">'.$this->form->get_checkbox( 'plm_addr_day_'.$day.'_'.$id ).' '.$label.'</td>'.
 								'<td>Opens at '.$this->form->get_select( 'plm_addr_day_'.$day.'_open_'.$id,
-									$this->form->__half_hours, 'medium', '', true ).'</td>'.
+									$this->form->get_prop( 'half_hours' ), 'medium', '', true ).'</td>'.
 								'<td>Closes at '.$this->form->get_select( 'plm_addr_day_'.$day.'_close_'.$id,
-									$this->form->__half_hours, 'medium', '', true ).'</td>';
+									$this->form->get_prop( 'half_hours' ), 'medium', '', true ).'</td>';
 							$row_number++;
 						}
 		

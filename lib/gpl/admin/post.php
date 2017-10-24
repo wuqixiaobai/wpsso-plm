@@ -31,11 +31,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$form->__half_hours = SucomUtil::get_hours_range( 0, DAY_IN_SECONDS, 60 * 30, '' );	// $format = ''
-			$form->__all_types = $this->p->schema->get_schema_types_array( false );		// $flatten = false
-			$form->__business_types = $this->p->schema->get_schema_types_select( 
-				$form->__all_types['thing']['place']['local.business'], false );	// $add_none = false
-			$form->__address_names = array( 'custom' => WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'] );
+			$addr_names = array( 'custom' => _x( WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'], 'option value', 'wpsso-plm' ) );
 
 			unset( $form->options['plm_addr_id'] );
 
@@ -45,8 +41,8 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 
 			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Select an Address',
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_id' ).
-			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_id', $form->__address_names,
-				'long_name', '', true ).'</td>';
+			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_id',
+				$addr_names, 'long_name', '', true ).'</td>';
 
 			$table_rows['subsection_schema_place'] = '<td></td><td class="subsection" colspan="3"><h4>'.
 				_x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' ).'</h4></td>';
@@ -103,7 +99,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_addr_business_type'] = $form->get_th_html( _x( 'Local Business Type',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_type' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
-				$form->__business_types, 'schema_type', '', true ).'</td>';
+				$form->get_prop( 'business_select' ), 'schema_type', '', true ).'</td>';
 
 			$table_rows['plm_addr_phone'] = $form->get_th_html( _x( 'Business Telephone',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_phone' ). 
@@ -119,9 +115,9 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$table_rows['plm_addr_day_'.$day] = $th_cell.
 					'<td class="blank short">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.$label.'</td>'.
 					'<td class="blank">Opens at '.$form->get_no_select( 'plm_addr_day_'.$day.'_open',
-						$form->__half_hours, 'medium', '', true ).'</td>'.
+						$form->get_prop( 'half_hours' ), 'medium', '', true ).'</td>'.
 					'<td class="blank">Closes at '.$form->get_no_select( 'plm_addr_day_'.$day.'_close',
-						$form->__half_hours, 'medium', '', true ).'</td>';
+						$form->get_prop( 'half_hours' ), 'medium', '', true ).'</td>';
 
 				$row_number++;
 			}

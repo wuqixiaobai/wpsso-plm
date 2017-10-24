@@ -36,6 +36,165 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 		}
 
+		public static function get_addr_names( $business_type = '', $add_none = false, $add_new = false, $add_custom = false ) {
+
+			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
+			$first_names = array();
+			$addr_names = array();
+
+			if ( $add_none ) {
+				$first_names['none'] = _x( '[None]', 'option value', 'wpsso-plm' );
+			}
+
+			if ( $add_custom ) {
+				$first_names['custom'] = _x( WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'], 'option value', 'wpsso-plm' );
+			}
+
+			$addr_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $wpsso->options, false );	// $add_none = false
+
+			if ( ! empty( $business_type ) && is_string( $business_type) ) {
+				$children = $wpsso->schema->get_schema_type_children( $business_type );
+				if ( ! empty( $children ) ) {	// just in case
+					foreach ( $addr_names as $num => $name ) {
+						if ( ! empty( $wpsso->options['addr_business_type'.$num] ) && 
+							in_array( $wpsso->options['addr_business_type'.$num], $children ) ) {
+							continue;
+						} else {
+							unset( $addr_names[$num] );
+						}
+					}
+				}
+			}
+
+			if ( $add_new ) {
+				list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $addr_names );
+				$addr_names[$next_num] = _x( WpssoPlmConfig::$cf['form']['org_select']['new'], 'option value', 'wpsso-plm' );
+			}
+
+			if ( ! empty( $first_names ) ) {
+				$addr_names = $first_names + $addr_names;	// combine arrays, preserving numeric key associations
+			}
+
+			return $addr_names;
+		}
+
+		// get a specific address id
+		// if $id is 'custom' then $mixed must be the $mod array
+		public static function get_addr_id( $id, $mixed = 'current' ) {
+
+			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->log_args( array( 
+					'id' => $id,
+					'mixed' => $mixed,
+				) );
+			}
+
+			$addr_opts = array();
+
+			if ( $id === 'custom' ) {
+				if ( isset( $mixed['obj'] ) && is_object( $mixed['obj'] ) ) {
+					$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
+					foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)(#.*)?$/', 	// filter for all address options
+						$md_opts, false, '$1' ) as $opt_idx => $value ) {
+						$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
+					}
+				}
+			} elseif ( is_numeric( $id ) ) {
+				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*_)'.$id.'(#.*)?$/',
+					$wpsso->options, false, '$1' ) as $opt_prefix => $value ) {	// allow '[:_]' as separator
+					$opt_idx = rtrim( $opt_prefix, '_' );
+					$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix.$id, $wpsso->options, $mixed );
+				}
+			}
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->log( $addr_opts );
+			}
+
+			if ( empty( $addr_opts ) ) {
+				return false; 
+			} else {
+				return array_merge( WpssoPlmConfig::$cf['form']['plm_addr_opts'], $addr_opts );	// complete the array
+			}
+		}
+
+		// text value for http://schema.org/address
+		public static function get_addr_line( array $addr_opts ) {
+			$address = '';
+			foreach ( array( 
+				'plm_addr_streetaddr',
+				'plm_addr_po_box_number',
+				'plm_addr_city',
+				'plm_addr_state',
+				'plm_addr_zipcode',
+				'plm_addr_country',
+			) as $key ) {
+				if ( isset( $addr_opts[$key] ) && $addr_opts[$key] !== '' && $addr_opts[$key] !== 'none' ) {
+					switch ( $key ) {
+						case 'plm_addr_name':
+							$addr_opts[$key] = preg_replace( '/\s*,\s*/', ' ', $addr_opts[$key] );	// just in case
+							break;
+						case 'plm_addr_po_box_number':
+							$address = rtrim( $address, ', ' ).' #';	// continue street address
+							break;
+					}
+					$address .= $addr_opts[$key].', ';
+				}
+			}
+			return rtrim( $address, ', ' );
+		}
+
+		public static function get_md_options( array &$mod ) {
+			if ( ! is_object( $mod['obj'] ) ) {	// just in case
+				return array();
+			}
+
+			$wpsso =& Wpsso::get_instance();
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
+			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) ) {	// make sure a cache entry exists
+				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
+			} else {
+				return self::$mod_md_opts[$mod['name']][$mod['id']];		// return the cache entry
+			}
+
+			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// shortcut variable
+			$md_opts = $mod['obj']->get_options( $mod['id'] );			// returns empty string if no meta found
+
+			if ( is_array( $md_opts  ) ) {
+
+				if ( isset( $md_opts['plm_addr_id'] ) && is_numeric( $md_opts['plm_addr_id'] ) ) {	// allow for 0
+					if ( ( $addr_opts = self::get_addr_id( $md_opts['plm_addr_id'] ) ) !== false ) {
+						if ( $wpsso->debug->enabled ) {
+							$wpsso->debug->log( 'using address ID '.$md_opts['plm_addr_id'].' options' );
+						}
+						$md_opts = array_merge( $md_opts, $addr_opts );
+					}
+				}
+
+				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
+
+				if ( ! empty( $md_opts ) ) { 
+					if ( empty( $md_opts['plm_addr_country'] ) ) {	// alpha2 country code
+						$md_opts['plm_addr_country'] = isset( $wpsso->options['plm_addr_def_country'] ) ?
+							$wpsso->options['plm_addr_def_country'] : 'none';
+					}
+				}
+			}
+
+			return $md_opts;
+		}
+
 		public static function has_place( array $mod ) {
 
 			$wpsso =& Wpsso::get_instance();
@@ -196,129 +355,6 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 				}
 			}
 			return false;
-		}
-
-		public static function get_md_options( array &$mod ) {
-			if ( ! is_object( $mod['obj'] ) ) {	// just in case
-				return array();
-			}
-
-			$wpsso =& Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->mark();
-			}
-
-			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) ) {	// make sure a cache entry exists
-				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
-			} else {
-				return self::$mod_md_opts[$mod['name']][$mod['id']];		// return the cache entry
-			}
-
-			$md_opts =& self::$mod_md_opts[$mod['name']][$mod['id']];		// shortcut variable
-			$md_opts = $mod['obj']->get_options( $mod['id'] );			// returns empty string if no meta found
-
-			if ( is_array( $md_opts  ) ) {
-
-				if ( isset( $md_opts['plm_addr_id'] ) && is_numeric( $md_opts['plm_addr_id'] ) ) {	// allow for 0
-					if ( ( $addr_opts = self::get_addr_id( $md_opts['plm_addr_id'] ) ) !== false ) {
-						if ( $wpsso->debug->enabled ) {
-							$wpsso->debug->log( 'using address ID '.$md_opts['plm_addr_id'].' options' );
-						}
-						$md_opts = array_merge( $md_opts, $addr_opts );
-					}
-				}
-
-				$md_opts = SucomUtil::preg_grep_keys( '/^plm_/', $md_opts );	// only return plm options
-
-				if ( ! empty( $md_opts ) ) { 
-					if ( empty( $md_opts['plm_addr_country'] ) ) {	// alpha2 country code
-						$md_opts['plm_addr_country'] = isset( $wpsso->options['plm_addr_def_country'] ) ?
-							$wpsso->options['plm_addr_def_country'] : 'none';
-					}
-				}
-			}
-
-			return $md_opts;
-		}
-
-		// text value for http://schema.org/address
-		public static function get_addr_line( array $addr_opts ) {
-			$address = '';
-			foreach ( array( 
-				'plm_addr_streetaddr',
-				'plm_addr_po_box_number',
-				'plm_addr_city',
-				'plm_addr_state',
-				'plm_addr_zipcode',
-				'plm_addr_country',
-			) as $key ) {
-				if ( isset( $addr_opts[$key] ) && $addr_opts[$key] !== '' && $addr_opts[$key] !== 'none' ) {
-					switch ( $key ) {
-						case 'plm_addr_name':
-							$addr_opts[$key] = preg_replace( '/\s*,\s*/', ' ', $addr_opts[$key] );	// just in case
-							break;
-						case 'plm_addr_po_box_number':
-							$address = rtrim( $address, ', ' ).' #';	// continue street address
-							break;
-					}
-					$address .= $addr_opts[$key].', ';
-				}
-			}
-			return rtrim( $address, ', ' );
-		}
-
-		public static function get_addr_names() {
-
-			$wpsso =& Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->mark();
-			}
-
-			return SucomUtil::get_multi_key_locale( 'plm_addr_name', $wpsso->options, false );
-		}
-
-		// get a specific address id
-		// if $id is 'custom' then $mixed must be the $mod array
-		public static function get_addr_id( $id, $mixed = 'current' ) {
-
-			$wpsso =& Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log_args( array( 
-					'id' => $id,
-					'mixed' => $mixed,
-				) );
-			}
-
-			$addr_opts = array();
-
-			if ( $id === 'custom' ) {
-				if ( isset( $mixed['obj'] ) && is_object( $mixed['obj'] ) ) {
-					$md_opts = self::get_md_options( $mixed );				// returns all plm options from the post
-					foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*)(#.*)?$/', 	// filter for all address options
-						$md_opts, false, '$1' ) as $opt_idx => $value ) {
-						$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_idx, $md_opts, $mixed );
-					}
-				}
-			} elseif ( is_numeric( $id ) ) {
-				foreach ( SucomUtil::preg_grep_keys( '/^(plm_addr_.*_)'.$id.'(#.*)?$/',
-					$wpsso->options, false, '$1' ) as $opt_prefix => $value ) {	// allow '[:_]' as separator
-					$opt_idx = rtrim( $opt_prefix, '_' );
-					$addr_opts[$opt_idx] = SucomUtil::get_key_value( $opt_prefix.$id, $wpsso->options, $mixed );
-				}
-			}
-
-			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( $addr_opts );
-			}
-
-			if ( empty( $addr_opts ) ) {
-				return false; 
-			} else {
-				return array_merge( WpssoPlmConfig::$cf['form']['plm_addr_opts'], $addr_opts );	// complete the array
-			}
 		}
 	}
 }

@@ -379,10 +379,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_save_options( $opts, $options_name, $network ) {
 
-			$address_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
-			list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $address_names );
+			$addr_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
+			list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $addr_names );
 
-			foreach ( $address_names as $num => $name ) {
+			foreach ( $addr_names as $num => $name ) {
 				$name = trim( $name );
 
 				// remove the image url if we have an image id
@@ -390,8 +390,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					unset( $opts['plm_addr_img_url_'.$num] );
 				}
 
-				if ( ! empty( $opts['plm_addr_delete_'.$num] ) ||
-					( $name === '' && $num === $last_num ) ) {	// remove the empty "New Address"
+				if ( ! empty( $opts['plm_addr_delete_'.$num] ) || ( $name === '' && $num === $last_num ) ) {	// remove empty "New Address"
 
 					if ( isset( $opts['plm_addr_id'] ) && $opts['plm_addr_id'] === $num ) {
 						unset( $opts['plm_addr_id'] );
