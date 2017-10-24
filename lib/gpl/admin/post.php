@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$this->p->debug->mark();
 			}
 
-			$addr_names = array( 'custom' => _x( WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'], 'option value', 'wpsso-plm' ) );
+			$addr_names_custom = array( 'custom' => $this->p->cf['form']['addr_select']['custom'] );
 
 			unset( $form->options['plm_addr_id'] );
 
@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_addr_id'] = $form->get_th_html( _x( 'Select an Address',
 				'option label', 'wpsso-plm' ), 'medium', 'post-plm_addr_id' ).
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_id',
-				$addr_names, 'long_name', '', true ).'</td>';
+				$addr_names_custom, 'long_name', '', true ).'</td>';
 
 			$table_rows['subsection_schema_place'] = '<td></td><td class="subsection" colspan="3"><h4>'.
 				_x( 'Pinterest Rich Pin / Schema Place', 'metabox title', 'wpsso-plm' ).'</h4></td>';
@@ -99,7 +99,7 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			$table_rows['plm_addr_business_type'] = $form->get_th_html( _x( 'Local Business Type',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_business_type' ). 
 			'<td class="blank" colspan="3">'.$form->get_no_select( 'plm_addr_business_type',
-				$form->get_prop( 'business_select' ), 'schema_type', '', true ).'</td>';
+				$form->get_cache( 'business_types_select' ), 'schema_type', '', true ).'</td>';
 
 			$table_rows['plm_addr_phone'] = $form->get_th_html( _x( 'Business Telephone',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_phone' ). 
@@ -115,9 +115,9 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 				$table_rows['plm_addr_day_'.$day] = $th_cell.
 					'<td class="blank short">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.$label.'</td>'.
 					'<td class="blank">Opens at '.$form->get_no_select( 'plm_addr_day_'.$day.'_open',
-						$form->get_prop( 'half_hours' ), 'medium', '', true ).'</td>'.
+						$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>'.
 					'<td class="blank">Closes at '.$form->get_no_select( 'plm_addr_day_'.$day.'_close',
-						$form->get_prop( 'half_hours' ), 'medium', '', true ).'</td>';
+						$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>';
 
 				$row_number++;
 			}

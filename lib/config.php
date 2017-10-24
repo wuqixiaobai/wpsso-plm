@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssoplm' => array(
-					'version' => '2.3.7-dev.5',		// plugin version
+					'version' => '2.3.7-dev.6',		// plugin version
 					'opt_version' => '16',		// increment when changing default options
 					'short' => 'WPSSO PLM',		// short plugin name
 					'name' => 'WPSSO Place / Location and Local Business Meta',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WPSSO Core',
-						'min_version' => '3.47.2-dev.5',
+						'min_version' => '3.47.2-dev.6',
 					),
 					'img' => array(
 						'icons' => array(
@@ -56,15 +56,6 @@ if ( ! class_exists( 'WpssoPlmConfig' ) ) {
 				),
 			),
 			'form' => array(
-				'plm_addr_select' => array(
-					'none' => '[None]',
-					'custom' => '[Custom Address]',
-					'new' => '[New Address]',
-				),
-				'plm_addr_type' => array(
-					'geo' => 'Geographic',
-					'postal' => 'Postal Address',
-				),
 				'plm_addr_opts' => array(
 					'plm_addr_name' => '',				// Name
 					'plm_addr_alt_name' => '',			// Altername Name

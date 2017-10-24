@@ -48,16 +48,22 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			$addr_names = array();
 
 			if ( $add_none ) {
-				$first_names['none'] = _x( '[None]', 'option value', 'wpsso-plm' );
+				$first_names['none'] = $wpsso->cf['form']['addr_select']['none'];
 			}
 
 			if ( $add_custom ) {
-				$first_names['custom'] = _x( WpssoPlmConfig::$cf['form']['plm_addr_select']['custom'], 'option value', 'wpsso-plm' );
+				$first_names['custom'] = $wpsso->cf['form']['addr_select']['custom'];
 			}
 
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->log( 'getting multi keys for plm_addr_name' );
+			}
 			$addr_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $wpsso->options, false );	// $add_none = false
 
 			if ( ! empty( $business_type ) && is_string( $business_type) ) {
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'removing addresses not in business type: '.$business_type );
+				}
 				$children = $wpsso->schema->get_schema_type_children( $business_type );
 				if ( ! empty( $children ) ) {	// just in case
 					foreach ( $addr_names as $num => $name ) {
@@ -69,11 +75,13 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 						}
 					}
 				}
+			} elseif ( $wpsso->debug->enabled ) {
+				$wpsso->debug->log( 'business type not provided - keeping all addresses' );
 			}
 
 			if ( $add_new ) {
-				list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $addr_names );
-				$addr_names[$next_num] = _x( WpssoPlmConfig::$cf['form']['org_select']['new'], 'option value', 'wpsso-plm' );
+				$next_num = SucomUtil::get_next_num( $addr_names );
+				$addr_names[$next_num] = $wpsso->cf['form']['addr_select']['new'];
 			}
 
 			if ( ! empty( $first_names ) ) {
@@ -287,13 +295,18 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		public static function has_md_days( array &$mod ) {
-			if ( ! is_object( $mod['obj'] ) )	// just in case
+
+			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return false;
+			}
 			$wpsso =& Wpsso::get_instance();
+
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
 			}
+
 			$md_opts = self::get_md_options( $mod );
+
 			if ( is_array( $md_opts  ) ) {
 				foreach ( $wpsso->cf['form']['weekdays'] as $day => $label ) {
 					if ( ! empty( $md_opts['plm_addr_day_'.$day] ) ) {
@@ -301,12 +314,14 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 					}
 				}
 			}
+
 			return false;
 		}
 
 		public static function has_geo( array &$mod ) {
 
 			$wpsso =& Wpsso::get_instance();
+
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
 			}
@@ -344,9 +359,13 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 		}
 
 		public static function has_md_geo( array &$mod ) {
-			if ( ! is_object( $mod['obj'] ) )	// just in case
+
+			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return false;
+			}
+
 			$md_opts = self::get_md_options( $mod );
+
 			if ( is_array( $md_opts  ) ) {
 				// allow for latitude and/or longitude of 0
 				if ( isset( $md_opts['plm_addr_latitude'] ) && $md_opts['plm_addr_latitude']!== '' && 
@@ -354,6 +373,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 					return $md_opts;
 				}
 			}
+
 			return false;
 		}
 	}

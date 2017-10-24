@@ -57,12 +57,21 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 					'post_custom_meta_tabs' => 3,		// $tabs, $mod, $metabox_id
 					'messages_tooltip' => 2,
 					'messages_tooltip_post' => 3,
+					'form_cache_place_addr_names' => 1,
 				) );
 				$this->p->util->add_plugin_filters( $this, array( 
 					'status_gpl_features' => 4,
 					'status_pro_features' => 4,
 				), 10, 'wpssoplm' );			// hook into our own filters
 			}
+		}
+
+		public function filter_form_cache_place_addr_names( $mixed ) {
+			$ret = WpssoPlmAddress::get_addr_names();
+			if ( is_array( $mixed ) ) {
+				$ret = $mixed + $ret;
+			}
+			return $ret;
 		}
 
 		public function filter_get_defaults( $def_opts ) {
@@ -380,7 +389,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 		public function filter_save_options( $opts, $options_name, $network ) {
 
 			$addr_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $opts, false );	// $add_none = false
-			list( $first_num, $last_num, $next_num ) = SucomUtil::get_first_last_next_nums( $addr_names );
+			$last_num = SucomUtil::get_last_num( $addr_names );
 
 			foreach ( $addr_names as $num => $name ) {
 				$name = trim( $name );
