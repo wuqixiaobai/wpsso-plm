@@ -25,7 +25,7 @@ WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location,
 
 Include Pinterest Rich Pin - Schema Place, Facebook - Open Graph Location, and Google - Schema Local Business meta tags in your webpages.
 
-Select a Job Location for the Schema Job Posting markup (WPSSO JSON Pro extension required).
+Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required).
 
 **WPSSO PLM can be used in two different ways:**
 
@@ -47,7 +47,7 @@ WPSSO Place / Location and Local Business Meta is an extension for the WPSSO Cor
 
 The WPSSO PLM Free extension works with either the Free or Pro version of WPSSO Core.
 
-The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Core Pro plugin features and requires the [WPSSO Core Pro](https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-prereq) plugin.
+The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_source=wpssoplm-readme-prereq) uses many WPSSO Core Pro plugin features and requires the [WPSSO Core Pro plugin](https://wpsso.com/extend/plugins/wpsso/?utm_source=wpssoplm-readme-prereq).
 
 <h3>Quick List of Features</h3>
 
@@ -85,7 +85,7 @@ The [WPSSO PLM Pro extension](https://wpsso.com/extend/plugins/wpsso-plm/?utm_so
 	* Food Menu URL
 	* Order Action URL(s)
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup Pro](https://wpsso.com/extend/plugins/wpsso-json/) extension to include complete Place and Local Business using Schema JSON-LD markup.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; Combine WPSSO PLM with the [WPSSO Schema JSON-LD Markup Pro extension](https://wpsso.com/extend/plugins/wpsso-json/) to include complete Place and Local Business using Schema JSON-LD markup.
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; Download the Free version from [GitHub](https://surniaulula.github.io/wpsso-plm/) or [WordPress.org](https://wordpress.org/plugins/wpsso-plm/).
 
