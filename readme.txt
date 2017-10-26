@@ -23,7 +23,9 @@ WPSSO Core extension to provide Pinterest Place, Facebook / Open Graph Location,
 
 **Let Pinterest, Facebook and Google know about your locations:**
 
-WPSSO PLM includes Pinterest Rich Pin / Schema Place, Facebook / Open Graph Location, and Google / Schema Local Business meta tags in your webpages.
+Include Pinterest Rich Pin - Schema Place, Facebook - Open Graph Location, and Google - Schema Local Business meta tags in your webpages.
+
+Select a Job Location for the Schema Job Posting markup (WPSSO JSON Pro extension required).
 
 **WPSSO PLM can be used in two different ways:**
 
