@@ -27,7 +27,9 @@
 
 <p><span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for the content of the current webpage.</p>
 
-<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher). To assign location information to an Organization, you will also need to use the WPSSO ORG extension.</p>
+<p><span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).</p>
+
+<p><strong>To assign location information to an Organization, you will need to use the <a href="https://wordpress.org/plugins/wpsso-organization/">WPSSO ORG extension</a> along with the WPSSO PLM extension.</strong></p>
 
 <p>The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a <em>blog front page</em>. If you're using a <em>static front page</em>, or would like to include location information for the content of other posts / pages, you'll need the Pro version.</p>
 

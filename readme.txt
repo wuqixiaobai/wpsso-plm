@@ -31,7 +31,9 @@ Select a Job Location for the Schema Job Posting markup ([WPSSO JSON Pro extensi
 
 <span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for the content of the current webpage.
 
-<span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher). To assign location information to an Organization, you will also need to use the WPSSO ORG extension.
+<span style="color:#33cc33">&#x0229b;</span> &nbsp; To provide location information for an Organization, which in turn is related to the content (for example, the content publisher).
+
+**To assign location information to an Organization, you will need to use the [WPSSO ORG extension](https://wordpress.org/plugins/wpsso-organization/) along with the WPSSO PLM extension.**
 
 The Free version of WPSSO PLM can add location information to the main entity (aka the primary Schema type) of a *blog front page*. If you're using a *static front page*, or would like to include location information for the content of other posts / pages, you'll need the Pro version.
 
