@@ -156,6 +156,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.8-b.5 (2017/11/10)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* Fixed a business type options key name in the WpssoPlmAddress get_addr_names() method.
+* *Developer Notes*
+	* None
+
 **Version 2.3.7 (2017/10/28)**
 
 * *New Features*
@@ -309,6 +320,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.8-b.5 =
+
+(2017/11/10) Fixed a business type options key name in the WpssoPlmAddress get_addr_names() method.
 
 = 2.3.7 =
 
