@@ -58,23 +58,28 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log( 'getting multi keys for plm_addr_name' );
 			}
+
 			$addr_names = SucomUtil::get_multi_key_locale( 'plm_addr_name', $wpsso->options, false );	// $add_none = false
 
 			if ( ! empty( $business_type ) && is_string( $business_type) ) {
+
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'removing addresses not in business type: '.$business_type );
 				}
+
 				$children = $wpsso->schema->get_schema_type_children( $business_type );
+
 				if ( ! empty( $children ) ) {	// just in case
 					foreach ( $addr_names as $num => $name ) {
-						if ( ! empty( $wpsso->options['addr_business_type'.$num] ) && 
-							in_array( $wpsso->options['addr_business_type'.$num], $children ) ) {
+						if ( ! empty( $wpsso->options['plm_addr_business_type_'.$num] ) && 
+							in_array( $wpsso->options['plm_addr_business_type_'.$num], $children ) ) {
 							continue;
 						} else {
 							unset( $addr_names[$num] );
 						}
 					}
 				}
+
 			} elseif ( $wpsso->debug->enabled ) {
 				$wpsso->debug->log( 'business type not provided - keeping all addresses' );
 			}
