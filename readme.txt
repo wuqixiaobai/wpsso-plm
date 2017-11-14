@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.8-rc.3 (2017/11/13)**
+**Version 2.3.8 (2017/11/14)**
 
 * *New Features*
 	* None
@@ -321,9 +321,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.8-rc.3 =
+= 2.3.8 =
 
-(2017/11/13) Fixed a business type options key name in the WpssoPlmAddress get_addr_names() method.
+(2017/11/14) Fixed a business type options key name in the WpssoPlmAddress get_addr_names() method.
 
 = 2.3.7 =
 
