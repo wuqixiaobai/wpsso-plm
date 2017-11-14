@@ -8,8 +8,8 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-plm/assets/
 Tags: local seo, local business, knowledge graph, location, place, address, venue, restaurant, business hours, telephone, coordinates, meta tags
 Contributors: jsmoriss
-Requires PHP: 5.3
-Requires At Least: 3.7
+Requires PHP: 5.4
+Requires At Least: 3.8
 Tested Up To: 4.9
 Stable Tag: 2.3.8
 
