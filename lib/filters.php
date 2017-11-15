@@ -392,8 +392,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			return $opts;
 		}
 
-		public function filter_get_event_place_id( $place_id, $mod, $event_id ) {
-			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) !== false ) {
+		public function filter_get_event_place_id( $place_id, array $mod, $event_id ) {
+			if ( ( $addr_opts = WpssoPlmAddress::has_md_place( $mod, 'plm_addr_id' ) ) !== false ) {
 				$place_id = $addr_opts['plm_addr_id'];
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'returning place id '.$place_id.' for event id '.$event_id );

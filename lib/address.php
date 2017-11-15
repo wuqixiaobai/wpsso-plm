@@ -164,7 +164,8 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			return rtrim( $address, ', ' );
 		}
 
-		public static function get_md_options( array &$mod ) {
+		public static function get_md_options( array $mod ) {
+
 			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return array();
 			}
@@ -176,8 +177,14 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 
 			if ( ! isset( self::$mod_md_opts[$mod['name']][$mod['id']] ) ) {	// make sure a cache entry exists
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'getting new options for static array cache' );
+				}
 				self::$mod_md_opts[$mod['name']][$mod['id']] = array();
 			} else {
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'returning options from static array cache' );
+				}
 				return self::$mod_md_opts[$mod['name']][$mod['id']];		// return the cache entry
 			}
 
@@ -247,32 +254,46 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			return $addr_opts;
 		}
 
-		public static function has_md_place( array &$mod ) {
+		public static function has_md_place( array $mod, $idx_exists = '' ) {
+
 			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return false;
 			}
+
 			$md_opts = self::get_md_options( $mod );
-			if ( is_array( $md_opts  ) ) {
+
+			// check for a specific index key
+			if ( ! empty( $idx_exists ) && isset( $md_opts[$idx_exists] ) ) {
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'returning place options - index key '.$idx_exists.' exists' );
+				}
+				return $md_opts;
+			} elseif ( is_array( $md_opts  ) ) {
 				foreach ( self::$place_mt as $key => $mt_name ) {
 					if ( ! empty( $md_opts[$key] ) ) {
+						if ( $wpsso->debug->enabled ) {
+							$wpsso->debug->log( 'returning place options - one or more option keys found' );
+						}
 						return $md_opts;
 					}
 				}
 			}
+
 			return false;
 		}
 
-		public static function has_days( array &$mod ) {
+		public static function has_days( array $mod ) {
 
 			$wpsso =& Wpsso::get_instance();
+
 			if ( $wpsso->debug->enabled ) {
 				$wpsso->debug->mark();
 			}
 
 			$addr_opts = false;
+
 			if ( $mod['is_home_index'] ) {
-				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
-					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
+				if ( isset( $wpsso->options['plm_addr_for_home'] ) && is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
 						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'no business days for address id '.$wpsso->options['plm_addr_for_home'] );
@@ -299,7 +320,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			return $addr_opts;
 		}
 
-		public static function has_md_days( array &$mod ) {
+		public static function has_md_days( array $mod ) {
 
 			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return false;
@@ -323,7 +344,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			return false;
 		}
 
-		public static function has_geo( array &$mod ) {
+		public static function has_geo( array $mod ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -332,9 +353,9 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 
 			$addr_opts = false;
+
 			if ( $mod['is_home_index'] ) {
-				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
-					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
+				if ( isset( $wpsso->options['plm_addr_for_home'] ) && is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
 						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'no geo coordinates for address id '.$wpsso->options['plm_addr_for_home'] );
@@ -363,7 +384,7 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			return $addr_opts;
 		}
 
-		public static function has_md_geo( array &$mod ) {
+		public static function has_md_geo( array $mod ) {
 
 			if ( ! is_object( $mod['obj'] ) ) {	// just in case
 				return false;
