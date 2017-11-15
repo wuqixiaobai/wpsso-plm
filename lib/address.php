@@ -217,9 +217,9 @@ if ( ! class_exists( 'WpssoPlmAddress' ) ) {
 			}
 
 			$addr_opts = false;
+
 			if ( $mod['is_home_index'] ) {
-				if ( isset( $wpsso->options['plm_addr_for_home'] ) &&
-					is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
+				if ( isset( $wpsso->options['plm_addr_for_home'] ) && is_numeric( $wpsso->options['plm_addr_for_home'] ) ) {
 					if ( ( $addr_opts = self::get_addr_id( $wpsso->options['plm_addr_for_home'] ) ) === false ) {
 						if ( $wpsso->debug->enabled ) {
 							$wpsso->debug->log( 'no place options for address id '.$wpsso->options['plm_addr_for_home'] );

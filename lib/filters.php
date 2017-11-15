@@ -48,6 +48,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				'schema_noscript_array' => 4,				// $ret, $mod, $mt_og, $page_type_id
 				'schema_type_id' => 3,					// $type_id, $mod, $is_custom
 				'get_place_options' => 3,				// $opts, $mod, $place_id
+				'get_event_place_id' => 3,				// $place_id, $mod, $event_id
 			) );
 
 			if ( is_admin() ) {
@@ -170,14 +171,13 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 * place:location:longitude
 			 * place:location:altitude
 			 */
-			if ( ! empty( $addr_opts['plm_addr_latitude'] ) && 
-				! empty( $addr_opts['plm_addr_longitude'] ) ) {
-
+			if ( ! empty( $addr_opts['plm_addr_latitude'] ) && ! empty( $addr_opts['plm_addr_longitude'] ) ) {
 				foreach( array( 'place:location', 'og' ) as $mt_prefix ) {
 					$mt_og[$mt_prefix.':latitude'] = $addr_opts['plm_addr_latitude'];
 					$mt_og[$mt_prefix.':longitude'] = $addr_opts['plm_addr_longitude'];
-					if ( ! empty( $addr_opts['plm_altitude'] ) )
+					if ( ! empty( $addr_opts['plm_altitude'] ) ) {
 						$mt_og[$mt_prefix.':altitude'] = $addr_opts['plm_addr_altitude'];
+					}
 				}
 			}
 
@@ -269,24 +269,28 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			// return a default - don't override custom head types
-			if ( empty( $is_custom ) ) {
-				if ( WpssoPlmAddress::has_place( $mod ) !== false ) {
-					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'mod is defined as a place' );
-					}
-					if ( ( $addr_opts = WpssoPlmAddress::has_days( $mod ) ) !== false ) {
-						$type_id = empty( $addr_opts['plm_addr_business_type'] ) ?
-							'local.business' : $addr_opts['plm_addr_business_type'];
-					} else {
-						$type_id = 'place';
-					}
-					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'returning schema type id '.$type_id );
-					}
-				} elseif ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'mod is not a place (no place options found)' );
+			if ( $is_custom ) {
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'exiting early: custom schema type id is true' );
 				}
+				return $type_id;
+			}
+
+			if ( WpssoPlmAddress::has_place( $mod ) !== false ) {
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'mod is defined as a place' );
+				}
+				if ( ( $addr_opts = WpssoPlmAddress::has_days( $mod ) ) !== false ) {
+					$type_id = empty( $addr_opts['plm_addr_business_type'] ) ?
+						'local.business' : $addr_opts['plm_addr_business_type'];
+				} else {
+					$type_id = 'place';
+				}
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'returning schema type id '.$type_id );
+				}
+			} elseif ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'mod is not a place (no place options found)' );
 			}
 
 			return $type_id;
@@ -367,9 +371,11 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 	
 							$mt_day[] = array( array( '</noscript>'."\n" ) );
 						}
-						foreach ( $mt_day as $arr )
-							foreach ( $arr as $val )
+						foreach ( $mt_day as $arr ) {
+							foreach ( $arr as $val ) {
 								$ret[] = $val;
+							}
+						}
 					}
 				}
 			}
@@ -384,6 +390,16 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 				}
 			}
 			return $opts;
+		}
+
+		public function filter_get_event_place_id( $place_id, $mod, $event_id ) {
+			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) !== false ) {
+				$place_id = $addr_opts['plm_addr_id'];
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'returning place id '.$place_id.' for event id '.$event_id );
+				}
+			}
+			return $place_id; 
 		}
 
 		public function filter_save_options( $opts, $options_name, $network ) {
