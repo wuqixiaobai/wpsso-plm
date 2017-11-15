@@ -127,6 +127,9 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 		public function filter_og_type( $og_type, $mod ) {
 			if ( WpssoPlmAddress::has_place( $mod ) ) {
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'returning og_type = place' );
+				}
 				return 'place';
 			} else {
 				return $og_type;
@@ -141,6 +144,10 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 			if ( ( $addr_opts = WpssoPlmAddress::has_place( $mod ) ) === false ) {
 				return $mt_og;     // abort
+			}
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'returning open graph place meta tags' );
 			}
 
 			/*
@@ -396,7 +403,8 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			if ( ( $addr_opts = WpssoPlmAddress::has_md_place( $mod, 'plm_addr_id' ) ) !== false ) {
 				$place_id = $addr_opts['plm_addr_id'];
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'returning place id '.$place_id.' for event id '.$event_id );
+					$this->p->debug->log( 'returning place id '.$place_id.' '.
+						( $event_id !== false ? 'for event id '.$event_id : '(event id is false)' ) );
 				}
 			}
 			return $place_id; 
@@ -408,6 +416,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			$last_num = SucomUtil::get_last_num( $addr_names );
 
 			foreach ( $addr_names as $num => $name ) {
+
 				$name = trim( $name );
 
 				// remove the image url if we have an image id
