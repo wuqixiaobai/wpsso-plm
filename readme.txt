@@ -156,6 +156,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.9-dev.1 (2017/11/15)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Added a 'wpsso_get_event_place_id' filter hook to return a custom place id for single event options.
+
 **Version 2.3.8 (2017/11/14)**
 
 * *New Features*
@@ -320,6 +331,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.9-dev.1 =
+
+(2017/11/15) Added a 'wpsso_get_event_place_id' filter hook to return a custom place id for single event options.
 
 = 2.3.8 =
 
