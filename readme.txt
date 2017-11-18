@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.9-rc.2 (2017/11/18)**
+**Version 2.3.9-rc.3 (2017/11/18)**
 
 * *New Features*
 	* None
@@ -332,7 +332,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.9-rc.2 =
+= 2.3.9-rc.3 =
 
 (2017/11/18) Added a 'wpsso_get_event_place_id' filter hook to return a custom place id for single event options.
 
