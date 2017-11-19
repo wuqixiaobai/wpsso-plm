@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.9-rc.4 (2017/11/18)**
+**Version 2.3.9-rc.4 (2017/11/19)**
 
 * *New Features*
 	* None
@@ -334,7 +334,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.3.9-rc.4 =
 
-(2017/11/18) Added a 'wpsso_get_event_place_id' filter hook to return a custom place id for single event options.
+(2017/11/19) Added a 'wpsso_get_event_place_id' filter hook to return a custom place id for single event options.
 
 = 2.3.8 =
 
