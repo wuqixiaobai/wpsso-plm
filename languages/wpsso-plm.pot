@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Place / Location and Local Business Meta 2.3.10-"
-"dev.3\n"
+"dev.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-plm\n"
 "POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
@@ -352,62 +352,82 @@ msgctxt "option label"
 msgid "Business Telephone"
 msgstr ""
 
-#: lib/gpl/admin/post.php:111 lib/pro/admin/post.php:216
-#: lib/submenu/plm-general.php:231
+#: lib/gpl/admin/post.php:113 lib/pro/admin/post.php:218
+#: lib/submenu/plm-general.php:232
 msgctxt "option label"
 msgid "Business Days + Hours"
 msgstr ""
 
-#: lib/gpl/admin/post.php:125 lib/pro/admin/post.php:251
-#: lib/pro/admin/post.php:285 lib/submenu/plm-general.php:251
+#: lib/gpl/admin/post.php:122 lib/pro/admin/post.php:228
+#: lib/pro/admin/post.php:248 lib/submenu/plm-general.php:245
+msgid "Opens at"
+msgstr ""
+
+#: lib/gpl/admin/post.php:125 lib/pro/admin/post.php:231
+#: lib/pro/admin/post.php:251 lib/submenu/plm-general.php:248
+msgid "Closes at"
+msgstr ""
+
+#: lib/gpl/admin/post.php:132 lib/pro/admin/post.php:261
+#: lib/pro/admin/post.php:298 lib/submenu/plm-general.php:255
 msgctxt "option label"
 msgid "Business Dates (Season)"
 msgstr ""
 
-#: lib/gpl/admin/post.php:130 lib/pro/admin/post.php:256
-#: lib/pro/admin/post.php:290 lib/submenu/plm-general.php:256
+#: lib/gpl/admin/post.php:135 lib/pro/admin/post.php:263
+#: lib/pro/admin/post.php:300 lib/submenu/plm-general.php:257
+msgid "Open from"
+msgstr ""
+
+#: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:265
+#: lib/pro/admin/post.php:302 lib/submenu/plm-general.php:259
+msgid "through"
+msgstr ""
+
+#: lib/gpl/admin/post.php:140 lib/pro/admin/post.php:269
+#: lib/pro/admin/post.php:306 lib/submenu/plm-general.php:263
 msgctxt "option label"
 msgid "Service Radius"
 msgstr ""
 
-#: lib/gpl/admin/post.php:133 lib/pro/admin/post.php:258
-#: lib/pro/admin/post.php:292 lib/submenu/plm-general.php:258
+#: lib/gpl/admin/post.php:143 lib/pro/admin/post.php:271
+#: lib/pro/admin/post.php:308 lib/submenu/plm-general.php:265
 msgctxt "option comment"
 msgid "meters from location"
 msgstr ""
 
-#: lib/gpl/admin/post.php:136 lib/pro/admin/post.php:261
-#: lib/pro/admin/post.php:295 lib/submenu/plm-general.php:261
+#: lib/gpl/admin/post.php:146 lib/pro/admin/post.php:274
+#: lib/pro/admin/post.php:311 lib/submenu/plm-general.php:268
 msgctxt "option label"
 msgid "Currencies Accepted"
 msgstr ""
 
-#: lib/gpl/admin/post.php:137 lib/pro/admin/post.php:262
-#: lib/pro/admin/post.php:296 lib/submenu/plm-general.php:262
+#: lib/gpl/admin/post.php:147 lib/pro/admin/post.php:275
+#: lib/pro/admin/post.php:312 lib/submenu/plm-general.php:269
 msgctxt "option label"
 msgid "Payment Accepted"
 msgstr ""
 
-#: lib/gpl/admin/post.php:138 lib/pro/admin/post.php:263
-#: lib/pro/admin/post.php:297 lib/submenu/plm-general.php:263
+#: lib/gpl/admin/post.php:148 lib/pro/admin/post.php:276
+#: lib/pro/admin/post.php:313 lib/submenu/plm-general.php:270
 msgctxt "option label"
 msgid "Price Range"
 msgstr ""
 
-#: lib/gpl/admin/post.php:144 lib/pro/admin/post.php:271
-#: lib/pro/admin/post.php:306 lib/submenu/plm-general.php:271
+#: lib/gpl/admin/post.php:154 lib/pro/admin/post.php:284
+#: lib/pro/admin/post.php:322 lib/submenu/plm-general.php:278
 msgctxt "option label"
 msgid "Accepts Reservations"
 msgstr ""
 
-#: lib/gpl/admin/post.php:148 lib/pro/admin/post.php:275
-#: lib/pro/admin/post.php:310 lib/submenu/plm-general.php:275
+#: lib/gpl/admin/post.php:158 lib/pro/admin/post.php:288
+#: lib/pro/admin/post.php:326 lib/submenu/plm-general.php:282
 msgctxt "option label"
 msgid "Food Menu URL"
 msgstr ""
 
-#: lib/gpl/admin/post.php:152 lib/pro/admin/post.php:279
-#: lib/pro/admin/post.php:314 lib/submenu/plm-general.php:279
+#: lib/gpl/admin/post.php:162 lib/pro/admin/post.php:292
+#: lib/pro/admin/post.php:330 lib/submenu/plm-general.php:286
 msgctxt "option label"
 msgid "Order Action URL(s)"
 msgstr ""

@@ -106,26 +106,36 @@ if ( ! class_exists( 'WpssoPlmGplAdminPost' ) ) {
 			'<td class="blank" colspan="3">'.$form->get_no_input_value( '' ).'</td>';
 
 			$row_number = 1;
-			foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
-				if ( $row_number === 1 )
+			foreach ( $this->p->cf['form']['weekdays'] as $day => $day_label ) {
+				$day_label_transl = _x( $day_label, 'option value', 'wpsso' );
+
+				if ( $row_number === 1 ) {
 					$th_cell = $form->get_th_html( _x( 'Business Days + Hours',
 						'option label', 'wpsso-plm' ), 'medium', 'plm_addr_days' );
-				else $th_cell = '<td></td>';
+				} else {
+					$th_cell = '<td></td>';
+				}
 
 				$table_rows['plm_addr_day_'.$day] = $th_cell.
-					'<td class="blank short">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.$label.'</td>'.
-					'<td class="blank">Opens at '.$form->get_no_select( 'plm_addr_day_'.$day.'_open',
-						$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>'.
-					'<td class="blank">Closes at '.$form->get_no_select( 'plm_addr_day_'.$day.'_close',
-						$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>';
+					'<td class="blank short">'.$form->get_no_checkbox( 'plm_addr_day_'.$day ).' '.
+						$day_label_transl.'</td>'.
+					'<td class="blank">'.__( 'Opens at', 'wpsso-plm' ).' '.
+						$form->get_no_select( 'plm_addr_day_'.$day.'_open',
+							$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>'.
+					'<td class="blank">'.__( 'Closes at', 'wpsso-plm' ).' '.
+						$form->get_no_select( 'plm_addr_day_'.$day.'_close',
+							$form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>';
 
 				$row_number++;
 			}
 
 			$table_rows['plm_addr_season_dates'] = $form->get_th_html( _x( 'Business Dates (Season)',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_season_dates' ). 
-			'<td class="blank" colspan="3">Open from '.$form->get_no_input_date().
-				' through '.$form->get_no_input_date().'</td>';
+			'<td class="blank" colspan="3">'.
+				__( 'Open from', 'wpsso-plm' ).' '.
+				$form->get_no_input_date().' '.
+				__( 'through', 'wpsso-plm' ).' '.
+				$form->get_no_input_date().'</td>';
 
 			$table_rows['plm_addr_service_radius'] = $form->get_th_html( _x( 'Service Radius',
 				'option label', 'wpsso-plm' ), 'medium', 'plm_addr_service_radius' ). 

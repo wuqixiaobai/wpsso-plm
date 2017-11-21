@@ -225,7 +225,8 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 						'<td colspan="3">'.$this->form->get_input( 'plm_addr_phone_'.$id ).'</td>';
 
 						$row_number = 1;
-						foreach ( $this->p->cf['form']['weekdays'] as $day => $label ) {
+						foreach ( $this->p->cf['form']['weekdays'] as $day => $day_label ) {
+							$day_label_transl = _x( $day_label, 'option value', 'wpsso' );
 
 							if ( $row_number === 1 ) {
 								$th_cell = $tr_hide_addr_id.$this->form->get_th_html( _x( 'Business Days + Hours',
@@ -239,18 +240,24 @@ if ( ! class_exists( 'WpssoPlmSubmenuPlmGeneral' ) && class_exists( 'WpssoAdmin'
 							$this->form->defaults['plm_addr_day_'.$day.'_close_'.$id] = '17:00';	// set default value
 		
 							$table_rows['plm_addr_day_'.$day.'_'.$id] = $th_cell.
-								'<td class="short">'.$this->form->get_checkbox( 'plm_addr_day_'.$day.'_'.$id ).' '.$label.'</td>'.
-								'<td>Opens at '.$this->form->get_select( 'plm_addr_day_'.$day.'_open_'.$id,
-									$this->form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>'.
-								'<td>Closes at '.$this->form->get_select( 'plm_addr_day_'.$day.'_close_'.$id,
-									$this->form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>';
+								'<td class="short">'.$this->form->get_checkbox( 'plm_addr_day_'.$day.'_'.$id ).' '.
+									$day_label_transl.'</td>'.
+								'<td>'.__( 'Opens at', 'wpsso-plm' ).' '.
+									$this->form->get_select( 'plm_addr_day_'.$day.'_open_'.$id,
+										$this->form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>'.
+								'<td>'.__( 'Closes at', 'wpsso-plm' ).' '.
+									$this->form->get_select( 'plm_addr_day_'.$day.'_close_'.$id,
+										$this->form->get_cache( 'half_hours' ), 'medium', '', true ).'</td>';
 							$row_number++;
 						}
 		
 						$table_rows['plm_addr_season_dates_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Business Dates (Season)', 'option label', 'wpsso-plm' ), '', 'plm_addr_season_dates' ). 
-						'<td colspan="3">Open from '.$this->form->get_input_date( 'plm_addr_season_from_date_'.$id ).
-							' through '.$this->form->get_input_date( 'plm_addr_season_to_date_'.$id ).'</td>';
+						'<td colspan="3">'.
+							__( 'Open from', 'wpsso-plm' ).' '.
+							$this->form->get_input_date( 'plm_addr_season_from_date_'.$id ).' '.
+							__( 'through', 'wpsso-plm' ).' '.
+							$this->form->get_input_date( 'plm_addr_season_to_date_'.$id ).'</td>';
 		
 						$table_rows['plm_addr_service_radius_'.$id] = $tr_hide_addr_id.
 						$this->form->get_th_html( _x( 'Service Radius', 'option label', 'wpsso-plm' ), '', 'plm_addr_service_radius' ). 
