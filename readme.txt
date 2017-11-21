@@ -345,7 +345,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.3.10-dev.4 =
 
-(2017/11/21) Renamed the WpssoSchema is_schema_type_child_of() method to is_schema_type_child().
+(2017/11/21) Added translation to the "Business Days + Hours" option labels. Renamed the WpssoSchema is_schema_type_child_of() method to is_schema_type_child().
 
 = 2.3.9 =
 
