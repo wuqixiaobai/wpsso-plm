@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.10-dev.2 (2017/11/20)**
+**Version 2.3.10-dev.3 (2017/11/20)**
 
 * *New Features*
 	* None
@@ -343,7 +343,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.10-dev.2 =
+= 2.3.10-dev.3 =
 
 (2017/11/20) Renamed the WpssoSchema is_schema_type_child_of() method to is_schema_type_child().
 
