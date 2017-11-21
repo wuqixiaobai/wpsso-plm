@@ -313,7 +313,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 
 				$mt_schema['address'] = WpssoPlmAddress::get_addr_line( $addr_opts );
 
-				if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
+				if ( $this->p->schema->is_schema_type_child( $page_type_id, 'local.business' ) ) {	// just in case
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'schema type is child of local.business' );
 					}
@@ -350,7 +350,7 @@ if ( ! class_exists( 'WpssoPlmFilters' ) ) {
 			 *	[place:business:season:to_date] => 2016-05-01
 			 * )
 			 */
-			if ( $this->p->schema->is_schema_type_child_of( $page_type_id, 'local.business' ) ) {	// just in case
+			if ( $this->p->schema->is_schema_type_child( $page_type_id, 'local.business' ) ) {	// just in case
 
 				$mt_business = SucomUtil::preg_grep_keys( '/^place:business:/', $mt_og );
 
