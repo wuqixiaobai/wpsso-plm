@@ -156,6 +156,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.3.10-dev.2 (2017/11/20)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Renamed the WpssoSchema is_schema_type_child_of() method to is_schema_type_child().
+
 **Version 2.3.9 (2017/11/20)**
 
 * *New Features*
@@ -331,6 +342,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'plm_addr_business_phone' option key to 'plm_addr_phone'.
 
 == Upgrade Notice ==
+
+= 2.3.10-dev.2 =
+
+(2017/11/20) Renamed the WpssoSchema is_schema_type_child_of() method to is_schema_type_child().
 
 = 2.3.9 =
 
